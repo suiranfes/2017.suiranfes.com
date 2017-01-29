@@ -1,0 +1,29 @@
+{
+  "name": "2017.suiranfes.com",
+  "version": "0.0.0",
+  "description": "2017.suiranfes.com",
+  "main": "docs/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suiranfes/2017.suiranfes.com.git"
+  },
+  "author": "suiranfestival <info@suiranfes.com> (https://suiranfes.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/suiranfes/2017.suiranfes.com/issues"
+  },
+  "homepage": "https://2017.suiranfes.com/",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.5"
+  }
+}
