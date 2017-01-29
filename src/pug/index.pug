@@ -1,10 +1,12 @@
-doctype html
+- var page = { title: 'トップページ', description: '来場者数1万5千人を誇る県内一の文化祭。第65回は2017年6月3日(土)4日(日)開催。テーマは“No SurFace”、日本語で言ったら「おもてなし」。ごめんなさい、駄洒落です。', keywords: 'スイラン祭', url: '' };
+
+doctype
 html(lang="ja")
   head
-    meta(charset="utf-8")
-    style(src="css/default.css")
-    title Pugテスト
+    include includes/_meta.pug
   body
-    h1.sitettl Pugテストサイトタイトル
+    h1.sitettl #{page.title}
     main.main
-      h2.content_ttl メインタイトル
+      h2.content_ttl テーマ #{site.theme}
+      p
+        a(href="/access.html") アクセス
