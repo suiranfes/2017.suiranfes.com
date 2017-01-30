@@ -28,7 +28,8 @@ module.exports = function(grunt){
                 },
                 files: {
                     'docs/index.html' : ['src/pug/index.pug'],
-                    'docs/access.html' : ['src/pug/access.pug']
+                    'docs/access.html' : ['src/pug/access.pug'],
+                    'docs/food.html' : ['src/pug/food.pug']
                 }
             }
         },
@@ -40,8 +41,8 @@ module.exports = function(grunt){
             }
         },
         watch: {
-            files: [src.everypug, src.json, src.everystyl],
-            tasks: ['pug', 'stylus']
+            files: [src.everypug, src.json, src.everystyl, 'Gruntfile.js'],
+            tasks: ['default']
         },
         connect: {
             server: {

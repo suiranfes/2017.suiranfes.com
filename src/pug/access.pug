@@ -5,6 +5,9 @@ html(lang="ja")
   head
     include includes/_meta.pug
   body
-    h1.sitettl #{page.title}
-    main.main
-      h2.content_ttl 1日目 #{fes.Day1.startDate}
+    include includes/_nav.pug
+    div.wrap
+      div.container
+        div.row
+          div.col-12
+            h1 #{page.title}

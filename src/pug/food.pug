@@ -1,0 +1,13 @@
+- var page = { title: '模擬店', description: '模擬店のメニューをご紹介しています。今年はポップコーンのキャラメルソース味が追加されました!', keywords: 'スイラン祭', url: 'food.html' };
+
+doctype
+html(lang="ja")
+  head
+    include includes/_meta.pug
+  body
+    include includes/_nav.pug
+    div.wrap
+      div.container
+        div.row
+          div.col-12
+            h1 #{page.title}

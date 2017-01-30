@@ -5,8 +5,11 @@ html(lang="ja")
   head
     include includes/_meta.pug
   body
-    h1.sitettl #{page.title}
-    main.main
-      h2.content_ttl テーマ #{site.theme}
-      p
-        a(href="/access.html") アクセス
+    include includes/_nav.pug
+    div.wrap.-top-first
+      div.container
+        div.row
+          div.col-12
+            h1 #{site.title}
+            p.-top-theme #{site.theme} ～ 
+              span.-top-themeinjap #{site.themeinjap}
