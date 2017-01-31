@@ -1,0 +1,18 @@
+language: node_js
+notifications:
+  email: false
+  slack:
+    secure: LCsqLpN+w1VjIIqGN5PcPWsiag1n+nUIFzClEsbIQUn3vYsmq11I3H7q4geDdQWxoYuzYtZE/fED44WqUpsAp6vdFdzLmByX5DOf5WjOwVZ3j8nKcCTuy1wnk5DVJtrSIEdHNsuikHNAarbA15XNctYXNt0jiuYw08njsU8SIffz3cgVQaZu7AoVGemjxuilhaz38EOWZm9CPIuutdqeyz4WcnFIUqwmJ3PzxFp79O43ZjwhMqKZ4ZeMvEz17h8CNxW7Qb3TSU3RbUfW9w3RTVslX/LSVPJy0KUmzFb99RHvw3KYuVqmQFsosi9Kg2WYHkNuYGRBv94XjGx54B94+x5kiM79nUhgo9L/ZPbXw/wUvhUSNU2+3w9LIdYU8js7LvEUgvz9NL2mSNplqP/JhPlvf7iHeeoF1zd2Kvi9OHoDBw1Z7qKNhUno0fjlA0sC50AKb99V2MoyQzx6b2uXk3/Ov/PJP/MHHZ5H//g87PNZssDjkygqrEM4l995a8GvFkaOVfhYQmJkfvkyG0JZ6nPhyZ1P8yPrk2VlslUC3rvLbkn4FXe8DPNqky3budfhLle04siHDwwcCUgKCbI0VYzwdGV2qua1wPO6uuMI5YnfIFglpOdETh9YlTvneOHA90VkLofHMeQQR1pE1UstJGLJRz9Lx7dOLAYNyh+xrKc=
+node_js:
+- '6.9.2'
+sudo: false
+cache:
+  directories:
+  - node_modules
+git:
+  submodules: false
+before_install:
+- npm install -g grunt-cli
+- grunt --version
+script:
+- grunt build
