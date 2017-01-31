@@ -13,3 +13,12 @@ html(lang="ja")
           div.col-12
             div.py-3
               h1 #{page.title}
+              - for (var i in fes.foods) {
+              p
+                b #{fes.foods[i].title}
+                br
+                - for (var j in fes.foods[i].kinds) {
+                | #{fes.foods[i].kinds[j].title} : #{fes.foods[i].kinds[j].price}
+                br
+                - }
+              - }
