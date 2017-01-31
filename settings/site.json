@@ -5,7 +5,7 @@
         "themeinjap" : "おもてなし",
         "domain" : "suiranfes.com",
         "FesURL" : "https://suiranfes.com/",
-        "URL" : "http://localhost:3000/",
+        "URL" : "https://suiranfes.com/",
         "CDN" : "https://cdn.suiranfes.com/",
         "pages" : [
             {
