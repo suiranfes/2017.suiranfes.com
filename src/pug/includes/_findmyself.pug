@@ -1,0 +1,20 @@
+- function arrayMerge() {
+-   if (arguments.length === 0) return false;
+-   var i, len, key, result = {};
+-   for (i = 0, len = arguments.length;i < len; i++) {
+-     if (typeof arguments[i] !== 'object') continue;
+-     for (key in arguments[i]) {
+-       if (isFinite(key)) {
+-         result.push(arguments[i][key]);
+-       } else {
+-         result[key] = arguments[i][key];
+-       }
+-     }
+-   }
+-   return result;
+- };
+- for( var i in site.pages ) {
+-   if( page.id == site.pages[i].name ) {
+-     page = arrayMerge( page, site.pages[i] )
+-   }
+- }

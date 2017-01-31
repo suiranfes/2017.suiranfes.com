@@ -24,13 +24,10 @@ module.exports = function(grunt){
                 options: {
                     data: function(dest, src) {
                         return require('./docs/suiranfes.json');
-                    }
+                    },
+                    debug: false
                 },
-                files: {
-                    'docs/index.html' : ['src/pug/index.pug'],
-                    'docs/access.html' : ['src/pug/access.pug'],
-                    'docs/food.html' : ['src/pug/food.pug']
-                }
+                files: listPages()
             }
         },
         stylus: {
@@ -78,11 +75,27 @@ function arrayMerge() {
     return result;
 };
 
+function listPages() {
+    var suiranfesapi = require('./docs/suiranfes.json'),
+        files = '{',
+        logtext = 'Files:\n';
+    for (var i in suiranfesapi.site.pages) {
+        files += '"docs/' + suiranfesapi.site.pages[i].name + '.html":["src/pug/' + suiranfesapi.site.pages[i].name + '.pug"]';
+        logtext += '' + suiranfesapi.site.pages[i].name + '\n';
+        if ( i < suiranfesapi.site.pages.length - 1 ) {
+            files += ','
+        }
+    }
+    files += '}';
+    console.log(logtext);
+    return JSON.parse(files);
+}
+
 grunt.task.registerTask( 'merge-json' , 'Merge All Settings' , function(){
     var resultObj = { options: "" };
     grunt.file.recurse('./settings/', process );
     function process(abspath, rootdir, subdir, filename){
-        console.log('Processing ' + filename);
+        console.log(filename);
         if( filename.indexOf('.json') > -1 ){
             bookObj = require('./'+abspath);
             for (var key in bookObj) {
