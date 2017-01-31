@@ -5,8 +5,10 @@
         "themeinjap" : "おもてなし",
         "domain" : "suiranfes.com",
         "FesURL" : "https://suiranfes.com/",
-        "URL" : "https://suiranfes.com/",
+        "URL" : "https://2017.suiranfes.com/",
         "CDN" : "https://cdn.suiranfes.com/",
+        "sitecardpath" : "assets/img/TwitterCard2.png",
+        "iconpath" : "assets/img/X-SUIRAN-t-600-f-fs8.png",
         "pages" : [
             {
                 "id" : "index",

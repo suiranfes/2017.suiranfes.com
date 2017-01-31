@@ -8,8 +8,7 @@ var src = {
 
 var dest = {
     'root': 'docs/',
-    'css': 'docs/css',
-    'everything': ['docs/**/*', '!' + 'docs/CNAME']
+    'everything': ['docs/**/*.html','docs/**/*.css','docs/**/*.js','docs/**/*.json']
 }
 
 module.exports = function(grunt){
