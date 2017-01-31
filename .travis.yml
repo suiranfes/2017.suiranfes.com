@@ -15,4 +15,4 @@ before_install:
 - npm install -g grunt-cli
 - grunt --version
 script:
-- grunt build
+- grunt
