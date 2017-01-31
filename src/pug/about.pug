@@ -1,0 +1,14 @@
+- var page = { id :"about" };
+
+doctype
+html(lang="ja")
+  head
+    include includes/_findmyself.pug
+    include includes/_meta.pug
+  body
+    include includes/_nav.pug
+    div.wrap
+      div.container
+        div.row
+          div.col-12
+            h1 #{page.title}

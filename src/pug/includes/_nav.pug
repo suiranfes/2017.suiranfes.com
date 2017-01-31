@@ -5,6 +5,8 @@ nav.navbar.navbar-toggleable-md.navbar-inverse.bg-danger
   div.collapse.navbar-collapse(id="navbarSupportedContent")
     ul.navbar-nav.mr-auto
       - for (var i in site.pages) {
+      -   if (i != 0) {
       li.nav-item
         a.nav-link(href=`/${site.pages[i].name}.html`) #{site.pages[i].title}
+      -   }
       - }
