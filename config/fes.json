@@ -2,6 +2,7 @@
     "fes" : {
         "common" : {
             "theme" : "No SurFace",
+            "themeinjap" : "おもてなし",
             "address" : {
                 "sameAs" : "http://www.takasaki-hs.gsn.ed.jp/",
                 "name" : "群馬県立高崎高等学校",
@@ -13,12 +14,12 @@
             }
         },
         "Day1" : {
-            "startDate" : "2017-06-03T12:00",
-            "endDate" : "2017-06-03T17:00"
+            "startDate" : "2017-06-03T12:00+09:00",
+            "endDate" : "2017-06-03T17:00+09:00"
         },
         "Day2" : {
-            "startDate" : "2017-06-04T09:00",
-            "endDate" : "2017-06-04T16:30"
+            "startDate" : "2017-06-04T09:00+09:00",
+            "endDate" : "2017-06-04T16:30+09:00"
         },
         "foods" : [
             {
@@ -30,12 +31,12 @@
                 ]
             },
             {
-                "name" : "dippin dots",
+                "name" : "dippin_dots",
                 "title" : "dippin dots 粒粒アイス",
                 "kinds" : [
-                    { "name" : "dippin dots RAINBOW", "title" : "dippin dots レインボー", "price" : "300" },
-                    { "name" : "dippin dots VANILLA", "title" : "dippin dots バニラ", "price" : "300" },
-                    { "name" : "dippin dots STRAWBERRY", "title" : "dippin dots ストロベリー", "price" : "300" }
+                    { "name" : "dippin_dots-RAINBOW", "title" : "dippin dots レインボー", "price" : "300" },
+                    { "name" : "dippin_dots-VANILLA", "title" : "dippin dots バニラ", "price" : "300" },
+                    { "name" : "dippin_dots-STRAWBERRY", "title" : "dippin dots ストロベリー", "price" : "300" }
                 ]
             },
             {
