@@ -1,14 +1,14 @@
 var src = {
    'pug': ['src/pug/**/*.pug', '!' + 'src/pug/**/_*.pug'],
    'everypug': 'src/pug/**/*.pug',
-   'json': 'settings/**/*.json',
+   'json': 'config/**/*.json',
    'styl': ['src/styl/**/*.styl', '!' + 'src/styl/**/_*.styl'],
    'everystyl': 'src/styl/**/*.styl'
 };
 
 var dest = {
     'root': 'docs/',
-    'everything': ['docs/**/*.html','docs/**/*.css','docs/**/*.js','docs/**/*.json']
+    'everything': ['docs/**/*.html','docs/**/*.css','docs/**/*.js','docs/api/**/*.json']
 }
 
 module.exports = function(grunt){
@@ -22,7 +22,7 @@ module.exports = function(grunt){
             compile: {
                 options: {
                     data: function(dest, src) {
-                        return require('./docs/suiranfes.json');
+                        return require('./docs/api/suiranfes.json');
                     },
                     debug: false
                 },
@@ -75,7 +75,7 @@ function arrayMerge() {
 };
 
 function listPages() {
-    var suiranfesapi = require('./docs/suiranfes.json'),
+    var suiranfesapi = require('./docs/api/suiranfes.json'),
         files = '{',
         logtext = 'Files:\n';
     for (var i in suiranfesapi.site.pages) {
@@ -90,9 +90,9 @@ function listPages() {
     return JSON.parse(files);
 }
 
-grunt.task.registerTask( 'merge-json' , 'Merge All Settings' , function(){
+grunt.task.registerTask( 'merge-json' , 'Merge all config files' , function(){
     var resultObj = { options: "" };
-    grunt.file.recurse('./settings/', process );
+    grunt.file.recurse('./config/', process );
     function process(abspath, rootdir, subdir, filename){
         console.log(filename);
         if( filename.indexOf('.json') > -1 ){
@@ -102,7 +102,7 @@ grunt.task.registerTask( 'merge-json' , 'Merge All Settings' , function(){
             }
         }
     }
-    grunt.file.write( 'docs/suiranfes.json' , JSON.stringify( resultObj ) );
+    grunt.file.write( 'docs/api/suiranfes.json' , JSON.stringify( resultObj ) );
 });
   //タスクの登録
     grunt.registerTask('default', ['clean', 'merge-json', 'pug', 'stylus']);
