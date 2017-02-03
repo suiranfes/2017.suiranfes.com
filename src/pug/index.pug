@@ -7,11 +7,39 @@ html(lang="ja")
     include includes/_meta.pug
   body
     include includes/_nav.pug
-    div.wrap.-top-first
-      div.container
-        div.row
-          div.col-12
-            div.py-3
+    .wrap.-index-first
+      .row
+        .col-md-6
+          .py-3.-index-left
+            .container
               h1 #{site.title}
-              p.-top-theme #{site.theme} ～ 
-                span.-top-themeinjap #{site.themeinjap}
+              p.-index-theme #{site.theme} ～ 
+                span.-index-themeinjap #{site.themeinjap}
+              p.-index-date
+                span.-index-date-y 2017年
+                span.-index-date-m 6月
+                span.-index-date-day1num 3日
+                span.-index-date-day1Sat (土)
+                br
+                span.-index-date-day2num 4日
+                span.-index-date-day2Sun (日)
+        .col-md-6
+          .py-3.-index-right
+            .-index-pickups-wrap.Attention
+              .container
+                .-index-pickups.Attention
+                  a(href="attention.html")
+                    .-index-pickups-head ご注意
+                    .-index-pickups-desc ご来場前に必ずお読みください。
+            .-index-pickups-wrap.Bus
+              .container
+                .-index-pickups.Bus
+                  a(href="access.html#shuttle")
+                    .-index-pickups-head バスについて
+                    .-index-pickups-desc 約10分間隔です。詳しくはこちら。
+            .-index-pickups-wrap.Food
+              .container
+                .-index-pickups.Food
+                  a(href="food.html")
+                    .-index-pickups-head 模擬店・食堂
+                    .-index-pickups-desc 食べ物・飲み物に関してはこちら。
