@@ -22,7 +22,7 @@ module.exports = function(grunt){
             compile: {
                 options: {
                     data: function(dest, src) {
-                        return require('./docs/api/suiranfes.json');
+                        return grunt.file.readJSON('./docs/api/suiranfes.json');
                     },
                     debug: false
                 },
@@ -74,29 +74,13 @@ function arrayMerge() {
     return result;
 };
 
-function listPages() {
-    var suiranfesapi = require('./docs/api/suiranfes.json'),
-        files = '{',
-        logtext = 'Files:\n';
-    for (var i in suiranfesapi.site.pages) {
-        files += '"docs/' + suiranfesapi.site.pages[i].name + '.html":["src/pug/' + suiranfesapi.site.pages[i].name + '.pug"]';
-        logtext += '' + suiranfesapi.site.pages[i].name + '\n';
-        if ( i < suiranfesapi.site.pages.length - 1 ) {
-            files += ','
-        }
-    }
-    files += '}';
-    console.log(logtext);
-    return JSON.parse(files);
-}
-
 grunt.task.registerTask( 'merge-json' , 'Merge all config files' , function(){
     var resultObj = { options: "" };
     grunt.file.recurse('./config/', process );
     function process(abspath, rootdir, subdir, filename){
         console.log(filename);
         if( filename.indexOf('.json') > -1 ){
-            bookObj = require('./'+abspath);
+            bookObj = grunt.file.readJSON('./'+abspath);
             for (var key in bookObj) {
                 resultObj = arrayMerge( resultObj , bookObj );
             }
@@ -107,4 +91,22 @@ grunt.task.registerTask( 'merge-json' , 'Merge all config files' , function(){
   //タスクの登録
     grunt.registerTask('default', ['clean', 'merge-json', 'pug', 'stylus']);
     grunt.registerTask('server', ['default', 'connect', 'watch']);
+
+
+function listPages() {
+    var siteArray = grunt.file.readJSON('config/site.json'),
+        files = '{',
+        logtext = 'Files:\n';
+    for (var i in siteArray.site.pages) {
+        files += '"docs/' + siteArray.site.pages[i].name + '.html":["src/pug/' + siteArray.site.pages[i].name + '.pug"]';
+        logtext += '' + siteArray.site.pages[i].name + '\n';
+        if ( i < siteArray.site.pages.length - 1 ) {
+            files += ','
+        }
+    }
+    files += '}';
+    console.log(logtext);
+    return JSON.parse(files);
+}
+
 }

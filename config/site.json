@@ -39,11 +39,11 @@
                 "keywords" : ["スイラン祭","バス","シャトル","直通"]
             },
             {
-                "id" : "goods",
-                "name" : "goods",
-                "title" : "グッズ",
-                "description" : "うちわとクリアファイルを配布します！",
-                "keywords" : ["スイラン祭"]
+                "id" : "pantene",
+                "name" : "pantene",
+                "title" : "一般展示",
+                "description" : "部活展示およびクラス展示の情報です",
+                "keywords" : ["スイラン祭","部活展示","部展示","学級展示"]
             },
             {
                 "id" : "food",
@@ -51,6 +51,13 @@
                 "title" : "模擬店･食堂",
                 "description" : "唐揚げ、アイス、ポップコーン、ジュース、etc...模擬店についてです。",
                 "keywords" : ["スイラン祭","模擬店","食べ物","飲み物"]
+            },
+            {
+                "id" : "goods",
+                "name" : "goods",
+                "title" : "グッズ",
+                "description" : "うちわとクリアファイルを配布します！",
+                "keywords" : ["スイラン祭"]
             }
         ]
     }

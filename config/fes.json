@@ -21,6 +21,41 @@
             "startDate" : "2017-06-04T09:00+09:00",
             "endDate" : "2017-06-04T16:30+09:00"
         },
+        "pantene" : [
+            {
+                "name" : "Railway_Reserch_Club",
+                "title" : "鉄道研究部",
+                "description" : "こんにちは。鉄道研究部です。",
+                "attractions" : [ "巨大ジオラマ", "運転体験", "記念切符配布" ],
+                "room" : "1-6",
+                "hosts" : [
+                    {
+                        "type" : "club",
+                        "name" : "Railway_Reserch_Club",
+                        "title" : "鉄道研究部"
+                    }
+                ]
+            },
+            {
+                "name" : "Alice_in_Wonderland",
+                "title" : "アソス IN WONDERLAND",
+                "description" : "アソスと一緒に写真を撮ろう！",
+                "attractions" : [ "アリス", "写真撮影" ],
+                "room" : "1-6",
+                "hosts" : [
+                    {
+                        "type" : "homeroom",
+                        "name" : "3-5",
+                        "title" : "3年5組"
+                    },
+                    {
+                        "type" : "homeroom",
+                        "name" : "3-6",
+                        "title" : "3年6組"
+                    }
+                ]
+            }
+        ],
         "foods" : [
             {
                 "name" : "juice",
