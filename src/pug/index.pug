@@ -8,8 +8,8 @@ html(lang="ja")
   body
     include includes/_nav.pug
     .wrap.-index-first
-      .row
-        .col-md-6
+      .row.-index-second
+        .col-md-6.col-xl-4
           .py-3.-index-left
             .container
               h1.-index-title #{site.title}
@@ -24,24 +24,29 @@ html(lang="ja")
                 br
                 span.-index-date-day2num 4日
                 span.-index-date-day2Sun (日)
-              p 開発メモ:適当
-        .col-md-6
+        .col-md-6.col-xl-5
           .-index-right
-            .-index-pickups-wrap.Attention
-              .container
-                .-index-pickups.Attention
-                  a(href="attention.html")
+            a(href="attention.html")
+              .-index-pickups-wrap.Attention
+                .container
+                  .-index-pickups.Attention
                     .-index-pickups-head ご注意
                     .-index-pickups-desc ご来場前に必ず知っていただきたいこと
-            .-index-pickups-wrap.Bus
-              .container
-                .-index-pickups.Bus
-                  a(href="access.html#shuttle")
-                    .-index-pickups-head バスについて
-                    .-index-pickups-desc 高崎駅から無料シャトルバスを運行！
-            .-index-pickups-wrap.Food
-              .container
-                .-index-pickups.Food
-                  a(href="food.html")
-                    .-index-pickups-head 模擬店・食堂
-                    .-index-pickups-desc 各種食べ物・飲み物　取り揃えております！
+            a(href="access.html#shuttle")
+              .-index-pickups-wrap.Bus
+                .container
+                  .-index-pickups.Bus
+                    .-index-pickups-head 無料シャトルバス
+                    .-index-pickups-desc 高崎駅から約10分毎に運行。詳細をご確認ください
+            a(href="pantene.html")
+              .-index-pickups-wrap.Pantene
+                .container
+                  .-index-pickups.Pantene
+                    .-index-pickups-head 一般展示
+                    .-index-pickups-desc 今回最も力を入れた校内の展示です
+            a(href="food.html")
+              .-index-pickups-wrap.Food
+                .container
+                  .-index-pickups.Food
+                    .-index-pickups-head 模擬店･食堂･喫茶
+                    .-index-pickups-desc 各種食べ物、飲み物

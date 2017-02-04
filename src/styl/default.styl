@@ -17,6 +17,9 @@ h1
 *
 */
 
+.row.-index-second
+  margin: 0
+
 .-index-left
   text-align: right
   .-index-title
@@ -27,6 +30,7 @@ h1
   .-index-themeinjap
     font-size: 1.5em
   .-index-date
+    font-weight: 700
     .-index-date-m
       font-size: 1.5em
     .-index-date-day1num
@@ -39,8 +43,7 @@ h1
     .-index-date-2Sun
       color: red
 
-.-index-pickups-wrap
-  padding: 1em
+.-index-right
   a
     color: black
     &:link
@@ -50,16 +53,19 @@ h1
     &:hover
       color: maroon
       text-decoration: none
-  &.Attention
-    background-color: yellow
-  &.Bus
-    background-color: yellowgreen
-  &.Food
-    background-color: cyan
-  .-index-pickups
-    .-index-pickups-head
-      font-size: 2em
-      font-weight: 700
-    .-index-pickups-desc
-      font-size: 1.25em
-      font-weight: 200
+  .-index-pickups-wrap
+    padding: 1.75em
+    &.Attention
+      padding: 3em 1.75em
+      background-color: yellow
+    &.Bus
+      background-color: yellowgreen
+    &.Food
+      background-color: cyan
+    .-index-pickups
+      .-index-pickups-head
+        font-size: 2em
+        font-weight: 700
+      .-index-pickups-desc
+        font-size: 1.25em
+        font-weight: 200

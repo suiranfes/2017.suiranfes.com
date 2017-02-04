@@ -24,6 +24,7 @@ module.exports = function(grunt){
                     data: function(dest, src) {
                         return grunt.file.readJSON('./docs/api/v1/index.json');
                     },
+                    filters: require('./pugfilters.js'),
                     debug: false
                 },
                 files: listPages()
