@@ -10,7 +10,8 @@
                 "addressStreet" : "八千代町",
                 "addressLocality" : "高崎市",
                 "addressRegion" : "群馬県",
-                "addressCountry" : "日本"
+                "addressCountry" : "日本",
+                "postNumber" : "370-0861"
             }
         },
         "Day1" : {
