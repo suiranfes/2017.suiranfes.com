@@ -22,7 +22,7 @@ module.exports = function(grunt){
             compile: {
                 options: {
                     data: function(dest, src) {
-                        return grunt.file.readJSON('./docs/api/suiranfes.json');
+                        return grunt.file.readJSON('./docs/api/v1/index.json');
                     },
                     debug: false
                 },
@@ -86,7 +86,7 @@ grunt.task.registerTask( 'merge-json' , 'Merge all config files' , function(){
             }
         }
     }
-    grunt.file.write( 'docs/api/suiranfes.json' , JSON.stringify( resultObj ) );
+    grunt.file.write( 'docs/api/v1/index.json' , JSON.stringify( resultObj ) );
 });
   //タスクの登録
     grunt.registerTask('default', ['clean', 'merge-json', 'pug', 'stylus']);

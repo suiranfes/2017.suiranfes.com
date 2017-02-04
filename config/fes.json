@@ -82,6 +82,28 @@
                     { "name" : "yakisoba", "title" : "やきそば", "price" : "150" }
                 ]
             }
+        ],
+        "events" : [
+            {
+                "name" : "Ms_Takataka_CONTEST",
+                "title" : "ミス高高コンテスト 予選A",
+                "description" : "高高一かわいい女の子は誰か！？",
+                "tags" : [ "女装", "仮装", "変装", "コスプレ", "女子" ],
+                "place" : "stage",
+                "performers" : [ "女装の人A", "女装の人B" ],
+                "startDate" : "2017-06-03T13:00+09:00",
+                "endDate"   : "2017-06-03T13:20+09:00"
+            },
+            {
+                "name" : "SUIRAN_STATION",
+                "title" : "SUIRAN STATION",
+                "description" : "",
+                "tags" : [ "紅白", "ライブ", "音楽" ],
+                "place" : "gym",
+                "performers" : [ "女装の人A", "女装の人B" ],
+                "startDate" : "2017-06-04T12:30+09:00",
+                "endDate"   : "2017-06-04T15:30+09:00"
+            }
         ]
     }
 }
