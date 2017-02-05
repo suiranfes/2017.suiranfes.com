@@ -1,0 +1,97 @@
+@import '_setting'
+
+/*
+*
+* index
+*
+*/
+.-index-left
+  text-align: right
+  .-index-title
+    font-size: 2.8em
+  .-index-theme
+    font-size: 2.5em
+    font-weight: 700
+  .-index-themeinjap
+    font-size: 1.5em
+  .-index-date
+    font-weight: 700
+    .-index-date-m
+      font-size: 1.5em
+    .-index-date-day1num
+    .-index-date-day1Sat
+    .-index-date-day2num
+    .-index-date-day2Sun
+      font-size: 1.7em
+    .-index-date-day1Sat
+      color: blue
+    .-index-date-day2Sun
+      color: red
+
+.-index-right
+  a
+    display: block
+    color: black
+    overflow: hidden
+    &:link
+    &:visited
+      color: black
+    &:active
+    &:focus
+    &:hover
+      color: maroon
+      text-decoration: none
+      filter: none !important
+    &.Attention
+      color: black
+      background-color: yellow
+    &.Bus
+      color: black
+      background-color: lighten(yellowgreen,30%)
+    &.Food
+      color: black
+      background-color: cyan
+    &.Pantene
+      color: white
+      background-color: site-colorpalet-theme
+  .-index-pickups-wrap
+    padding: 1.6em
+    transition-timing-function: ease !important
+    transition-duration: .25s !important
+    transition-property: all !important
+    position: relative
+    z-index: 3
+    ::before
+      z-index: 4
+      background: inherit
+      position: absolute
+      &:hover
+      &:active
+      &:focus
+        filter: brightness(85%) blur(1px)
+    &.Attention
+      padding: 3em 1.75em
+      background-color: yellow
+    &.Bus
+      background-color: yellowgreen
+    &.Food
+      background-color: cyan
+    .-index-pickups
+      &:hover
+      &:active
+      &:focus
+        filter: none !important
+      .-index-pickups-head
+        font-size: 2em
+        font-weight: 700
+        &:hover
+        &:active
+        &:focus
+          filter: none !important
+      .-index-pickups-desc
+        font-size: 1.25em
+        font-weight: 200
+        &:hover
+        &:active
+        &:focus
+          filter: none !important

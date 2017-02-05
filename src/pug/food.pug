@@ -7,11 +7,11 @@ html(lang="ja")
     include includes/_meta.pug
   body
     include includes/_nav.pug
-    div.wrap
-      div.container
-        div.row
-          div.col-12
-            div.py-3
+    .wrap
+      .container
+        .row
+          .col-12
+            .py-3
               h1 #{page.title}
               - for (var i in fes.foods) {
               p
@@ -22,3 +22,4 @@ html(lang="ja")
                 br
                 - }
               - }
+    include includes/_footer.pug

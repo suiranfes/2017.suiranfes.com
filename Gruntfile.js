@@ -32,8 +32,13 @@ module.exports = function(grunt){
         },
         stylus: {
             compile: {
+                options: {
+                    import: [
+                        'nib'
+                    ]
+                },
                 files: {
-                    'docs/css/default.css' : ['src/styl/default.styl']
+                    'docs/css/default.css' : ['src/styl/*.styl', '!' + 'src/styl/_*.styl']
                 }
             }
         },

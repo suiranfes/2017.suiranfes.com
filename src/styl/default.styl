@@ -1,67 +1,28 @@
-@import 'nib'
 @charset "UTF-8";
-
+@import '_setting'
 /*!
 *
 * 群馬県立高崎高等学校 第65回翠巒祭
 * Copyright 2017 Gunma Pref. Takasaki High School the 65th Suiran Festival
 *
 */
+
+html
+body
+  margin: 0
+  padding: 0
+  overflow-x: hidden
+  background-color: site-colorpalet-bg
+  background-image: url(bgimg-n)
+
+.bg-suiranfes
+  background-color: site-colorpalet-theme !important
+
 /*
 *
-* index
+* footer
 *
 */
-
-.-index-first
-  overflow-x: hidden
-
-.-index-left
-  text-align: right
-  .-index-title
-    font-size: 2.8em
-  .-index-theme
-    font-size: 2.5em
-    font-weight: 700
-  .-index-themeinjap
-    font-size: 1.5em
-  .-index-date
-    font-weight: 700
-    .-index-date-m
-      font-size: 1.5em
-    .-index-date-day1num
-    .-index-date-day1Sat
-    .-index-date-day2num
-    .-index-date-day2Sun
-      font-size: 1.7em
-    .-index-date-1Sat
-      color: blue
-    .-index-date-2Sun
-      color: red
-
-.-index-right
-  a
-    color: black
-    &:link
-    &:visited
-      color: black
-    &:active
-    &:hover
-      color: maroon
-      text-decoration: none
-  .-index-pickups-wrap
-    padding: 1.75em
-    &.Attention
-      padding: 3em 1.75em
-      background-color: yellow
-    &.Bus
-      background-color: yellowgreen
-    &.Food
-      background-color: cyan
-    .-index-pickups
-      .-index-pickups-head
-        font-size: 2em
-        font-weight: 700
-      .-index-pickups-desc
-        font-size: 1.25em
-        font-weight: 200
+footer
+  background-color: #6b1a14
+  color: #e7e7e7

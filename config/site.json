@@ -59,6 +59,11 @@
                 "description" : "うちわとクリアファイルを配布します！",
                 "keywords" : ["スイラン祭"]
             }
-        ]
+        ],
+        "colorpalet" : {
+            "theme" : "#e7001d",
+            "suiran-blue" : "#0071b2",
+            "bg" : "#eddda6"
+        }
     }
 }
