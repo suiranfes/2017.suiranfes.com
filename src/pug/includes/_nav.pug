@@ -1,3 +1,10 @@
+.loading.pt-5
+  p Now Loading......
+.fontloader
+  .a Aあ翠
+  .b Aあ翠
+  .c Aあ翠
+
 nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse.bg-suiranfes
   button.navbar-toggler.navbar-toggler-right(type="button", data-toggle="collapse", data-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
     span.navbar-toggler-icon
@@ -10,3 +17,5 @@ nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse.bg-suiranfes
         a.nav-link(href=`/${site.pages[i].name}.html`) #{site.pages[i].title}
       -   }
       - }
+script
+  include ../../js/loading.js

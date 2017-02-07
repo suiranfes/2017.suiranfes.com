@@ -24,33 +24,40 @@
         },
         "pantene" : [
             {
+                "id" : "B01",
+                "type" : "club",
                 "name" : "Railway_Reserch_Club",
                 "title" : "鉄道研究部",
                 "description" : "こんにちは。鉄道研究部です。",
                 "attractions" : [ "巨大ジオラマ", "運転体験", "記念切符配布" ],
-                "room" : "1-6",
+                "place" : {
+                    "floor" : "1",
+                    "room" : "6"
+                },
                 "hosts" : [
                     {
-                        "type" : "club",
                         "name" : "Railway_Reserch_Club",
                         "title" : "鉄道研究部"
                     }
                 ]
             },
             {
+                "id" : "A01",
+                "type" : "homeroom",
                 "name" : "Alice_in_Wonderland",
                 "title" : "アソス IN WONDERLAND",
                 "description" : "アソスと一緒に写真を撮ろう！",
                 "attractions" : [ "アリス", "写真撮影" ],
-                "room" : "1-6",
+                "place" : {
+                    "floor" : "2",
+                    "room" : "5"
+                },
                 "hosts" : [
                     {
-                        "type" : "homeroom",
                         "name" : "3-5",
                         "title" : "3年5組"
                     },
                     {
-                        "type" : "homeroom",
                         "name" : "3-6",
                         "title" : "3年6組"
                     }

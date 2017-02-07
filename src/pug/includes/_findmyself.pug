@@ -18,3 +18,10 @@
 -     page = arrayMerge( page, site.pages[i] )
 -   }
 - }
+- page.keyword = ""
+- for( var i in page.keywords ) {
+- page.keyword += page.keywords[i]
+-   if ( i < page.keywords.length ) {
+-     page.keyword += ","
+-   }
+- }
