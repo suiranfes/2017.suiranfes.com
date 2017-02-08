@@ -38,10 +38,14 @@ html(lang="ja")
                             | #{printableDate}
                         .badge.badge-pill(class=badgeType,itemprop="keywords")
                           | #{site.updatebadges[site.updates[i].badge].title}
-                      h5(itemprop="name").my-1
+                      h5(itemprop="headline").my-1
                         | #{site.updates[i].title}
                       p(itemprop="articleBody")
                         | #{site.updates[i].description}
+                      meta(itemprop="author", content="第65回翠巒祭実行委員会")
+                      meta(itemprop="publisher", content="第65回翠巒祭公式サイト")
+                      meta(itemprop="image", content=`${site.URL}${sitecardpath}`)
+                      
                   - for( var i in site.updates ) {
                   -   var printableDate = printDate(site.updates[i].date)
                   -   var badgeType = "badge-" + site.updatebadges[site.updates[i].badge].style
