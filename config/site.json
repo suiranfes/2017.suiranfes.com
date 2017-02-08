@@ -95,15 +95,15 @@
                 "title" : "DEV1",
                 "description" : "",
                 "link" : "",
-                "badge" : "new"
+                "badge" : "delete"
             },
             {
                 "date" : "2017-04-02T14:00+09:00",
                 "name" : "dev2",
                 "title" : "DEV2",
                 "description" : "",
-                "link" : "",
-                "badge" : "new"
+                "link" : "about.html",
+                "badge" : "modify"
             },
             {
                 "date" : "2017-05-02T11:00+09:00",
@@ -111,7 +111,7 @@
                 "title" : "DEV3",
                 "description" : "",
                 "link" : "",
-                "badge" : "new"
+                "badge" : "modify"
             },
             {
                 "date" : "2017-06-01T19:00+09:00",
@@ -119,7 +119,7 @@
                 "title" : "DEV4",
                 "description" : "",
                 "link" : "",
-                "badge" : "new"
+                "badge" : "revice"
             },
             {
                 "date" : "2017-04-01T12:00+09:00",
@@ -127,13 +127,33 @@
                 "title" : "DEV5",
                 "description" : "",
                 "link" : "",
-                "badge" : "new"
+                "badge" : "add"
             }
         ],
         "updatebadges" : {
             "new" : {
                 "title" : "新規公開",
                 "style" : "success"
+            },
+            "revice" : {
+                "title" : "訂正",
+                "style" : "warning"
+            },
+            "modify" : {
+                "title" : "改善",
+                "style" : "warning"
+            },
+            "change" : {
+                "title" : "変更",
+                "style" : "primary"
+            },
+            "add" : {
+                "title" : "追加",
+                "style" : "info"
+            },
+            "delete" : {
+                "title" : "削除",
+                "style" : "danger"
             }
         }
     }
