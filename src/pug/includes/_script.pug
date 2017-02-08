@@ -1,0 +1,54 @@
+- function arrayMerge() {
+-   if (arguments.length === 0) return false
+-   var i, len, key, result = new Object()
+-   for (i = 0, len = arguments.length;i < len; i++) {
+-     if (typeof arguments[i] !== 'object') continue
+-     for (key in arguments[i]) {
+-       if (isFinite(key)) {
+-         result.push(arguments[i][key])
+-       } else {
+-         result[key] = arguments[i][key]
+-       }
+-     }
+-   }
+-   return result
+- }
+
+- function printDate( data, printtype ){
+-   if (arguments.length === 0) return false;
+-   var upData,upYear,upMonth,upDate,upHours,upMinutes,upDay,DayArray,result = ""
+-   upData    = new Date(data)
+-   upYear    = upData.getFullYear()
+-   upMonth   = upData.getMonth() + 1
+-   upDate    = upData.getDate()
+-   upHours   = upData.getHours()
+-   upMinutes = ( '00' + upData.getMinutes() ).slice(-2)
+-   upDay     = upData.getDay()
+-   DayArray  = ["日","月","火","水","木","金","土"]
+-   
+-   if(printtype == "date"){
+-     result = upYear+'年'+upMonth+'月'+upDate+'日'+'('+DayArray[upDay]+')'
+-   } else if(printtype == "time"){
+-     result = upHours+':'+upMinutes
+-   } else {
+-     result = upYear+'年'+upMonth+'月'+upDate+'日'+'('+DayArray[upDay]+') '+upHours+':'+upMinutes
+-   }
+- 
+-   return result
+- }
+
+- for( var i in site.pages ) {
+-   if( page.id == site.pages[i].name ) {
+-     page = arrayMerge( page, site.pages[i] )
+-   }
+- }
+- page.keyword = ""
+- for( var i in page.keywords ) {
+- page.keyword += page.keywords[i]
+-   if ( i < page.keywords.length - 1 ) {
+-     page.keyword += ","
+-   }
+- }
+- site.updates.sort(function(a,b) {
+-   return (a.date < b.date ? 1 : -1);
+- });

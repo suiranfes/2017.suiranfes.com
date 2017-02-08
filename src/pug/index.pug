@@ -3,27 +3,64 @@
 doctype
 html(lang="ja")
   head
-    include includes/_findmyself.pug
+    include includes/_script.pug
     include includes/_meta.pug
   body
     include includes/_nav.pug
     .wrap.-index-first
       .row.-index-second
-        .col-md-6.col-xl-4
-          .py-3.-index-left.text-font-mpc
-            .container
-              h1.-index-title #{site.title}
-              span.-index-theme #{site.theme}
-              br
-              span.-index-themeinjap  『#{site.themeinjap}』
-              p.-index-date
-                span.-index-date-y 2017年
-                span.-index-date-m 6月
-                span.-index-date-day1num 3日
-                span.-index-date-day1Sat (土)
+        .col-md-6.col-xl-7
+          .row
+            .col-xl-8.py-3.-index-left.text-font-mpc
+              .container
+                h1.-index-title #{site.title}
+                span.-index-theme #{site.theme}
                 br
-                span.-index-date-day2num 4日
-                span.-index-date-day2Sun (日)
+                span.-index-themeinjap  『#{site.themeinjap}』
+                p.-index-date
+                  span.-index-date-y 2017年
+                  span.-index-date-m 6月
+                  span.-index-date-day1num 3日
+                  span.-index-date-day1Sat (土)
+                  br
+                  span.-index-date-day2num 4日
+                  span.-index-date-day2Sun (日)
+            .col-xl-4.py-4
+              .-index-mediun
+                .list-group
+                  .list-group-item
+                    h3.my-1 更新情報
+                  mixin updatearticle
+                    article(itemscope, itemtype="http://schema.org/NewsArticle").w-100.flex-column.align-items-start
+                      .d-flex.w-100.justify-content-between
+                        small
+                          time(itemprop="datePublished", datetime=site.updates[i].date, content=site.updates[i].date)
+                            | #{printableDate}
+                        .badge.badge-pill(class=badgeType,itemprop="keywords")
+                          | #{site.updatebadges[site.updates[i].badge].title}
+                      h5(itemprop="name").my-1
+                        | #{site.updates[i].title}
+                      p(itemprop="articleBody")
+                        | #{site.updates[i].description}
+                  - for( var i in site.updates ) {
+                  -   var printableDate = printDate(site.updates[i].date)
+                  -   var badgeType = "badge-" + site.updatebadges[site.updates[i].badge].style
+                  -   if( i == 0 ){
+                    if site.updates[i].link
+                      a(href=site.updates[i].link).list-group-item.list-group-item-action.active
+                        +updatearticle
+                    else
+                      .list-group-item.active
+                        +updatearticle
+                  -   } else {
+                    if site.updates[i].link
+                      a(href=site.updates[i].link).list-group-item.list-group-item-action
+                        +updatearticle
+                    else
+                      .list-group-item
+                        +updatearticle
+                  -   }
+                  - }
         .col-md-6.col-xl-5
           .-index-right
             a(href="attention.html").Attention

@@ -71,6 +71,30 @@
             "theme" : "#e7001d",
             "suiran-blue" : "#0071b2",
             "bg" : "#eddda6"
+        },
+        "updates" : [
+            {
+                "date" : "2017-04-01T12:10+09:00",
+                "name" : "release_attention",
+                "title" : "翠巒祭でのご注意",
+                "description" : "",
+                "link" : "attention.html",
+                "badge" : "new"
+            },
+            {
+                "date" : "2017-04-01T12:00+09:00",
+                "name" : "site_open",
+                "title" : "第65回サイト正式版公開",
+                "description" : "第65回もよろしくお願いします。",
+                "link" : "",
+                "badge" : "new"
+            }
+        ],
+        "updatebadges" : {
+            "new" : {
+                "title" : "新規公開",
+                "style" : "success"
+            }
         }
     }
 }

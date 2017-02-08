@@ -66,7 +66,7 @@ module.exports = function(grunt){
 
 function arrayMerge() {
     if (arguments.length === 0) return false;
-    var i, len, key, result = {};
+    var i, len, key, result = new Object();
     for (i = 0, len = arguments.length;i < len; i++) {
         if (typeof arguments[i] !== 'object') continue;
         for (key in arguments[i]) {
