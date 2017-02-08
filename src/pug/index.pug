@@ -11,7 +11,7 @@ html(lang="ja")
       .row.-index-second
         .col-md-6.col-xl-7
           .row
-            .col-xl-8.py-3.-index-left.text-font-mpc
+            .col-xl-7.py-3.-index-left.text-font-mpc
               .container
                 h1.-index-title #{site.title}
                 span.-index-theme #{site.theme}
@@ -25,9 +25,9 @@ html(lang="ja")
                   br
                   span.-index-date-day2num 4日
                   span.-index-date-day2Sun (日)
-            .col-xl-4.py-4
+            .col-xl-5.py-4
               .-index-mediun
-                .list-group
+                .list-group.mx-2
                   .list-group-item
                     h3.my-1 更新情報
                   mixin updatearticle
@@ -39,7 +39,10 @@ html(lang="ja")
                         .badge.badge-pill(class=badgeType,itemprop="keywords")
                           | #{site.updatebadges[site.updates[i].badge].title}
                       h5(itemprop="headline").my-1
-                        | #{site.updates[i].title}
+                        - if(site.updates[i].link){
+                          i.fa.fa-link(aria-hidden="true")
+                        - }
+                          | #{site.updates[i].title}
                       p(itemprop="articleBody")
                         | #{site.updates[i].description}
                       meta(itemprop="author", itemtype="http://schema.org/Thing", content="群馬県立高崎高等学校 第65回翠巒祭実行委員会")
