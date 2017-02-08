@@ -42,10 +42,14 @@ html(lang="ja")
                         | #{site.updates[i].title}
                       p(itemprop="articleBody")
                         | #{site.updates[i].description}
-                      meta(itemprop="author", itemtype="Thing", content="群馬県立高崎高等学校 第65回翠巒祭実行委員会")
-                      meta(itemprop="publisher", itemtype="Organization", itemscope)
-                      meta(itemprop="name", content="第65回翠巒祭公式サイト")
-                      meta(itemprop="image", content=`${site.URL}${site.sitecardpath}`)
+                      meta(itemprop="author", itemtype="http://schema.org/Thing", content="群馬県立高崎高等学校 第65回翠巒祭実行委員会")
+                      span(itemprop="publisher", itemtype="http://schema.org/Organization", itemscope)
+                        meta(itemprop="name", content="第65回翠巒祭公式サイト")
+                        meta(itemprop="logo", content=`${site.URL}${site.iconpath}`)
+                      span(itemprop="image", itemtype="http://schema.org/ImageObject", itemscope)
+                        meta(itemprop="url", content=`${site.URL}${site.sitecardpath}`)
+                        meta(itemprop="width", content="700")
+                        meta(itemprop="height", content="389")
                       
                   - for( var i in site.updates ) {
                   -   var printableDate = printDate(site.updates[i].date)
