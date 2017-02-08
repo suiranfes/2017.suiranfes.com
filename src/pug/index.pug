@@ -42,9 +42,9 @@ html(lang="ja")
                         | #{site.updates[i].title}
                       p(itemprop="articleBody")
                         | #{site.updates[i].description}
-                      meta(itemprop="author", content="群馬県立高崎高等学校 第65回翠巒祭実行委員会")
+                      meta(itemprop="author", itemtype="Thing", content="群馬県立高崎高等学校 第65回翠巒祭実行委員会")
                       meta(itemprop="publisher", itemtype="Organization", itemscope)
-                      meta(itemprop="name", content="群馬県立高崎高等学校 第65回翠巒祭実行委員会")
+                      meta(itemprop="name", content="第65回翠巒祭公式サイト")
                       meta(itemprop="image", content=`${site.URL}${site.sitecardpath}`)
                       
                   - for( var i in site.updates ) {
