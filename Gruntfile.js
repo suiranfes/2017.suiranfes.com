@@ -2,6 +2,7 @@ var src = {
    'pug': ['src/pug/**/*.pug', '!' + 'src/pug/**/_*.pug'],
    'everypug': 'src/pug/**/*.pug',
    'json': 'config/**/*.json',
+   'js': 'src/js/**/*.js',
    'styl': ['src/styl/**/*.styl', '!' + 'src/styl/**/_*.styl'],
    'everystyl': 'src/styl/**/*.styl'
 };
@@ -38,12 +39,12 @@ module.exports = function(grunt){
                     ]
                 },
                 files: {
-                    'docs/css/default.css' : ['src/styl/*.styl', '!' + 'src/styl/_*.styl']
+                    'docs/css/style.css' : ['src/styl/*.styl', '!' + 'src/styl/_*.styl']
                 }
             }
         },
         watch: {
-            files: [src.everypug, src.json, src.everystyl, 'Gruntfile.js'],
+            files: [src.everypug, src.json, src.everystyl, src.js,'Gruntfile.js'],
             tasks: ['default']
         },
         connect: {

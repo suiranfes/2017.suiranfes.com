@@ -5,6 +5,7 @@ html(lang="ja")
   head
     include includes/_script.pug
     include includes/_meta.pug
+    include includes/_includes.pug
   body
     include includes/_nav.pug
     .wrap.-index-first
@@ -26,7 +27,7 @@ html(lang="ja")
                   span.-index-date-day2num 4日
                   span.-index-date-day2Sun (日)
             .col-xl-5.py-4
-              .-index-mediun
+              .-index-middle
                 .list-group.mx-2
                   .list-group-item
                     h3.my-1 更新情報
@@ -67,6 +68,15 @@ html(lang="ja")
                     else
                       .list-group-item.active
                         +updatearticle
+                  -   } else if ( i == 5 ) {
+                    a(href="javascript:void(0);").list-group-item.list-group-item-action
+                      b もっと見る
+                    if site.updates[i].link
+                      a(href=site.updates[i].link).list-group-item.list-group-item-action
+                        +updatearticle
+                    else
+                      .list-group-item
+                        +updatearticle
                   -   } else {
                     if site.updates[i].link
                       a(href=site.updates[i].link).list-group-item.list-group-item-action
@@ -76,6 +86,8 @@ html(lang="ja")
                         +updatearticle
                   -   }
                   - }
+                  a(href="javascript:void(0);").list-group-item.list-group-item-action
+                    b 隠す
         .col-md-6.col-xl-5
           .-index-right
             a(href="attention.html").Attention

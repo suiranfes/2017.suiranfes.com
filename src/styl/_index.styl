@@ -3,28 +3,73 @@
 * index
 *
 */
+/*
+*
+* LEFT
+*
+*/
+
 .-index-left
   text-align: right
+
   .-index-title
     font-size: 2.8em
+
   .-index-theme
     font-size: 2.5em
     font-weight: 700
+
   .-index-themeinjap
     font-size: 1.5em
+
   .-index-date
     font-weight: 700
+
     .-index-date-m
       font-size: 1.5em
+
     .-index-date-day1num
     .-index-date-day1Sat
     .-index-date-day2num
     .-index-date-day2Sun
       font-size: 1.7em
+
     .-index-date-day1Sat
       color: blue
+
     .-index-date-day2Sun
       color: red
+
+/*
+*
+* MIDDLE
+*
+*/
+
+.-index-middle
+
+  .list-group-item
+    @extend .bgimg-s
+    transform-origin: 50% 50%
+
+  .list-group-item:nth-child(7)
+  .list-group-item:last-child
+    text-align: center !important
+    b
+      text-align: inherit
+      width: 100%
+
+  .list-group-item:nth-child(n+8)
+    display: none
+
+  .list-group-item.active
+    @extend .bgimg-n
+
+/*
+*
+* RIGHT
+*
+*/
 
 .-index-right
   a

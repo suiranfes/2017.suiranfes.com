@@ -26,6 +26,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "marked": "^0.3.6",
     "pug-cli": "^1.0.0-alpha6",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "uglify-js": "^2.7.5"
   }
 }

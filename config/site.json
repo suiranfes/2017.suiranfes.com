@@ -70,7 +70,7 @@
         "colorpalet" : {
             "theme" : "#e7001d",
             "suiran-blue" : "#0071b2",
-            "bg" : "#eddda6"
+            "bg" : "#f2e4b3"
         },
         "updates" : [
             {
@@ -85,7 +85,7 @@
                 "date" : "2017-04-01T12:00+09:00",
                 "name" : "site_open",
                 "title" : "第65回サイト正式版公開",
-                "description" : "",
+                "description" : "よろしくおねがいします",
                 "link" : "",
                 "badge" : "new"
             },
