@@ -72,6 +72,32 @@
             "suiran-blue" : "#0071b2",
             "bg" : "#f2e4b3"
         },
+        "updatebadges" : {
+            "new" : {
+                "title" : "新規公開",
+                "style" : "success"
+            },
+            "revice" : {
+                "title" : "訂正",
+                "style" : "warning"
+            },
+            "modify" : {
+                "title" : "改善",
+                "style" : "warning"
+            },
+            "change" : {
+                "title" : "変更",
+                "style" : "primary"
+            },
+            "add" : {
+                "title" : "追加",
+                "style" : "info"
+            },
+            "delete" : {
+                "title" : "削除",
+                "style" : "danger"
+            }
+        },
         "updates" : [
             {
                 "date" : "2017-04-01T12:10+09:00",
@@ -129,32 +155,6 @@
                 "link" : "",
                 "badge" : "add"
             }
-        ],
-        "updatebadges" : {
-            "new" : {
-                "title" : "新規公開",
-                "style" : "success"
-            },
-            "revice" : {
-                "title" : "訂正",
-                "style" : "warning"
-            },
-            "modify" : {
-                "title" : "改善",
-                "style" : "warning"
-            },
-            "change" : {
-                "title" : "変更",
-                "style" : "primary"
-            },
-            "add" : {
-                "title" : "追加",
-                "style" : "info"
-            },
-            "delete" : {
-                "title" : "削除",
-                "style" : "danger"
-            }
-        }
+        ]
     }
 }
