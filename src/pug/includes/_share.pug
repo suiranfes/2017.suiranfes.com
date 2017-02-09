@@ -1,0 +1,26 @@
+section#share.py-4
+  span.shareSNS
+    p.my-1: b SNSで #翠巒祭 をシェア
+    a(data-label="line-share",href=`line://msg/text/?`, target="_blank").btn.btn-line.mr-2
+      | LINEで送る
+    a(data-label="tweet",href=`https://twitter.com/intent/tweet?url=https://suiranfes.com/&text=`, target="_blank").btn.btn-tweet.mr-2
+      i.fa.fa-twitter(aria-hidden="true") 
+      | ツイート
+    a(data-label="fbshare",href="https://www.Facebook.com/sharer/sharer.php?u=https://suiranfes.com/", target="_blank").btn.btn-facebook.mr-2
+        i.fa.fa-facebook-square(aria-hidden="true") 
+        | Facebook　
+        .fb-like(data-href="https://suiranfes.com/", data-layout="button_count", data-action="like", data-show-faces="true", data-share="false")
+    a(data-label="gplusshare",href="https://plus.google.com/share?url=suiranfes.com", target="_blank").btn.btn-gplus.mr-2
+        i.fa.fa-google-plus(aria-hidden="true") 
+        | Google+　
+        .g-plusone(data-callback="gacb_gplusone", data-href="https://suiranfes.com/")
+    a(data-label="",href=`http://b.hatena.ne.jp/entry/suiranfes.com`, target="_blank").btn.btn-hatena.mr-2
+      | はてブ
+  span.followSNS
+    p.my-1: b 翠巒祭の最新情報
+    a(data-label="twitter-follow",href="https://twitter.com/suiranfes", target="_blank").btn.btn-twitter-f.mr-2
+      i.fa.fa-twitter-square(aria-hidden="true") 
+      | @suiranfes
+    a(data-label="youtube",href="https://youtube.com/翠巒祭", target="_blank").btn.btn-youtube-f.mr-2
+      i.fa.fa-youtube(aria-hidden="true") 
+      | 翠巒祭チャンネル
