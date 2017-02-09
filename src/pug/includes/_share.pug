@@ -1,9 +1,9 @@
 section#share.py-4
   span.shareSNS.py-1
     p.my-1: b SNSで #翠巒祭 をシェア
-    a(data-label="line-share",href=`line://msg/text/?`, target="_blank").btn.btn-line.mr-2.my-1
+    a(data-label="line-share",href=`line://msg/text/?${site.sharetext.line}`, target="_blank").btn.btn-line.mr-2.my-1
       | LINEで送る
-    a(data-label="tweet",href=`https://twitter.com/intent/tweet?url=https://suiranfes.com/&text=`, target="_blank").btn.btn-tweet.mr-2.my-1
+    a(data-label="tweet",href=`https://twitter.com/intent/tweet?url=https://suiranfes.com/&text=${site.sharetext.twitter}`, target="_blank").btn.btn-tweet.mr-2.my-1
       i.fa.fa-twitter(aria-hidden="true") 
       | ツイート
     a(data-label="fbshare",href="https://www.Facebook.com/sharer/sharer.php?u=https://suiranfes.com/", target="_blank").btn.btn-facebook.mr-2.my-1
