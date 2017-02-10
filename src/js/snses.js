@@ -67,6 +67,7 @@ window.fbAsyncInit = function() {
 }
 
 $(function(){
+try {
   $.ajaxSetup({ cache: true });
   $.getScript('//connect.facebook.net/ja_JP/sdk.js', function(){
     FB.init({
@@ -77,6 +78,7 @@ $(function(){
     });
     $('#loginbutton,#feedbutton').removeAttr('disabled');
   });
+} catch(e) { }
 });
 
 $(document).ready(function(){
