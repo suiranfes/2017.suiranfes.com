@@ -15588,15 +15588,9 @@ $('.btn-social-action').on('click',function(){
   } else if(thelabel == "fbshare"){
     socialNw = "Facebook";
     socialAc = "share";
-  } else if(thelabel == "fblike"){
-    socialNw = "Facebook";
-    socialAc = "like";
   } else if(thelabel == "gplusshare"){
     socialNw = "Google+";
     socialAc = "share";
-  } else if(thelabel == "gplusone"){
-    socialNw = "Google+";
-    socialAc = "+1";
   } else if(thelabel == "hatena"){
     socialNw = "HatenaBookmark";
     socialAc = "Bookmark";
@@ -15638,30 +15632,10 @@ window.fbAsyncInit = function() {
 };
 }
 
-$(function(){
-  $.ajaxSetup({ cache: true });
-  $.getScript('//connect.facebook.net/ja_JP/sdk.js', function(){
-    FB.init({
-      appId      : '689195224565280',
-      status     : true,
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-    $('#loginbutton,#feedbutton').removeAttr('disabled');
-  });
-});
-
 $(document).ready(function(){
   socialbutton();
 });
 
 $(window).on('load',function(){
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/ja_JP/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
   FB.XFBML.parse();
 });
