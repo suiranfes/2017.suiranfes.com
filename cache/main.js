@@ -15639,7 +15639,6 @@ window.fbAsyncInit = function() {
 }
 
 $(function(){
-try {
   $.ajaxSetup({ cache: true });
   $.getScript('//connect.facebook.net/ja_JP/sdk.js', function(){
     FB.init({
@@ -15650,7 +15649,6 @@ try {
     });
     $('#loginbutton,#feedbutton').removeAttr('disabled');
   });
-} catch(e) { }
 });
 
 $(document).ready(function(){
@@ -15658,5 +15656,12 @@ $(document).ready(function(){
 });
 
 $(window).on('load',function(){
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/ja_JP/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
   FB.XFBML.parse();
 });
