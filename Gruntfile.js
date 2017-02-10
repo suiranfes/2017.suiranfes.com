@@ -45,6 +45,21 @@ module.exports = function(grunt){
         },
         concat: {
             bundle: {
+                files: {
+                    'cache/main.js' : [
+                        'src/js/jquery.js',
+                        'src/js/tether.js',
+                        'src/js/bootstrap.js',
+                        'src/js/blockoldandro.js',
+                        'src/js/loading.js',
+                        'src/js/suiranfes-updates.js',
+                        'src/js/snses.js'
+                    ]
+                }
+            }
+        },
+        uglify: {
+            compress: {
                 options: {
                     sequences     : true,  // join consecutive statemets with the “comma operator”
                     properties    : true,  // optimize property access: a["foo"] → a.foo
@@ -65,21 +80,6 @@ module.exports = function(grunt){
                     side_effects  : true,  // drop side-effect-free statements
                     warnings      : true,  // warn about potentially dangerous optimizations/code
                 },
-                files: {
-                    'cache/main.js' : [
-                        'src/js/jquery.js',
-                        'src/js/tether.js',
-                        'src/js/bootstrap.js',
-                        'src/js/blockoldandro.js',
-                        'src/js/loading.js',
-                        'src/js/suiranfes-updates.js',
-                        'src/js/snses.js'
-                    ]
-                }
-            }
-        },
-        uglify: {
-            compress: {
                 files: {
                     'docs/js/main.js' : 'cache/main.js'
                 }
