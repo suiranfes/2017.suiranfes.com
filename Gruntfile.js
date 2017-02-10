@@ -71,6 +71,7 @@ module.exports = function(grunt){
                         'src/js/tether.js',
                         'src/js/bootstrap.js',
                         'src/js/blockoldandro.js',
+                        'src/js/loading.js',
                         'src/js/suiranfes-updates.js',
                         'src/js/snses.js'
                     ]

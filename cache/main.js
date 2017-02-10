@@ -15559,6 +15559,12 @@ $(function(){
     return false;
   }
 });
+$(window).on('load',function(){
+    $(".loading").fadeOut("fast");
+    $(".wrap").css("display","block");
+    $(".fontloader").css("display","none");
+});
+
 $(document).ready(function(){
     $('.-index-middle .list-group-item').eq(6).on("click", function(){
         $('.-index-middle .list-group-item').eq(6).hide();
@@ -15631,6 +15637,19 @@ window.fbAsyncInit = function() {
   });
 };
 }
+
+$(function(){
+  $.ajaxSetup({ cache: true });
+  $.getScript('//connect.facebook.net/ja_JP/sdk.js', function(){
+    FB.init({
+      appId      : '689195224565280',
+      status     : true,
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    $('#loginbutton,#feedbutton').removeAttr('disabled');
+  });
+});
 
 $(document).ready(function(){
   socialbutton();
