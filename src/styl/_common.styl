@@ -2,16 +2,22 @@ html
 body
   margin: 0
   padding: 0
-  overflow-x: hidden
   background-color: site-colorpalet-bg
   @extend .bgimg-g
+
+body
+  nav
+    position: sticky !important
+    top: 0
+    left: 0
+    z-index: 1030
 
 .bg-suiranfes
   background-color: site-colorpalet-theme !important
 
 .wrap
   min-height: 94vh
-  padding-top: 72px
+  overflow-x: hidden
   display: none
 
 .btn
