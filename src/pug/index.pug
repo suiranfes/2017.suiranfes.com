@@ -3,7 +3,7 @@
 doctype
 html(lang="ja")
   head
-    include includes/_script.pug
+    include includes/_mixins.pug
     include includes/_meta.pug
     include includes/_includes.pug
   body
@@ -37,8 +37,7 @@ html(lang="ja")
                         small
                           time(itemprop="datePublished", datetime=site.updates[i].date, content=site.updates[i].date)
                             | #{printableDate}
-                        .badge.badge-pill(class=badgeType,itemprop="keywords")
-                          | #{site.updatebadges[site.updates[i].badge].title}
+                        +bootstrap_badge_pill( site.updatebadges[site.updates[i].badge].title, site.updatebadges[site.updates[i].badge].style, "keywords" )
                       h5(itemprop="headline").my-1
                         - if(site.updates[i].link){
                           i.fa.fa-chevron-right(aria-hidden="true")
@@ -60,7 +59,6 @@ html(lang="ja")
                       
                   - for( var i in site.updates ) {
                   -   var printableDate = printDate(site.updates[i].date)
-                  -   var badgeType = "badge-" + site.updatebadges[site.updates[i].badge].style
                   -   if( i == 0 ){
                     if site.updates[i].link
                       a(href=site.updates[i].link).list-group-item.list-group-item-action.active

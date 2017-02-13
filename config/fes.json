@@ -64,6 +64,16 @@
                 ]
             }
         ],
+        "pantenebadges" : {
+            "club" : {
+                "title" : "部活動展示",
+                "style" : "success"
+            },
+            "homeroom" : {
+                "title" : "クラス展示",
+                "style" : "primary"
+            }
+        },
         "foods" : [
             {
                 "name" : "juice",

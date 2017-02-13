@@ -1,0 +1,9 @@
+include _script.pug
+
+mixin bootstrap_badge_pill( $badge_title, $badge_style, $badge_schema_itemprop )
+  .badge.badge-pill(class=`badge-${$badge_style}`,itemprop=$badge_schema_itemprop)&attributes(attributes)
+    | #{$badge_title}
+
+mixin bootstrap_badge_normal( $badge_title, $badge_style, $badge_schema_itemprop )
+  .badge(class=`badge-${$badge_style}`,itemprop=$badge_schema_itemprop)&attributes(attributes)
+    | #{$badge_title}
