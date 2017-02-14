@@ -1,4 +1,5 @@
 - var page = { id :"food" };
+- var circlenums = [ "", "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑪", "⑫", "⑬", "⑭", "⑮", "⑯", "⑰", "⑱", "⑲", "⑳" ];
 
 doctype
 html(lang="ja")
@@ -16,7 +17,10 @@ html(lang="ja")
               h1 #{page.title}
               - for (var i in fes.foods) {
               p
-                b #{fes.foods[i].title}
+                b #{fes.foods[i].title} 
+                  | @#{fes.foodsshops[fes.foods[i].shop.name].title}
+                  if(fes.foodsshops[fes.foods[i].shop.name].is_plural)
+                    | #{circlenums[fes.foods[i].shop.location]}
                 br
                 - for (var j in fes.foods[i].kinds) {
                 | #{fes.foods[i].kinds[j].title} : #{fes.foods[i].kinds[j].price}

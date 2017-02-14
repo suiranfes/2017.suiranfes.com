@@ -1,4 +1,9 @@
 include _script.pug
+  
+//-**********************************************
+  *      badge
+  *      バッジ
+  ***********************************************
 
 mixin bootstrap_badge_pill( $badge_title, $badge_style, $badge_schema_itemprop )
   .badge.badge-pill(class=`badge-${$badge_style}`,itemprop=$badge_schema_itemprop)&attributes(attributes)
@@ -7,3 +12,34 @@ mixin bootstrap_badge_pill( $badge_title, $badge_style, $badge_schema_itemprop )
 mixin bootstrap_badge_normal( $badge_title, $badge_style, $badge_schema_itemprop )
   .badge(class=`badge-${$badge_style}`,itemprop=$badge_schema_itemprop)&attributes(attributes)
     | #{$badge_title}
+  
+//-**********************************************
+  *      index
+  *      トップページ
+  ***********************************************
+
+mixin updatearticle(i)
+  article(itemscope, itemtype="http://schema.org/NewsArticle").w-100.flex-column.align-items-start
+    .d-flex.w-100.justify-content-between
+      small
+        time(itemprop="datePublished", datetime=site.updates[i].date, content=site.updates[i].date)
+          | #{printableDate}
+        +bootstrap_badge_pill( site.updatebadges[site.updates[i].badge].title, site.updatebadges[site.updates[i].badge].style, "keywords" )
+        h5(itemprop="headline").my-1
+          - if(site.updates[i].link){
+            i.fa.fa-chevron-right(aria-hidden="true")
+          - }
+          | #{site.updates[i].title}
+        p(itemprop="articleBody")
+          | #{site.updates[i].description}
+        meta(itemprop="author", itemtype="http://schema.org/Thing", content="群馬県立高崎高等学校 第65回翠巒祭実行委員会")
+        span(itemprop="publisher", itemtype="http://schema.org/Organization", itemscope)
+          meta(itemprop="name", content="第65回翠巒祭公式サイト")
+          span(itemprop="logo", itemtype="http://schema.org/ImageObject", itemscope)
+            meta(itemprop="url", content=`${site.URL}${site.iconpath}`)
+            meta(itemprop="width", content="600")
+            meta(itemprop="height", content="600")
+        span(itemprop="image", itemtype="http://schema.org/ImageObject", itemscope)
+          meta(itemprop="url", content=`${site.URL}${site.sitecardpath}`)
+          meta(itemprop="width", content="700")
+          meta(itemprop="height", content="389")

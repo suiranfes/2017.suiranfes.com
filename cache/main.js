@@ -15570,9 +15570,11 @@ $(function(){
 });
 
 $(window).on('load',function(){
+
   if(suiranfes_chkandro() == true){
     throw new Error('古いアンドロイドの埋め込みブラウザを検出しました。以降のデータ読み込み終了後に行う処理を中止します。');
   }
+
 });
 $(window).on('load',function(){
     $(".loading").fadeOut("fast");

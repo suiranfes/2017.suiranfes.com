@@ -78,28 +78,66 @@
             {
                 "name" : "juice",
                 "title" : "ジュース",
+                "shop" : {
+                    "name" : "stall",
+                    "location" : 1
+                },
                 "kinds" : [
                     { "name" : "Calpis", "title" : "カルピス", "price" : "150" },
+                    { "name" : "water", "title" : "観音山の天然水", "price" : "150" },
+                    { "name" : "Pocari_Sweat", "title" : "ポカリスエット", "price" : "150" },
                     { "name" : "Ayataka", "title" : "綾鷹", "price" : "120" }
                 ]
             },
             {
                 "name" : "dippin_dots",
                 "title" : "dippin dots 粒粒アイス",
+                "shop" : {
+                    "name" : "stall",
+                    "location" : 6
+                },
                 "kinds" : [
-                    { "name" : "dippin_dots-RAINBOW", "title" : "dippin dots レインボー", "price" : "300" },
-                    { "name" : "dippin_dots-VANILLA", "title" : "dippin dots バニラ", "price" : "300" },
-                    { "name" : "dippin_dots-STRAWBERRY", "title" : "dippin dots ストロベリー", "price" : "300" }
+                    { "name" : "RAINBOW", "title" : "レインボー", "price" : "300" },
+                    { "name" : "VANILLA", "title" : "バニラ", "price" : "300" },
+                    { "name" : "STRAWBERRY", "title" : "ストロベリー", "price" : "300" }
                 ]
             },
             {
                 "name" : "yakisoba",
                 "title" : "やきそば",
+                "shop" : {
+                    "name" : "stall",
+                    "location" : 7
+                },
                 "kinds" : [
                     { "name" : "yakisoba", "title" : "やきそば", "price" : "150" }
                 ]
+            },
+            {
+                "name" : "torihei",
+                "title" : "登利平 鶏めし",
+                "shop" : {
+                    "name" : "bakery"
+                },
+                "kinds" : [
+                    { "name" : "bamboo", "title" : "竹", "price" : "750" }
+                ]
             }
         ],
+        "foodsshops" : {
+            "stall" : {
+                "title" : "模擬店",
+                "is_plural" : true
+            },
+            "bakery" : {
+                "title" : "売店",
+                "is_plural" : false
+            },
+            "cafe" : {
+                "title" : "喫茶",
+                "is_plural" : false
+            }
+        },
         "events" : [
             {
                 "name" : "Ms_Takataka_CONTEST",
