@@ -15,20 +15,20 @@ html(lang="ja")
             .py-3
               h1 #{page.title}
               - for (var i in fes.pantene) {
-              p
-                +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
-                br
-                b ##{fes.pantene[i].id} #{fes.pantene[i].title}
-                br
-                | #{fes.pantene[i].description}
-                br
-                | at #{fes.pantene[i].place.floor}階#{fes.pantene[i].place.room}号室
-              ul
-                each item in fes.pantene[i].attractions
-                  li= item
-              p
-                - for (var j in fes.pantene[i].hosts) {
-                | #{fes.pantene[i].hosts[j].title} 
+                if( i != 0 )
+                  hr
+                p
+                  +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
+                  br
+                  b ##{fes.pantene[i].id} #{fes.pantene[i].title} @#{fes.pantene[i].place.floor}階#{fes.pantene[i].place.room}号室
+                  br
+                  | #{fes.pantene[i].description}
+                ul
+                  each item in fes.pantene[i].attractions
+                    li= item
+                p
+                  - for (var j in fes.pantene[i].hosts) {
+                  | #{fes.pantene[i].hosts[j].title} 
+                  - }
                 - }
-              - }
     include includes/_footer.pug
