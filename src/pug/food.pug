@@ -30,6 +30,7 @@ html(lang="ja")
                     - for(var j in fes.foods[i].kinds) {
                       dt
                         b #{fes.foods[i].kinds[j].title}:#{fes.foods[i].kinds[j].price}円
+                        br
                         +bootstrap_badge_normal("アレルギー物質","primary")
                         if ( fes.foods[i].kinds[j].allergens === undefined )
                           +bootstrap_badge_pill("調査中","warning")
