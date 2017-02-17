@@ -15,18 +15,36 @@ html(lang="ja")
           .col-12
             .py-3
               h1 #{page.title}
-              - for (var i in fes.foods) {
-                if( i != 0 )
-                  hr
-                p
-                  b #{fes.foods[i].title} 
-                    | @#{fes.foodsshops[fes.foods[i].shop.name].title}
-                    if(fes.foodsshops[fes.foods[i].shop.name].is_plural)
+              each foodsshop, key in fes.foodsshops
+                h2 #{foodsshop.title}
+                p!= foodsshop.description.replace(/\r?\n|\r/g,"<br>")
+                - for(var i in fes.foods) {
+                - if ( fes.foods[i].shop.name === key ) {
+                  h4 #{fes.foods[i].title} 
+                  p @#{foodsshop.title}
+                    if(foodsshop.is_plural)
                       | #{circlenums[fes.foods[i].shop.location]}
-                  br
-                  ul
-                    - for (var j in fes.foods[i].kinds) {
-                      li #{fes.foods[i].kinds[j].title} : #{fes.foods[i].kinds[j].price}円
+                    br
+                    span!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
+                  dl
+                    - for(var j in fes.foods[i].kinds) {
+                      dt
+                        b #{fes.foods[i].kinds[j].title}:#{fes.foods[i].kinds[j].price}円
+                        +bootstrap_badge_normal("アレルギー物質","primary")
+                        if ( fes.foods[i].kinds[j].allergens === undefined )
+                          +bootstrap_badge_pill("調査中","warning")
+                        else if ( fes.foods[i].kinds[j].allergens === null )
+                          +bootstrap_badge_pill("なし","success")
+                        else
+                          - for(var k in fes.foods[i].kinds[j].allergens){
+                              +bootstrap_badge_pill(fes.foods[i].kinds[j].allergens[k],"default")
+                          - }
+                        br
+                        if fes.foods[i].kinds[j].description
+                          dd!= fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")
                     - }
-              - }
+                  hr
+                - } }
+              h2 お知らせ
+              p ここでのアレルギー物質とは、特定原材料等27品目のことです。
     include includes/_footer.pug

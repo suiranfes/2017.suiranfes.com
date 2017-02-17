@@ -22,7 +22,7 @@ html(lang="ja")
                   br
                   b ##{fes.pantene[i].id} #{fes.pantene[i].title} @#{fes.pantene[i].place.floor}階#{fes.pantene[i].place.room}号室
                   br
-                  | #{fes.pantene[i].description}
+                  | !{fes.pantene[i].description.replace(/\r?\n|\r/g,"<br>")}
                 ul
                   each item in fes.pantene[i].attractions
                     li= item

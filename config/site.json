@@ -25,21 +25,21 @@
                 "id" : "attention",
                 "name" : "attention",
                 "title" : "ご注意",
-                "description" : "ご来場前にどうかお読みください。",
+                "description" : "ご来場前にどうかお読みください",
                 "keywords" : ["スイラン祭"]
             },
             {
                 "id" : "about",
                 "name" : "about",
                 "title" : "翠巒祭について",
-                "description" : "関係者からのお言葉、翠巒祭の沿革などが書かれています。",
+                "description" : "関係者からのお言葉、翠巒祭の沿革などが書かれています",
                 "keywords" : ["スイラン祭","高崎高校","歴史"]
             },
             {
                 "id" : "access",
                 "name" : "access",
                 "title" : "アクセス",
-                "description" : "当日運行される高崎駅からのシャトルバスなどについてです。",
+                "description" : "当日運行される高崎駅からのシャトルバスなどについてです",
                 "keywords" : ["スイラン祭","バス","シャトル","直通"]
             },
             {
@@ -52,9 +52,16 @@
             {
                 "id" : "food",
                 "name" : "food",
-                "title" : "模擬店･売店･食堂",
-                "description" : "唐揚げ、アイス、ポップコーン、ジュース、etc...模擬店についてです。",
+                "title" : "食べ物",
+                "description" : "唐揚げ、アイス、ポップコーン、ジュース、etc...模擬店・食堂・喫茶についてです",
                 "keywords" : ["スイラン祭","模擬店","食べ物","飲み物"]
+            },
+            {
+                "id" : "events",
+                "name" : "events",
+                "title" : "ステージイベント",
+                "description" : "イベントステージ・体育館でのショーについてです",
+                "keywords" : ["スイラン祭"]
             },
             {
                 "id" : "goods",
@@ -67,7 +74,7 @@
                 "id" : "404",
                 "name" : "404",
                 "title" : "エラー「404」",
-                "description" : "未公開のページか、間違ったアドレスである可能性があります。",
+                "description" : "未公開のページか、間違ったアドレスである可能性があります",
                 "keywords" : [""]
             }
         ],
