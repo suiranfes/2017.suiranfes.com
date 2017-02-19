@@ -1,8 +1,10 @@
 
 link(href=`${site.CDN}2017/suika/4.0.0-alpha.5/css/bootstrap.min.css`, rel="stylesheet")
 link(href=`${site.CDN}2017/font-awesome/4.7.0/css/font-awesome.min.css`, rel="stylesheet")
-link(href="/css/style.css", rel="stylesheet")
+style
+  include:oneline ../../../cache/style.css
 
-script(src=`/js/main.js`)
+script
+  include:oneline ../../../cache/main.min.js
 script(src="https://b.st-hatena.com/js/bookmark_button.js", charset="utf-8", async defer)
 script(src="https://apis.google.com/js/platform.js", async, defer) {lang: 'ja'}

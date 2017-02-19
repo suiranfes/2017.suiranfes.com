@@ -39,7 +39,7 @@ module.exports = function(grunt){
                     ]
                 },
                 files: {
-                    'docs/css/style.css' : ['src/styl/*.styl', '!' + 'src/styl/_*.styl']
+                    'cache/style.css' : ['src/styl/*.styl', '!' + 'src/styl/_*.styl']
                 }
             }
         },
@@ -75,7 +75,7 @@ module.exports = function(grunt){
                     }
                 },
                 files: {
-                    'docs/js/main.js' : 'cache/main.js'
+                    'cache/main.min.js' : 'cache/main.js'
                 }
             }
         },
@@ -150,7 +150,7 @@ function listPages() {
 }
 
   //タスクの登録
-    grunt.registerTask('default', ['clean', 'merge-json', 'pug', 'stylus', 'browserify', 'uglify']);
+    grunt.registerTask('default', ['clean', 'merge-json', 'browserify', 'uglify', 'stylus', 'pug']);
     grunt.registerTask('server', ['default', 'connect', 'watch']);
 
 }

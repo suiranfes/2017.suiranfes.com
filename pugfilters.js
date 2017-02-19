@@ -17,7 +17,6 @@ pugfilters.UglifyJS = function(str) {
     var result = UglifyJS.minify(str, {fromString: true}).code;
     return result;
 };
-pugfilters.stylus = function(str) {
-    var result = UglifyJS.minify(str, {fromString: true}).code;
-    return result;
-};
+pugfilters.oneline = function(str) {
+    return str.replace(/\r?\n/g,"");
+}
