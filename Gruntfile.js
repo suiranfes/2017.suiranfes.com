@@ -43,18 +43,10 @@ module.exports = function(grunt){
                 }
             }
         },
-        concat: {
+        browserify: {
             bundle: {
                 files: {
-                    'cache/main.js' : [
-                        'src/js/jquery.js',
-                        'src/js/tether.js',
-                        'src/js/bootstrap.js',
-                        'src/js/blockoldandro.js',
-                        'src/js/loading.js',
-                        'src/js/suiranfes-updates.js',
-                        'src/js/snses.js'
-                    ]
+                    'cache/main.js' : 'src/js/main.js'
                 }
             }
         },
@@ -107,8 +99,8 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-concat');
 
 function arrayMerge() {
     if (arguments.length === 0) return false;
@@ -158,7 +150,7 @@ function listPages() {
 }
 
   //タスクの登録
-    grunt.registerTask('default', ['clean', 'merge-json', 'pug', 'stylus', 'concat', 'uglify']);
+    grunt.registerTask('default', ['clean', 'merge-json', 'pug', 'stylus', 'browserify', 'uglify']);
     grunt.registerTask('server', ['default', 'connect', 'watch']);
 
 }

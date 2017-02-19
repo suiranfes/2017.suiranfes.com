@@ -1,13 +1,11 @@
-$(function(){
-setTimeout(function() {
+function suiranfes_loaded(){
     $(".loading").fadeOut("fast");
     $(".wrap").css("display","block");
     $(".fontloader").css("display","none");
-}, 10000);
+}
+
+$(function(){
+setTimeout(suiranfes_loaded, 10000);
 });
 
-$(window).on('load',function(){
-    $(".loading").fadeOut("fast");
-    $(".wrap").css("display","block");
-    $(".fontloader").css("display","none");
-});
+$(window).on('load',suiranfes_loaded);

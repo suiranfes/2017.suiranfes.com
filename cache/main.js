@@ -1,3 +1,4 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.1.1
  * https://jquery.com/
@@ -10219,7 +10220,8 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-/*! tether 1.3.3 */
+},{}],2:[function(require,module,exports){
+/*! tether 1.4.0 */
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
@@ -10329,7 +10331,7 @@ var getOrigin = function getOrigin() {
   // are equivilant or not.  We place an element at the top left of the page that will
   // get the same jitter, so we can cancel the two out.
   var node = zeroElement;
-  if (!node) {
+  if (!node || !document.body.contains(node)) {
     node = document.createElement('div');
     node.setAttribute('data-tether-id', uniqueId());
     extend(node.style, {
@@ -10400,7 +10402,11 @@ function getOffsetParent(el) {
   return el.offsetParent || document.documentElement;
 }
 
+var _scrollBarSize = null;
 function getScrollBarSize() {
+  if (_scrollBarSize) {
+    return _scrollBarSize;
+  }
   var inner = document.createElement('div');
   inner.style.width = '100%';
   inner.style.height = '200px';
@@ -10433,7 +10439,8 @@ function getScrollBarSize() {
 
   var width = widthContained - widthScroll;
 
-  return { width: width, height: width };
+  _scrollBarSize = { width: width, height: width };
+  return _scrollBarSize;
 }
 
 function extend() {
@@ -11276,12 +11283,12 @@ var TetherClass = (function (_Evented) {
       var win = doc.defaultView;
 
       var scrollbarSize = undefined;
-      if (doc.body.scrollWidth > win.innerWidth) {
+      if (win.innerHeight > doc.documentElement.clientHeight) {
         scrollbarSize = this.cache('scrollbar-size', getScrollBarSize);
         next.viewport.bottom -= scrollbarSize.height;
       }
 
-      if (doc.body.scrollHeight > win.innerHeight) {
+      if (win.innerWidth > doc.documentElement.clientWidth) {
         scrollbarSize = this.cache('scrollbar-size', getScrollBarSize);
         next.viewport.right -= scrollbarSize.width;
       }
@@ -11402,7 +11409,16 @@ var TetherClass = (function (_Evented) {
             xPos = -_pos.right;
           }
 
-          css[transformKey] = 'translateX(' + Math.round(xPos) + 'px) translateY(' + Math.round(yPos) + 'px)';
+          if (window.matchMedia) {
+            // HubSpot/tether#207
+            var retina = window.matchMedia('only screen and (min-resolution: 1.3dppx)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 1.3)').matches;
+            if (!retina) {
+              xPos = Math.round(xPos);
+              yPos = Math.round(yPos);
+            }
+          }
+
+          css[transformKey] = 'translateX(' + xPos + 'px) translateY(' + yPos + 'px)';
 
           if (transformKey !== 'msTransform') {
             // The Z transform will keep this in the GPU (faster, and prevents artifacts),
@@ -11454,20 +11470,24 @@ var TetherClass = (function (_Evented) {
       }
 
       if (!moved) {
-        var offsetParentIsBody = true;
-        var currentNode = this.element.parentNode;
-        while (currentNode && currentNode.nodeType === 1 && currentNode.tagName !== 'BODY') {
-          if (getComputedStyle(currentNode).position !== 'static') {
-            offsetParentIsBody = false;
-            break;
+        if (this.options.bodyElement) {
+          this.options.bodyElement.appendChild(this.element);
+        } else {
+          var offsetParentIsBody = true;
+          var currentNode = this.element.parentNode;
+          while (currentNode && currentNode.nodeType === 1 && currentNode.tagName !== 'BODY') {
+            if (getComputedStyle(currentNode).position !== 'static') {
+              offsetParentIsBody = false;
+              break;
+            }
+
+            currentNode = currentNode.parentNode;
           }
 
-          currentNode = currentNode.parentNode;
-        }
-
-        if (!offsetParentIsBody) {
-          this.element.parentNode.removeChild(this.element);
-          this.element.ownerDocument.body.appendChild(this.element);
+          if (!offsetParentIsBody) {
+            this.element.parentNode.removeChild(this.element);
+            this.element.ownerDocument.body.appendChild(this.element);
+          }
         }
       }
 
@@ -11487,6 +11507,7 @@ var TetherClass = (function (_Evented) {
       if (write) {
         defer(function () {
           extend(_this8.element.style, writeCSS);
+          _this8.trigger('repositioned');
         });
       }
     }
@@ -12012,6 +12033,36 @@ return Tether;
 
 }));
 
+},{}],3:[function(require,module,exports){
+function suiranfes_chkandro(){
+
+  var isOldAndroidBrowser = false;
+  var ua = window.navigator.userAgent;
+  if (/Android/.test(ua) && /Linux; U;/.test(ua) && !/Chrome/.test(ua)) {
+    isOldAndroidBrowser = true;
+  }
+
+  return isOldAndroidBrowser
+
+}
+
+$(function(){
+
+  if(suiranfes_chkandro() == true){
+    $('.loading').html('<p><a href="intent://suiranfes.com#Intent;scheme=https;action=android.intent.action.VIEW;end">タップでブラウザアプリを開きます。</a></p>');
+    throw new Error('古いアンドロイドの埋め込みブラウザを検出しました。以降のDOMツリー構築後に行う処理を中止します。');
+  }
+
+});
+
+$(window).on('load',function(){
+
+  if(suiranfes_chkandro() == true){
+    throw new Error('古いアンドロイドの埋め込みブラウザを検出しました。以降のデータ読み込み終了後に行う処理を中止します。');
+  }
+
+});
+},{}],4:[function(require,module,exports){
 /*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
@@ -15548,59 +15599,28 @@ var Popover = function (jQuery) {
 
 }();
 
-function suiranfes_chkandro(){
-
-  var isOldAndroidBrowser = false;
-  var ua = window.navigator.userAgent;
-  if (/Android/.test(ua) && /Linux; U;/.test(ua) && !/Chrome/.test(ua)) {
-    isOldAndroidBrowser = true;
-  }
-
-  return isOldAndroidBrowser
-
+},{}],5:[function(require,module,exports){
+function suiranfes_loaded(){
+    $(".loading").fadeOut("fast");
+    $(".wrap").css("display","block");
+    $(".fontloader").css("display","none");
 }
 
 $(function(){
-
-  if(suiranfes_chkandro() == true){
-    $('.loading').html('<p><a href="intent://suiranfes.com#Intent;scheme=https;action=android.intent.action.VIEW;end">タップでブラウザアプリを開きます。</a></p>');
-    throw new Error('古いアンドロイドの埋め込みブラウザを検出しました。以降のDOMツリー構築後に行う処理を中止します。');
-  }
-
+setTimeout(suiranfes_loaded, 10000);
 });
 
-$(window).on('load',function(){
+$(window).on('load',suiranfes_loaded);
 
-  if(suiranfes_chkandro() == true){
-    throw new Error('古いアンドロイドの埋め込みブラウザを検出しました。以降のデータ読み込み終了後に行う処理を中止します。');
-  }
-
-});
-$(function(){
-setTimeout(function() {
-    $(".loading").fadeOut("fast");
-    $(".wrap").css("display","block");
-    $(".fontloader").css("display","none");
-}, 10000);
-});
-
-$(window).on('load',function(){
-    $(".loading").fadeOut("fast");
-    $(".wrap").css("display","block");
-    $(".fontloader").css("display","none");
-});
-
-$(document).ready(function(){
-    $('.-index-middle .list-group-item').eq(6).on("click", function(){
-        $('.-index-middle .list-group-item').eq(6).hide();
-        $('.-index-middle .list-group-item:nth-child(n+8)').slideDown();
-    });
-    $('.-index-middle .list-group-item:last-child').on("click", function(){
-        $('.-index-middle .list-group-item:nth-child(n+8)').hide();
-        $('.-index-middle .list-group-item').eq(6).slideDown();
-    });
-});
-
+},{}],6:[function(require,module,exports){
+window.jQuery = $ = require('jquery');
+Tether = require('tether');
+require('./bootstrap');
+require('./blockoldandro');
+require('./loading');
+require('./suiranfes-updates');
+require('./snses');
+},{"./blockoldandro":3,"./bootstrap":4,"./loading":5,"./snses":7,"./suiranfes-updates":8,"jquery":1,"tether":2}],7:[function(require,module,exports){
 function socialbutton(){
 
 var thelabel = "";
@@ -15683,3 +15703,17 @@ $(document).ready(function(){
 $(window).on('load',function(){
   FB.XFBML.parse();
 });
+
+},{}],8:[function(require,module,exports){
+$(document).ready(function(){
+    $('.-index-middle .list-group-item').eq(6).on("click", function(){
+        $('.-index-middle .list-group-item').eq(6).hide();
+        $('.-index-middle .list-group-item:nth-child(n+8)').slideDown();
+    });
+    $('.-index-middle .list-group-item:last-child').on("click", function(){
+        $('.-index-middle .list-group-item:nth-child(n+8)').hide();
+        $('.-index-middle .list-group-item').eq(6).slideDown();
+    });
+});
+
+},{}]},{},[6]);
