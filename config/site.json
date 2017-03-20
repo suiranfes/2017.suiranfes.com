@@ -59,7 +59,7 @@
             {
                 "id" : "events",
                 "name" : "events",
-                "title" : "ステージイベント",
+                "title" : "ステージ",
                 "description" : "イベントステージ・体育館でのショーについてです",
                 "keywords" : ["スイラン祭"]
             },
