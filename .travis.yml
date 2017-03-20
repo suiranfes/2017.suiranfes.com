@@ -21,5 +21,6 @@ script:
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - git config --global user.email "info@suiranfes.com"
 - git config --global user.name "suiranfestival"
+- git add .
 - git commit -m "Automatic Build by Travis CI (JOB $TRAVIS_JOB_NUMBER)"
 - git push origin master
