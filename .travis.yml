@@ -17,8 +17,8 @@ before_install:
 script:
 - grunt
 - openssl aes-256-cbc -K $encrypted_f4d63df644dd_key -iv $encrypted_f4d63df644dd_iv -in suiranfes.enc -out suiranfes -d
-- cp suiranfes ~/.ssh/suiranfes
-- chmod 600 ~/.ssh/suiranfes
+- cp suiranfes ~/.ssh/id_rsa
+- chmod 600 ~/.ssh/id_rsa
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - git config --global user.email "info@suiranfes.com"
 - git config --global user.name "LuckyBeast"
