@@ -23,5 +23,5 @@ script:
 - git config --global user.email "info@suiranfes.com"
 - git config --global user.name "LuckyBeast"
 - git add --all
-- git commit -m "Automatic Build by Travis CI (JOB $TRAVIS_JOB_NUMBER)"
-- git push origin master
+- git commit -m "Automatic Build by Travis CI $TRAVIS_COMMIT"
+- git push git@github.com:suiranfes/2017.suiranfes.com.git master
