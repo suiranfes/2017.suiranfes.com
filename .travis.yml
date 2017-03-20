@@ -17,11 +17,11 @@ before_install:
 script:
 - grunt
 - openssl aes-256-cbc -K $encrypted_f4d63df644dd_key -iv $encrypted_f4d63df644dd_iv -in suiranfes.enc -out suiranfes -d
-- cp suiranfes ~/.ssh/id_rsa
-- chmod 600 ~/.ssh/id_rsa
-- echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- cp suiranfes ~/.ssh/suiranfes
+- chmod 600 ~/.ssh/suiranfes
+- echo -e "Host github.com\n\tStrictHostKeyChecking no\nHost github github.com\n  HostName github.com\n  IdentityFile ~/.ssh/suiranfes\n  User git\n" >> ~/.ssh/config
 - git config --global user.email "info@suiranfes.com"
 - git config --global user.name "LuckyBeast"
 - git add --all
 - git commit -m "Automatic Build by Travis CI $TRAVIS_COMMIT"
-- git push git@github.com:suiranfes/2017.suiranfes.com.git master
+- git push -f git@github.com:suiranfes/2017.suiranfes.com.git master
