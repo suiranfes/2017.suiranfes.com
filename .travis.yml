@@ -15,8 +15,7 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_26b4962af0e7_key -iv $encrypted_26b4962af0e7_iv -in luckybeast.enc -out luckybeast -d
 - cp luckybeast ~/.ssh/luckybeast
 - chmod 600 ~/.ssh/luckybeast
-- echo -e "Host github.com\n\tStrictHostKeyChecking no\nHost github github.com\n\tHostName
-  github.com\n\tIdentityFile ~/.ssh/luckybeast\n\tUser git\n" >> ~/.ssh/config
+- echo -e "Host github.com\n\tStrictHostKeyChecking no\nHost github github.com\n\tHostName github.com\n\tIdentityFile ~/.ssh/luckybeast\n\tUser git\n" >> ~/.ssh/config
 - git config --global user.email "info@suiranfes.com"
 - git config --global user.name "LuckyBeast"
 - npm install -g grunt-cli
@@ -27,4 +26,4 @@ after_success:
 - git branch releasing
 - git add --all
 - git commit -m "Automatic Build by Travis CI $TRAVIS_COMMIT"
-- git push origin master
+- git push git@github.com:suiranfes/2017.suiranfes.com.git master
