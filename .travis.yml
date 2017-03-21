@@ -19,13 +19,12 @@ before_install:
   github.com\n\tIdentityFile ~/.ssh/luckybeast\n\tUser git\n" >> ~/.ssh/config
 - git config --global user.email "info@suiranfes.com"
 - git config --global user.name "LuckyBeast"
-- git remote add origin git@github.com:suiranfes/2017.suiranfes.com.git
 - npm install -g grunt-cli
 - grunt --version
 script:
 - grunt
 after_success:
-- git checkout -b releasing
+- git branch releasing
 - git add --all
 - git commit -m "Automatic Build by Travis CI $TRAVIS_COMMIT"
 - git push origin master
