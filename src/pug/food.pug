@@ -26,25 +26,27 @@ html(lang="ja")
                       | #{circlenums[fes.foods[i].shop.location]}
                     br
                     span!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
-                  dl
-                    - for(var j in fes.foods[i].kinds) {
-                      dt
-                        b #{fes.foods[i].kinds[j].title}:#{fes.foods[i].kinds[j].price}円
-                        br
-                        +bootstrap_badge_normal("アレルギー物質","primary")
-                        if ( fes.foods[i].kinds[j].allergens === undefined )
-                          +bootstrap_badge_pill("調査中","warning")
-                        else if ( fes.foods[i].kinds[j].allergens === null )
-                          +bootstrap_badge_pill("なし","success")
-                        else
-                          - for(var k in fes.foods[i].kinds[j].allergens){
-                              +bootstrap_badge_pill(fes.foods[i].kinds[j].allergens[k],"default")
-                          - }
-                        br
-                        if fes.foods[i].kinds[j].description
-                          dd!= fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")
-                    - }
-                  hr
+                  .row
+                    .col-12.col-md-6.col-xl-4
+                      dl
+                        - for(var j in fes.foods[i].kinds) {
+                          dt
+                            b #{fes.foods[i].kinds[j].title}:#{fes.foods[i].kinds[j].price}円
+                            br
+                            +bootstrap_badge_normal("アレルギー物質","primary")
+                            if ( fes.foods[i].kinds[j].allergens === undefined )
+                              +bootstrap_badge_pill("調査中","warning")
+                            else if ( fes.foods[i].kinds[j].allergens === null )
+                              +bootstrap_badge_pill("なし","success")
+                            else
+                              - for(var k in fes.foods[i].kinds[j].allergens){
+                                  +bootstrap_badge_pill(fes.foods[i].kinds[j].allergens[k],"default")
+                              - }
+                            br
+                            if fes.foods[i].kinds[j].description
+                              dd!= fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")
+                        - }
+                      hr
                 - } }
               h2 お知らせ
               p ここでのアレルギー物質とは、特定原材料等27品目のことです。
