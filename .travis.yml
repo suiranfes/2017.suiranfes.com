@@ -23,6 +23,7 @@ before_install:
 - grunt --version
 script:
 - grunt
+after_success:
 - git add --all
 - git commit -m "Automatic Build by Travis CI $TRAVIS_COMMIT"
-- git push -f git@github.com:suiranfes/2017.suiranfes.com.git master
+- git push git@github.com:suiranfes/2017.suiranfes.com master
