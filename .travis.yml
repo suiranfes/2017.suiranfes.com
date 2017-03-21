@@ -12,7 +12,7 @@ cache:
 git:
   submodules: false
 before_install:
-- openssl aes-256-cbc -K $encrypted_f4d63df644dd_key -iv $encrypted_f4d63df644dd_iv -in luckybeast.enc -out luckybeast -d
+- openssl aes-256-cbc -K $encrypted_26b4962af0e7_key -iv $encrypted_26b4962af0e7_iv -in luckybeast.enc -out luckybeast -d
 - cp luckybeast ~/.ssh/luckybeast
 - chmod 600 ~/.ssh/luckybeast
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\nHost github github.com\n\tHostName
