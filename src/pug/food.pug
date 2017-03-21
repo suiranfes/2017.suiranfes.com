@@ -27,9 +27,9 @@ html(lang="ja")
                     br
                     span!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
                   .row
-                    .col-12.col-md-6.col-xl-4
-                      dl
-                        - for(var j in fes.foods[i].kinds) {
+                    dl
+                      - for(var j in fes.foods[i].kinds) {
+                        .col-12.col-md-6.col-xl-4
                           dt
                             b #{fes.foods[i].kinds[j].title}:#{fes.foods[i].kinds[j].price}円
                             br
@@ -45,7 +45,7 @@ html(lang="ja")
                             br
                             if fes.foods[i].kinds[j].description
                               dd!= fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")
-                        - }
+                      - }
                       hr
                 - } }
               h2 お知らせ
