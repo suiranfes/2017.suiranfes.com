@@ -26,8 +26,8 @@ html(lang="ja")
                       | #{circlenums[fes.foods[i].shop.location]}
                     br
                     span!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
-                  .row
-                    dl
+                  dl
+                    .row
                       - for(var j in fes.foods[i].kinds) {
                         .col-12.col-md-6
                           dt
