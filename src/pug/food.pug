@@ -27,24 +27,24 @@ html(lang="ja")
                     br
                     span!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
                   dl
-                    .row
+                    .card-group
                       - for(var j in fes.foods[i].kinds) {
-                        .col-12.col-md-6.col-xl-4
-                          dt
-                            b #{fes.foods[i].kinds[j].title}:#{fes.foods[i].kinds[j].price}円
-                            br
-                            +bootstrap_badge_normal("アレルギー物質","primary")
-                            if ( fes.foods[i].kinds[j].allergens === undefined )
-                              +bootstrap_badge_pill("調査中","warning")
-                            else if ( fes.foods[i].kinds[j].allergens === null )
-                              +bootstrap_badge_pill("なし","success")
-                            else
-                              - for(var k in fes.foods[i].kinds[j].allergens){
-                                  +bootstrap_badge_pill(fes.foods[i].kinds[j].allergens[k],"default")
-                              - }
-                            br
-                            if fes.foods[i].kinds[j].description
-                              dd!= fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")
+                        .card
+                          .card-block
+                            h4.card-title #{fes.foods[i].kinds[j].title}:#{fes.foods[i].kinds[j].price}円
+                            p.card-text
+                              +bootstrap_badge_normal("アレルギー物質","primary")
+                              if ( fes.foods[i].kinds[j].allergens === undefined )
+                                +bootstrap_badge_pill("調査中","warning")
+                              else if ( fes.foods[i].kinds[j].allergens === null )
+                                +bootstrap_badge_pill("なし","success")
+                              else
+                                - for(var k in fes.foods[i].kinds[j].allergens){
+                                    +bootstrap_badge_pill(fes.foods[i].kinds[j].allergens[k],"default")
+                                - }
+                            p.card-text
+                              if fes.foods[i].kinds[j].description
+                                | #{fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")}
                       - }
                       hr
                 - } }
