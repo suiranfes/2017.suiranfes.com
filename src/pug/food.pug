@@ -31,8 +31,11 @@ html(lang="ja")
                       - for(var j in fes.foods[i].kinds) {
                         .card
                           .card-block
-                            h4.card-title #{fes.foods[i].kinds[j].title}:#{fes.foods[i].kinds[j].price}円
-                            p.card-text
+                            h6.card-title #{fes.foods[i].kinds[j].title}
+                            p.card-text #{fes.foods[i].kinds[j].price}円
+                            if fes.foods[i].kinds[j].description
+                              p.card-text #{fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")}
+                            .card-text
                               +bootstrap_badge_normal("アレルギー物質","primary")
                               if ( fes.foods[i].kinds[j].allergens === undefined )
                                 +bootstrap_badge_pill("調査中","warning")
@@ -42,9 +45,6 @@ html(lang="ja")
                                 - for(var k in fes.foods[i].kinds[j].allergens){
                                     +bootstrap_badge_pill(fes.foods[i].kinds[j].allergens[k],"default")
                                 - }
-                            p.card-text
-                              if fes.foods[i].kinds[j].description
-                                | #{fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")}
                       - }
                       hr
                 - } }
