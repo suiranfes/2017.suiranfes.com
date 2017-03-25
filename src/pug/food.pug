@@ -20,14 +20,14 @@ html(lang="ja")
                 p!= foodsshop.description.replace(/\r?\n|\r/g,"<br>")
                 - for(var i in fes.foods) {
                 - if ( fes.foods[i].shop.name === key ) {
-                  h4 #{fes.foods[i].title} 
-                  p @#{foodsshop.title}.px-4
+                  h4 <i class="fa fa-cutlery" aria-hidden="true"></i> #{fes.foods[i].title} 
+                  p.px-4 @#{foodsshop.title}
                     if(foodsshop.is_plural)
                       | #{circlenums[fes.foods[i].shop.location]}
                     br
                     span!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
                   dl
-                    .card-group
+                    .card-group.px-4
                       - for(var j in fes.foods[i].kinds) {
                         .card
                           .card-block
