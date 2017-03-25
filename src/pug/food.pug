@@ -21,7 +21,7 @@ html(lang="ja")
                 - for(var i in fes.foods) {
                 - if ( fes.foods[i].shop.name === key ) {
                   h4 #{fes.foods[i].title} 
-                  p @#{foodsshop.title}
+                  p @#{foodsshop.title}.px-4
                     if(foodsshop.is_plural)
                       | #{circlenums[fes.foods[i].shop.location]}
                     br
@@ -31,19 +31,19 @@ html(lang="ja")
                       - for(var j in fes.foods[i].kinds) {
                         .card
                           .card-block
-                            h6.card-title #{fes.foods[i].kinds[j].title}
+                            h6.card-title <i class="fa fa-caret-right" aria-hidden="true"></i> #{fes.foods[i].kinds[j].title}
                             p.card-text #{fes.foods[i].kinds[j].price}円
                             if fes.foods[i].kinds[j].description
                               p.card-text #{fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")}
                             .card-text
                               +bootstrap_badge_normal("アレルギー物質","primary")
                               if ( fes.foods[i].kinds[j].allergens === undefined )
-                                +bootstrap_badge_pill("調査中","warning")
+                                +bootstrap_badge_pill_lighter("調査中","warning")
                               else if ( fes.foods[i].kinds[j].allergens === null )
-                                +bootstrap_badge_pill("なし","success")
+                                +bootstrap_badge_pill_lighter("なし","success")
                               else
                                 - for(var k in fes.foods[i].kinds[j].allergens){
-                                    +bootstrap_badge_pill(fes.foods[i].kinds[j].allergens[k],"default")
+                                    +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
                                 - }
                       - }
                       hr
