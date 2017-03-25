@@ -14,11 +14,11 @@ mixin bootstrap_badge_normal( $badge_title, $badge_style, $badge_schema_itemprop
     | #{$badge_title}
 
 mixin bootstrap_badge_pill_lighter( $badge_title, $badge_style, $badge_schema_itemprop )
-  .badge.badge-pill(class=`badge-${$badge_style}`,itemprop=$badge_schema_itemprop)&attributes(attributes)
+  .badge.badge-pill(class=`badge-${$badge_style}`,itemprop=$badge_schema_itemprop, style="font-weight: 500")&attributes(attributes)
     | #{$badge_title}
 
 mixin bootstrap_badge_normal_lighter( $badge_title, $badge_style, $badge_schema_itemprop )
-  .badge(class=`badge-${$badge_style}`,itemprop=$badge_schema_itemprop)&attributes(attributes)
+  .badge(class=`badge-${$badge_style}`,itemprop=$badge_schema_itemprop, style="font-weight: 500")&attributes(attributes)
     | #{$badge_title}
   
 //-**********************************************

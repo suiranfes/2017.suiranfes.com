@@ -21,7 +21,7 @@ html(lang="ja")
                 - for(var i in fes.foods) {
                 - if ( fes.foods[i].shop.name === key ) {
                   h4 <i class="fa fa-cutlery" aria-hidden="true"></i> #{fes.foods[i].title} 
-                  p.px-4 @#{foodsshop.title}
+                  p.px-4 販売所:<b>#{foodsshop.title}</b>
                     if(foodsshop.is_plural)
                       | #{circlenums[fes.foods[i].shop.location]}
                     br
