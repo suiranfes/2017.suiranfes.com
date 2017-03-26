@@ -12,42 +12,41 @@ html(lang="ja")
     .wrap
       .container
         .row
-          .col-12
-            .py-3
-              h1 #{page.title}
-              each foodsshop, key in fes.foodsshops
-                h2 #{foodsshop.title}
-                p!= foodsshop.description.replace(/\r?\n|\r/g,"<br>")
-                - for(var i in fes.foods) {
-                - if ( fes.foods[i].shop.name === key ) {
-                  h4 <i class="fa fa-cutlery" aria-hidden="true"></i> #{fes.foods[i].title} 
-                  p.px-4 販売所:<b>#{foodsshop.title}</b>
-                    if(foodsshop.is_plural)
-                      | #{circlenums[fes.foods[i].shop.location]}
-                    br
+          .col-12.py-3
+            h1 #{page.title}
+            each foodsshop, key in fes.foodsshops
+              h2 <i class="fa fa-cutlery" aria-hidden="true"></i> #{foodsshop.title}
+              p!= foodsshop.description.replace(/\r?\n|\r/g,"<br>")
+              - for(var i in fes.foods) {
+              - if ( fes.foods[i].shop.name === key ) {
+                h4 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title} 
+                p.px-4 販売所:<b>#{foodsshop.title}</b>
+                  if(foodsshop.is_plural)
+                    | #{circlenums[fes.foods[i].shop.location]}
+                  br
                     span!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
-                  dl
-                    .card-group.px-4
-                      - for(var j in fes.foods[i].kinds) {
-                        .card
-                          .card-block
-                            h6.card-title <i class="fa fa-caret-right" aria-hidden="true"></i> #{fes.foods[i].kinds[j].title}
-                            p.card-text #{fes.foods[i].kinds[j].price}円
-                            if fes.foods[i].kinds[j].description
-                              p.card-text #{fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")}
-                            .card-text
-                              +bootstrap_badge_normal("アレルギー物質","primary")
-                              if ( fes.foods[i].kinds[j].allergens === undefined )
-                                +bootstrap_badge_pill_lighter("調査中","warning")
-                              else if ( fes.foods[i].kinds[j].allergens === null )
-                                +bootstrap_badge_pill_lighter("なし","success")
-                              else
-                                - for(var k in fes.foods[i].kinds[j].allergens){
-                                    +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
-                                - }
-                      - }
-                      hr
-                - } }
-              h2 お知らせ
-              p ここでのアレルギー物質とは、特定原材料等27品目のことです。
+                dl
+                  .card-group.px-4
+                    - for(var j in fes.foods[i].kinds) {
+                      .card
+                        .card-block
+                          h6.card-title <i class="fa fa-caret-right" aria-hidden="true"></i> #{fes.foods[i].kinds[j].title}
+                          p.card-text #{fes.foods[i].kinds[j].price}円
+                          if fes.foods[i].kinds[j].description
+                            p.card-text #{fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")}
+                          .card-text
+                            +bootstrap_badge_normal("アレルギー物質","primary")
+                            if ( fes.foods[i].kinds[j].allergens === undefined )
+                              +bootstrap_badge_pill_lighter("調査中","warning")
+                            else if ( fes.foods[i].kinds[j].allergens === null )
+                              +bootstrap_badge_pill_lighter("なし","success")
+                            else
+                              - for(var k in fes.foods[i].kinds[j].allergens){
+                                  +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
+                              - }
+                    - }
+                    hr
+              - } }
+            h2 お知らせ
+            p ここでのアレルギー物質とは、特定原材料等27品目のことです。
     include includes/_footer.pug

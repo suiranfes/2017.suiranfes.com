@@ -11,9 +11,7 @@ html(lang="ja")
     .wrap
       .container
         .row
-          .col-12
-            .py-3
-              h1 #{page.title}
-              include:md ../text/about.md
-              
+          .col-12.py-3
+            h1 #{page.title}
+            include:md ../text/about.md
     include includes/_footer.pug

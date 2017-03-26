@@ -1,4 +1,4 @@
-- var page = { "id" : "404" };
+- var page = { id :"404" };
 
 doctype
 html(lang="ja")
@@ -11,8 +11,7 @@ html(lang="ja")
     .wrap
       .container
         .row
-          .col-12
-            .py-3
-              h1 #{page.title}
-              p お探しのページは見つかりませんでした。
+          .col-12.py-3
+            h1 #{page.title}
+            p お探しのページは見つかりませんでした。
     include includes/_footer.pug
