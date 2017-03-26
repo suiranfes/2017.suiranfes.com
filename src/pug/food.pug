@@ -24,7 +24,7 @@ html(lang="ja")
                   if(foodsshop.is_plural)
                     | #{circlenums[fes.foods[i].shop.location]}
                   br
-                    span!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
+                  span!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
                 dl
                   .card-group.px-4
                     - for(var j in fes.foods[i].kinds) {
