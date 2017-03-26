@@ -15725,6 +15725,8 @@ $(document).ready(function(){
 });
 
 $(window).on('load',function(){
+  $('#after_fbshare').html('<div class="fb-like" data-href="https://2017.suiranfes.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>');
+  $('#after_gp').html('<div class="g-plusone" data-callback="gacb_gplusone" data-href="https://2017.suiranfes.com/"></div>')
   FB.XFBML.parse();
 });
 
