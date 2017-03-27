@@ -8,7 +8,7 @@ mixin pantene_columm()
     div.ml-auto
       +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
   | #{fes.pantene[i].title}
-  small
+  small.-pantene-hosts
     - for (var o in fes.pantene[i].hosts) {
       | #{fes.pantene[i].hosts[o].title}
       - if (o < fes.pantene[i].hosts.length - 1){
