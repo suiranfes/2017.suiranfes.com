@@ -176,6 +176,14 @@
             "homeroom": {
                 "title": "クラス展示",
                 "style": "primary"
+            },
+            "information": {
+                "title": "部活動展示",
+                "style": "success"
+            },
+            "club": {
+                "title": "部活動展示",
+                "style": "success"
             }
         },
         "foods": [

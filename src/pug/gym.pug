@@ -1,0 +1,17 @@
+- var page = { id :"events" };
+
+doctype
+html(lang="ja")
+  head
+    include includes/_mixins.pug
+    include includes/_meta.pug
+    include includes/_includes.pug
+  body
+    include includes/_nav.pug
+    .wrap
+      .container
+        .row
+          .col-12.py-3
+            h1 #{page.title}
+            
+    include includes/_footer.pug
