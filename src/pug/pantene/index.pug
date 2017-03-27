@@ -1,5 +1,21 @@
 - var page = { id :"pantene/index" };
 
+mixin pantene_columm()
+  .d-flex.flex-row.align-items-center
+    if (fes.pantene[i].has_page)
+      small <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    div: b #{j}-#{k}
+    div.ml-auto
+      +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
+  | #{fes.pantene[i].title}
+  small
+    - for (var o in fes.pantene[i].hosts) {
+      | #{fes.pantene[i].hosts[o].title}
+      - if (o < fes.pantene[i].hosts.length - 1){
+        | ･
+      - }
+    - }
+
 doctype
 html(lang="ja")
   head
@@ -26,18 +42,10 @@ html(lang="ja")
               -         thereis = true;
               -         if(fes.pantene[i].has_page) {
                 a.card.p-2(class=`card-inverse card-${fes.pantenebadges[fes.pantene[i].type].style}`, href=`/pantene/${fes.pantene[i].id}`)
-                  .d-flex.flex-row
-                    div: b #{j}-#{k}
-                    div.ml-auto
-                      +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
-                  | #{fes.pantene[i].title}
+                  +pantene_columm()
               -         } else {
                 .card.p-2(class=`card-inverse card-${fes.pantenebadges[fes.pantene[i].type].style}`)
-                  .d-flex.flex-row
-                    div: b #{j}-#{k}
-                    div.ml-auto
-                      +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
-                  | #{fes.pantene[i].title}
+                  +pantene_columm()
               -         }
               -       }
               -     }
