@@ -55,5 +55,9 @@
 -   }
 - }
 - site.updates.sort(function(a,b) {
--   return (a.date < b.date ? 1 : -1);
+-   if(a.date < b.date) return -1;
+- });
+- fes.pantene.sort(function(a,b) {
+-   if(a.place.floor < b.place.floor) { return 1 } else { return -1 }
+-   if(a.place.room < b.place.room) { return 1 } else { return -1 }
 - });
