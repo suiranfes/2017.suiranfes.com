@@ -26,8 +26,8 @@
             {
                 "id": "B01",
                 "type": "club",
-                "name": "Railway_Reserch_Club",
-                "title": "鉄道研究部",
+                "name": "RI N GO KU",
+                "title": "り　ん　ご　く",
                 "description": "こんにちは。鉄道研究部です。",
                 "keywords": [
                     "巨大ジオラマ",
@@ -37,6 +37,47 @@
                 "place": {
                     "floor": 1,
                     "room": 6
+                },
+                "hosts": [
+                    {
+                        "name": "Railway_Reserch_Club",
+                        "title": "鉄道研究部"
+                    }
+                ]
+            },
+            {
+                "id": "B02",
+                "type": "club",
+                "name": "Switch",
+                "title": "ピタゴラ",
+                "description": "諏訪先輩が作ったピタゴラみてね",
+                "keywords": [
+                    "数学",
+                    "ピタゴラスイッチ"
+                ],
+                "place": {
+                    "floor": 1,
+                    "room": 5
+                },
+                "hosts": [
+                    {
+                        "name": "Math_Club",
+                        "title": "数学部"
+                    }
+                ]
+            },
+            {
+                "id": "B01",
+                "type": "club",
+                "name": "Totoro",
+                "title": "トトロ",
+                "description": "去年のしかわかんねぇ！",
+                "keywords": [
+                    "おやま"
+                ],
+                "place": {
+                    "floor": 1,
+                    "room": 1
                 },
                 "hosts": [
                     {
@@ -67,6 +108,56 @@
                     {
                         "name": "3-6",
                         "title": "3年6組"
+                    }
+                ]
+            },
+            {
+                "id": "A02",
+                "type": "homeroom",
+                "name": "Venezia",
+                "title": "水の都 ヴェネツィア",
+                "description": "圧倒的清涼感",
+                "keywords": [
+                    "水",
+                    "清涼感"
+                ],
+                "place": {
+                    "floor": 2,
+                    "room": 4
+                },
+                "hosts": [
+                    {
+                        "name": "3-8",
+                        "title": "3年8組"
+                    }
+                ]
+            },
+            {
+                "id": "A03",
+                "type": "homeroom",
+                "name": "Jungle",
+                "title": "ジャングル行こうぜ",
+                "description": "的屋である！",
+                "keywords": [
+                    "的屋",
+                    "おかし"
+                ],
+                "place": {
+                    "floor": 3,
+                    "room": 9
+                },
+                "hosts": [
+                    {
+                        "name": "1-4",
+                        "title": "1年4組"
+                    },
+                    {
+                        "name": "1-5",
+                        "title": "1年5組"
+                    },
+                    {
+                        "name": "1-7",
+                        "title": "1年7組"
                     }
                 ]
             }

@@ -1,0 +1,26 @@
+- var page = { id :"pantene/A01" };
+
+
+doctype
+html(lang="ja")
+  head
+    include ../includes/_mixins.pug
+    include ../includes/_meta.pug
+    include ../includes/_includes.pug
+  body
+    include ../includes/_nav.pug
+    .wrap
+      .container
+        .row
+          .col-12
+            .py-3
+              h1 #{page.title}
+              p
+                +bootstrap_badge_pill( fes.pantenebadges[page.type].title, fes.pantenebadges[page.type].style )
+                | #{page.description}
+              p @#{page.place.floor}-#{page.place.room}
+              p
+                - for (var j in page.hosts) {
+                  | #{page.hosts[j].title} 
+                - }
+    include ../includes/_footer.pug
