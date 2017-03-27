@@ -14,9 +14,30 @@ html(lang="ja")
           .col-12
             .py-3
               h1 #{page.title}
-              - for (var i in fes.pantene) {
-                 a.btn.btn-link(href=`/pantene/${fes.pantene[i].id}`)
-                  | #{fes.pantene[i].title}
-                  +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
-              - }
+      - for (var j = 3; j > 0; j--) {
+      -   for (var k = 9; k > 0; k--) {
+      -     var thereis = false;
+      -     for (var i in fes.pantene) {
+      -       if (fes.pantene[i].place.floor == j && fes.pantene[i].place.room == k) {
+      -         thereis = true;
+      -         if(fes.pantene[i].has_page) {
+          a(href=`/pantene/${fes.pantene[i].id}`)
+            div
+              +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
+              | #{fes.pantene[i].title}
+      -         } else {
+          div
+            +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
+            | #{fes.pantene[i].title}
+      -         }
+      -       }
+      -     }
+      -     if (thereis == false) {
+        div
+          +bootstrap_badge_pill( "?", "danger" )
+          | #{j}-#{k}の情報なし
+      -     }
+      -   }
+        br
+      - }
     include ../includes/_footer.pug

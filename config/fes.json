@@ -29,6 +29,7 @@
                 "name": "RI N GO KU",
                 "title": "り　ん　ご　く",
                 "description": "こんにちは。鉄道研究部です。",
+                "has_page" : true,
                 "keywords": [
                     "巨大ジオラマ",
                     "運転体験",
@@ -51,6 +52,7 @@
                 "name": "Switch",
                 "title": "ピタゴラ",
                 "description": "諏訪先輩が作ったピタゴラみてね",
+                "has_page" : true,
                 "keywords": [
                     "数学",
                     "ピタゴラスイッチ"
@@ -72,6 +74,7 @@
                 "name": "Totoro",
                 "title": "トトロ",
                 "description": "去年のしかわかんねぇ！",
+                "has_page" : true,
                 "keywords": [
                     "おやま"
                 ],
@@ -92,6 +95,7 @@
                 "name": "Alice_in_Wonderland",
                 "title": "アソス IN WONDERLAND",
                 "description": "アソスと一緒に写真を撮ろう！",
+                "has_page" : true,
                 "keywords": [
                     "アリス",
                     "写真撮影"
@@ -117,6 +121,7 @@
                 "name": "Venezia",
                 "title": "水の都 ヴェネツィア",
                 "description": "圧倒的清涼感",
+                "has_page" : false,
                 "keywords": [
                     "水",
                     "清涼感"
@@ -138,6 +143,7 @@
                 "name": "Jungle",
                 "title": "ジャングル行こうぜ",
                 "description": "的屋である！",
+                "has_page" : true,
                 "keywords": [
                     "的屋",
                     "おかし"
