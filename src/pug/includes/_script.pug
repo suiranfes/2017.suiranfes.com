@@ -38,8 +38,13 @@
 - }
 
 - for( var i in site.pages ) {
--   if( page.id == site.pages[i].name ) {
+-   if( page.id == site.pages[i].id ) {
 -     page = arrayMerge( page, site.pages[i] )
+-   }
+- }
+- for( var i in fes.pantene ) {
+-   if( page.id == "pantene/" + fes.pantene[i].id ) {
+-     page = arrayMerge( page, fes.pantene[i] )
 -   }
 - }
 - page.keyword = ""

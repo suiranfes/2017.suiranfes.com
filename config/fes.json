@@ -1,190 +1,275 @@
 {
-    "fes" : {
-        "common" : {
-            "theme" : "No SurFace",
-            "themeinjap" : "おもてなし",
-            "address" : {
-                "sameAs" : "http://www.takasaki-hs.gsn.ed.jp/",
-                "name" : "群馬県立高崎高等学校",
-                "addressNumber" : "2丁目4番地1号",
-                "addressStreet" : "八千代町",
-                "addressLocality" : "高崎市",
-                "addressRegion" : "群馬県",
-                "addressCountry" : "日本",
-                "postNumber" : "370-0861"
+    "fes": {
+        "common": {
+            "theme": "No SurFace",
+            "themeinjap": "おもてなし",
+            "address": {
+                "sameAs": "http://www.takasaki-hs.gsn.ed.jp/",
+                "name": "群馬県立高崎高等学校",
+                "addressNumber": "2丁目4番地1号",
+                "addressStreet": "八千代町",
+                "addressLocality": "高崎市",
+                "addressRegion": "群馬県",
+                "addressCountry": "日本",
+                "postNumber": "370-0861"
             }
         },
-        "Day1" : {
-            "startDate" : "2017-06-03T12:00+09:00",
-            "endDate" : "2017-06-03T17:00+09:00"
+        "Day1": {
+            "startDate": "2017-06-03T12:00+09:00",
+            "endDate": "2017-06-03T17:00+09:00"
         },
-        "Day2" : {
-            "startDate" : "2017-06-04T09:00+09:00",
-            "endDate" : "2017-06-04T16:30+09:00"
+        "Day2": {
+            "startDate": "2017-06-04T09:00+09:00",
+            "endDate": "2017-06-04T16:30+09:00"
         },
-        "pantene" : [
+        "pantene": [
             {
-                "id" : "B01",
-                "type" : "club",
-                "name" : "Railway_Reserch_Club",
-                "title" : "鉄道研究部",
-                "description" : "こんにちは。鉄道研究部です。",
-                "attractions" : [ "巨大ジオラマ", "運転体験", "記念切符配布" ],
-                "place" : {
-                    "floor" : 1,
-                    "room" : 6
+                "id": "B01",
+                "type": "club",
+                "name": "Railway_Reserch_Club",
+                "title": "鉄道研究部",
+                "description": "こんにちは。鉄道研究部です。",
+                "keywords": [
+                    "巨大ジオラマ",
+                    "運転体験",
+                    "記念切符配布"
+                ],
+                "place": {
+                    "floor": 1,
+                    "room": 6
                 },
-                "hosts" : [
+                "hosts": [
                     {
-                        "name" : "Railway_Reserch_Club",
-                        "title" : "鉄道研究部"
+                        "name": "Railway_Reserch_Club",
+                        "title": "鉄道研究部"
                     }
                 ]
             },
             {
-                "id" : "A01",
-                "type" : "homeroom",
-                "name" : "Alice_in_Wonderland",
-                "title" : "アソス IN WONDERLAND",
-                "description" : "アソスと一緒に写真を撮ろう！",
-                "attractions" : [ "アリス", "写真撮影" ],
-                "place" : {
-                    "floor" : 2,
-                    "room" : 5
+                "id": "A01",
+                "type": "homeroom",
+                "name": "Alice_in_Wonderland",
+                "title": "アソス IN WONDERLAND",
+                "description": "アソスと一緒に写真を撮ろう！",
+                "keywords": [
+                    "アリス",
+                    "写真撮影"
+                ],
+                "place": {
+                    "floor": 2,
+                    "room": 5
                 },
-                "hosts" : [
+                "hosts": [
                     {
-                        "name" : "3-5",
-                        "title" : "3年5組"
+                        "name": "3-5",
+                        "title": "3年5組"
                     },
                     {
-                        "name" : "3-6",
-                        "title" : "3年6組"
+                        "name": "3-6",
+                        "title": "3年6組"
                     }
                 ]
             }
         ],
-        "pantenebadges" : {
-            "club" : {
-                "title" : "部活動展示",
-                "style" : "success"
+        "pantenebadges": {
+            "club": {
+                "title": "部活動展示",
+                "style": "success"
             },
-            "homeroom" : {
-                "title" : "クラス展示",
-                "style" : "primary"
+            "homeroom": {
+                "title": "クラス展示",
+                "style": "primary"
             }
         },
-        "foods" : [
+        "foods": [
             {
-                "name" : "juice",
-                "title" : "ジュース",
-                "description" : "天空ジュース",
-                "shop" : {
-                    "name" : "stall",
-                    "location" : 1
+                "name": "juice",
+                "title": "ジュース",
+                "description": "天空ジュース",
+                "shop": {
+                    "name": "stall",
+                    "location": 1
                 },
-                "kinds" : [
-                    { "name" : "Calpis", "title" : "カルピス", "description" : "ソーダではない", "price" : 150, "allergens" : ["乳","大豆"] },
-                    { "name" : "water", "title" : "観音山の天然水", "description" : "架空の商品です", "price" : 150, "allergens" : null },
-                    { "name" : "Pocari_Sweat", "title" : "ポカリスエット", "description" : "群馬で作ってます", "price" : 150 },
-                    { "name" : "Ayataka", "title" : "綾鷹", "description" : "選ばれたのは綾鷹でした", "price" : 120 }
+                "kinds": [
+                    {
+                        "name": "Calpis",
+                        "title": "カルピス",
+                        "description": "ソーダではない",
+                        "price": 150,
+                        "allergens": [
+                            "乳",
+                            "大豆"
+                        ]
+                    },
+                    {
+                        "name": "water",
+                        "title": "観音山の天然水",
+                        "description": "架空の商品です",
+                        "price": 150,
+                        "allergens": null
+                    },
+                    {
+                        "name": "Pocari_Sweat",
+                        "title": "ポカリスエット",
+                        "description": "群馬で作ってます",
+                        "price": 150
+                    },
+                    {
+                        "name": "Ayataka",
+                        "title": "綾鷹",
+                        "description": "選ばれたのは綾鷹でした",
+                        "price": 120
+                    }
                 ]
             },
             {
-                "name" : "dippin_dots",
-                "title" : "dippin dots 粒粒アイス",
-                "description" : "新しい食感",
-                "shop" : {
-                    "name" : "stall",
-                    "location" : 6
+                "name": "dippin_dots",
+                "title": "dippin dots 粒粒アイス",
+                "description": "新しい食感",
+                "shop": {
+                    "name": "stall",
+                    "location": 6
                 },
-                "kinds" : [
-                    { "name" : "RAINBOW", "title" : "レインボー", "description" : "", "price" : 300 },
-                    { "name" : "VANILLA", "title" : "バニラ", "description" : "", "price" : 300 },
-                    { "name" : "STRAWBERRY", "title" : "ストロベリー", "description" : "", "price" : 300 }
+                "kinds": [
+                    {
+                        "name": "RAINBOW",
+                        "title": "レインボー",
+                        "description": "",
+                        "price": 300
+                    },
+                    {
+                        "name": "VANILLA",
+                        "title": "バニラ",
+                        "description": "",
+                        "price": 300
+                    },
+                    {
+                        "name": "STRAWBERRY",
+                        "title": "ストロベリー",
+                        "description": "",
+                        "price": 300
+                    }
                 ]
             },
             {
-                "name" : "yakisoba",
-                "title" : "やきそば",
-                "description" : "",
-                "shop" : {
-                    "name" : "stall",
-                    "location" : 7
+                "name": "yakisoba",
+                "title": "やきそば",
+                "description": "",
+                "shop": {
+                    "name": "stall",
+                    "location": 7
                 },
-                "kinds" : [
-                    { "name" : "yakisoba", "title" : "やきそば", "description" : "", "price" : 150 }
+                "kinds": [
+                    {
+                        "name": "yakisoba",
+                        "title": "やきそば",
+                        "description": "",
+                        "price": 150
+                    }
                 ]
             },
             {
-                "name" : "torihei",
-                "title" : "登利平 鶏めし",
-                "description" : "",
-                "shop" : {
-                    "name" : "bakery"
+                "name": "torihei",
+                "title": "登利平 鶏めし",
+                "description": "",
+                "shop": {
+                    "name": "bakery"
                 },
-                "kinds" : [
-                    { "name" : "bamboo", "title" : "竹", "description" : "", "price" : 750 }
+                "kinds": [
+                    {
+                        "name": "bamboo",
+                        "title": "竹",
+                        "description": "",
+                        "price": 750
+                    }
                 ]
             },
             {
-                "name" : "cafe_setmenu",
-                "title" : "お得なセットメニュー",
-                "description" : "",
-                "shop" : {
-                    "name" : "cafe"
+                "name": "cafe_setmenu",
+                "title": "お得なセットメニュー",
+                "description": "",
+                "shop": {
+                    "name": "cafe"
                 },
-                "kinds" : [
-                    { "name" : "typeA", "title" : "Aセット", "description" : "", "price" : 180 },
-                    { "name" : "typeB", "title" : "Bセット", "description" : "", "price" : 330 }
+                "kinds": [
+                    {
+                        "name": "typeA",
+                        "title": "Aセット",
+                        "description": "",
+                        "price": 180
+                    },
+                    {
+                        "name": "typeB",
+                        "title": "Bセット",
+                        "description": "",
+                        "price": 330
+                    }
                 ]
             }
         ],
-        "foodsshops" : {
-            "stall" : {
-                "title" : "模擬店",
-                "description" : "校舎外での販売です。詳しい場所はパンフレットをご覧ください。\n完売する可能性があります。ご了承ください。\nゴミはゴミステーションへよろしくお願いします。",
-                "is_plural" : true
+        "foodsshops": {
+            "stall": {
+                "title": "模擬店",
+                "description": "校舎外での販売です。詳しい場所はパンフレットをご覧ください。\n完売する可能性があります。ご了承ください。\nゴミはゴミステーションへよろしくお願いします。",
+                "is_plural": true
             },
-            "bakery" : {
-                "title" : "売店",
-                "description" : "",
-                "is_plural" : false
+            "bakery": {
+                "title": "売店",
+                "description": "",
+                "is_plural": false
             },
-            "cafe" : {
-                "title" : "喫茶",
-                "description" : "",
-                "is_plural" : false
+            "cafe": {
+                "title": "喫茶",
+                "description": "",
+                "is_plural": false
             }
         },
-        "events" : [
+        "events": [
             {
-                "name" : "Ms_Takataka_CONTEST",
-                "title" : "ミス高高コンテスト 予選A",
-                "description" : "高高一かわいい女の子は誰か！？\n予選3回あり！",
-                "tags" : [ "女装", "仮装", "変装", "コスプレ", "女子" ],
-                "place" : "stage",
-                "performers" : [ "女装の人A", "女装の人B" ],
-                "startDate" : "2017-06-03T13:00+09:00",
-                "endDate"   : "2017-06-03T13:20+09:00"
+                "name": "Ms_Takataka_CONTEST",
+                "title": "ミス高高コンテスト 予選A",
+                "description": "高高一かわいい女の子は誰か！？\n予選3回あり！",
+                "tags": [
+                    "女装",
+                    "仮装",
+                    "変装",
+                    "コスプレ",
+                    "女子"
+                ],
+                "place": "stage",
+                "performers": [
+                    "女装の人A",
+                    "女装の人B"
+                ],
+                "startDate": "2017-06-03T13:00+09:00",
+                "endDate": "2017-06-03T13:20+09:00"
             },
             {
-                "name" : "SUIRAN_STATION",
-                "title" : "SUIRAN STATION",
-                "description" : "",
-                "tags" : [ "紅白", "ライブ", "音楽" ],
-                "place" : "gym",
-                "performers" : [ "女装の人A", "女装の人B" ],
-                "startDate" : "2017-06-04T12:30+09:00",
-                "endDate"   : "2017-06-04T15:30+09:00"
+                "name": "SUIRAN_STATION",
+                "title": "SUIRAN STATION",
+                "description": "",
+                "tags": [
+                    "紅白",
+                    "ライブ",
+                    "音楽"
+                ],
+                "place": "gym",
+                "performers": [
+                    "女装の人A",
+                    "女装の人B"
+                ],
+                "startDate": "2017-06-04T12:30+09:00",
+                "endDate": "2017-06-04T15:30+09:00"
             }
         ],
-        "eventsplaces" : {
-            "stage" : {
-                "title" : "屋外ステージ"
-            }, 
-            "gym" : {
-                "title" : "体育館"
+        "eventsplaces": {
+            "stage": {
+                "title": "屋外ステージ",
+                "description": "イベント班です。"
+            },
+            "gym": {
+                "title": "体育館",
+                "description": "体育館行事班です！"
             }
         }
     }

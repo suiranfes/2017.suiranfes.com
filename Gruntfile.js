@@ -135,13 +135,21 @@ grunt.task.registerTask( 'merge-json' , 'Merge all config files' , function(){
 
 function listPages() {
     var siteArray = grunt.file.readJSON('config/site.json'),
+        fesArray = grunt.file.readJSON('config/fes.json'),
         files = '{',
-        logtext = 'Files:\n';
+        logtext = 'Listing Up Files\n\n';
+
     for (var i in siteArray.site.pages) {
-        files += '"docs/' + siteArray.site.pages[i].name + '.html":["src/pug/' + siteArray.site.pages[i].name + '.pug"]';
-        logtext += '' + siteArray.site.pages[i].name + '\n';
-        if ( i < siteArray.site.pages.length - 1 ) {
-            files += ','
+        files += '"docs/' + siteArray.site.pages[i].id + '.html":["src/pug/' + siteArray.site.pages[i].id + '.pug"]';
+        logtext += '' + siteArray.site.pages[i].id + '\n';
+        files += ',\n';
+    }
+    logtext += 'pantene\n';
+    for (var i in fesArray.fes.pantene) {
+        files += '"docs/pantene/' + fesArray.fes.pantene[i].id + '.html":["src/pug/pantene/' + fesArray.fes.pantene[i].id + '.pug"]';
+        logtext += '' + fesArray.fes.pantene[i].id + ' : ' + fesArray.fes.pantene[i].title + '\n';
+        if ( i < fesArray.fes.pantene.length - 1 ) {
+            files += ',\n';
         }
     }
     files += '}';

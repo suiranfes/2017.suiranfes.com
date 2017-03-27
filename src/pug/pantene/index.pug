@@ -1,0 +1,22 @@
+- var page = { id :"pantene/index" };
+
+doctype
+html(lang="ja")
+  head
+    include ../includes/_mixins.pug
+    include ../includes/_meta.pug
+    include ../includes/_includes.pug
+  body
+    include ../includes/_nav.pug
+    .wrap
+      .container
+        .row
+          .col-12
+            .py-3
+              h1 #{page.title}
+              - for (var i in fes.pantene) {
+                 a.btn.btn-link(href=`/pantene/${fes.pantene[i].id}`)
+                  | #{fes.pantene[i].title}
+                  +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
+              - }
+    include ../includes/_footer.pug
