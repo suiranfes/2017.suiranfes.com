@@ -49,6 +49,19 @@ html(lang="ja")
                     +bootstrap_badge_pill( "?", "danger" )
                   | 情報なし
               -     }
+            - if (k == 7 || k == 3) {
+              .-pantene-stairs.p-1
+                - if (j == 1 && k == 7) {
+                  .card.p-2(class="card-inverse card-info")
+                    | 出入口
+                - } else if (j == 1 && k == 3) {
+                  .card.p-2(class="card-inverse card-info")
+                    | 出口
+                - } else {
+                  .card.p-2(class="card-inverse card-warning")
+                    | 階段
+                - }
+            - }
             -   }
         - }
     include ../includes/_footer.pug
