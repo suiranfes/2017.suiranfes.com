@@ -69,7 +69,7 @@
                 ]
             },
             {
-                "id": "B01",
+                "id": "B03",
                 "type": "club",
                 "name": "Totoro",
                 "title": "トトロ",
@@ -84,8 +84,8 @@
                 },
                 "hosts": [
                     {
-                        "name": "Railway_Reserch_Club",
-                        "title": "鉄道研究部"
+                        "name": "Montres_Club",
+                        "title": "山岳部"
                     }
                 ]
             },
