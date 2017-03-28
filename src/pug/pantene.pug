@@ -46,10 +46,11 @@ html(lang="ja")
               -         if(fes.pantene[i].has_page) {
                 a.card.p-2(class=`card-inverse card-${fes.pantenebadges[fes.pantene[i].type].style}`, href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_${fes.pantene[i].name}`)
                   +pantene_columm()
-                .modal.fade(id=`pantene_modal_${fes.pantene[i].name}`, tabindex="-1", role="dialog", aria-labelledby="exampleModalLabel", aria-hidden="true")
+                .modal.fade.-pantene-modal(id=`pantene_modal_${fes.pantene[i].name}`, tabindex="-1", role="dialog", aria-labelledby="exampleModalLabel", aria-hidden="true")
                   .modal-dialog(role="document")
                     .modal-content
                       .modal-header
+                        p: b #{j}-#{k}
                         h5 #{fes.pantene[i].id} #{fes.pantene[i].title}
                         button.close(type="button", data-dismiss="modal", aria-label="Close")
                           span(aria-hidden="true") &times;
