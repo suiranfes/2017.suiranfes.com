@@ -144,14 +144,6 @@ function listPages() {
         logtext += '' + siteArray.site.pages[i].id + '\n';
         files += ',\n';
     }
-    logtext += 'pantene\n';
-    for (var i in fesArray.fes.pantene) {
-      if (fesArray.fes.pantene[i].has_page) {
-        files += '"docs/pantene/' + fesArray.fes.pantene[i].id + '.html":["src/pug/pantene/' + fesArray.fes.pantene[i].id + '.pug"]';
-        logtext += '' + fesArray.fes.pantene[i].id + ' : ' + fesArray.fes.pantene[i].title + '\n';
-        files += ',\n';
-      }
-    }
     files = files.substr( 0, files.length - 2 );
     files += '}';
     console.log(logtext);

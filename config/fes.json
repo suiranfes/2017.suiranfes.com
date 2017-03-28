@@ -121,7 +121,7 @@
                 "name": "Venezia",
                 "title": "水の都 ヴェネツィア",
                 "description": "圧倒的清涼感",
-                "has_page" : false,
+                "has_page" : true,
                 "keywords": [
                     "水",
                     "清涼感"
