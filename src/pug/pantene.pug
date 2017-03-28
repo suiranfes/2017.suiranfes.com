@@ -5,7 +5,7 @@ mixin pantene_columm()
     if (fes.pantene[i].has_page)
       small <i class="fa fa-chevron-right" aria-hidden="true"></i>
     div: b #{j}-#{k}
-    div.ml-auto: b ##{fes.pantene[i].id}
+    div.ml-auto: b \##{fes.pantene[i].id}
   | #{fes.pantene[i].title}
   small.-pantene-hosts
     +pantene_column_hosts()
@@ -48,10 +48,10 @@ html(lang="ja")
                 .modal.fade.-pantene-modal(id=`pantene_modal_${fes.pantene[i].name}`, tabindex="-1", role="dialog", aria-labelledby="exampleModalLabel", aria-hidden="true")
                   .modal-dialog(role="document")
                     .modal-content
-                      .modal-header
-                        p: b #{j}-#{k}
-                        h5 ##{fes.pantene[i].id} #{fes.pantene[i].title}
-                        button.close(type="button", data-dismiss="modal", aria-label="Close")
+                      .modal-header.flex-wrap-reverse
+                        p.mr-2: b #{j}-#{k}
+                        h5.mr-2 \##{fes.pantene[i].id} #{fes.pantene[i].title}
+                        button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
                           span(aria-hidden="true") &times;
                       .modal-body
                         p
