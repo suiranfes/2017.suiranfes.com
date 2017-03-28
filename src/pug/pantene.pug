@@ -5,8 +5,7 @@ mixin pantene_columm()
     if (fes.pantene[i].has_page)
       small <i class="fa fa-chevron-right" aria-hidden="true"></i>
     div: b #{j}-#{k}
-    div.ml-auto
-      +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
+    div.ml-auto: b ##{fes.pantene[i].id}
   | #{fes.pantene[i].title}
   small.-pantene-hosts
     +pantene_column_hosts()
@@ -51,7 +50,7 @@ html(lang="ja")
                     .modal-content
                       .modal-header
                         p: b #{j}-#{k}
-                        h5 #{fes.pantene[i].id} #{fes.pantene[i].title}
+                        h5 ##{fes.pantene[i].id} #{fes.pantene[i].title}
                         button.close(type="button", data-dismiss="modal", aria-label="Close")
                           span(aria-hidden="true") &times;
                       .modal-body
