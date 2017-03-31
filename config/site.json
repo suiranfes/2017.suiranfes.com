@@ -29,13 +29,6 @@
                 "keywords" : ["スイラン祭"]
             },
             {
-                "id" : "about",
-                "name" : "about",
-                "title" : "翠巒祭について",
-                "description" : "関係者からのお言葉、翠巒祭の沿革などが書かれています",
-                "keywords" : ["スイラン祭","高崎高校","歴史"]
-            },
-            {
                 "id" : "access",
                 "name" : "access",
                 "title" : "バス･アクセス",
@@ -60,7 +53,21 @@
                 "id" : "events",
                 "name" : "events",
                 "title" : "ステージ",
-                "description" : "イベントステージ・体育館でのショーについてです",
+                "description" : "屋外ステージのイベント！",
+                "keywords" : ["スイラン祭"]
+            },
+            {
+                "id" : "gym",
+                "name" : "gym",
+                "title" : "体育館",
+                "description" : "体育館のイベント！",
+                "keywords" : ["スイラン祭"]
+            },
+            {
+                "id" : "kaikan",
+                "name" : "kaikan",
+                "title" : "ステージ",
+                "description" : "翠巒音楽祭！",
                 "keywords" : ["スイラン祭"]
             },
             {
@@ -69,6 +76,13 @@
                 "title" : "グッズ",
                 "description" : "うちわとクリアファイルを配布します！",
                 "keywords" : ["スイラン祭"]
+            },
+            {
+                "id" : "about",
+                "name" : "about",
+                "title" : "翠巒祭について",
+                "description" : "関係者からのお言葉、翠巒祭の沿革などが書かれています",
+                "keywords" : ["スイラン祭","高崎高校","歴史"]
             },
             {
                 "id" : "404",

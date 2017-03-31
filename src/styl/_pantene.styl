@@ -1,7 +1,7 @@
 .-pantene-index-columns
   background-color: #e1f5fe
   @extend .bgimg-s
-  @media screen and (max-width: 1366px)
+  @media screen and (max-width: 1701px)
     overflow-x: scroll
 
   h3
@@ -12,13 +12,13 @@
     display: flex
     flex-wrap: wrap
     align-items: stretch
-    @media screen and (max-width: 1366px)
-      width: 1366px
+    @media screen and (max-width: 1701px)
+      width: 1701px
 
     .-pantene-room
       display: block
-      flex: 0 0 calc( (100% - 110px) / 9 )
-      width: calc( (100% - 110px) / 9 )
+      flex: 0 0 calc( (100% - 216px) / 9 )
+      width: calc( (100% - 216px) / 9 )
       word-wrap: break-word
       word-break: break-all
 
@@ -32,10 +32,11 @@
       div.card
         color: rgba(255,255,255,.85)
 
-    .-pantene-stairs
+    .-pantene-stair
       display: block
       flex: 0 0 54px
       width: 54px
+      line-height: 1.1em
       word-wrap: break-word
       word-break: break-all
 
@@ -43,11 +44,50 @@
         width: 100%
         height: 100%
         text-align: center
-        vertical-align: middle
         color: rgba(255,255,255,.85)
+
+    .-pantene-toilet
+      display: block
+      flex: 0 0 54px
+      width: 54px
+      word-wrap: break-word
+      word-break: break-all
+
+      .card
+        display: flex
+        width: 100%
+        height: 100%
+        text-align: center
+        color: rgba(255,255,255,.85)
+
+    .-pantene-nakaniwa
+      display: block
+      color: black
+      flex: 0 0 calc( (100% - 216px) * 4 / 9 + 54px )
+      width: calc( (100% - 216px) * 4 / 9 + 54px )
+      word-wrap: break-word
+      word-break: break-all
+
+      .card
+        width: 100%
+        height: 100%
+        color: black
+        background-color: white
+
+    
+.-pantene-card-toilet
+  border-color: #333
+  background-color: #333
 
 .-pantene-modal
   h5
     margin: 0
   p
     margin: 0
+
+.-pantene-wtf
+  height: auto !important
+
+.card-outline-secondary
+  background-color: rgba(255,255,255,.85) !important
+  color: black !important

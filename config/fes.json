@@ -166,6 +166,63 @@
                         "title": "1年7組"
                     }
                 ]
+            },
+            {
+                "id": "🏠",
+                "type": "suwa",
+                "name": "Home",
+                "title": "本部",
+                "description": "お困りごとは、近くの黒いTシャツの実行委員へお気軽にお話しください。",
+                "has_page" : true,
+                "keywords": [],
+                "place": {
+                    "floor": 1,
+                    "room": 9
+                },
+                "hosts": [
+                    {
+                        "name": "suwa",
+                        "title": "実行委員"
+                    }
+                ]
+            },
+            {
+                "id": "☕",
+                "type": "cafe",
+                "name": "cafe1",
+                "title": "喫茶１",
+                "description": "<a href='/food#cafe' class='btn btn-primary btn-block btn-lg'>メニューはこちら！</a>",
+                "has_page" : true,
+                "keywords": [],
+                "place": {
+                    "floor": 2,
+                    "room": 2
+                },
+                "hosts": [
+                    {
+                        "name": "cafe",
+                        "title": "食堂･喫茶班"
+                    }
+                ]
+            },
+            {
+                "id": "🍰",
+                "type": "cafe",
+                "name": "cafe2",
+                "title": "喫茶２",
+                "description": "<a href='/food#cafe' class='btn btn-primary btn-block btn-lg'>メニューはこちら！</a>",
+                "has_page" : true,
+                "keywords": [],
+                "place": {
+                    "floor": 2,
+                    "room": 1
+                },
+                "hosts": [
+                    {
+                        "name": "cafe",
+                        "title": "食堂･喫茶班"
+                    }
+                ]
             }
         ],
         "pantenebadges": {
@@ -177,13 +234,13 @@
                 "title": "クラス展示",
                 "style": "primary"
             },
-            "information": {
-                "title": "部活動展示",
-                "style": "success"
+            "suwa": {
+                "title": "本部",
+                "style": "brown"
             },
-            "club": {
-                "title": "部活動展示",
-                "style": "success"
+            "cafe": {
+                "title": "喫茶",
+                "style": "danger"
             }
         },
         "foods": [

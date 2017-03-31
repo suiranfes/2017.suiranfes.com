@@ -39,14 +39,14 @@ module.exports = function(grunt){
                     ]
                 },
                 files: {
-                    'cache/style.css' : ['src/styl/*.styl', '!' + 'src/styl/_*.styl']
+                    'docs/assets/style.css' : ['src/styl/*.styl', '!' + 'src/styl/_*.styl']
                 }
             }
         },
         browserify: {
             bundle: {
                 files: {
-                    'cache/main.js' : 'src/js/main.js'
+                    'docs/assets/main.js' : 'src/js/main.js'
                 }
             }
         },
@@ -75,7 +75,7 @@ module.exports = function(grunt){
                     }
                 },
                 files: {
-                    'cache/main.min.js' : 'cache/main.js'
+                    'docs/assets/main.min.js' : 'docs/assets/main.js'
                 }
             }
         },

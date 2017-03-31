@@ -1,10 +1,9 @@
 
-link(href=`${site.CDN}2017/suika/4.0.0-alpha.5/css/bootstrap.min.css`, rel="stylesheet")
-link(href=`${site.CDN}2017/font-awesome/4.7.0/css/font-awesome.min.css`, rel="stylesheet")
-style
-  include:oneline ../../../cache/style.css
+link(href=`${site.CDN}2017/suika/4.0.0-alpha.5/css/bootstrap.min.css`, rel="preload", as="style")
+link(href=`${site.CDN}2017/font-awesome/4.7.0/css/font-awesome.min.css`, rel="preload", as="style")
+link(href=`${site.CDN}2017/icons/v1.1.1/thsicons.css`, rel="preload", as="style")
+link(href=`/assets/style.css`, rel="stylesheet")
 
-script
-  include:oneline ../../../cache/main.min.js
+script(src="/assets/main.min.js")
 script(src="https://b.st-hatena.com/js/bookmark_button.js", charset="utf-8", async defer)
 script(src="https://apis.google.com/js/platform.js", async, defer) {lang: 'ja'}

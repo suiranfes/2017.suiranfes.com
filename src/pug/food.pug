@@ -30,7 +30,9 @@ html(lang="ja")
                     - for(var j in fes.foods[i].kinds) {
                       .card
                         .card-block
-                          h6.card-title <i class="fa fa-caret-right" aria-hidden="true"></i> #{fes.foods[i].kinds[j].title}
+                          h6.card-title
+                            +fa("caret-right")
+                            | #{fes.foods[i].kinds[j].title}
                           p.card-text #{fes.foods[i].kinds[j].price}円
                           if fes.foods[i].kinds[j].description
                             p.card-text #{fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")}

@@ -4,9 +4,9 @@ mixin pantene_columm()
   .d-flex.flex-row.align-items-center.flex-wrap
     if (fes.pantene[i].has_page)
       small <i class="fa fa-chevron-right" aria-hidden="true"></i>
-    div: b #{j}-#{k}
-    div.ml-auto: b ##{fes.pantene[i].id}
-  | #{fes.pantene[i].title}
+    div #{j}-#{k}
+    div.ml-auto #{fes.pantene[i].id}
+  h6.m-0 #{fes.pantene[i].title}
   small.-pantene-hosts
     +pantene_column_hosts()
 
@@ -45,12 +45,12 @@ html(lang="ja")
               -         if(fes.pantene[i].has_page) {
                 a.card.p-2(class=`card-inverse card-${fes.pantenebadges[fes.pantene[i].type].style}`, href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_${fes.pantene[i].name}`)
                   +pantene_columm()
-                .modal.fade.-pantene-modal(id=`pantene_modal_${fes.pantene[i].name}`, tabindex="-1", role="dialog", aria-labelledby="exampleModalLabel", aria-hidden="true")
+                .modal.fade.-pantene-modal(id=`pantene_modal_${fes.pantene[i].name}`, tabindex="-1", role="dialog", aria-hidden="true")
                   .modal-dialog(role="document")
                     .modal-content
                       .modal-header.flex-wrap-reverse
                         p.mr-2: b #{j}-#{k}
-                        h5.mr-2 ##{fes.pantene[i].id} #{fes.pantene[i].title}
+                        h5.mr-2 #{fes.pantene[i].id} #{fes.pantene[i].title}
                         button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
                           span(aria-hidden="true") &times;
                       .modal-body
@@ -58,7 +58,7 @@ html(lang="ja")
                           +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
                           small
                             +pantene_column_hosts()
-                        p #{fes.pantene[i].description}
+                        p!= fes.pantene[i].description.replace(/\r?\n/g,"<br>")
               -         } else {
                 .card.p-2(class=`card-inverse card-${fes.pantenebadges[fes.pantene[i].type].style}`)
                   +pantene_columm()
@@ -68,24 +68,93 @@ html(lang="ja")
               -     if (thereis == false) {
                 .card.p-2(class="card-inverse card-danger")
                   .d-flex.flex-row
-                    div: b #{j}-#{k}
-                    div.ml-auto
-                    +bootstrap_badge_pill( "?", "danger" )
+                    div #{j}-#{k}
+                    div.ml-auto ?
                   | 情報なし
               -     }
             - if (k == 7 || k == 3) {
-              .-pantene-stairs.p-1
-                - if (j == 1 && k == 7) {
-                  .card.p-2(class="card-inverse card-info")
-                    | 出入口
-                - } else if (j == 1 && k == 3) {
-                  .card.p-2(class="card-inverse card-info")
-                    | 出口
-                - } else {
-                  .card.p-2(class="card-inverse card-warning")
-                    | 階段
-                - }
+              - if( j == 3 && k == 7 ) {
+                .-pantene-toilet.p-1
+                  .card.p-2(class="card-inverse -pantene-card-toilet")
+                    div.m-auto
+                      +fa("female")
+              - } else if( j == 3 && k == 3 ) {
+                .-pantene-toilet.p-1
+                  .card.p-2(class="card-inverse -pantene-card-toilet")
+                    div.m-auto
+                      +fa("female")
+              - } else if( j == 2 && k == 7 ) {
+                .-pantene-toilet.p-1
+                  .card.p-2(class="card-outline-secondary")
+                    div.m-auto
+                      +fa("male")
+              - } else if( j == 2 && k == 3 ) {
+                .-pantene-toilet.p-1
+                  .card.p-2(class="card-inverse -pantene-card-toilet")
+                    div.m-auto
+                      +fa("female")
+              - } else if( j == 1 && k == 7 ) {
+                .-pantene-toilet.p-1
+                  .card.p-2(class="card-inverse -pantene-card-toilet")
+                    div.m-auto
+                      +fa("female")
+              - } else if( j == 1 && k == 3 ) {
+                .-pantene-toilet.p-1
+                  .card.p-2(class="card-outline-secondary")
+                    div.m-auto
+                      +fa("male")
+              - }
+              .-pantene-stair.p-1
+                .card.p-2(class="card-inverse card-warning")
+                  div.m-auto 階段
             - }
-            -   }
+            - }
         - }
+        // 4段目
+        .-pantene-floor
+            .-pantene-room.p-1
+              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/food#stall") 模擬店
+              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/kaikan") 翠巒会館
+            .-pantene-toilet
+            .-pantene-stair
+            .-pantene-room.p-1
+              a.card.p-2(class="card-inverse card-info", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_engra`)
+                div
+                  +fa("chevron-right")
+                  | 玄関
+                h6.m-0 エントランス・グラフィック
+                small 創作班美術課
+            .-pantene-room.p-1
+              a.card.p-2(class="card-inverse card-info", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_endec`)
+                div
+                  +fa("chevron-right")
+                  | 玄関
+                h6.m-0 投票
+                small 一般展示班
+            .-pantene-nakaniwa.p-1
+              a.card.p-2(class="card-outline-warning", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_owen`)
+                div
+                  +fa("chevron-right")
+                  | 中庭
+                h6.m-0 リーダー公開
+                small 應援部
+            .-pantene-stair.p-1
+              .card.p-2(class="card-inverse card-info")
+                div.m-auto 出口
+            .-pantene-room.p-1
+              a.card.p-2(class="card-inverse card-danger", href=`/food#bread`)
+                div 
+                  +fa("chevron-right")
+                  | 2F
+                h6.m-0 食堂
+                small 食堂･喫茶班
+            .-pantene-room.p-1
+              p.text-right: b
+                | 入口
+                +fa("arrow-up")
+                br
+                | ゴミステーション
+                +fa("arrow-right")
+
     include includes/_footer.pug
+    +_pantene_modals()

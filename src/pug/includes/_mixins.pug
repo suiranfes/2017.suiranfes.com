@@ -1,6 +1,14 @@
 include _script.pug
   
 //-**********************************************
+  *      fa
+  *      フォントアウィーサム
+  ***********************************************
+
+mixin fa( $icon )
+  <i class="fa fa-#{$icon}" aria-hidden="true"></i>
+
+//-**********************************************
   *      badge
   *      バッジ
   ***********************************************
@@ -51,3 +59,55 @@ mixin updatearticle(i)
       meta(itemprop="url", content=`${site.URL}${site.sitecardpath}`)
       meta(itemprop="width", content="700")
       meta(itemprop="height", content="389")
+
+
+//-**********************************************
+  *      pantene
+  *      一般展示
+  ***********************************************
+
+
+mixin _pantene_modals()
+
+  .modal.fade.-pantene-modal(id=`pantene_modal_engra`, tabindex="-1", role="dialog", aria-hidden="true")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header.flex-wrap-reverse
+          p.mr-2: b 玄関
+          h5.mr-2 エントランス・グラフィック
+          button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          p
+            small 創作班美術課
+          p NoSurFaceっぽくデザインしました。
+
+  .modal.fade.-pantene-modal(id=`pantene_modal_endec`, tabindex="-1", role="dialog", aria-hidden="true")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header.flex-wrap-reverse
+          p.mr-2: b 玄関
+          h5.mr-2 投票
+          button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          p
+            small 一般展示班
+          p シールを張るだけのかんたんな投票です。
+            br
+            | 翠巒祭の改善のために、どうかWEBアンケートにもご協力ください。
+          a.btn.btn-primary.btn-lg.disabled.m-1.-pantene-wtf(href="javascript:void(0);", role="button", aria-disabled="true") WEBアンケート
+
+  .modal.fade.-pantene-modal(id=`pantene_modal_owen`, tabindex="-1", role="dialog", aria-hidden="true")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header.flex-wrap-reverse
+          p.mr-2: b 中庭
+          h5.mr-2 リーダー公開
+          button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          p
+            small 應援部
+          h6 1日目
+            p: b 14:00～
