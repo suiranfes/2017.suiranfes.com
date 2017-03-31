@@ -1,6 +1,10 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*!
+<<<<<<< HEAD
  * jQuery JavaScript Library v3.2.1
+=======
+ * jQuery JavaScript Library v3.2.0
+>>>>>>> 777bc8484a1badf8c995a0f438833ef8b4379c32
  * https://jquery.com/
  *
  * Includes Sizzle.js
@@ -10,7 +14,11 @@
  * Released under the MIT license
  * https://jquery.org/license
  *
+<<<<<<< HEAD
  * Date: 2017-03-20T18:59Z
+=======
+ * Date: 2017-03-16T21:26Z
+>>>>>>> 777bc8484a1badf8c995a0f438833ef8b4379c32
  */
 ( function( global, factory ) {
 
@@ -89,7 +97,11 @@ var support = {};
 
 
 var
+<<<<<<< HEAD
 	version = "3.2.1",
+=======
+	version = "3.2.0",
+>>>>>>> 777bc8484a1badf8c995a0f438833ef8b4379c32
 
 	// Define a local copy of jQuery
 	jQuery = function( selector, context ) {
@@ -5344,9 +5356,15 @@ jQuery.event = {
 		},
 		click: {
 
-			// For checkbox, fire native event so checked state will be right
+			// For checkable types, fire native event so checked state will be right
 			trigger: function() {
+<<<<<<< HEAD
 				if ( this.type === "checkbox" && this.click && nodeName( this, "input" ) ) {
+=======
+				if ( rcheckableType.test( this.type ) &&
+					this.click && nodeName( this, "input" ) ) {
+
+>>>>>>> 777bc8484a1badf8c995a0f438833ef8b4379c32
 					this.click();
 					return false;
 				}
@@ -6359,11 +6377,16 @@ function getWidthOrHeight( elem, name, extra ) {
 	valueIsBorderBox = isBorderBox &&
 		( support.boxSizingReliable() || val === elem.style[ name ] );
 
+<<<<<<< HEAD
 	// Fall back to offsetWidth/Height when value is "auto"
 	// This happens for inline elements with no explicit setting (gh-3571)
 	if ( val === "auto" ) {
 		val = elem[ "offset" + name[ 0 ].toUpperCase() + name.slice( 1 ) ];
 	}
+=======
+	// Normalize "", auto, and prepare for extra
+	val = parseFloat( val ) || 0;
+>>>>>>> 777bc8484a1badf8c995a0f438833ef8b4379c32
 
 	// Normalize "", auto, and prepare for extra
 	val = parseFloat( val ) || 0;
@@ -10181,9 +10204,17 @@ jQuery.fn.extend( {
 		return arguments.length === 1 ?
 			this.off( selector, "**" ) :
 			this.off( types, selector || "**", fn );
+	},
+	holdReady: function( hold ) {
+		if ( hold ) {
+			jQuery.readyWait++;
+		} else {
+			jQuery.ready( true );
+		}
 	}
 } );
 
+<<<<<<< HEAD
 jQuery.holdReady = function( hold ) {
 	if ( hold ) {
 		jQuery.readyWait++;
@@ -10191,6 +10222,8 @@ jQuery.holdReady = function( hold ) {
 		jQuery.ready( true );
 	}
 };
+=======
+>>>>>>> 777bc8484a1badf8c995a0f438833ef8b4379c32
 jQuery.isArray = Array.isArray;
 jQuery.parseJSON = JSON.parse;
 jQuery.nodeName = nodeName;
