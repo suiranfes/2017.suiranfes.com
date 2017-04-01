@@ -32,8 +32,10 @@ html(lang="ja")
           .col-12
             .py-3
               h1 #{page.title}
+              p 校内展示の情報です。廊下側から見た図になっております。<span class="-pantene-u1701-text"></span>項目を選択すると、詳細情報が表示されます。
       .-pantene-index-columns.p-2
         h3 展示一覧
+      .-pantene-index-columns.p-2
         - for (var j = 3; j > 0; j--) {
           .-pantene-floor
             -   for (var k = 9; k > 0; k--) {
@@ -123,8 +125,8 @@ html(lang="ja")
         // 4段目
         .-pantene-floor
             .-pantene-room.p-1
-              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/food#stall") 模擬店
-              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/kaikan") 翠巒会館
+              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/food?tab=stall") 模擬店
+              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=kaikan") 翠巒会館
             .-pantene-toilet
             .-pantene-stair
             .-pantene-room.p-1
@@ -139,7 +141,7 @@ html(lang="ja")
                 div
                   +fa("chevron-right")
                   | 玄関
-                h6.m-0 投票
+                h6.m-0 投票所
                 small 一般展示班
             .-pantene-nakaniwa.p-1
               a.card.p-2(class="card-outline-warning", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_owen`)

@@ -1,6 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*!
- * jQuery JavaScript Library v3.2.0
+ * jQuery JavaScript Library v3.2.1
  * https://jquery.com/
  *
  * Includes Sizzle.js
@@ -10,7 +10,7 @@
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2017-03-16T21:26Z
+ * Date: 2017-03-20T18:59Z
  */
 ( function( global, factory ) {
 
@@ -89,7 +89,7 @@ var support = {};
 
 
 var
-	version = "3.2.0",
+	version = "3.2.1",
 
 	// Define a local copy of jQuery
 	jQuery = function( selector, context ) {
@@ -5344,11 +5344,9 @@ jQuery.event = {
 		},
 		click: {
 
-			// For checkable types, fire native event so checked state will be right
+			// For checkbox, fire native event so checked state will be right
 			trigger: function() {
-				if ( rcheckableType.test( this.type ) &&
-					this.click && nodeName( this, "input" ) ) {
-
+				if ( this.type === "checkbox" && this.click && nodeName( this, "input" ) ) {
 					this.click();
 					return false;
 				}
@@ -6168,6 +6166,11 @@ var getStyles = function( elem ) {
 
 function curCSS( elem, name, computed ) {
 	var width, minWidth, maxWidth, ret,
+
+		// Support: Firefox 51+
+		// Retrieving style before computed somehow
+		// fixes an issue with getting wrong values
+		// on detached elements
 		style = elem.style;
 
 	computed = computed || getStyles( elem );
@@ -6355,6 +6358,12 @@ function getWidthOrHeight( elem, name, extra ) {
 	// for getComputedStyle silently falls back to the reliable elem.style
 	valueIsBorderBox = isBorderBox &&
 		( support.boxSizingReliable() || val === elem.style[ name ] );
+
+	// Fall back to offsetWidth/Height when value is "auto"
+	// This happens for inline elements with no explicit setting (gh-3571)
+	if ( val === "auto" ) {
+		val = elem[ "offset" + name[ 0 ].toUpperCase() + name.slice( 1 ) ];
+	}
 
 	// Normalize "", auto, and prepare for extra
 	val = parseFloat( val ) || 0;
@@ -10172,16 +10181,16 @@ jQuery.fn.extend( {
 		return arguments.length === 1 ?
 			this.off( selector, "**" ) :
 			this.off( types, selector || "**", fn );
-	},
-	holdReady: function( hold ) {
-		if ( hold ) {
-			jQuery.readyWait++;
-		} else {
-			jQuery.ready( true );
-		}
 	}
 } );
 
+jQuery.holdReady = function( hold ) {
+	if ( hold ) {
+		jQuery.readyWait++;
+	} else {
+		jQuery.ready( true );
+	}
+};
 jQuery.isArray = Array.isArray;
 jQuery.parseJSON = JSON.parse;
 jQuery.nodeName = nodeName;
@@ -15624,6 +15633,26 @@ var Popover = function (jQuery) {
 }();
 
 },{}],5:[function(require,module,exports){
+function getUrlVars(){
+    var vars = [], max = 0, hash = "", array = "";
+    var url = window.location.search;
+
+    hash  = url.slice(1).split('&');    
+    max = hash.length;
+    for (var i = 0; i < max; i++) {
+        array = hash[i].split('=');    //keyと値に分割。
+        vars.push(array[0]);    //末尾にクエリ文字列のkeyを挿入。
+        vars[array[0]] = array[1];    //先ほど確保したkeyに、値を代入。
+    }
+
+    return vars;
+}
+
+var vars = getUrlVars();
+$(function(){
+    $( '[role="tablist"] a[href="#' + vars.tab + '"]' ).tab('show');
+});
+},{}],6:[function(require,module,exports){
 function suiranfes_loaded(){
     $(".loading").fadeOut("fast");
     $(".wrap").css("display","block");
@@ -15636,18 +15665,19 @@ setTimeout(suiranfes_loaded, 10000);
 
 $(window).on('load',suiranfes_loaded);
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 window.jQuery = $ = require('jquery');
 Tether = require('tether');
 require('./open');
 require('./bootstrap');
 require('./blockoldandro');
 require('./loading');
+require('./bstab');
 require('./suiranfes-updates');
 require('./snses');
-},{"./blockoldandro":3,"./bootstrap":4,"./loading":5,"./open":7,"./snses":8,"./suiranfes-updates":9,"jquery":1,"tether":2}],7:[function(require,module,exports){
+},{"./blockoldandro":3,"./bootstrap":4,"./bstab":5,"./loading":6,"./open":8,"./snses":9,"./suiranfes-updates":10,"jquery":1,"tether":2}],8:[function(require,module,exports){
 $('link[as = "style"]').attr('rel','stylesheet');
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 function socialbutton(){
 
 var thelabel = "";
@@ -15732,7 +15762,7 @@ $(window).on('load',function(){
   FB.XFBML.parse();
 });
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 $(document).ready(function(){
     $('.-index-middle .list-group-item').eq(6).on("click", function(){
         $('.-index-middle .list-group-item').eq(6).hide();
@@ -15744,4 +15774,4 @@ $(document).ready(function(){
     });
 });
 
-},{}]},{},[6]);
+},{}]},{},[7]);

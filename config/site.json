@@ -52,22 +52,8 @@
             {
                 "id" : "events",
                 "name" : "events",
-                "title" : "ステージ",
-                "description" : "屋外ステージのイベント！",
-                "keywords" : ["スイラン祭"]
-            },
-            {
-                "id" : "gym",
-                "name" : "gym",
-                "title" : "体育館",
-                "description" : "体育館のイベント！",
-                "keywords" : ["スイラン祭"]
-            },
-            {
-                "id" : "kaikan",
-                "name" : "kaikan",
-                "title" : "ステージ",
-                "description" : "翠巒音楽祭！",
+                "title" : "イベント",
+                "description" : "楽しいイベント！屋外ステージ・体育館行事、翠巒会館での音楽部発表の情報です",
                 "keywords" : ["スイラン祭"]
             },
             {

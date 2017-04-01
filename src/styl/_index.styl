@@ -71,59 +71,93 @@
 */
 
 .-index-right
+  @extend .bgimg-n
+  background-color: lighten(#94B78D,35%)
+
   a
     display: block
     color: black
     overflow: hidden
+
+    &.Events
+    &.Gym
+      @media screen and ( min-width:768px )
+        width: 50%
+
     &:link
     &:visited
       color: black
+    
     &:active
     &:focus
     &:hover
       color: maroon
       text-decoration: none
       filter: none !important
-    &.Attention
-      color: black
-      background-color: yellow
-    &.Bus
-      color: black
-      background-color: lighten(yellowgreen,30%)
-    &.Food
-      color: black
-      background-color: cyan
-    &.Pantene
-      color: white
-      background-color: site-colorpalet-theme
-    &.Events
-      color: black
-      background-color: white
-    &.Gym
-      color: black
-      background-color: white
+
   .-index-pickups-wrap
     padding: 1.25rem
     transition-timing-function: ease !important
     transition-duration: .25s !important
     transition-property: all !important
     position: relative
+    background-image: url(-top-bgimg-saya)
+    background-size: 96px 96px
+    box-shadow: 0 0 5px white
     z-index: 3
-    ::before
-      z-index: 4
-      background: inherit
-      position: absolute
-      &:hover
-      &:active
-      &:focus
-        filter: brightness(85%) blur(1px)
+
+    &:hover
+      box-shadow: 0 0 5px black
+
     &.Attention
+      color: white
+      background-color: darken(orange,10%)
       padding: 3rem 1.25rem
-      background-color: yellow
+
+      &:hover
+        color: white
+        background-color: darken(yellow,70%)
+    
     &.Bus
-      background-color: yellowgreen
+      color: white
+      background-color: #85c600
+
+      &:hover
+        color: white
+        background-color: darken(yellowgreen,70%)
+    
     &.Food
-      background-color: cyan
+      color: white
+      background-color: #24d8d8
+
+      &:hover
+        color: white
+        background-color: darken(cyan,70%)
+    
+    &.Pantene
+      color: white
+      background-color: site-colorpalet-theme
+
+      &:hover
+        color: white
+        background-color: darken(site-colorpalet-theme,70%)
+    
+    &.Events
+      color: white
+      background-color: lighten(blue,10%)
+
+      &:hover
+        color: white
+        background-color: darken(blue,70%)
+    
+    &.Gym
+      color: white
+      background-color: lighten(magenta,10%)
+
+      &:hover
+        color: white
+        background-color: darken(magenta,70%)
+
     .-index-pickups
       &:hover
       &:active

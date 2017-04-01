@@ -96,7 +96,7 @@ mixin _pantene_modals()
           p シールを張るだけのかんたんな投票です。
             br
             | 翠巒祭の改善のために、どうかWEBアンケートにもご協力ください。
-          a.btn.btn-primary.btn-lg.disabled.m-1.-pantene-wtf(href="javascript:void(0);", role="button", aria-disabled="true") WEBアンケート
+          a.btn.btn-primary.btn-lg.btn-block.disabled.m-1.-pantene-wtf(href="javascript:void(0);", role="button", aria-disabled="true") WEBアンケート準備中
 
   .modal.fade.-pantene-modal(id=`pantene_modal_owen`, tabindex="-1", role="dialog", aria-hidden="true")
     .modal-dialog(role="document")
@@ -111,3 +111,53 @@ mixin _pantene_modals()
             small 應援部
           h6 1日目
             p: b 14:00～
+
+mixin _food_tabcontent(foodsshop, key)
+  h3= foodsshop.title
+  p!= foodsshop.description.replace(/\r?\n|\r/g,"<br>")
+  - for(var i in fes.foods) {
+  - if ( fes.foods[i].shop.name === key ) {
+    h4 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title} 
+    p.px-4 販売所:<b>#{foodsshop.title}</b>
+      if(foodsshop.is_plural)
+        | #{circlenums[fes.foods[i].shop.location]}
+      br
+      span!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
+    .card-group.px-4
+      - for(var j in fes.foods[i].kinds) {
+        .card
+          .card-block
+            h6.card-title
+              +fa("caret-right")
+              | #{fes.foods[i].kinds[j].title}
+            p.card-text #{fes.foods[i].kinds[j].price}円
+            if fes.foods[i].kinds[j].description
+              p.card-text #{fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")}
+            .card-text
+              +bootstrap_badge_normal("アレルギー物質","primary")
+              if ( fes.foods[i].kinds[j].allergens === undefined )
+                +bootstrap_badge_pill_lighter("調査中","warning")
+              else if ( fes.foods[i].kinds[j].allergens === null )
+                +bootstrap_badge_pill_lighter("なし","success")
+              else
+                - for(var k in fes.foods[i].kinds[j].allergens){
+                    +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
+                - }
+      - }
+    hr
+  - } }
+
+mixin _event_tabcontent_ub(eventsplace, key, mmday)
+  each event, i in fes.events
+    - var this_startDate = new Date(fes.events[i].startDate)
+    -     this_endDate = new Date(fes.events[i].endDate)
+    -     day_startDate = new Date(fes['Day' + mmday].startDate)
+    -     day_endDate = new Date(fes['Day' + mmday].endDate)
+      if ( fes.events[i].place === key && this_startDate >= day_startDate && this_startDate <= day_endDate )
+        h4= fes.events[i].title
+
+mixin _event_tabcontent(eventsplace, key)
+  h3= eventsplace.title
+  p!= eventsplace.description.replace(/\r?\n|\r/g,"<br>")
+  +_event_tabcontent_ub(eventsplace, key, 1)
+  +_event_tabcontent_ub(eventsplace, key, 2)

@@ -191,7 +191,7 @@
                 "type": "cafe",
                 "name": "cafe1",
                 "title": "喫茶１",
-                "description": "<a href='/food#cafe' class='btn btn-primary btn-block btn-lg'>メニューはこちら！</a>",
+                "description": "<a href='/food?tab=cafe' class='btn btn-primary btn-block btn-lg'>メニューはこちら！</a>",
                 "has_page" : true,
                 "keywords": [],
                 "place": {
@@ -210,7 +210,7 @@
                 "type": "cafe",
                 "name": "cafe2",
                 "title": "喫茶２",
-                "description": "<a href='/food#cafe' class='btn btn-primary btn-block btn-lg'>メニューはこちら！</a>",
+                "description": "<a href='/food?tab=cafe' class='btn btn-primary btn-block btn-lg'>メニューはこちら！</a>",
                 "has_page" : true,
                 "keywords": [],
                 "place": {
@@ -388,6 +388,7 @@
         },
         "events": [
             {
+                "id": "Ms_Takataka_CONTEST_preA",
                 "name": "Ms_Takataka_CONTEST",
                 "title": "ミス高高コンテスト 予選A",
                 "description": "高高一かわいい女の子は誰か！？\n予選3回あり！",
@@ -407,6 +408,7 @@
                 "endDate": "2017-06-03T13:20+09:00"
             },
             {
+                "id": "SUIRAN_STATION",
                 "name": "SUIRAN_STATION",
                 "title": "SUIRAN STATION",
                 "description": "",
@@ -417,8 +419,23 @@
                 ],
                 "place": "gym",
                 "performers": [
-                    "女装の人A",
-                    "女装の人B"
+                    "JRC部",
+                    "硬式野球部"
+                ],
+                "startDate": "2017-06-04T12:30+09:00",
+                "endDate": "2017-06-04T15:30+09:00"
+            },
+            {
+                "id": "TWO_1stDay",
+                "name": "TWO_1stDay",
+                "title": "吹奏楽部",
+                "description": "",
+                "tags": [
+                    "翠巒音楽祭"
+                ],
+                "place": "kaikan",
+                "performers": [
+                    "吹奏楽部"
                 ],
                 "startDate": "2017-06-04T12:30+09:00",
                 "endDate": "2017-06-04T15:30+09:00"
@@ -432,6 +449,10 @@
             "gym": {
                 "title": "体育館",
                 "description": "体育館行事班です！"
+            },
+            "kaikan": {
+                "title": "翠巒会館",
+                "description": "翠巒音楽祭！"
             }
         }
     }

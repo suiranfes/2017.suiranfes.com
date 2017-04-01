@@ -1,4 +1,5 @@
 - var page = { id :"events" };
+- var circlenums = [ "", "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑪", "⑫", "⑬", "⑭", "⑮", "⑯", "⑰", "⑱", "⑲", "⑳" ];
 
 doctype
 html(lang="ja")
@@ -8,10 +9,27 @@ html(lang="ja")
     include includes/_includes.pug
   body
     include includes/_nav.pug
+    .container
+      .py-3
+        h1 #{page.title}
     .wrap
       .container
-        .row
-          .col-12.py-3
-            h1 #{page.title}
-            
+        .tab-content
+
+          .tab-pane.fade.show.active.py-3(id="top", role="tabpanel")
+            h3 ご案内
+            p.pl-2.my-1
+              +fa("circle")
+              | 時間前に完売した場合は販売終了とさせていただきます。 
+            p 下部からお選びください！
+
+          each eventsplace, key in fes.eventsplaces
+              .tab-pane.py-3(id=key, role="tabpanel")
+                +_event_tabcontent(eventsplace, key)
+    ul.nav.nav-pills.nav-fill.p-2.bg-faded.sticky-bottom#foodtab(role="tablist")
+      li.nav-item
+        a.nav-link.active(data-toggle="tab", href=`#top`, role="tab") ご案内
+      each eventsplace, key in fes.eventsplaces
+        li.nav-item
+          a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
     include includes/_footer.pug
