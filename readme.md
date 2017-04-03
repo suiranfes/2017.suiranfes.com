@@ -5,7 +5,7 @@
 
 ![travis-ci badge](https://travis-ci.org/suiranfes/2017.suiranfes.com.svg?branch=master)
 
-## How To Install
+## How to Build
 
 1. node.jsをインストールします
 2. https://github.com/suiranfes/2017.suiranfes.com の中身をダウンロードします
@@ -16,6 +16,24 @@ npm i
 npm i grunt-cli -g
 grunt
 ```
+
+## About This Site
+
+ビルド前のコード自体はsrcにあります。
+
+pugがhtmlになり、stylがcssになり、jsがjsになります。imgは手動でdocsに投げてください(ただしたいていの画像はcdnに格納します)。
+
+中央集約ファイルとして、stylはstyle.styl,jsはmain.jsに集約しています。ファイルを分ける場合は、これにそのファイルをそのように追加してください。
+
+pugのmixin(+～～()で参照しているもの)はincludes/mixins.pugにすべて集約しています(でないと面倒臭い)。その他にも多くの共通部品はincludesにあります。
+
+pug記法、styl記法は慣れられるはず、というよりむしろhtmlやcssより使いやすいはずです。わからなかったらggr。
+
+apiの素はconfigに入っています。2つファイルがありますが、同じように使えます。pugでは普通に(.区切りで)、stylでは-区切りで参照できます。
+
+一般展示、イベントなどの配列リストタイプはpug/includes/_script.pugではじめに適宜ソートしています。
+
+あとは、見よう見まねで(汗)
 
 ## Commit Message
 
