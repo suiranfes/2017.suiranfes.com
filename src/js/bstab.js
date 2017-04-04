@@ -16,4 +16,5 @@ function getUrlVars(){
 var vars = getUrlVars();
 $(function(){
     $( '[role="tablist"] a[href="#' + vars.tab + '"]' ).tab('show');
+    $('#' + vars.modal + '').modal('show');
 });

@@ -64,6 +64,20 @@
                 "keywords" : ["スイラン祭"]
             },
             {
+                "id" : "invmatch",
+                "name" : "invmatch",
+                "title" : "招待試合",
+                "description" : "運動部の活躍も見れます。",
+                "keywords" : ["スイラン祭"]
+            },
+            {
+                "id" : "radio",
+                "name" : "radio",
+                "title" : "校内放送",
+                "description" : "ラジオ風校内放送についてです。",
+                "keywords" : ["スイラン祭"]
+            },
+            {
                 "id" : "about",
                 "name" : "about",
                 "title" : "翠巒祭について",

@@ -110,7 +110,21 @@ mixin _pantene_modals()
           p
             small 應援部
           h6 1日目
-            p: b 14:00～
+            p 14:00～
+
+  .modal.fade.-pantene-modal(id=`pantene_modal_act`, tabindex="-1", role="dialog", aria-hidden="true")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header.flex-wrap-reverse
+          p.mr-2: b 中庭
+          h5.mr-2 演劇
+          button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          p
+            small 演劇部
+          h6 1日目
+            p 14:30～
 
 mixin _food_tabcontent(foodsshop, key)
   h3= foodsshop.title

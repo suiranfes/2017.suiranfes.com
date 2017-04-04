@@ -121,6 +121,12 @@ html(lang="ja")
               - }
             - }
             - }
+            if (j == 1)
+              .-pantene-stair.p-1
+                .card.p-2(class="card-inverse card-info")
+                  div.m-auto 入口
+            else
+              .-pantene-stair
         - }
         // 4段目
         .-pantene-floor
@@ -141,15 +147,25 @@ html(lang="ja")
                 div
                   +fa("chevron-right")
                   | 玄関
-                h6.m-0 投票所
+                h6.m-0 投票場
                 small 一般展示班
-            .-pantene-nakaniwa.p-1
-              a.card.p-2(class="card-outline-warning", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_owen`)
+            .-pantene-room
+            .-pantene-room
+            .-pantene-room.p-1
+              a.card.p-2(class="card-outline-warning bg-white", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_owen`)
                 div
                   +fa("chevron-right")
                   | 中庭
                 h6.m-0 リーダー公開
                 small 應援部
+            .-pantene-room.p-1
+              a.card.p-2(class="card-outline-warning bg-white", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_act`)
+                div
+                  +fa("chevron-right")
+                  | 中庭
+                h6.m-0 演劇
+                small 演劇部
+            .-pantene-stair
             .-pantene-stair.p-1
               .card.p-2(class="card-inverse card-info")
                 div.m-auto 出口
@@ -160,13 +176,11 @@ html(lang="ja")
                   | 2F
                 h6.m-0 食堂
                 small 食堂･喫茶班
+            .-pantene-stair
             .-pantene-room.p-1
-              p.text-right: b
-                | 入口
-                +fa("arrow-up")
-                br
-                | ゴミステーション
-                +fa("arrow-right")
+              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=gym") 体育館
+              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=stage") ステージ
+              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/invmatch") 招待試合
 
     include includes/_footer.pug
     +_pantene_modals()
