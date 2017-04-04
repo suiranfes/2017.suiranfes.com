@@ -15642,6 +15642,7 @@ function getUrlVars(){
 var vars = getUrlVars();
 $(function(){
     $( '[role="tablist"] a[href="#' + vars.tab + '"]' ).tab('show');
+    $('#' + vars.modal + '').modal('show');
 });
 },{}],6:[function(require,module,exports){
 function suiranfes_loaded(){
