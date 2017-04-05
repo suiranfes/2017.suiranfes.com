@@ -40,7 +40,7 @@ html(lang="ja")
                     else
                       .list-group-item.active
                         +updatearticle(i)
-                  -   } else if ( i == 5 ) {
+                  -   } else if ( i == 5 && site.updates.length > 5 ) {
                     a(href="javascript:void(0);").list-group-item.list-group-item-action
                       b もっと見る
                     if site.updates[i].link
@@ -58,8 +58,9 @@ html(lang="ja")
                         +updatearticle(i)
                   -   }
                   - }
-                  a(href="javascript:void(0);").list-group-item.list-group-item-action
-                    b 隠す
+                  if ( site.updates.length > 5 )
+                    a(href="javascript:void(0);").list-group-item.list-group-item-action
+                      b 隠す
         .col-md-6.col-xl-5
           .-index-right.p-md-1.d-flex.flex-wrap
             a(href="attention").Attention.py-2.px-3
