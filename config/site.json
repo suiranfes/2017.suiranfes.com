@@ -125,60 +125,12 @@
         },
         "updates" : [
             {
-                "date" : "2017-04-01T12:10+09:00",
-                "name" : "release_attention",
-                "title" : "翠巒祭でのご注意",
-                "description" : "",
-                "link" : "attention.html",
-                "badge" : "new"
-            },
-            {
                 "date" : "2017-04-01T12:00+09:00",
                 "name" : "site_open",
                 "title" : "第65回サイト正式版公開",
-                "description" : "よろしくおねがいします",
+                "description" : "順次情報をお届けします。よろしくお願いします。",
                 "link" : "",
                 "badge" : "new"
-            },
-            {
-                "date" : "2017-03-30T12:00+09:00",
-                "name" : "dev1",
-                "title" : "DEV1",
-                "description" : "",
-                "link" : "",
-                "badge" : "delete"
-            },
-            {
-                "date" : "2017-04-02T14:00+09:00",
-                "name" : "dev2",
-                "title" : "DEV2",
-                "description" : "",
-                "link" : "about.html",
-                "badge" : "modify"
-            },
-            {
-                "date" : "2017-05-02T11:00+09:00",
-                "name" : "dev3",
-                "title" : "DEV3",
-                "description" : "",
-                "link" : "",
-                "badge" : "modify"
-            },
-            {
-                "date" : "2017-06-01T19:00+09:00",
-                "name" : "dev4",
-                "title" : "DEV4",
-                "description" : "",
-                "link" : "",
-                "badge" : "revice"
-            },
-            {
-                "date" : "2017-04-01T12:00+09:00",
-                "name" : "dev5",
-                "title" : "DEV5",
-                "description" : "",
-                "link" : "",
-                "badge" : "add"
             }
         ]
     }
