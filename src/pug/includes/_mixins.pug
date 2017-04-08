@@ -1,8 +1,8 @@
 include _script.pug
-  
+
 //-**********************************************
   *      fa
-  *      フォントアウィーサム
+  *      フォントおーサム
   ***********************************************
 
 mixin fa( $icon )
@@ -28,7 +28,7 @@ mixin bootstrap_badge_pill_lighter( $badge_title, $badge_style, $badge_schema_it
 mixin bootstrap_badge_normal_lighter( $badge_title, $badge_style, $badge_schema_itemprop )
   .badge(class=`badge-${$badge_style}`,itemprop=$badge_schema_itemprop, style="font-weight: 500")&attributes(attributes)
     | #{$badge_title}
-  
+
 //-**********************************************
   *      index
   *      トップページ
@@ -126,17 +126,12 @@ mixin _pantene_modals()
           h6 1日目
             p 14:30～
 
-//-**********************************************
-  *      food
-  *      たべもの
-  ***********************************************
-
 mixin _food_tabcontent(foodsshop, key)
   h3= foodsshop.title
   p!= foodsshop.description.replace(/\r?\n|\r/g,"<br>")
   - for(var i in fes.foods) {
   - if ( fes.foods[i].shop.name === key ) {
-    h4 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title} 
+    h4 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
     p.px-4 販売所:<b>#{foodsshop.title}</b>
       if(foodsshop.is_plural)
         | #{circlenums[fes.foods[i].shop.location]}
@@ -173,7 +168,14 @@ mixin _event_tabcontent_ub(eventsplace, key, mmday)
     -     day_startDate = new Date(fes['Day' + mmday].startDate)
     -     day_endDate = new Date(fes['Day' + mmday].endDate)
       if ( fes.events[i].place === key && this_startDate >= day_startDate && this_startDate <= day_endDate )
-        h4= fes.events[i].title
+        div( id = fes.events[i].id ).event
+          h4= fes.events[i].title
+          p= fes.events[i].description
+          if ( fes.events[i].programs != null )
+            ol.programs
+              each program in fes.events[i].programs
+                li= program
+
 
 mixin _event_tabcontent(eventsplace, key)
   h3= eventsplace.title
