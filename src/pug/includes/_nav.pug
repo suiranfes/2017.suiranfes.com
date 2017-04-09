@@ -16,12 +16,12 @@ nav.navbar.navbar-toggleable-md.navbar-inverse.bg-suiranfes.bgimg-n
     span.navbar-toggler-icon
   a.navbar-brand(href="/") <i class="icon-ths-takasakihs"></i> #{site.title}
   div.collapse.navbar-collapse(id="navbarSupportedContent")
-    ul.navbar-nav.mr-auto
+    ul.navbar-nav
       - for (var i in site.pages) {
       -   if ( i != 0 && site.pages[i].name != "404" ) {
       li.nav-item
         a.nav-link(href=`/${site.pages[i].name}`) #{site.pages[i].title}
       -   }
       - }
-      li.nav-item
-        a.btn.btn-warning.ml-auto(href="https://suiranfes.com/") suiranfes.comへ
+      li.nav-item.ml-auto
+        a.btn.btn-warning(href="https://suiranfes.com/") ポータル
