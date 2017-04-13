@@ -13,5 +13,5 @@ html(lang="ja")
         .row
           .col-12.py-3
             h1 #{page.title}
-            p お探しのページは見つかりませんでした。
+            p!=page.description
     include includes/_footer.pug
