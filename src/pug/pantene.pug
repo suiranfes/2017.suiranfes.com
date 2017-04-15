@@ -44,6 +44,7 @@ html(lang="ja")
                             +pantene_column_hosts()
                         p!= fes.pantene[i].description.replace(/\r?\n/g,"<br>")
                       .modal-footer
+                        h4 Share
                         form
                           .input-group
                             input.form-control(type="url",value=`${site.URL}pantene?modal=pantene_modal_${fes.pantene[i].name}`, readonly)
@@ -51,10 +52,10 @@ html(lang="ja")
                               button.btn.btn-secondary.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
                                 +fa('share-alt')
                               .dropdown-menu.dropdown-menu-right
-                                a.dropdown-item(href=`line://msg/text/?${encodeURIComponent(site.URL + "pantene?modal=pantene_modal_" + fes.pantene[i].name + "\n\n#翠巒祭")}`)
+                                a.dropdown-item(href=`line://msg/text/?${encodeURIComponent(site.URL + "pantene?modal=pantene_modal_" + fes.pantene[i].name + "\n\n当日"+ j + "-" + k + "でやってます。校舎内に来てね！\n\n#翠巒祭")}`)
                                   +ft('line')
                                   | &thinsp;LINE it!
-                                a.dropdown-item(href=`https://twitter.com/intent/tweet?url=${site.URL}pantene?modal=pantene_modal_${fes.pantene[i].name}&hashtags=翠巒祭&related=suiranfes`, target="_blank")
+                                a.dropdown-item(href=`https://twitter.com/intent/tweet?url=${site.URL}pantene?modal=pantene_modal_${fes.pantene[i].name}&text=${fes.pantene[i].title}\n\n当日${j}-${k}でやってます。校舎内に来てね！&hashtags=翠巒祭&related=suiranfes`, target="_blank")
                                   +fa('twitter')
                                   | &thinsp;Tweet
               -         } else {
