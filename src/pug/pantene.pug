@@ -44,9 +44,9 @@ html(lang="ja")
                             +pantene_column_hosts()
                         p!= fes.pantene[i].description.replace(/\r?\n/g,"<br>")
                       .modal-footer
-                        h4 Share
                         form
                           .input-group
+                            span.input-group-addon Share
                             input.form-control(type="url",value=`${site.URL}pantene?modal=pantene_modal_${fes.pantene[i].name}`, readonly)
                             .input-group-btn
                               button.btn.btn-secondary.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
@@ -149,20 +149,15 @@ html(lang="ja")
             .-pantene-room
             .-pantene-room
             .-pantene-room.p-1
-              a.card.p-2(class="card-outline-warning bg-white", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_owen`)
-                div
-                  +fa("chevron-right")
-                  | 中庭
-                h6.m-0 リーダー公開
-                small 應援部
+              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=nakaniwa") 中庭
+            .-pantene-stair
             .-pantene-room.p-1
               a.card.p-2(class="card-outline-warning bg-white", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_act`)
                 div
                   +fa("chevron-right")
-                  | 中庭
+                  | 3F
                 h6.m-0 演劇
                 small 演劇部
-            .-pantene-stair
             .-pantene-stair.p-1
               .card.p-2(class="card-inverse card-info")
                 div.m-auto 出口

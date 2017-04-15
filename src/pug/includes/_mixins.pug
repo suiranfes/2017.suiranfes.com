@@ -118,20 +118,6 @@ mixin _pantene_modals()
             | 翠巒祭の改善のために、どうかWEBアンケートにもご協力ください。
           a.btn.btn-primary.btn-lg.btn-block.disabled.m-1.-pantene-wtf(href="javascript:void(0);", role="button", aria-disabled="true") WEBアンケート準備中
 
-  .modal.fade.-pantene-modal(id=`pantene_modal_owen`, tabindex="-1", role="dialog", aria-hidden="true")
-    .modal-dialog(role="document")
-      .modal-content
-        .modal-header.flex-wrap-reverse
-          p.mr-2: b 中庭
-          h5.mr-2 リーダー公開
-          button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
-            span(aria-hidden="true") &times;
-        .modal-body
-          p
-            small 應援部
-          h6 1日目
-            p 14:00～
-
   .modal.fade.-pantene-modal(id=`pantene_modal_act`, tabindex="-1", role="dialog", aria-hidden="true")
     .modal-dialog(role="document")
       .modal-content
@@ -145,6 +131,21 @@ mixin _pantene_modals()
             small 演劇部
           h6 1日目
             p 14:30～
+        .modal-footer
+          form
+            .input-group
+              span.input-group-addon Share
+              input.form-control(type="url",value=`${site.URL}pantene?modal=pantene_modal_act`, readonly)
+              .input-group-btn
+                button.btn.btn-secondary.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                  +fa('share-alt')
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item(href=`line://msg/text/?${encodeURIComponent(site.URL + "pantene?modal=pantene_modal_act\n\n当日3階でやってます。校舎内に来てね！\n\n#翠巒祭")}`)
+                    +ft('line')
+                    | &thinsp;LINE it!
+                  a.dropdown-item(href=`https://twitter.com/intent/tweet?url=${site.URL}pantene?modal=pantene_modal_act&text=演劇部\n\n当日3階でやってます。校舎内に来てね！&hashtags=翠巒祭&related=suiranfes`, target="_blank")
+                    +fa('twitter')
+                    | &thinsp;Tweet
 
 mixin _food_tabcontent(foodsshop, key)
   h3= foodsshop.title
