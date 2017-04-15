@@ -12,10 +12,17 @@ html(lang="ja")
     .container
       .py-3
         h1 #{page.title}
+    .sticky-bottom.-tabemon-nav-wrap
+      ul.nav.nav-pills.nav-fill.p-2.bg-faded.sticky-bottom#foodtab(role="tablist")
+        li.nav-item
+          a.nav-link.active(data-toggle="tab", href=`#top`, role="tab") ご案内
+        each foodsshop, key in fes.foodsshops
+          li.nav-item
+            a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
+
     .wrap
       .container
         .tab-content
-
           .tab-pane.fade.show.active.py-3(id="top", role="tabpanel")
             h3 ご案内
             p.pl-2.my-1
@@ -30,12 +37,14 @@ html(lang="ja")
           each foodsshop, key in fes.foodsshops
               .tab-pane.py-3(id=key, role="tabpanel")
                 +_food_tabcontent(foodsshop, key)
-    ul.nav.nav-pills.nav-fill.p-2.bg-faded.sticky-bottom#foodtab(role="tablist")
-      li.nav-item
-        a.nav-link.active(data-toggle="tab", href=`#top`, role="tab") ご案内
-      each foodsshop, key in fes.foodsshops
+
+    .sticky-bottom.-tabemon-nav-wrap
+      ul.nav.nav-pills.nav-fill.p-2.bg-faded.sticky-bottom#foodtab(role="tablist")
         li.nav-item
-          a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
+          a.nav-link.active(data-toggle="tab", href=`#top`, role="tab") ご案内
+        each foodsshop, key in fes.foodsshops
+          li.nav-item
+            a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
     .container
       .py-3
         h2 お知らせ

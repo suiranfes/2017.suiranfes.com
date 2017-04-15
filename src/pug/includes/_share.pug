@@ -3,18 +3,18 @@ section#share.py-4
     p.my-1: b SNSで #翠巒祭 をシェア
     a(data-label="line-share",href=`line://msg/text/?${site.sharetext.line}`, target="_blank").btn.btn-line.mr-2.my-1
       | LINEで送る
-    a(data-label="tweet",href=`https://twitter.com/intent/tweet?url=https://2017.suiranfes.com/&text=${site.sharetext.twitter}`, target="_blank").btn.btn-tweet.mr-2.my-1
+    a(data-label="tweet",href=`https://twitter.com/intent/tweet?url=${site.URL}&text=${site.sharetext.twitter}`, target="_blank").btn.btn-tweet.mr-2.my-1
       i.fa.fa-twitter(aria-hidden="true") 
       | ツイート
-    a(data-label="fbshare",href="https://www.Facebook.com/sharer/sharer.php?u=https://2017.suiranfes.com/", target="_blank").btn.btn-facebook.mr-2.my-1
+    a(data-label="fbshare",href="https://www.Facebook.com/sharer/sharer.php?u=${site.URL}", target="_blank").btn.btn-facebook.mr-2.my-1
         i.fa.fa-facebook-square(aria-hidden="true") 
         | Facebook　
         span#after_fbshare
-    a(data-label="gplusshare",href="https://plus.google.com/share?url=suiranfes.com", target="_blank").btn.btn-gplus.mr-2.my-1
+    a(data-label="gplusshare",href=`https://plus.google.com/share?url=${site.URL}`, target="_blank").btn.btn-gplus.mr-2.my-1
         i.fa.fa-google-plus(aria-hidden="true") 
         | Google+　
-        .g-plusone(data-callback="gacb_gplusone", data-href="https://2017.suiranfes.com/")
-    a(data-label="",href=`http://b.hatena.ne.jp/entry/suiranfes.com`, target="_blank").btn.btn-hatena.mr-2.my-1
+        .g-plusone(data-callback="gacb_gplusone", data-href=`${site.URL}`)
+    a(data-label="",href=`http://b.hatena.ne.jp/entry/${site.URL}`, target="_blank").btn.btn-hatena.mr-2.my-1
       | はてブ
   span.followSNS.py-1
     p.my-1: b 翠巒祭の最新情報

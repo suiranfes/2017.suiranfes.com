@@ -26,10 +26,11 @@ html(lang="ja")
           each eventsplace, key in fes.eventsplaces
               .tab-pane.py-3(id=key, role="tabpanel")
                 +_event_tabcontent(eventsplace, key)
-    ul.nav.nav-pills.nav-fill.p-2.bg-faded.sticky-bottom#foodtab(role="tablist")
-      li.nav-item
-        a.nav-link.active(data-toggle="tab", href=`#top`, role="tab") ご案内
-      each eventsplace, key in fes.eventsplaces
+    .sticky-bottom.-tabemon-nav-wrap
+      ul.nav.nav-pills.nav-fill.p-2.bg-faded.bg-dark#foodtab(role="tablist")
         li.nav-item
-          a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
+          a.nav-link.active(data-toggle="tab", href=`#top`, role="tab") ご案内
+        each eventsplace, key in fes.eventsplaces
+          li.nav-item
+            a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
     include includes/_footer.pug

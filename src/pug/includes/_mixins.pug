@@ -8,6 +8,9 @@ include _script.pug
 mixin fa( $icon )
   <i class="fa fa-#{$icon}" aria-hidden="true"></i>
 
+mixin ft( $icon )
+  <i class="icon-#{$icon}" aria-hidden="true"></i>
+
 //-**********************************************
   *      badge
   *      バッジ
@@ -66,6 +69,23 @@ mixin updatearticle(i)
   *      一般展示
   ***********************************************
 
+mixin pantene_columm()
+  .d-flex.flex-row.align-items-center.flex-wrap
+    if (fes.pantene[i].has_page)
+      small <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    div #{j}-#{k}
+    +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
+  h6.m-0 #{fes.pantene[i].title}
+  small.-pantene-hosts
+    +pantene_column_hosts()
+
+mixin pantene_column_hosts()
+  - for (var o in fes.pantene[i].hosts) {
+    | #{fes.pantene[i].hosts[o].title}
+    - if (o < fes.pantene[i].hosts.length - 1){
+      | ･
+    - }
+  - }
 
 mixin _pantene_modals()
 
