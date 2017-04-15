@@ -12,6 +12,13 @@ html(lang="ja")
     .container
       .py-3
         h1 #{page.title}
+    .-tabemon-nav-wrap
+      ul.nav.nav-pills.nav-fill.p-2.bg-faded.bg-dark#foodtab(role="tablist")
+        li.nav-item
+          a.nav-link.active(data-toggle="tab", href=`#top`, role="tab") ご案内
+        each eventsplace, key in fes.eventsplaces
+          li.nav-item
+            a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
     .wrap
       .container
         .tab-content

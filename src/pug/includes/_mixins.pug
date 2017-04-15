@@ -191,6 +191,7 @@ mixin _event_tabcontent_ub(eventsplace, key, mmday)
       if ( fes.events[i].place === key && this_startDate >= day_startDate && this_startDate <= day_endDate )
         div( id = fes.events[i].id ).event
           h4= fes.events[i].title
+          p: b #{this_startDate.getHours()}:#{this_startDate.getMinutes()}～
           p= fes.events[i].description
           if ( fes.events[i].programs != null )
             ol.programs
