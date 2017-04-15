@@ -26,4 +26,4 @@ after_success:
 - git checkout master
 - git add --all
 - git commit -m "Automatic Build by Travis CI $TRAVIS_COMMIT"
-- '["$TRAVIS_PULL_REQUEST" == "false"] || git push git@github.com:suiranfes/2017.suiranfes.com.git $TRAVIS_BRANCH''
+- '["$TRAVIS_PULL_REQUEST" == "false"] || git push git@github.com:suiranfes/2017.suiranfes.com.git $TRAVIS_BRANCH'
