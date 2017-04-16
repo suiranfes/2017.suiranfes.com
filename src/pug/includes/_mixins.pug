@@ -158,10 +158,9 @@ mixin _food_tabcontent(foodsshop, key)
         | #{circlenums[fes.foods[i].shop.location]}
       br
       span!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
-    .card-group.px-4
+    .row.px-4
       - for(var j in fes.foods[i].kinds) {
-        .card
-          .card-block
+        .-food-card-wrap: .card: .card-block
             h6.card-title
               +fa("caret-right")
               | #{fes.foods[i].kinds[j].title}

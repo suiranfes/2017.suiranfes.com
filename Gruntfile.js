@@ -36,10 +36,18 @@ module.exports = function(grunt){
                 options: {
                     import: [
                         'nib'
-                    ]
+                    ],
+                    "include css": true
                 },
                 files: {
                     'docs/assets/style.css' : ['src/styl/*.styl', '!' + 'src/styl/_*.styl']
+                }
+            }
+        },
+        cssmin: {
+            minifybs: {
+                files: {
+                    'src/suika/bootstrap.min.css': 'src/suika/*'
                 }
             }
         },
@@ -97,6 +105,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-pug');
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browserify');
@@ -151,7 +160,7 @@ function listPages() {
 }
 
   //タスクの登録
-    grunt.registerTask('default', ['clean', 'merge-json', 'browserify', 'uglify', 'stylus', 'pug']);
+    grunt.registerTask('default', ['clean', 'merge-json', 'browserify', 'uglify', 'cssmin', 'stylus', 'pug']);
     grunt.registerTask('server', ['default', 'connect', 'watch']);
 
 }
