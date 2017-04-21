@@ -47,7 +47,7 @@ module.exports = function(grunt){
         cssmin: {
             minifybs: {
                 files: {
-                    'src/suika/bootstrap.min.css': 'src/suika/*'
+                    'docs/assets/style.min.css': 'docs/assets/style.css'
                 }
             }
         },
@@ -160,7 +160,7 @@ function listPages() {
 }
 
   //タスクの登録
-    grunt.registerTask('default', ['clean', 'merge-json', 'browserify', 'uglify', 'cssmin', 'stylus', 'pug']);
+    grunt.registerTask('default', ['clean', 'merge-json', 'browserify', 'uglify', 'stylus', 'cssmin', 'pug']);
     grunt.registerTask('server', ['default', 'connect', 'watch']);
 
 }

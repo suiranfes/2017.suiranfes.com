@@ -14,4 +14,8 @@ html(lang="ja")
           .col-12.py-3
             h1 #{page.title}
             p!=page.description
+            p または
+              a.btn.btn-warning(href="https://survey.suiranfes.com/325545", target="_blank") 別のタブで開く
+            .embed-responsive.embed-responsive-1by1
+              iframe.embed-responsive-item(src="https://survey.suiranfes.com/325545", allowfullscreen)
     include includes/_footer.pug

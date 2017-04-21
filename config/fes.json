@@ -90,7 +90,7 @@
                 "name": "Owen",
                 "description": "押忍。",
                 "performers": [
-                    "吹奏楽部"
+                    "應援部"
                 ],
                 "programs": [
                     "ここに曲目を入れます！",
@@ -106,25 +106,29 @@
                     "應援部",
                     "應援團"
                 ],
-                "title": "吹奏楽部"
+                "title": "應援部"
             }
         ],
         "eventsplaces": {
             "gym": {
                 "description": "体育館行事班です！",
-                "title": "体育館"
+                "title": "体育館",
+                "style": "info"
             },
             "kaikan": {
                 "description": "翠巒音楽祭！",
-                "title": "翠巒会館"
+                "title": "翠巒会館",
+                "style": "secondary"
             },
             "stage": {
                 "description": "イベント班です。",
-                "title": "イベントステージ"
+                "title": "イベントステージ",
+                "style": "warning"
             },
             "nakaniwa": {
                 "description": "副実です。",
-                "title": "中庭"
+                "title": "中庭",
+                "style": "success"
             }
         },
         "foods": [
@@ -257,17 +261,20 @@
             "bakery": {
                 "description": "",
                 "is_plural": false,
-                "title": "売店"
+                "title": "売店",
+                "style": "info"
             },
             "cafe": {
                 "description": "",
                 "is_plural": false,
-                "title": "喫茶"
+                "title": "喫茶",
+                "style": "danger"
             },
             "stall": {
                 "description": "校舎外での販売です。詳しい場所はパンフレットをご覧ください。完売する可能性があります。ご了承ください。ゴミはゴミステーションへよろしくお願いします。",
                 "is_plural": true,
-                "title": "模擬店"
+                "title": "模擬店",
+                "style": "primary"
             }
         },
         "pantene": [

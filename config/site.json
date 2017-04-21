@@ -25,63 +25,63 @@
                 "id" : "attention",
                 "name" : "attention",
                 "title" : "ご注意",
-                "description" : "ご来場前にどうかお読みください",
+                "description" : "ご来場前にどうかお読みください。",
                 "keywords" : ["スイラン祭"]
             },
             {
                 "id" : "access",
                 "name" : "access",
                 "title" : "バス･アクセス",
-                "description" : "当日運行される高崎駅からのシャトルバスなどについてです",
+                "description" : "当日運行される高崎駅からのシャトルバスや駐車場などについてです。",
                 "keywords" : ["スイラン祭","バス","シャトル","直通"]
             },
             {
                 "id" : "pantene",
                 "name" : "pantene",
                 "title" : "一般展示",
-                "description" : "部活展示およびクラス展示の情報です",
+                "description" : "校内の展示について。部活展示およびクラス展示などを、教室棟を模した図でリストアップしました。",
                 "keywords" : ["スイラン祭","部活展示","部展示","学級展示"]
             },
             {
                 "id" : "food",
                 "name" : "food",
                 "title" : "食べ物",
-                "description" : "唐揚げ、アイス、ポップコーン、ジュース、etc...模擬店・食堂・喫茶についてです",
+                "description" : "唐揚げ、アイス、ポップコーン、ジュース、etc...模擬店・食堂・喫茶店についてです。",
                 "keywords" : ["スイラン祭","模擬店","食べ物","飲み物"]
             },
             {
                 "id" : "events",
                 "name" : "events",
                 "title" : "イベント",
-                "description" : "楽しいイベント！屋外ステージ・体育館行事、翠巒会館での音楽部発表の情報です",
+                "description" : "楽しいイベント！ イベントステージ・体育館行事・翠巒会館での音楽部発表・新しい中庭行事の情報です。",
                 "keywords" : ["スイラン祭"]
             },
             {
                 "id" : "goods",
                 "name" : "goods",
                 "title" : "グッズ",
-                "description" : "うちわとクリアファイルを配布します！",
+                "description" : "うちわとクリアファイルを配布。スタンプラリーの紹介も。",
                 "keywords" : ["スイラン祭"]
             },
             {
                 "id" : "invmatch",
                 "name" : "invmatch",
                 "title" : "招待試合",
-                "description" : "運動部の活躍も見れます。",
+                "description" : "運動部の活躍も見よう。",
                 "keywords" : ["スイラン祭"]
             },
             {
                 "id" : "radio",
                 "name" : "radio",
                 "title" : "校内放送",
-                "description" : "ラジオ風校内放送についてです。",
+                "description" : "ラジオ風校内放送についてです。\nお便り募集中です。以下のフォームからお便りを募集してます。",
                 "keywords" : ["スイラン祭"]
             },
             {
                 "id" : "about",
                 "name" : "about",
                 "title" : "概要",
-                "description" : "関係者からのお言葉、翠巒祭の沿革などが書かれています",
+                "description" : "関係者からの言葉と、今年のテーマについてです。",
                 "keywords" : ["スイラン祭","高崎高校","歴史"]
             },
             {

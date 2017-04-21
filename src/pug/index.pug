@@ -11,9 +11,9 @@ html(lang="ja")
     .wrap.-index-first
       .row.-index-second
         .col-md-6.col-xl-7
-          .row
-            .col-xl-7.py-3.-index-left.text-font-mpc
-              .container
+          .row.-index-third.px-0
+            .col-xl-7.p-3.-index-left.text-font-mpc
+              .container.py-3
                 h1.-index-title #{site.title}
                 span.-index-theme #{site.theme}
                 br
@@ -26,9 +26,9 @@ html(lang="ja")
                   br
                   span.-index-date-day2num 4日
                   span.-index-date-day2Sun (日)
-            .col-xl-5.py-4.px-xl-0
-              .-index-middle
-                .list-group.mx-2.mx-xl-0
+            .col-xl-5.pt-xl-5
+              .-index-middle.align-left
+                .list-group.mx-2.mr-xl-5
                   .list-group-item
                     h3.my-1 更新情報
                   - for( var i in site.updates ) {
@@ -61,8 +61,8 @@ html(lang="ja")
                   if ( site.updates.length > 5 )
                     a(href="javascript:void(0);").list-group-item.list-group-item-action
                       b 隠す
-        .col-md-6.col-xl-5
-          .-index-right.p-md-1.d-flex.flex-wrap
+        .col-md-6.col-xl-5.px-0
+          .-index-right.px-3.py-3.py-md-4.d-flex.flex-wrap
             a(href="attention").Attention.py-2.px-3
               .-index-pickups-wrap.rounded.Attention
                 .container

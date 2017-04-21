@@ -113,7 +113,7 @@ mixin _pantene_modals()
         .modal-body
           p
             small 一般展示班
-          p シールを張るだけのかんたんな投票です。
+          p シールを貼るだけのかんたんな投票です。
             br
             | 翠巒祭の改善のために、どうかWEBアンケートにもご協力ください。
           a.btn.btn-primary.btn-lg.btn-block.disabled.m-1.-pantene-wtf(href="javascript:void(0);", role="button", aria-disabled="true") WEBアンケート準備中
@@ -152,33 +152,38 @@ mixin _food_tabcontent(foodsshop, key)
   p!= foodsshop.description.replace(/\r?\n|\r/g,"<br>")
   - for(var i in fes.foods) {
   - if ( fes.foods[i].shop.name === key ) {
-    h4 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
-    p.px-4 販売所:<b>#{foodsshop.title}</b>
-      if(foodsshop.is_plural)
-        | #{circlenums[fes.foods[i].shop.location]}
-      br
-      span!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
-    .row.px-4
-      - for(var j in fes.foods[i].kinds) {
-        .-food-card-wrap: .card: .card-block
-            h6.card-title
-              +fa("caret-right")
-              | #{fes.foods[i].kinds[j].title}
-            p.card-text #{fes.foods[i].kinds[j].price}円
-            if fes.foods[i].kinds[j].description
-              p.card-text #{fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")}
-            .card-text
-              +bootstrap_badge_normal("アレルギー物質","primary")
-              if ( fes.foods[i].kinds[j].allergens === undefined )
-                +bootstrap_badge_pill_lighter("調査中","warning")
-              else if ( fes.foods[i].kinds[j].allergens === null )
-                +bootstrap_badge_pill_lighter("なし","success")
-              else
-                - for(var k in fes.foods[i].kinds[j].allergens){
-                    +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
-                - }
-      - }
-    hr
+    div( id= fes.foods[i].name ).food
+      #accordion(role="tablist", aria-multiselectable="true")
+        .card(class=`card-outline-${foodsshop.style}`)
+          .card-header(id=`event_collapse_head_${key}_${fes.foods[i].name}`,role="tab")
+            a(data-toggle="collapse", data-parent="#accordion", href=`#food_collapse_${key}_${fes.foods[i].name}`, aria-expanded="true", aria-controls=`food_collapse_${key}_${fes.foods[i].name}`)
+              h4.p-0.m-0 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
+          .collapse(id=`food_collapse_${key}_${fes.foods[i].name}` role="tabpanel" aria-labelledby=`event_collapse_head_${key}_${fes.foods[i].name}`): .card-block.bg-white
+            p.px-3 販売所:<b>#{foodsshop.title}</b>
+              if(foodsshop.is_plural)
+                | #{circlenums[fes.foods[i].shop.location]}
+              br
+              span!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
+            .row.px-3
+              - for(var j in fes.foods[i].kinds) {
+                .-food-card-wrap.p-1: div.card.p-2(class=`card-outline-${foodsshop.style}`): .card-block
+                    h6.card-title
+                      +fa("caret-right")
+                      | #{fes.foods[i].kinds[j].title}
+                    p.card-text #{fes.foods[i].kinds[j].price}円
+                    if fes.foods[i].kinds[j].description
+                      p.card-text #{fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")}
+                    .card-text
+                      +bootstrap_badge_normal("アレルギー物質","primary")
+                      if ( fes.foods[i].kinds[j].allergens === undefined )
+                        +bootstrap_badge_pill_lighter("調査中","warning")
+                      else if ( fes.foods[i].kinds[j].allergens === null )
+                        +bootstrap_badge_pill_lighter("なし","success")
+                      else
+                        - for(var k in fes.foods[i].kinds[j].allergens){
+                            +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
+                        - }
+              - }
   - } }
 
 mixin _event_tabcontent_ub(eventsplace, key, mmday)
@@ -188,15 +193,20 @@ mixin _event_tabcontent_ub(eventsplace, key, mmday)
     -     day_startDate = new Date(fes['Day' + mmday].startDate)
     -     day_endDate = new Date(fes['Day' + mmday].endDate)
       if ( fes.events[i].place === key && this_startDate >= day_startDate && this_startDate <= day_endDate )
-        div( id = fes.events[i].id ).event
-          h4= fes.events[i].title
-          p: b #{printDate(this_startDate, 'time')}～
-          p= fes.events[i].description
-          if ( fes.events[i].programs != null )
-            ol.programs
-              each program in fes.events[i].programs
-                li= program
-
+        div( id= fes.events[i].id ).event
+          #accordion(role="tablist",aria-multiselectable="true")
+            .card(class=`card-outline-${eventsplace.style}`)
+              .card-header(id=`event_collapse_head_${key}_${fes.foods[i].name}`,role="tab")
+                h4.p-0.m-0
+                  a(data-toggle="collapse", data-parent="#accordion", href=`#event_collapse_${key}_${fes.events[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${key}_${fes.events[i].id}`)
+                    | <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.events[i].title}
+              .collapse(id=`event_collapse_${key}_${fes.events[i].id}` role="tabpanel" aria-labelledby=`event_collapse_head_${key}_${fes.foods[i].name}`): .card-block.bg-white
+                p: b #{printDate(this_startDate, 'time')}～
+                p= fes.events[i].description
+                if ( fes.events[i].programs != null )
+                  ol.programs
+                    each program in fes.events[i].programs
+                      li= program
 
 mixin _event_tabcontent(eventsplace, key)
   h3= eventsplace.title

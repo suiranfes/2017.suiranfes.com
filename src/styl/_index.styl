@@ -3,6 +3,16 @@
 * index
 *
 */
+.-index-first
+.-index-second
+  height: 100%
+
+.-index-third
+  background-image: url(-top-bgimg-posterex)
+  background-size: cover
+  background-position: center
+  height: 100%
+
 /*
 *
 * LEFT
@@ -11,6 +21,7 @@
 
 .-index-left
   text-align: right
+  text-shadow: 0 0 4px #fff,0 0 3px #fff,0 0 3px #fff,0 0 3px #fff,0 0 2px rgba(255,255,255,0.2),0 0 1px #fff
 
   .-index-title
     font-size: 2.8em
@@ -50,6 +61,7 @@
 
   .list-group-item
     @extend .bgimg-s
+    box-shadow: 0 0 4px #fff,0 0 3px #fff,0 0 3px #fff,0 0 3px #fff,0 0 2px rgba(255,255,255,0.2),0 0 1px #fff
 
   .list-group-item:nth-child(7)
   .list-group-item:last-child
@@ -57,6 +69,15 @@
     b
       text-align: inherit
       width: 100%
+
+  .list-group-item:nth-child(0)
+  .list-group-item:nth-child(1)
+  .list-group-item:nth-child(2)
+  .list-group-item:nth-child(3)
+  .list-group-item:nth-child(4)
+  .list-group-item:nth-child(5)
+  .list-group-item:nth-child(6)
+    text-align: left !important
 
   .list-group-item:nth-child(n+8)
     display: none
