@@ -74,54 +74,54 @@ html(lang="ja")
             - if (k == 7 || k == 3) {
               - if( j == 3 && k == 7 ) {
                 .-pantene-toilet.p-1
-                  .card.p-2(class="card-inverse -pantene-card-toilet")
+                  .card(class="card-inverse -pantene-card-toilet")
                     div.m-auto
                       +fa("female")
               - } else if( j == 3 && k == 3 ) {
                 .-pantene-toilet.p-1
-                  .card.p-2(class="card-inverse -pantene-card-toilet")
+                  .card(class="card-inverse -pantene-card-toilet")
                     div.m-auto
                       +fa("female")
               - } else if( j == 2 && k == 7 ) {
                 .-pantene-toilet.p-1
-                  .card.p-2(class="card-outline-secondary")
+                  .card(class="card-outline-secondary")
                     div.m-auto
                       +fa("male")
               - } else if( j == 2 && k == 3 ) {
                 .-pantene-toilet.p-1
-                  .card.p-2(class="card-inverse -pantene-card-toilet")
+                  .card(class="card-inverse -pantene-card-toilet")
                     div.m-auto
                       +fa("female")
               - } else if( j == 1 && k == 7 ) {
                 .-pantene-toilet.p-1
-                  .card.p-2(class="card-inverse -pantene-card-toilet")
+                  .card(class="card-inverse -pantene-card-toilet")
                     div.m-auto
                       +fa("female")
               - } else if( j == 1 && k == 3 ) {
                 .-pantene-toilet.p-1
-                  .card.p-2(class="card-outline-secondary")
+                  .card(class="card-outline-secondary")
                     div.m-auto
                       +fa("male")
               - }
               - if ( j == 3 ) {
                 .-pantene-stair.px-1.pt-1.pb-0
-                  .card.rounded-top.p-2(class="card-inverse card-warning")
-                    div.m-auto.-pantene-stair-hidden 階段
+                  .card.rounded-top(class="card-inverse card-warning")
+                    div.m-auto.-pantene-stair-hidden 階<br>段
               - } else if ( j == 2 ) {
                 .-pantene-stair.px-1.py-0
-                  .card.rounded-0.p-2(class="card-inverse card-warning")
-                    div.m-auto 階段
+                  .card.rounded-0(class="card-inverse card-warning")
+                    div.m-auto 階<br>段
               - } else if ( j == 1 ) {
                 .-pantene-stair.px-1.pt-0.pb-1
-                  .card.rounded-bottom.p-2(class="card-inverse card-warning")
-                    div.m-auto.-pantene-stair-hidden 階段
+                  .card.rounded-bottom(class="card-inverse card-warning")
+                    div.m-auto.-pantene-stair-hidden 階<br>段
               - }
             - }
             - }
             if (j == 1)
               .-pantene-stair.p-1
-                .card.p-2(class="card-inverse card-info")
-                  div.m-auto 入口
+                .card(class="card-inverse card-info")
+                  div.m-auto 入<br>口
             else
               .-pantene-stair
         - }
