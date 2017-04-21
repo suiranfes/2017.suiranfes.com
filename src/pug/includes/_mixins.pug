@@ -153,10 +153,10 @@ mixin _food_tabcontent(foodsshop, key)
   - for(var i in fes.foods) {
   - if ( fes.foods[i].shop.name === key ) {
     div( id= fes.foods[i].name ).food
-      #accordion(role="tablist", aria-multiselectable="true")
+      div(role="tablist", aria-multiselectable="true",id=`accordion_${key}`).-tabemon-common-wrapper
         .card(class=`card-outline-${foodsshop.style}`)
           .card-header(id=`event_collapse_head_${key}_${fes.foods[i].name}`,role="tab")
-            a(data-toggle="collapse", data-parent="#accordion", href=`#food_collapse_${key}_${fes.foods[i].name}`, aria-expanded="true", aria-controls=`food_collapse_${key}_${fes.foods[i].name}`)
+            a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#food_collapse_${key}_${fes.foods[i].name}`, aria-expanded="true", aria-controls=`food_collapse_${key}_${fes.foods[i].name}`)
               h4.p-0.m-0 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
           .collapse(id=`food_collapse_${key}_${fes.foods[i].name}` role="tabpanel" aria-labelledby=`event_collapse_head_${key}_${fes.foods[i].name}`): .card-block.bg-white
             p.px-3 販売所:<b>#{foodsshop.title}</b>
@@ -187,6 +187,7 @@ mixin _food_tabcontent(foodsshop, key)
   - } }
 
 mixin _event_tabcontent_ub(eventsplace, key, mmday)
+  h4 #{mmday}日目
   each event, i in fes.events
     - var this_startDate = new Date(fes.events[i].startDate)
     -     this_endDate = new Date(fes.events[i].endDate)
@@ -194,11 +195,11 @@ mixin _event_tabcontent_ub(eventsplace, key, mmday)
     -     day_endDate = new Date(fes['Day' + mmday].endDate)
       if ( fes.events[i].place === key && this_startDate >= day_startDate && this_startDate <= day_endDate )
         div( id= fes.events[i].id ).event
-          #accordion(role="tablist",aria-multiselectable="true")
+          div(role="tablist",aria-multiselectable="true",id=`accordion_${key}`).-tabemon-common-wrapper
             .card(class=`card-outline-${eventsplace.style}`)
-              .card-header(id=`event_collapse_head_${key}_${fes.foods[i].name}`,role="tab")
-                h4.p-0.m-0
-                  a(data-toggle="collapse", data-parent="#accordion", href=`#event_collapse_${key}_${fes.events[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${key}_${fes.events[i].id}`)
+              .card-header(id=`event_collapse_head_${key}_${fes.events[i].id}`,role="tab")
+                h5.p-0.m-0
+                  a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#event_collapse_${key}_${fes.events[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${key}_${fes.events[i].id}`)
                     | <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.events[i].title}
               .collapse(id=`event_collapse_${key}_${fes.events[i].id}` role="tabpanel" aria-labelledby=`event_collapse_head_${key}_${fes.foods[i].name}`): .card-block.bg-white
                 p: b #{printDate(this_startDate, 'time')}～
@@ -213,3 +214,26 @@ mixin _event_tabcontent(eventsplace, key)
   p!= eventsplace.description.replace(/\r?\n|\r/g,"<br>")
   +_event_tabcontent_ub(eventsplace, key, 1)
   +_event_tabcontent_ub(eventsplace, key, 2)
+
+
+mixin _invmatch_tabcontent_ub(mmday)
+  each match, i in fes.invmatches
+    - var this_startDate = new Date(fes.invmatches[i].startDate)
+    -     this_endDate = new Date(fes.invmatches[i].endDate)
+    -     day_startDate = new Date(fes['Day' + mmday].startDate)
+    -     day_endDate = new Date(fes['Day' + mmday].endDate)
+      if ( this_startDate >= day_startDate && this_startDate <= day_endDate )
+        div( id="#invmatch" ).invmatch
+          #accordion(role="tablist",aria-multiselectable="true").-tabemon-common-wrapper
+            .card(class=`card-outline-secondary`)
+              .card-header(id=`event_collapse_head_${fes.invmatches[i].id}`,role="tab")
+                h4.p-0.m-0
+                  a(data-toggle="collapse", data-parent="#accordion", href=`#event_collapse_${fes.invmatches[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${fes.invmatches[i].id}`)
+                    | <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.invmatches[i].title} <small>vs #{fes.invmatches[i].vs.convenient}</small>
+              .collapse(id=`event_collapse_${fes.invmatches[i].id}` role="tabpanel" aria-labelledby=`event_collapse_head_${fes.invmatches[i].name}`): .card-block.bg-white
+                p: b #{printDate(this_startDate, 'time')}～<br>@#{fes.invmatches[i].place.title}<br>vs.#{fes.invmatches[i].vs.formal}
+                p= fes.invmatches[i].description
+
+mixin _invmatch_tabcontent(mmday)
+  h3 #{mmday}日目
+  +_invmatch_tabcontent_ub(mmday)

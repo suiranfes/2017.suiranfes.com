@@ -7,3 +7,21 @@
 
 .-food-card-wrap
     flex: auto
+
+.-tabemon-common-wrapper
+  
+  .card:first-child
+    border-top: 0 !important
+    border-top-right-radius: .25rem
+    border-top-left-radius: .25rem
+
+  .card:last-child
+    border-bottom: 0 !important
+    border-bottom-right-radius: .25rem
+    border-bottom-left-radius: .25rem
+
+  .card:not(:first-child)
+  .card:not(:last-child)
+    border-top: 0 !important
+    border-bottom: 0 !important
+    border-radius: 0

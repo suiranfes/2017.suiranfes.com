@@ -8,10 +8,40 @@ html(lang="ja")
     include includes/_includes.pug
   body
     include includes/_nav.pug
+    .container
+      .row
+        .col-12.py-3
+          h1 #{page.title}
+          p!=page.description
+    ul.nav.nav-pills.nav-fill.p-2.bg-success#foodtab(role="tablist")
+      li.nav-item
+        a.nav-link.active.text-white(data-toggle="tab", href=`#top`, role="tab") ご案内
+      li.nav-item
+        a.nav-link.text-white(data-toggle="tab", href=`#day1`, role="tab") 1日目
+      li.nav-item
+        a.nav-link.text-white(data-toggle="tab", href=`#day2`, role="tab") 2日目
+
     .wrap
       .container
-        .row
-          .col-12.py-3
-            h1 #{page.title}
-            p!=page.description
+        .tab-content
+          .tab-pane.fade.show.active.py-3(id="top", role="tabpanel")
+            h3 ご案内
+            p.pl-2.my-1
+              +fa("circle")
+              | 時間前に完売した場合は販売終了とさせていただきます。 
+            p 下部からお選びください！
+          .tab-pane.py-3(id="day1", role="tabpanel")
+            +_invmatch_tabcontent(1)
+          .tab-pane.py-3(id="day2", role="tabpanel")
+            +_invmatch_tabcontent(2)
+
+    .sticky-bottom
+      ul.nav.nav-pills.nav-fill.p-2.bg-success#foodtab(role="tablist")
+        li.nav-item
+          a.nav-link.active.text-white(data-toggle="tab", href=`#top`, role="tab") ご案内
+        li.nav-item
+          a.nav-link.text-white(data-toggle="tab", href=`#day1`, role="tab") 1日目
+        li.nav-item
+          a.nav-link.text-white(data-toggle="tab", href=`#day2`, role="tab") 2日目
+
     include includes/_footer.pug
