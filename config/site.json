@@ -64,7 +64,7 @@
                 "id" : "events",
                 "name" : "events",
                 "title" : "イベント",
-                "description" : "楽しいイベント！ イベントステージ・体育館行事・翠巒会館での音楽部発表・新しい中庭行事の情報です。",
+                "description" : "楽しいイベント！ イベントステージ・体育館行事・翠巒会館での音楽部発表情報です。",
                 "keywords" : ["スイラン祭"],
                 "enable" : true,
                 "children" : [
@@ -94,7 +94,7 @@
                 "id" : "invmatch",
                 "name" : "invmatch",
                 "title" : "招待試合",
-                "description" : "運動部の活躍も見よう。",
+                "description" : "運動部の活躍もぜひご覧ください。",
                 "keywords" : ["スイラン祭"],
                 "enable" : false,
                 "children" : [
@@ -112,7 +112,7 @@
                 "id" : "radio",
                 "name" : "radio",
                 "title" : "校内放送",
-                "description" : "ラジオ風校内放送についてです。\nお便り募集中です。以下のフォームからお便りを募集してます。",
+                "description" : "ラジオ風校内放送についてです。\nお便り募集中です。以下のフォームからお便りを募集しています。",
                 "keywords" : ["スイラン祭"],
                 "enable" : true
             },
@@ -120,7 +120,7 @@
                 "id" : "about",
                 "name" : "about",
                 "title" : "概要",
-                "description" : "関係者からの言葉と、今年のテーマについてです。",
+                "description" : "翠巒祭の沿革や今年のテーマについてです。",
                 "keywords" : ["スイラン祭","高崎高校","歴史"],
                 "enable" : false
             },
