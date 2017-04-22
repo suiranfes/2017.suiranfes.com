@@ -15,13 +15,25 @@ nav.navbar.navbar-toggleable-md.navbar-inverse.bg-suiranfes.bgimg-n
   button.navbar-toggler.navbar-toggler-right(type="button", data-toggle="collapse", data-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
     span.navbar-toggler-icon
   a.navbar-brand(href="/") <i class="icon-ths-takasakihs"></i> #{site.title}
-  div.collapse.navbar-collapse(id="navbarSupportedContent")
+  div.collapse.navbar-collapse(id="navbar")
     ul.navbar-nav
       - for (var i in site.pages) {
-      -   if ( i != 0 && site.pages[i].name != "404" ) {
-      li.nav-item
-        a.nav-link(href=`/${site.pages[i].name}`) #{site.pages[i].title}
+      -   if ( i != 0 && site.pages[i].name != "404") {
+        if (site.pages[i].enable)
+          if (site.pages[i].children)
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(href="javascript:void(0)", id=`navbar_drop_${site.pages[i].name}`, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                | #{site.pages[i].title}
+              .dropdown-menu(area_labelledby=`navbar_drop_${site.pages[i].name}`)
+                each child, j in site.pages[i].children
+                  a.dropdown-item(href=`/${site.pages[i].name}${child.add}`) #{child.title}
+          else
+            li.nav-item
+              a.nav-link(href=`/${site.pages[i].name}`) #{site.pages[i].title}
+        else
+          li.nav-item
+            a.nav-link.disabled(href="javascript:void(0)") #{site.pages[i].title}
       -   }
       - }
       li.nav-item.ml-auto
-        a.btn.btn-warning(href="https://suiranfes.com/") ポータル
+        a.btn.btn-warning(href="https://suiranfes.com/") 翠巒祭ポータルへ

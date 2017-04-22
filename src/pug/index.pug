@@ -11,24 +11,42 @@ html(lang="ja")
     .wrap.-index-first
       .row.-index-second
         .col-md-6.col-xl-7
-          .row.-index-third.px-0
+          .row.-index-third.px-0.pb-3
             .col-xl-7.p-3.-index-left.text-font-mpc
               .container.py-3
                 h1.-index-title #{site.title}
                 span.-index-theme #{site.theme}
                 br
-                span.-index-themeinjap  『#{site.themeinjap}』
+                span.-index-themeinjp  『#{site.themeinjap}』
                 p.-index-date
                   span.-index-date-y 2017年
                   span.-index-date-m 6月
                   span.-index-date-day1num 3日
                   span.-index-date-day1Sat (土)
+                  span.-index-date-day1start 12:00～
                   br
                   span.-index-date-day2num 4日
                   span.-index-date-day2Sun (日)
+                  span.-index-date-day2start 9:00～
+                  br
+                  span 閉場 17:00(両日)
             .col-xl-5.pt-xl-5
-              .-index-middle.align-left
-                .list-group.mx-2.mr-xl-5
+              .-index-middle.align-left: .container
+                .alert.alert-danger(role="alert").-index-onposter
+                  p.my-2: b
+                    +fa("ban")
+                    | 高チャリでのご来場はご遠慮ください
+                .alert.alert-info(role="alert").-index-onposter
+                  p.my-2
+                    +fa("info-circle")
+                    b Web投票アンケートを実施します
+                  p.mb-2
+                    | 一般展示の投票結果は、それぞれが投票場のシールと合算され、部活動展示およびクラス展示の順位を付けます。
+                    br
+                    | 時間外の投票は受け付けておりません。お手数ですが、リンク下段の期間でご回答ください。
+                  a.btn.btn-success.btn-block(href="javascript:void(0)") 1日目用投票アンケート<br><small>3日 13:00 - 4日 9:00</small>
+                  a.btn.btn-success.btn-block(href="javascript:void(0)") 2日目用投票アンケート<br><small>4日 10:00 - 5日 3:00</small>
+                .list-group.-index-onposter
                   .list-group-item
                     h3.my-1 更新情報
                   - for( var i in site.updates ) {
@@ -63,30 +81,24 @@ html(lang="ja")
                       b 隠す
         .col-md-6.col-xl-5.px-0
           .-index-right.px-3.py-3.py-md-4.d-flex.flex-wrap
-            a(href="attention").Attention.py-2.px-3
-              .-index-pickups-wrap.rounded.Attention
-                .container
-                  .-index-pickups.Attention
-                    .-index-pickups-head ご注意･ご案内
-                    .-index-pickups-desc どうかご来場前にご一読ください
             a(href="access#shuttle").Bus.py-2.px-3
               .-index-pickups-wrap.rounded.Bus
                 .container
                   .-index-pickups.Bus
                     .-index-pickups-head 無料シャトルバス
-                    .-index-pickups-desc 高崎駅から約10分毎に運行・詳細をご確認ください
+                    .-index-pickups-desc 高崎駅から約10分毎に運行
             a(href="pantene").Pantene.py-2.px-3
               .-index-pickups-wrap.rounded.Pantene
                 .container
                   .-index-pickups.Pantene
                     .-index-pickups-head 一般展示
-                    .-index-pickups-desc 今回最も力を入れた校内の展示です
-            a(href="food").Food.py-2.px-3
+                    .-index-pickups-desc 今回最も力を入れた校内の展示
+            a(href="food?tab=stall").Food.py-2.px-3
               .-index-pickups-wrap.rounded.Food
                 .container
                   .-index-pickups.Food
                     .-index-pickups-head 食べ物･飲み物
-                    .-index-pickups-desc 模擬店、食堂、喫茶で美味しいものを食べる
+                    .-index-pickups-desc 模擬店、食堂、喫茶店で美味しいものを食べる
             a(href="events?tab=stage").Events.py-2.px-3
               .-index-pickups-wrap.rounded.Events
                 .container

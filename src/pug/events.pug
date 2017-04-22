@@ -12,32 +12,23 @@ html(lang="ja")
     .container
       .py-3
         h1 #{page.title}
+        p!=page.description
+
     .-tabemon-nav-wrap
       ul.nav.nav-pills.nav-fill.p-2.bg-faded.bg-dark#foodtab(role="tablist")
-        li.nav-item
-          a.nav-link.active(data-toggle="tab", href=`#top`, role="tab") ご案内
         each eventsplace, key in fes.eventsplaces
           li.nav-item
-            a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
+            a.nav-link.text-white(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
     .wrap
       .container
         .tab-content
-
-          .tab-pane.fade.show.active.py-3(id="top", role="tabpanel")
-            h3 ご案内
-            p.pl-2.my-1
-              +fa("circle")
-              | 時間前に完売した場合は販売終了とさせていただきます。 
-            p 下部からお選びください！
 
           each eventsplace, key in fes.eventsplaces
               .tab-pane.py-3(id=key, role="tabpanel")
                 +_event_tabcontent(eventsplace, key)
     .sticky-bottom.-tabemon-nav-wrap
       ul.nav.nav-pills.nav-fill.p-2.bg-faded.bg-dark#foodtab(role="tablist")
-        li.nav-item
-          a.nav-link.active(data-toggle="tab", href=`#top`, role="tab") ご案内
         each eventsplace, key in fes.eventsplaces
           li.nav-item
-            a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
+            a.nav-link.text-white(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
     include includes/_footer.pug

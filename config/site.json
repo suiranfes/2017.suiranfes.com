@@ -19,77 +19,118 @@
                 "name" : "index",
                 "title" : "トップページ",
                 "description" : "来場者数1万5千人を誇る県内一の文化祭。第65回は2017年6月3日(土)4日(日)開催。テーマは“No SurFace”、日本語で言ったら「おもてなし」。ごめんなさい、駄洒落です。",
-                "keywords" : ["スイラン祭","文化祭","群馬","高校","高高","すいらんさい","スイランサイ","すいらん祭","すいらん","タカタカ"]
-            },
-            {
-                "id" : "attention",
-                "name" : "attention",
-                "title" : "ご注意",
-                "description" : "ご来場前にどうかお読みください。",
-                "keywords" : ["スイラン祭"]
+                "keywords" : ["スイラン祭","文化祭","群馬","高校","高高","すいらんさい","スイランサイ","すいらん祭","すいらん","タカタカ"],
+                "enable" : true
             },
             {
                 "id" : "access",
                 "name" : "access",
                 "title" : "バス･アクセス",
                 "description" : "当日運行される高崎駅からのシャトルバスや駐車場などについてです。",
-                "keywords" : ["スイラン祭","バス","シャトル","直通"]
+                "keywords" : ["スイラン祭","バス","シャトル","直通"],
+                "enable" : true
             },
             {
                 "id" : "pantene",
                 "name" : "pantene",
                 "title" : "一般展示",
                 "description" : "校内の展示について。部活展示およびクラス展示などを、教室棟を模した図でリストアップしました。",
-                "keywords" : ["スイラン祭","部活展示","部展示","学級展示"]
+                "keywords" : ["スイラン祭","部活展示","部展示","学級展示"],
+                "enable" : false
             },
             {
                 "id" : "food",
                 "name" : "food",
                 "title" : "食べ物",
                 "description" : "唐揚げ、アイス、ポップコーン、ジュース、etc...模擬店・食堂・喫茶店についてです。",
-                "keywords" : ["スイラン祭","模擬店","食べ物","飲み物"]
+                "keywords" : ["スイラン祭","模擬店","食べ物","飲み物"],
+                "enable" : false,
+                "children" : [
+                    {
+                        "title" : "模擬店",
+                        "add" : "?tab=stall"
+                    },
+                    {
+                        "title" : "食堂",
+                        "add" : "?tab=bakery"
+                    },
+                    {
+                        "title" : "喫茶店",
+                        "add" : "?tab=cafe"
+                    }
+                ]
             },
             {
                 "id" : "events",
                 "name" : "events",
                 "title" : "イベント",
                 "description" : "楽しいイベント！ イベントステージ・体育館行事・翠巒会館での音楽部発表・新しい中庭行事の情報です。",
-                "keywords" : ["スイラン祭"]
+                "keywords" : ["スイラン祭"],
+                "enable" : true,
+                "children" : [
+                    {
+                        "title" : "イベントステージ",
+                        "add" : "?tab=stage"
+                    },
+                    {
+                        "title" : "体育館",
+                        "add" : "?tab=gym"
+                    },
+                    {
+                        "title" : "翠巒会館",
+                        "add" : "?tab=kaikan"
+                    }
+                ]
             },
             {
                 "id" : "goods",
                 "name" : "goods",
                 "title" : "グッズ",
-                "description" : "うちわとクリアファイルを配布。スタンプラリーの紹介も。",
-                "keywords" : ["スイラン祭"]
+                "description" : "翠巒祭限定グッズです。",
+                "keywords" : ["スイラン祭"],
+                "enable" : false
             },
             {
                 "id" : "invmatch",
                 "name" : "invmatch",
                 "title" : "招待試合",
                 "description" : "運動部の活躍も見よう。",
-                "keywords" : ["スイラン祭"]
+                "keywords" : ["スイラン祭"],
+                "enable" : false,
+                "children" : [
+                    {
+                        "title" : "1日目",
+                        "add" : "?tab=day1"
+                    },
+                    {
+                        "title" : "2日目",
+                        "add" : "?tab=day2"
+                    }
+                ]
             },
             {
                 "id" : "radio",
                 "name" : "radio",
                 "title" : "校内放送",
                 "description" : "ラジオ風校内放送についてです。\nお便り募集中です。以下のフォームからお便りを募集してます。",
-                "keywords" : ["スイラン祭"]
+                "keywords" : ["スイラン祭"],
+                "enable" : true
             },
             {
                 "id" : "about",
                 "name" : "about",
                 "title" : "概要",
                 "description" : "関係者からの言葉と、今年のテーマについてです。",
-                "keywords" : ["スイラン祭","高崎高校","歴史"]
+                "keywords" : ["スイラン祭","高崎高校","歴史"],
+                "enable" : false
             },
             {
                 "id" : "404",
                 "name" : "404",
                 "title" : "エラー「404」",
                 "description" : "未公開のページか、間違ったアドレスである可能性があります",
-                "keywords" : [""]
+                "keywords" : [""],
+                "enable" : true
             }
         ],
         "colorpalet" : {

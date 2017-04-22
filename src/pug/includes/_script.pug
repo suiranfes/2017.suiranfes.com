@@ -62,8 +62,8 @@
 -   if(a.place.room < b.place.room) { return 1 } else { return -1 }
 - });
 - fes.events.sort(function(a,b) {
--   if(a.startDate < b.startDate) { return 1 } else { return -1 }
+-   if(a.startDate > b.startDate) { return 1 } else { return -1 }
 - });
 - fes.invmatches.sort(function(a,b) {
--   if(a.startDate < b.startDate) { return 1 } else { return -1 }
+-   if(a.startDate > b.startDate) { return 1 } else { return -1 }
 - });

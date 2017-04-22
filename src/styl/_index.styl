@@ -12,6 +12,30 @@
   background-size: cover
   background-position: center
   height: 100%
+  
+  .-index-onposter
+    box-shadow: 0 0 4px #fff,0 0 3px #fff,0 0 3px #fff,0 0 3px #fff,0 0 2px rgba(255,255,255,0.2),0 0 1px #fff
+
+.-index-morebigger
+
+  @media screen and (max-width: 400px)
+    font-size: 1rem
+  @media screen and (min-width: 400px)
+    font-size: 1.15rem
+  @media screen and (min-width: 500px)
+    font-size: 1.3rem
+  @media screen and (min-width: 768px)
+    font-size: 1rem
+  @media screen and (min-width: 880px)
+    font-size: 1.15rem
+  @media screen and (min-width: 1000px)
+    font-size: 1.3rem
+  @media screen and (min-width: 1200px)
+    font-size: 1.07rem
+  @media screen and (min-width: 1401px)
+    font-size: 1.3rem
+  @media screen and (min-width: 1701px)
+    font-size: 1.5rem
 
 /*
 *
@@ -23,6 +47,8 @@
   text-align: right
   text-shadow: 0 0 4px #fff,0 0 3px #fff,0 0 3px #fff,0 0 3px #fff,0 0 2px rgba(255,255,255,0.2),0 0 1px #fff
 
+  @extend .-index-morebigger
+
   .-index-title
     font-size: 2.8em
 
@@ -30,19 +56,22 @@
     font-size: 2.5em
     font-weight: 700
 
-  .-index-themeinjap
+  .-index-themeinjp
     font-size: 1.5em
 
   .-index-date
     font-weight: 700
 
+    .-index-date-y
+      font-size: 1.1em
+
     .-index-date-m
-      font-size: 1.5em
+    .-index-date-day1Sat
+    .-index-date-day2Sun
+      font-size: 1.6em
 
     .-index-date-day1num
-    .-index-date-day1Sat
     .-index-date-day2num
-    .-index-date-day2Sun
       font-size: 1.7em
 
     .-index-date-day1Sat
@@ -51,6 +80,10 @@
     .-index-date-day2Sun
       color: red
 
+    .-index-date-day1start
+    .-index-date-day2start
+      font-size: 1.3em
+
 /*
 *
 * MIDDLE
@@ -58,10 +91,6 @@
 */
 
 .-index-middle
-
-  .list-group-item
-    @extend .bgimg-s
-    box-shadow: 0 0 4px #fff,0 0 3px #fff,0 0 3px #fff,0 0 3px #fff,0 0 2px rgba(255,255,255,0.2),0 0 1px #fff
 
   .list-group-item:nth-child(7)
   .list-group-item:last-child
@@ -82,8 +111,6 @@
   .list-group-item:nth-child(n+8)
     display: none
 
-  .list-group-item.active
-    @extend .bgimg-n
 
 /*
 *
@@ -94,11 +121,15 @@
 .-index-right
   @extend .bgimg-n
   background-color: lighten(#94B78D,35%)
+  height: 100%
+
+  @extend .-index-morebigger
 
   a
     display: block
     color: white
     width: 100%
+    height: auto
     overflow: hidden
 
     &:link
@@ -117,11 +148,10 @@
     transition-timing-function: ease !important
     transition-duration: .25s !important
     transition-property: all !important
-    position: relative
     background-image: url(-top-bgimg-saya)
     background-size: 96px 96px
     box-shadow: 0 0 5px white
-    z-index: 3
+    text-shadow: 0 0 2px black
 
     &:hover
       box-shadow: 0 0 5px black

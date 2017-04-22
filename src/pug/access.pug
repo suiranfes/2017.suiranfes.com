@@ -8,15 +8,28 @@ html(lang="ja")
     include includes/_includes.pug
   body
     include includes/_nav.pug
-    .wrap
-      .container
-        .row
-          .col-12.py-3
-            h1 #{page.title}
-          .col-12.py-3
-            h2 バス
-          .col-12.py-3
-            h2 お車
-          .col-12.py-3
-            h2 自転車
+    .container
+      .py-3
+        h1.my-2 #{page.title}
+        .embed-responsive.embed-responsive-21by9.mb-3
+          <iframe class="embed-responsive-item" src="https://www.google.com/maps/d/embed?mid=1vBl_eX38GpKpCYiVgD3JfPg-7eY"></iframe>
+        h2
+         +fa("bus")
+         | 無料シャトルバス
+        p 南小学校より高崎高校まで、無料のシャトルバスで会場までご案内致します。
+        p 両日とも、<b>開場後</b>にバスの運行を始め、<b>17時</b>に帰りのバスの列形成を締め切らせていただきます。
+        .embed-responsive.embed-responsive-21by9.mb-3
+          <iframe class="embed-responsive-item" src="https://www.google.com/maps/d/embed?mid=1CscodCPl3tv2PJmjJpYHqk4FWWE"></iframe>
+        h2
+          +fa("bicycle")
+          | 自転車
+        p.text-danger
+          b 高チャリ範囲外ですので、高チャリで和田橋を渡ることはできません。
+        p 会場内に駐輪場を開設しております。
+        h2.mt-3
+          +fa("car")
+          | お車
+        p 会場の近くまでお越しください。黒いTシャツを着た実行委員が、駐車場へご案内致します。
+        .embed-responsive.embed-responsive-21by9.mb-3
+          <iframe class="embed-responsive-item" src="https://www.google.com/maps/d/embed?mid=1vNKwSWLOZ5LaQ1hbuuDp1Hf_FWU"></iframe>
     include includes/_footer.pug

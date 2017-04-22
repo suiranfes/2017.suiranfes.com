@@ -1,27 +1,43 @@
-@media screen and (max-height: 600px)
+@media screen and (max-height: 500px)
   .-tabemon-nav-wrap
     overflow-x: scroll
     
     ul
-      width: 600px
+      width: 500px
 
 .-food-card-wrap
     flex: auto
 
 .-tabemon-common-wrapper
-  
-  .card:first-child
-    border-top: 0 !important
-    border-top-right-radius: .25rem
-    border-top-left-radius: .25rem
+  > div
+    &:first-child
+      .card.-tabemon-card
+        border-bottom: 0 !important
+        border-top-right-radius: .25rem
+        border-top-left-radius: .25rem
+        border-bottom-right-radius: 0
+        border-bottom-left-radius: 0
 
-  .card:last-child
-    border-bottom: 0 !important
-    border-bottom-right-radius: .25rem
-    border-bottom-left-radius: .25rem
+    &:last-child
+      .card.-tabemon-card
+        border-bottom-right-radius: .25rem
+        border-bottom-left-radius: .25rem
+        border-top-right-radius: 0
+        border-top-left-radius: 0
 
-  .card:not(:first-child)
-  .card:not(:last-child)
-    border-top: 0 !important
-    border-bottom: 0 !important
-    border-radius: 0
+    &:not(:first-child):not(:last-child)
+      .card.-tabemon-card
+        border-bottom: 0 !important
+        border-radius: 0
+    
+    &:first-child:last-child
+      .card.-tabemon-card
+        border-top-right-radius: .25rem
+        border-top-left-radius: .25rem
+        border-bottom-right-radius: .25rem
+        border-bottom-left-radius: .25rem
+    
+    .card.-tabemon-card
+      .card-header
+        a
+          color: #212121

@@ -39,11 +39,11 @@ mixin bootstrap_badge_normal_lighter( $badge_title, $badge_style, $badge_schema_
 
 mixin updatearticle(i)
   article(itemscope, itemtype="http://schema.org/NewsArticle").w-100.flex-column.align-items-start
-    .d-flex.w-100.justify-content-between
+    .d-flex.w-100.flex-wrap
       small
         time(itemprop="datePublished", datetime=site.updates[i].date, content=site.updates[i].date)
           | #{printableDate}
-      +bootstrap_badge_pill( site.updatebadges[site.updates[i].badge].title, site.updatebadges[site.updates[i].badge].style, "keywords" )
+      +bootstrap_badge_pill( site.updatebadges[site.updates[i].badge].title, site.updatebadges[site.updates[i].badge].style, "keywords" ).ml-auto
     h5(itemprop="headline").my-1
       - if(site.updates[i].link){
         i.fa.fa-chevron-right(aria-hidden="true")
@@ -150,23 +150,24 @@ mixin _pantene_modals()
 mixin _food_tabcontent(foodsshop, key)
   h3= foodsshop.title
   p!= foodsshop.description.replace(/\r?\n|\r/g,"<br>")
-  - for(var i in fes.foods) {
-  - if ( fes.foods[i].shop.name === key ) {
-    div( id= fes.foods[i].name ).food
-      div(role="tablist", aria-multiselectable="true",id=`accordion_${key}`).-tabemon-common-wrapper
-        .card(class=`card-outline-${foodsshop.style}`)
-          .card-header(id=`event_collapse_head_${key}_${fes.foods[i].name}`,role="tab")
-            a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#food_collapse_${key}_${fes.foods[i].name}`, aria-expanded="true", aria-controls=`food_collapse_${key}_${fes.foods[i].name}`)
-              h4.p-0.m-0 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
-          .collapse(id=`food_collapse_${key}_${fes.foods[i].name}` role="tabpanel" aria-labelledby=`event_collapse_head_${key}_${fes.foods[i].name}`): .card-block.bg-white
-            p.px-3 販売所:<b>#{foodsshop.title}</b>
-              if(foodsshop.is_plural)
+  .-tabemon-common-wrapper
+    - for(var i in fes.foods) {
+    - if ( fes.foods[i].shop.name === key ) {
+      div( id= fes.foods[i].name ).food
+        div(role="tablist", aria-multiselectable="true",id=`accordion_${key}`)
+          .card(class=`card-outline-${foodsshop.style}`).-tabemon-card
+            .card-header(class=`bg-${foodsshop.style}`, id=`event_collapse_head_${key}_${fes.foods[i].name}`,role="tab")
+              a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#food_collapse_${key}_${fes.foods[i].name}`, aria-expanded="true", aria-controls=`food_collapse_${key}_${fes.foods[i].name}`)
+                h4.p-0.m-0 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
+            .collapse(id=`food_collapse_${key}_${fes.foods[i].name}` role="tabpanel" aria-labelledby=`event_collapse_head_${key}_${fes.foods[i].name}`): .card-block.bg-white
+              p.px-3 販売所:<b>#{foodsshop.title}</b>
+                if(foodsshop.is_plural)
                 | #{circlenums[fes.foods[i].shop.location]}
-              br
-              span!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
-            .row.px-3
-              - for(var j in fes.foods[i].kinds) {
-                .-food-card-wrap.p-1: div.card.p-2(class=`card-outline-${foodsshop.style}`): .card-block
+                br
+                span.mb-0!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
+              .row.px-3
+                - for(var j in fes.foods[i].kinds) {
+                  .-food-card-wrap.p-1: div.card.p-2(class=`card-outline-${foodsshop.style}`): .card-block
                     h6.card-title
                       +fa("caret-right")
                       | #{fes.foods[i].kinds[j].title}
@@ -183,56 +184,60 @@ mixin _food_tabcontent(foodsshop, key)
                         - for(var k in fes.foods[i].kinds[j].allergens){
                             +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
                         - }
-              - }
-  - } }
+                - }
+    - } }
 
 mixin _event_tabcontent_ub(eventsplace, key, mmday)
   h4 #{mmday}日目
-  each event, i in fes.events
-    - var this_startDate = new Date(fes.events[i].startDate)
-    -     this_endDate = new Date(fes.events[i].endDate)
-    -     day_startDate = new Date(fes['Day' + mmday].startDate)
-    -     day_endDate = new Date(fes['Day' + mmday].endDate)
-      if ( fes.events[i].place === key && this_startDate >= day_startDate && this_startDate <= day_endDate )
-        div( id= fes.events[i].id ).event
-          div(role="tablist",aria-multiselectable="true",id=`accordion_${key}`).-tabemon-common-wrapper
-            .card(class=`card-outline-${eventsplace.style}`)
-              .card-header(id=`event_collapse_head_${key}_${fes.events[i].id}`,role="tab")
-                h5.p-0.m-0
-                  a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#event_collapse_${key}_${fes.events[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${key}_${fes.events[i].id}`)
-                    | <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.events[i].title}
-              .collapse(id=`event_collapse_${key}_${fes.events[i].id}` role="tabpanel" aria-labelledby=`event_collapse_head_${key}_${fes.foods[i].name}`): .card-block.bg-white
-                p: b #{printDate(this_startDate, 'time')}～
-                p= fes.events[i].description
-                if ( fes.events[i].programs != null )
-                  ol.programs
-                    each program in fes.events[i].programs
-                      li= program
+  .-tabemon-common-wrapper
+    each event, i in fes.events
+      - var this_startDate = new Date(fes.events[i].startDate)
+      -     this_endDate = new Date(fes.events[i].endDate)
+      -     day_startDate = new Date(fes['Day' + mmday].startDate)
+      -     day_endDate = new Date(fes['Day' + mmday].endDate)
+        if ( fes.events[i].place === key && this_startDate >= day_startDate && this_startDate <= day_endDate )
+          div( id= fes.events[i].id ).event
+            div(role="tablist",aria-multiselectable="true",id=`accordion_${key}`)
+              .card(class=`card-outline-${eventsplace.style}`).-tabemon-card
+                .card-header(class=`bg-${eventsplace.style}`, id=`event_collapse_head_${key}_${fes.events[i].id}`,role="tab")
+                  h5.p-0.m-0
+                    a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#event_collapse_${key}_${fes.events[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${key}_${fes.events[i].id}`)
+                      | <i class="fa fa-angle-double-right" aria-hidden="true"></i> <small>#{printDate(this_startDate, 'time')}～</small> #{fes.events[i].title}
+                .collapse(id=`event_collapse_${key}_${fes.events[i].id}` role="tabpanel" aria-labelledby=`event_collapse_head_${key}_${fes.events[i].name}`): .card-block.bg-white
+                  p.mb-0!= fes.events[i].description.replace(/\r?\n|\r/g,"<br>")
+                  if ( fes.events[i].programs != null )
+                    ol.programs
+                      each program in fes.events[i].programs
+                        li= program
 
 mixin _event_tabcontent(eventsplace, key)
   h3= eventsplace.title
   p!= eventsplace.description.replace(/\r?\n|\r/g,"<br>")
-  +_event_tabcontent_ub(eventsplace, key, 1)
-  +_event_tabcontent_ub(eventsplace, key, 2)
+  .row
+    .col-xl-6
+      +_event_tabcontent_ub(eventsplace, key, 1)
+    .col-xl-6
+      +_event_tabcontent_ub(eventsplace, key, 2)
 
 
 mixin _invmatch_tabcontent_ub(mmday)
-  each match, i in fes.invmatches
-    - var this_startDate = new Date(fes.invmatches[i].startDate)
-    -     this_endDate = new Date(fes.invmatches[i].endDate)
-    -     day_startDate = new Date(fes['Day' + mmday].startDate)
-    -     day_endDate = new Date(fes['Day' + mmday].endDate)
-      if ( this_startDate >= day_startDate && this_startDate <= day_endDate )
-        div( id="#invmatch" ).invmatch
-          #accordion(role="tablist",aria-multiselectable="true").-tabemon-common-wrapper
-            .card(class=`card-outline-secondary`)
-              .card-header(id=`event_collapse_head_${fes.invmatches[i].id}`,role="tab")
-                h4.p-0.m-0
-                  a(data-toggle="collapse", data-parent="#accordion", href=`#event_collapse_${fes.invmatches[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${fes.invmatches[i].id}`)
-                    | <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.invmatches[i].title} <small>vs #{fes.invmatches[i].vs.convenient}</small>
-              .collapse(id=`event_collapse_${fes.invmatches[i].id}` role="tabpanel" aria-labelledby=`event_collapse_head_${fes.invmatches[i].name}`): .card-block.bg-white
-                p: b #{printDate(this_startDate, 'time')}～<br>@#{fes.invmatches[i].place.title}<br>vs.#{fes.invmatches[i].vs.formal}
-                p= fes.invmatches[i].description
+  .-tabemon-common-wrapper
+    each match, i in fes.invmatches
+      - var this_startDate = new Date(fes.invmatches[i].startDate)
+      -     this_endDate = new Date(fes.invmatches[i].endDate)
+      -     day_startDate = new Date(fes['Day' + mmday].startDate)
+      -     day_endDate = new Date(fes['Day' + mmday].endDate)
+        if ( this_startDate >= day_startDate && this_startDate <= day_endDate )
+          div( id="#invmatch" ).invmatch
+            #accordion(role="tablist",aria-multiselectable="true")
+              .card(class=`card-outline-secondary`).-tabemon-card
+                .card-header.bg-success(id=`event_collapse_head_${fes.invmatches[i].id}`,role="tab")
+                  h4.p-0.m-0
+                    a(data-toggle="collapse", data-parent="#accordion", href=`#event_collapse_${fes.invmatches[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${fes.invmatches[i].id}`)
+                      | <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.invmatches[i].title} <small>vs #{fes.invmatches[i].vs.convenient}</small>
+                .collapse(id=`event_collapse_${fes.invmatches[i].id}` role="tabpanel" aria-labelledby=`event_collapse_head_${fes.invmatches[i].name}`): .card-block.bg-white
+                  p: b #{printDate(this_startDate, 'time')}～<br>@#{fes.invmatches[i].place.title}<br>vs.#{fes.invmatches[i].vs.formal}
+                  p.mb-0!= fes.invmatches[i].description.replace(/\r?\n|\r/g,"<br>")
 
 mixin _invmatch_tabcontent(mmday)
   h3 #{mmday}日目

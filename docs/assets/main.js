@@ -15652,10 +15652,6 @@ var vars = getUrlVars();
 $(function(){
     $( '[role="tablist"] a[href="#' + vars.tab + '"]' ).tab('show');
     $('#' + vars.modal + '').modal('show');
-    $('.collapse').on('hidden.bs.collapse', function () {
-        var mycollapse = this;
-        $("html,body").animate({scrollTop:$(mycollapse).offset().top});
-    })
     $('#' + vars.collapse + '').collapse('show');
     $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
         $('a[href="' + $(e.relatedTarget).attr("href") + '"]').removeClass('active')
