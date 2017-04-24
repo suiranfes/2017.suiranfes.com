@@ -239,17 +239,20 @@
             "stage": {
                 "description": "イベント班です。",
                 "title": "イベントステージ",
-                "style": "warning"
+                "style": "warning",
+                "enable" : true
             },
             "gym": {
                 "description": "体育館行事班です！",
                 "title": "体育館",
-                "style": "info"
+                "style": "info",
+                "enable" : false
             },
             "kaikan": {
                 "description": "翠巒音楽祭！",
                 "title": "翠巒会館",
-                "style": "secondary"
+                "style": "secondary",
+                "enable" : false
             }
         },
         "invmatches": [
@@ -415,19 +418,22 @@
                 "description": "校舎外での販売です。詳しい場所はパンフレットをご覧ください。完売する可能性があります。ご了承ください。ゴミはゴミステーションへよろしくお願いします。",
                 "is_plural": true,
                 "title": "模擬店",
-                "style": "primary"
+                "style": "primary",
+                "enable" : false
             },
             "bakery": {
                 "description": "",
                 "is_plural": false,
                 "title": "食堂",
-                "style": "info"
+                "style": "info",
+                "enable" : false
             },
             "cafe": {
                 "description": "",
                 "is_plural": false,
                 "title": "喫茶店",
-                "style": "danger"
+                "style": "danger",
+                "enable" : false
             }
         },
         "pantene": [

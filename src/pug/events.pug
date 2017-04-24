@@ -17,8 +17,13 @@ html(lang="ja")
     .-tabemon-nav-wrap
       ul.nav.nav-pills.nav-fill.p-2.bg-faded.bg-dark#foodtab(role="tablist")
         each eventsplace, key in fes.eventsplaces
-          li.nav-item
-            a.nav-link.text-white(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
+          if (eventsplace.enable)
+            li.nav-item
+              a.nav-link.text-white(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
+          else
+            li.nav-item
+              a.nav-link.text-secondary.disabled(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
+
     .wrap
       .container
         .tab-content
@@ -29,6 +34,10 @@ html(lang="ja")
     .sticky-bottom.-tabemon-nav-wrap
       ul.nav.nav-pills.nav-fill.p-2.bg-faded.bg-dark#foodtab(role="tablist")
         each eventsplace, key in fes.eventsplaces
-          li.nav-item
-            a.nav-link.text-white(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
+          if (eventsplace.enable)
+            li.nav-item
+              a.nav-link.text-white(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
+          else
+            li.nav-item
+              a.nav-link.text-white.disabled(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
     include includes/_footer.pug

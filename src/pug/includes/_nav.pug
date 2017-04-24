@@ -26,7 +26,10 @@ nav.navbar.navbar-toggleable-md.navbar-inverse.bg-suiranfes.bgimg-n
                 | #{site.pages[i].title}
               .dropdown-menu(area_labelledby=`navbar_drop_${site.pages[i].name}`)
                 each child, j in site.pages[i].children
-                  a.dropdown-item(href=`/${site.pages[i].name}${child.add}`) #{child.title}
+                  if(site.pages[i].children[j].enable)
+                    a.dropdown-item(href=`/${site.pages[i].name}${child.add}`) #{child.title}
+                  else
+                    a.dropdown-item.disabled(href=`/${site.pages[i].name}${child.add}`) #{child.title}
           else
             li.nav-item
               a.nav-link(href=`/${site.pages[i].name}`) #{site.pages[i].title}

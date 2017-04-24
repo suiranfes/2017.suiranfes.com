@@ -48,15 +48,18 @@
                 "children" : [
                     {
                         "title" : "模擬店",
-                        "add" : "?tab=stall"
+                        "add" : "?tab=stall",
+                        "enable" : false
                     },
                     {
                         "title" : "食堂",
-                        "add" : "?tab=bakery"
+                        "add" : "?tab=bakery",
+                        "enable" : false
                     },
                     {
                         "title" : "喫茶店",
-                        "add" : "?tab=cafe"
+                        "add" : "?tab=cafe",
+                        "enable" : false
                     }
                 ]
             },
@@ -70,15 +73,18 @@
                 "children" : [
                     {
                         "title" : "イベントステージ",
-                        "add" : "?tab=stage"
+                        "add" : "?tab=stage",
+                        "enable" : true
                     },
                     {
                         "title" : "体育館",
-                        "add" : "?tab=gym"
+                        "add" : "?tab=gym",
+                        "enable" : false
                     },
                     {
                         "title" : "翠巒会館",
-                        "add" : "?tab=kaikan"
+                        "add" : "?tab=kaikan",
+                        "enable" : false
                     }
                 ]
             },
