@@ -33,6 +33,7 @@
     "pug-cli": "^1.0.0-alpha6",
     "stylus": "^0.54.5",
     "tether": "^1.4.0",
+    "ua-parser-js": "^0.7.12",
     "uglify-js": "^2.7.5"
   }
 }

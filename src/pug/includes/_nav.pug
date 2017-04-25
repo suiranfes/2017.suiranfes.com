@@ -29,7 +29,7 @@ nav.navbar.navbar-toggleable-md.navbar-inverse.bg-suiranfes.bgimg-n
                   if(site.pages[i].children[j].enable)
                     a.dropdown-item(href=`/${site.pages[i].name}${child.add}`) #{child.title}
                   else
-                    a.dropdown-item.disabled(href=`/${site.pages[i].name}${child.add}`) #{child.title}
+                    a.dropdown-item.disabled(href=`javascript:void(0)`) #{child.title}
           else
             li.nav-item
               a.nav-link(href=`/${site.pages[i].name}`) #{site.pages[i].title}

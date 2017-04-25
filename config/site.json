@@ -128,7 +128,7 @@
                 "title" : "概要",
                 "description" : "翠巒祭の沿革や今年のテーマについてです。",
                 "keywords" : ["スイラン祭","高崎高校","歴史"],
-                "enable" : false
+                "enable" : true
             },
             {
                 "id" : "404",

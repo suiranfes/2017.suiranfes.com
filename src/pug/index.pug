@@ -14,7 +14,11 @@ html(lang="ja")
           .row.-index-third.px-0.pb-3
             .col-xl-7.p-3.-index-left.text-font-mpc
               .container.py-3
-                h1.-index-title #{site.title}
+                h1.-index-title
+                  span.-index-school 群馬県立高崎高等学校 文化祭
+                  br
+                  | #{site.title}
+                br
                 span.-index-theme #{site.theme}
                 br
                 span.-index-themeinjp  『#{site.themeinjap}』
@@ -29,23 +33,28 @@ html(lang="ja")
                   span.-index-date-day2Sun (日)
                   span.-index-date-day2start 9:00～
                   br
-                  span 閉場 17:00(両日)
+                  span 閉場 16:30(両日)
             .col-xl-5.pt-xl-5
               .-index-middle.align-left: .container
                 .alert.alert-danger(role="alert").-index-onposter
-                  p.my-2: b
+                  h5.my-2
                     +fa("ban")
                     | 高チャリでのご来場はご遠慮ください
+                  p.mb-2 高崎高校は高チャリ範囲外です。
                 .alert.alert-info(role="alert").-index-onposter
-                  p.my-2
+                  h5.my-2
                     +fa("info-circle")
-                    b Web投票アンケートを実施します
+                    | Web投票アンケートを実施します
                   p.mb-2
-                    | 一般展示の投票結果は、それぞれが投票場のシールと合算され、部活動展示およびクラス展示の順位を付けます。
+                    | Web上でも一般展示(校内の展示)の投票を行います。投票場でのシール投票とともに奮ってご参加ください。
+                  h6.mb-1.text-success 投票可能時間帯
+                  p.mb-2
+                    span.text-success <b>1日目:</b>&nbsp;3日12:00～4日9:00
                     br
-                    | 時間外の投票は受け付けておりません。お手数ですが、リンク下段の期間でご回答ください。
-                  a.btn.btn-success.btn-block(href="javascript:void(0)") 1日目用投票アンケート<br><small>3日 13:00 - 4日 9:00</small>
-                  a.btn.btn-success.btn-block(href="javascript:void(0)") 2日目用投票アンケート<br><small>4日 10:00 - 5日 3:00</small>
+                    span.text-success <b>2日目:</b>&nbsp;4日&nbsp;9:00～5日9:00
+                  p.mb-2
+                    | これ以降もアンケートを実施します。ご意見・ご感想をお聞かせください。
+                  a.btn.btn-success.btn-block.btn-large.disabled.mb-2(href="javascript:void(0)") <b>投票アンケートへ</b>
                 .list-group.-index-onposter
                   .list-group-item
                     h3.my-1 更新情報

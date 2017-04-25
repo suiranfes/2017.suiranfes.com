@@ -1,8 +1,9 @@
 window.jQuery = $ = require('jquery');
 Tether = require('tether');
+UAparser = require('ua-parser-js');
 require('./open');
 require('./bootstrap');
-require('./blockoldandro');
+require('./blockoldbrowsers');
 require('./loading');
 require('./typekit');
 require('./bstab');
