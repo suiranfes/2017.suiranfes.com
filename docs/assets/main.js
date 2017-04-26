@@ -13001,13 +13001,15 @@ function suiranfes_chkandro(){
 $(function(){
 
   if(suiranfes_chkandro()){
+    nosupport = true
     $('.loading').html('<p><a href="intent://suiranfes.com#Intent;scheme=https;action=android.intent.action.VIEW;end" class="btn btn-danger btn-block">タップでブラウザアプリを開きます。</a></p>');
     throw new Error('古いアンドロイドの埋め込みブラウザを検出しました。以降のDOMツリー構築後に行う処理を中止します。');
-    return 0;
+    return false;
   } else if (agent.browser.name == "IE") {
+    nosupport = true
     $('.loading').html('<p class="bg-danger text-white">Internet ExprolerまたはレンダラにIEを使用するブラウザは対応していません。<br>Edgeまたはその他のブラウザをご利用ください。</p>');
     throw new Error('Microsoft Internet Explorerを検出しました。以降のDOMツリー構築後に行う処理を中止します。');
-    return 0;
+    return false;
   }
 
 });
@@ -13015,12 +13017,14 @@ $(function(){
 $(window).on('load',function(){
 
   if(suiranfes_chkandro()){
+    nosupport = true
     throw new Error('古いアンドロイドの埋め込みブラウザを検出しました。以降のデータ読み込み終了後に行う処理を中止します。');
-    return 0;
+    return false;
   } else if (agent.browser.name == "IE") {
+    nosupport = true
     $('.loading').html('<p class="bg-danger">Internet ExprolerまたはレンダラにIEを使用するブラウザは対応していません。<br>Edgeまたはその他のブラウザをご利用ください。</p>');
     throw new Error('Microsoft Internet Explorerを検出しました。以降のデータ読み込み終了後に行う処理を中止します。');
-    return 0;
+    return false;
   }
 
 });
@@ -16730,13 +16734,15 @@ $(document).ready(function(){
 });
 },{}],9:[function(require,module,exports){
 function suiranfes_loaded(){
-    $(".loading").fadeOut("fast");
-    $(".wrap").css("display","block");
-    $(".fontloader").css("display","none");
+    if(!nosupport){
+        $(".loading").fadeOut("fast");
+        $(".wrap").css("display","block");
+        $(".fontloader").css("display","none");
+    }
 }
 
 $(function(){
-setTimeout(suiranfes_loaded, 10000);
+    setTimeout(suiranfes_loaded, 10000);
 });
 
 $(window).on('load',suiranfes_loaded);
