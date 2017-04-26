@@ -200,7 +200,7 @@ mixin _food_tabcontent(foodsshop, key)
   ***********************************************
 
 mixin _event_tabcontent_ub(eventsplace, key, mmday)
-  h4 #{mmday}日目
+  h4.mt-2 #{mmday}日目
   .-tabemon-common-wrapper
     each event, i in fes.events
       - var this_startDate = new Date(fes.events[i].startDate)
@@ -227,7 +227,7 @@ mixin _event_tabcontent_ub(eventsplace, key, mmday)
 
 
 mixin _event_tabcontent(eventsplace, key)
-  h3.mt-3= eventsplace.title
+  h3= eventsplace.title
   p!= eventsplace.description.replace(/\r?\n|\r/g,"<br>")
   .row
     .col-xl-6
