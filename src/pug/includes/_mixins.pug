@@ -256,6 +256,6 @@ mixin _urlshare_igroup(url, title, twtext, litext)
           a.dropdown-item(href=`line://msg/text/?${encodeURIComponent(linetext + "\n\n" + url + "\n#翠巒祭")}`)
             +ft('line')
             | &thinsp;LINE it!
-          a.dropdown-item(href=`https://twitter.com/intent/tweet?url=${url}&hashtags=翠巒祭&text=${encodeURIComponent(title+"\n"+tweettext)}&related=suiranfes`, target="_blank")
+          a.dropdown-item(href=`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&hashtags=翠巒祭&text=${encodeURIComponent(title+"\n"+tweettext)}&related=suiranfes`, target="_blank")
             +fa('twitter')
             | &thinsp;Tweet
