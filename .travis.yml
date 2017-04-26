@@ -14,7 +14,6 @@ git:
 before_install:
 - echo 'Asia/Tokyo' | sudo tee /etc/timezone
 - sudo dpkg-reconfigure --frontend noninteractive tzdata
-- sudo ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 - openssl aes-256-cbc -K $encrypted_26b4962af0e7_key -iv $encrypted_26b4962af0e7_iv -in luckybeast.enc -out luckybeast -d
 - cp luckybeast ~/.ssh/luckybeast
 - chmod 600 ~/.ssh/luckybeast
