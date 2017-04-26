@@ -12984,8 +12984,7 @@ return Tether;
 })(typeof window === 'object' ? window : this);
 
 },{}],4:[function(require,module,exports){
-var agent = UAparser(window.navigator.userAgent),
-    nosupport = false;
+var agent = UAparser(window.navigator.userAgent);
 
 function suiranfes_chkandro(){
 
@@ -13000,6 +12999,7 @@ function suiranfes_chkandro(){
 }
 
 $(function(){
+  nosupport = false
 
   if(suiranfes_chkandro()){
     nosupport = true
@@ -13016,6 +13016,7 @@ $(function(){
 });
 
 $(window).on('load',function(){
+  nosupport = false
 
   if(suiranfes_chkandro()){
     nosupport = true
