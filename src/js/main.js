@@ -9,3 +9,5 @@ require('./typekit');
 require('./bstab');
 require('./suiranfes-updates');
 require('./snses');
+require('./inputfocus');
+require('./jquery-yycountdown');

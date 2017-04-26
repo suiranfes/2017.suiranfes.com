@@ -19,11 +19,14 @@ html(lang="ja")
                   br
                   | #{site.title}
                 br
-                span.-index-theme #{site.theme}
+                span.-index-theme
+                  span.-index-tema テーマ&nbsp;
+                  | #{site.theme}
                 br
-                span.-index-themeinjp  『#{site.themeinjap}』
+                span.-index-themeinjp 『#{site.themeinjp}』
+                .-index-cntdwn.mt-5 開幕まで&ensp;<span class="-index-timer"></span>
                 p.-index-date
-                  span.-index-date-y 2017年
+                  span.-index-date-y 2017年&nbsp;
                   span.-index-date-m 6月
                   span.-index-date-day1num 3日
                   span.-index-date-day1Sat (土)
@@ -31,7 +34,7 @@ html(lang="ja")
                   br
                   span.-index-date-day2num 4日
                   span.-index-date-day2Sun (日)
-                  span.-index-date-day2start 9:00～
+                  span.-index-date-day2start &ensp;&thinsp;9:00～
                   br
                   span 閉場 16:30(両日)
             .col-xl-5.pt-xl-5
@@ -51,7 +54,7 @@ html(lang="ja")
                   p.mb-2
                     span.text-success <b>1日目:</b>&nbsp;3日12:00～4日9:00
                     br
-                    span.text-success <b>2日目:</b>&nbsp;4日&nbsp;9:00～5日9:00
+                    span.text-success <b>2日目:</b>&nbsp;4日&ensp;&thinsp;9:00～5日9:00
                   p.mb-2
                     | これ以降もアンケートを実施します。ご意見・ご感想をお聞かせください。
                   a.btn.btn-success.btn-block.btn-large.disabled.mb-2(href="javascript:void(0)") <b>投票アンケートへ</b>

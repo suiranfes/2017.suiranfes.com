@@ -44,20 +44,7 @@ html(lang="ja")
                             +pantene_column_hosts()
                         p!= fes.pantene[i].description.replace(/\r?\n/g,"<br>")
                       .modal-footer
-                        form
-                          .input-group
-                            span.input-group-addon Share
-                            input.form-control(type="url",value=`${site.URL}pantene?modal=pantene_modal_${fes.pantene[i].name}`, readonly)
-                            .input-group-btn
-                              button.btn.btn-secondary.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
-                                +fa('share-alt')
-                              .dropdown-menu.dropdown-menu-right
-                                a.dropdown-item(href=`line://msg/text/?${encodeURIComponent(site.URL + "pantene?modal=pantene_modal_" + fes.pantene[i].name + "\n\n当日"+ j + "-" + k + "でやってます。校舎内に来てね！\n\n#翠巒祭")}`)
-                                  +ft('line')
-                                  | &thinsp;LINE it!
-                                a.dropdown-item(href=`https://twitter.com/intent/tweet?url=${site.URL}pantene?modal=pantene_modal_${fes.pantene[i].name}&text=${fes.pantene[i].title}\n\n当日${j}-${k}でやってます。校舎内に来てね！&hashtags=翠巒祭&related=suiranfes`, target="_blank")
-                                  +fa('twitter')
-                                  | &thinsp;Tweet
+                        +_urlshare_igroup(site.URL + "pantene?modal=pantene_modal_" + fes.pantene[i].name, "【一般展示】 " + fes.pantene[i].title + " @" + j + "-" + k,"校舎内に遊びに来てね！\n\n第65回翠巒祭\n6月3日･4日\n","校舎内に遊びに来てね！\n\n第65回翠巒祭\n6月3日･4日\n")
               -         } else {
                 .card.p-2(class=`card-inverse card-${fes.pantenebadges[fes.pantene[i].type].style}`)
                   +pantene_columm()

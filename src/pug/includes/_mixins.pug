@@ -147,6 +147,12 @@ mixin _pantene_modals()
                     +fa('twitter')
                     | &thinsp;Tweet
 
+
+//-**********************************************
+  *      food
+  *      たべもの
+  ***********************************************
+
 mixin _food_tabcontent(foodsshop, key)
   h3= foodsshop.title
   p!= foodsshop.description.replace(/\r?\n|\r/g,"<br>")
@@ -156,10 +162,10 @@ mixin _food_tabcontent(foodsshop, key)
       div( id= fes.foods[i].name ).food
         div(role="tablist", aria-multiselectable="true",id=`accordion_${key}`)
           .card(class=`card-outline-${foodsshop.style}`).-tabemon-card
-            .card-header(class=`bg-${foodsshop.style}`, id=`event_collapse_head_${key}_${fes.foods[i].name}`,role="tab")
+            .card-header(class=`bg-${foodsshop.style}`, id=`accordion_${key}_${fes.foods[i].name}`,role="tab")
               a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#food_collapse_${key}_${fes.foods[i].name}`, aria-expanded="true", aria-controls=`food_collapse_${key}_${fes.foods[i].name}`)
                 h4.p-0.m-0 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
-            .collapse(id=`food_collapse_${key}_${fes.foods[i].name}` role="tabpanel" aria-labelledby=`event_collapse_head_${key}_${fes.foods[i].name}`): .card-block.bg-white
+            .collapse(id=`food_collapse_${key}_${fes.foods[i].name}` role="tabpanel" aria-labelledby=`accordion_${key}_${fes.foods[i].name}`): .card-block.bg-white
               p.px-3 販売所:<b>#{foodsshop.title}</b>
                 if(foodsshop.is_plural)
                 | #{circlenums[fes.foods[i].shop.location]}
@@ -187,6 +193,12 @@ mixin _food_tabcontent(foodsshop, key)
                 - }
     - } }
 
+
+//-**********************************************
+  *      events
+  *      イベント
+  ***********************************************
+
 mixin _event_tabcontent_ub(eventsplace, key, mmday)
   h4 #{mmday}日目
   .-tabemon-common-wrapper
@@ -199,19 +211,23 @@ mixin _event_tabcontent_ub(eventsplace, key, mmday)
           div( id= fes.events[i].id ).event
             div(role="tablist",aria-multiselectable="true",id=`accordion_${key}`)
               .card(class=`card-outline-${eventsplace.style}`).-tabemon-card
-                .card-header(class=`bg-${eventsplace.style}`, id=`event_collapse_head_${key}_${fes.events[i].id}`,role="tab")
+                .card-header(class=`bg-${eventsplace.style}`, id=`accordion_${key}_${fes.events[i].id}`,role="tab")
                   h5.p-0.m-0
                     a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#event_collapse_${key}_${fes.events[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${key}_${fes.events[i].id}`)
-                      | <i class="fa fa-angle-double-right" aria-hidden="true"></i> <small>#{printDate(this_startDate, 'time')}～</small> #{fes.events[i].title}
-                .collapse(id=`event_collapse_${key}_${fes.events[i].id}` role="tabpanel" aria-labelledby=`event_collapse_head_${key}_${fes.events[i].name}`): .card-block.bg-white
+                      | <i class="fa fa-angle-double-right" aria-hidden="true"></i> <small class="fw-700">#{printDate(this_startDate, 'time')}～</small> #{fes.events[i].title}
+                .collapse(id=`event_collapse_${key}_${fes.events[i].id}` role="tabpanel" aria-labelledby=`accordion_${key}_${fes.events[i].name}`): .card-block.bg-white
                   p.mb-0!= fes.events[i].description.replace(/\r?\n|\r/g,"<br>")
                   if ( fes.events[i].programs != null )
                     ol.programs
                       each program in fes.events[i].programs
                         li= program
+                  .dropdown-divider
+                  p.mb-1 #{printDate(this_startDate, 'time')} ～ #{printDate(this_endDate, 'time')} @#{eventsplace.title}
+                  +_urlshare_igroup(site.URL + "events?tab=" + key + "&collapse=event_collapse_" + key + "_" + fes.events[i].id, "【" + eventsplace.title + "】 " + fes.events[i].title, fes.events[i].description ,fes.events[i].description)
+
 
 mixin _event_tabcontent(eventsplace, key)
-  h3= eventsplace.title
+  h3.mt-3= eventsplace.title
   p!= eventsplace.description.replace(/\r?\n|\r/g,"<br>")
   .row
     .col-xl-6
@@ -219,6 +235,11 @@ mixin _event_tabcontent(eventsplace, key)
     .col-xl-6
       +_event_tabcontent_ub(eventsplace, key, 2)
 
+
+//-**********************************************
+  *      invmatch
+  *      招待試合
+  ***********************************************
 
 mixin _invmatch_tabcontent_ub(mmday)
   .-tabemon-common-wrapper
@@ -231,14 +252,38 @@ mixin _invmatch_tabcontent_ub(mmday)
           div( id="#invmatch" ).invmatch
             #accordion(role="tablist",aria-multiselectable="true")
               .card(class=`card-outline-secondary`).-tabemon-card
-                .card-header.bg-success(id=`event_collapse_head_${fes.invmatches[i].id}`,role="tab")
+                .card-header.bg-success(id=`accordion_${fes.invmatches[i].id}`,role="tab")
                   h4.p-0.m-0
-                    a(data-toggle="collapse", data-parent="#accordion", href=`#event_collapse_${fes.invmatches[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${fes.invmatches[i].id}`)
-                      | <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.invmatches[i].title} <small>vs #{fes.invmatches[i].vs.convenient}</small>
-                .collapse(id=`event_collapse_${fes.invmatches[i].id}` role="tabpanel" aria-labelledby=`event_collapse_head_${fes.invmatches[i].name}`): .card-block.bg-white
-                  p: b #{printDate(this_startDate, 'time')}～<br>@#{fes.invmatches[i].place.title}<br>vs.#{fes.invmatches[i].vs.formal}
+                    a.text-white(data-toggle="collapse", data-parent="#accordion", href=`#invmatch_collapse_${fes.invmatches[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${fes.invmatches[i].id}`)
+                      | <i class="fa fa-angle-double-right" aria-hidden="true"></i><small class="fw-700">#{printDate(this_startDate, 'time')}～</small> #{fes.invmatches[i].title} <small class="fw-500">vs #{fes.invmatches[i].vs.convenient}</small>
+                .collapse(id=`invmatch_collapse_${fes.invmatches[i].id}` role="tabpanel" aria-labelledby=`accordion_${fes.invmatches[i].name}`): .card-block.bg-white
+                  p #{printDate(this_startDate, 'time')}～#{printDate(this_endDate, 'time')} @#{fes.invmatches[i].place.title} vs#{fes.invmatches[i].vs.formal}
                   p.mb-0!= fes.invmatches[i].description.replace(/\r?\n|\r/g,"<br>")
+                  .dropdown-divider
+                  +_urlshare_igroup(site.URL + "invmatch?tab=day" + mmday + "&collapse=invmatch_collapse_" + fes.invmatches[i].id, "【招待試合】 vs " + fes.invmatches[i].vs.convenient, fes.invmatches[i].title + "です。ぜひ見に来てください。",fes.invmatches[i].title + "です。ぜひ見に来てください。" )
 
 mixin _invmatch_tabcontent(mmday)
   h3 #{mmday}日目
   +_invmatch_tabcontent_ub(mmday)
+
+
+//-**********************************************
+  *      urlshare
+  *      共有
+  ***********************************************
+
+mixin _urlshare_igroup(url, title, twtext, litext)
+  form
+    .input-group
+      span.input-group-addon シェア
+      input.form-control.-urlshare-inputurl(type="url",value=url, readonly)
+      .input-group-btn
+        button.btn.btn-secondary.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+          +fa('share-alt')
+        .dropdown-menu.dropdown-menu-right
+          a.dropdown-item(href=`line://msg/text/?${encodeURIComponent(litext + "\n\n" + url + "\n#翠巒祭")}`)
+            +ft('line')
+            | &thinsp;LINE it!
+          a.dropdown-item(href=`https://twitter.com/intent/tweet?url=${url}&hashtags=翠巒祭&text=${encodeURIComponent(title+"\n"+twtext)}&related=suiranfes`, target="_blank")
+            +fa('twitter')
+            | &thinsp;Tweet

@@ -22,10 +22,14 @@ html(lang="ja")
             | 時間前に完売した場合は販売終了とさせていただきます。 
           p 下部からお選びください！
     .-tabemon-nav-wrap
-      ul.nav.nav-pills.nav-fill.p-2.bg-faded.sticky-bottom#foodtab(role="tablist")
+      ul.nav.nav-pills.nav-fill.p-2.bg-faded#foodtab(role="tablist")
         each foodsshop, key in fes.foodsshops
-          li.nav-item
-            a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
+          if (foodsshop.enable)
+            li.nav-item
+              a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
+          else
+            li.nav-item
+              a.nav-link.disabled(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
 
     .wrap.-tabemon
       .container
@@ -35,10 +39,15 @@ html(lang="ja")
                 +_food_tabcontent(foodsshop, key)
 
     .sticky-bottom.-tabemon-nav-wrap
-      ul.nav.nav-pills.nav-fill.p-2.bg-faded.sticky-bottom#foodtab(role="tablist")
+      ul.nav.nav-pills.nav-fill.p-2.bg-faded#foodtab(role="tablist")
         each foodsshop, key in fes.foodsshops
-          li.nav-item
-            a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
+          if (foodsshop.enable)
+            li.nav-item
+              a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
+          else
+            li.nav-item
+              a.nav-link.disabled(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
+
     .container
       .py-3
         h2 お知らせ

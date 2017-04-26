@@ -27,10 +27,10 @@ html(lang="ja")
     .wrap
       .container
         .tab-content
-
           each eventsplace, key in fes.eventsplaces
               .tab-pane.py-3(id=key, role="tabpanel")
                 +_event_tabcontent(eventsplace, key)
+  
     .sticky-bottom.-tabemon-nav-wrap
       ul.nav.nav-pills.nav-fill.p-2.bg-faded.bg-dark#foodtab(role="tablist")
         each eventsplace, key in fes.eventsplaces
@@ -39,5 +39,5 @@ html(lang="ja")
               a.nav-link.text-white(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
           else
             li.nav-item
-              a.nav-link.text-white.disabled(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
+              a.nav-link.text-secondary.disabled(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
     include includes/_footer.pug

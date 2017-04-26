@@ -146,10 +146,11 @@ function listPages() {
     var siteArray = grunt.file.readJSON('config/site.json'),
         fesArray = grunt.file.readJSON('config/fes.json'),
         files = '{',
+        sitemaptxt = '{',
         logtext = 'Listing Up Files\n\n';
 
     for (var i in siteArray.site.pages) {
-        files += '"docs/' + siteArray.site.pages[i].id + '.html":["src/pug/' + siteArray.site.pages[i].id + '.pug"]';
+        files += '"docs/' + siteArray.site.pages[i].id + '.html":"src/pug/' + siteArray.site.pages[i].id + '.pug"';
         logtext += '' + siteArray.site.pages[i].id + '\n';
         files += ',\n';
     }
