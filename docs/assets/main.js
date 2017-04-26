@@ -12984,7 +12984,8 @@ return Tether;
 })(typeof window === 'object' ? window : this);
 
 },{}],4:[function(require,module,exports){
-var agent = UAparser(window.navigator.userAgent);
+var agent = UAparser(window.navigator.userAgent),
+    nosupport = false;
 
 function suiranfes_chkandro(){
 

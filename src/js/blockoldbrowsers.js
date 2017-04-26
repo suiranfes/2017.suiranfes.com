@@ -13,6 +13,7 @@ function suiranfes_chkandro(){
 }
 
 $(function(){
+  nosupport = false
 
   if(suiranfes_chkandro()){
     nosupport = true
@@ -29,6 +30,7 @@ $(function(){
 });
 
 $(window).on('load',function(){
+  nosupport = false
 
   if(suiranfes_chkandro()){
     nosupport = true
