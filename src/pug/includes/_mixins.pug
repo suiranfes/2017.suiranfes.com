@@ -132,7 +132,7 @@ mixin _food_tabcontent(foodsshop, key)
       - if ( fes.foods[i].shop.name === key ) {
         div( id= fes.foods[i].name ).food
           .card(class=`card-outline-${foodsshop.style}`).-tabemon-card
-            a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#food_collapse_${key}_${fes.foods[i].name}`, aria-expanded="true", aria-controls=`food_collapse_${key}_${fes.foods[i].name}`)
+            a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#food_collapse_${key}_${fes.foods[i].name}`, aria-controls=`food_collapse_${key}_${fes.foods[i].name}`)
               .card-header(class=`bg-${foodsshop.style}`, id=`accordion_${key}_${fes.foods[i].name}`,role="tab")
                 h4.text-white.p-0.m-0 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
             .collapse(id=`food_collapse_${key}_${fes.foods[i].name}` role="tabpanel" aria-labelledby=`accordion_${key}_${fes.foods[i].name}`): .card-block.bg-white
@@ -181,7 +181,7 @@ mixin _event_tabcontent_ub(eventsplace, key, mmday)
           if ( fes.events[i].place === key && this_startDate >= day_startDate && this_startDate <= day_endDate )
             div( id= fes.events[i].id ).event
               .card(class=`card-outline-${eventsplace.style}`).-tabemon-card
-                a(data-toggle="collapse", data-parent=`#accordion_${key}_${mmday}`, href=`#event_collapse_${key}_${fes.events[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${key}_${fes.events[i].id}`)
+                a(data-toggle="collapse", data-parent=`#accordion_${key}_${mmday}`, href=`#event_collapse_${key}_${fes.events[i].id}`, aria-controls=`event_collapse_${key}_${fes.events[i].id}`)
                   .card-header(class=`bg-${eventsplace.style}`, id=`accordion_${key}_${fes.events[i].id}`,role="tab")
                     h5.text-white.p-0.m-0
                       | <i class="fa fa-angle-double-right" aria-hidden="true"></i> <small class="fw-700">#{printDate(this_startDate, 'time')}</small> #{fes.events[i].title}
@@ -224,7 +224,7 @@ mixin _invmatch_tabcontent_ub(mmday)
               .card(class=`card-outline-secondary`).-tabemon-card
                 .card-header.bg-success(id=`accordion_${fes.invmatches[i].id}`,role="tab")
                   h4.p-0.m-0
-                    a.text-white(data-toggle="collapse", data-parent=`accordion_${mmday}`, href=`#invmatch_collapse_${fes.invmatches[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${fes.invmatches[i].id}`)
+                    a.text-white(data-toggle="collapse", data-parent=`accordion_${mmday}`, href=`#invmatch_collapse_${fes.invmatches[i].id}`, aria-controls=`event_collapse_${fes.invmatches[i].id}`)
                       | <i class="fa fa-angle-double-right" aria-hidden="true"></i><small class="fw-700">#{printDate(this_startDate, 'time')}</small> #{fes.invmatches[i].title} <small class="fw-500">vs #{fes.invmatches[i].vs.convenient}</small>
                 .collapse(id=`invmatch_collapse_${fes.invmatches[i].id}` role="tabpanel" aria-labelledby=`accordion_${fes.invmatches[i].name}`): .card-block.bg-white
                   p #{printDate(this_startDate, 'time')}～#{printDate(this_endDate, 'time')} @#{fes.invmatches[i].place.title} vs#{fes.invmatches[i].vs.formal}
