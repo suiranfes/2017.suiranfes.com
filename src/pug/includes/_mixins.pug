@@ -118,36 +118,6 @@ mixin _pantene_modals()
             | 翠巒祭の改善のために、どうかWEBアンケートにもご協力ください。
           a.btn.btn-primary.btn-lg.btn-block.disabled.m-1.-pantene-wtf(href="javascript:void(0);", role="button", aria-disabled="true") WEBアンケート準備中
 
-  .modal.fade.-pantene-modal(id=`pantene_modal_act`, tabindex="-1", role="dialog", aria-hidden="true")
-    .modal-dialog(role="document")
-      .modal-content
-        .modal-header.flex-wrap-reverse
-          p.mr-2: b 中庭
-          h5.mr-2 演劇
-          button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
-            span(aria-hidden="true") &times;
-        .modal-body
-          p
-            small 演劇部
-          h6 1日目
-            p 14:30～
-        .modal-footer
-          form
-            .input-group
-              span.input-group-addon Share
-              input.form-control(type="url",value=`${site.URL}pantene?modal=pantene_modal_act`, readonly)
-              .input-group-btn
-                button.btn.btn-secondary.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
-                  +fa('share-alt')
-                .dropdown-menu.dropdown-menu-right
-                  a.dropdown-item(href=`line://msg/text/?${encodeURIComponent(site.URL + "pantene?modal=pantene_modal_act\n\n当日3階でやってます。校舎内に来てね！\n\n#翠巒祭")}`)
-                    +ft('line')
-                    | &thinsp;LINE it!
-                  a.dropdown-item(href=`https://twitter.com/intent/tweet?url=${site.URL}pantene?modal=pantene_modal_act&text=演劇部\n\n当日3階でやってます。校舎内に来てね！&hashtags=翠巒祭&related=suiranfes`, target="_blank")
-                    +fa('twitter')
-                    | &thinsp;Tweet
-
-
 //-**********************************************
   *      food
   *      たべもの
@@ -157,14 +127,14 @@ mixin _food_tabcontent(foodsshop, key)
   h3= foodsshop.title
   p!= foodsshop.description.replace(/\r?\n|\r/g,"<br>")
   .-tabemon-common-wrapper
-    - for(var i in fes.foods) {
-    - if ( fes.foods[i].shop.name === key ) {
-      div( id= fes.foods[i].name ).food
-        div(role="tablist", aria-multiselectable="true",id=`accordion_${key}`)
+    div(role="tablist", aria-multiselectable="true",id=`accordion_${key}`)
+      - for(var i in fes.foods) {
+      - if ( fes.foods[i].shop.name === key ) {
+        div( id= fes.foods[i].name ).food
           .card(class=`card-outline-${foodsshop.style}`).-tabemon-card
-            .card-header(class=`bg-${foodsshop.style}`, id=`accordion_${key}_${fes.foods[i].name}`,role="tab")
-              a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#food_collapse_${key}_${fes.foods[i].name}`, aria-expanded="true", aria-controls=`food_collapse_${key}_${fes.foods[i].name}`)
-                h4.p-0.m-0 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
+            a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#food_collapse_${key}_${fes.foods[i].name}`, aria-expanded="true", aria-controls=`food_collapse_${key}_${fes.foods[i].name}`)
+              .card-header(class=`bg-${foodsshop.style}`, id=`accordion_${key}_${fes.foods[i].name}`,role="tab")
+                h4.text-white.p-0.m-0 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
             .collapse(id=`food_collapse_${key}_${fes.foods[i].name}` role="tabpanel" aria-labelledby=`accordion_${key}_${fes.foods[i].name}`): .card-block.bg-white
               p.px-3 販売所:<b>#{foodsshop.title}</b>
                 if(foodsshop.is_plural)
@@ -202,19 +172,19 @@ mixin _food_tabcontent(foodsshop, key)
 mixin _event_tabcontent_ub(eventsplace, key, mmday)
   h4.mt-2 #{mmday}日目
   .-tabemon-common-wrapper
-    each event, i in fes.events
-      - var this_startDate = new Date(fes.events[i].startDate)
-      -     this_endDate = new Date(fes.events[i].endDate)
-      -     day_startDate = new Date(fes['Day' + mmday].startDate)
-      -     day_endDate = new Date(fes['Day' + mmday].endDate)
-        if ( fes.events[i].place === key && this_startDate >= day_startDate && this_startDate <= day_endDate )
-          div( id= fes.events[i].id ).event
-            div(role="tablist",aria-multiselectable="true",id=`accordion_${key}`)
+    div(role="tablist",aria-multiselectable="true",id=`accordion_${key}_${mmday}`)
+      each event, i in fes.events
+        - var this_startDate = new Date(fes.events[i].startDate)
+        -     this_endDate = new Date(fes.events[i].endDate)
+        -     day_startDate = new Date(fes['Day' + mmday].startDate)
+        -     day_endDate = new Date(fes['Day' + mmday].endDate)
+          if ( fes.events[i].place === key && this_startDate >= day_startDate && this_startDate <= day_endDate )
+            div( id= fes.events[i].id ).event
               .card(class=`card-outline-${eventsplace.style}`).-tabemon-card
-                .card-header(class=`bg-${eventsplace.style}`, id=`accordion_${key}_${fes.events[i].id}`,role="tab")
-                  h5.p-0.m-0
-                    a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#event_collapse_${key}_${fes.events[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${key}_${fes.events[i].id}`)
-                      | <i class="fa fa-angle-double-right" aria-hidden="true"></i> <small class="fw-700">#{printDate(this_startDate, 'time')}～</small> #{fes.events[i].title}
+                a(data-toggle="collapse", data-parent=`#accordion_${key}_${mmday}`, href=`#event_collapse_${key}_${fes.events[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${key}_${fes.events[i].id}`)
+                  .card-header(class=`bg-${eventsplace.style}`, id=`accordion_${key}_${fes.events[i].id}`,role="tab")
+                    h5.text-white.p-0.m-0
+                      | <i class="fa fa-angle-double-right" aria-hidden="true"></i> <small class="fw-700">#{printDate(this_startDate, 'time')}</small> #{fes.events[i].title}
                 .collapse(id=`event_collapse_${key}_${fes.events[i].id}` role="tabpanel" aria-labelledby=`accordion_${key}_${fes.events[i].name}`): .card-block.bg-white
                   p.mb-0!= fes.events[i].description.replace(/\r?\n|\r/g,"<br>")
                   if ( fes.events[i].programs != null )
@@ -243,19 +213,19 @@ mixin _event_tabcontent(eventsplace, key)
 
 mixin _invmatch_tabcontent_ub(mmday)
   .-tabemon-common-wrapper
-    each match, i in fes.invmatches
-      - var this_startDate = new Date(fes.invmatches[i].startDate)
-      -     this_endDate = new Date(fes.invmatches[i].endDate)
-      -     day_startDate = new Date(fes['Day' + mmday].startDate)
-      -     day_endDate = new Date(fes['Day' + mmday].endDate)
-        if ( this_startDate >= day_startDate && this_startDate <= day_endDate )
-          div( id="#invmatch" ).invmatch
-            #accordion(role="tablist",aria-multiselectable="true")
+    div(role="tablist",aria-multiselectable="true",id=`accordion_${mmday}`)
+      each match, i in fes.invmatches
+        - var this_startDate = new Date(fes.invmatches[i].startDate)
+        -     this_endDate = new Date(fes.invmatches[i].endDate)
+        -     day_startDate = new Date(fes['Day' + mmday].startDate)
+        -     day_endDate = new Date(fes['Day' + mmday].endDate)
+          if ( this_startDate >= day_startDate && this_startDate <= day_endDate )
+            div( id=`invmatch_${fes.invmatches[i].id}` ).invmatch
               .card(class=`card-outline-secondary`).-tabemon-card
                 .card-header.bg-success(id=`accordion_${fes.invmatches[i].id}`,role="tab")
                   h4.p-0.m-0
-                    a.text-white(data-toggle="collapse", data-parent="#accordion", href=`#invmatch_collapse_${fes.invmatches[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${fes.invmatches[i].id}`)
-                      | <i class="fa fa-angle-double-right" aria-hidden="true"></i><small class="fw-700">#{printDate(this_startDate, 'time')}～</small> #{fes.invmatches[i].title} <small class="fw-500">vs #{fes.invmatches[i].vs.convenient}</small>
+                    a.text-white(data-toggle="collapse", data-parent=`accordion_${mmday}`, href=`#invmatch_collapse_${fes.invmatches[i].id}`, aria-expanded="true", aria-controls=`event_collapse_${fes.invmatches[i].id}`)
+                      | <i class="fa fa-angle-double-right" aria-hidden="true"></i><small class="fw-700">#{printDate(this_startDate, 'time')}</small> #{fes.invmatches[i].title} <small class="fw-500">vs #{fes.invmatches[i].vs.convenient}</small>
                 .collapse(id=`invmatch_collapse_${fes.invmatches[i].id}` role="tabpanel" aria-labelledby=`accordion_${fes.invmatches[i].name}`): .card-block.bg-white
                   p #{printDate(this_startDate, 'time')}～#{printDate(this_endDate, 'time')} @#{fes.invmatches[i].place.title} vs#{fes.invmatches[i].vs.formal}
                   p.mb-0!= fes.invmatches[i].description.replace(/\r?\n|\r/g,"<br>")
@@ -273,6 +243,8 @@ mixin _invmatch_tabcontent(mmday)
   ***********************************************
 
 mixin _urlshare_igroup(url, title, twtext, litext)
+  - var tweettext = twtext.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')
+  -     linetext  = litext.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')
   form
     .input-group
       span.input-group-addon シェア
@@ -281,9 +253,9 @@ mixin _urlshare_igroup(url, title, twtext, litext)
         button.btn.btn-secondary.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
           +fa('share-alt')
         .dropdown-menu.dropdown-menu-right
-          a.dropdown-item(href=`line://msg/text/?${encodeURIComponent(litext + "\n\n" + url + "\n#翠巒祭")}`)
+          a.dropdown-item(href=`line://msg/text/?${encodeURIComponent(linetext + "\n\n" + url + "\n#翠巒祭")}`)
             +ft('line')
             | &thinsp;LINE it!
-          a.dropdown-item(href=`https://twitter.com/intent/tweet?url=${url}&hashtags=翠巒祭&text=${encodeURIComponent(title+"\n"+twtext)}&related=suiranfes`, target="_blank")
+          a.dropdown-item(href=`https://twitter.com/intent/tweet?url=${url}&hashtags=翠巒祭&text=${encodeURIComponent(title+"\n"+tweettext)}&related=suiranfes`, target="_blank")
             +fa('twitter')
             | &thinsp;Tweet

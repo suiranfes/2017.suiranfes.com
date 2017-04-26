@@ -26,7 +26,7 @@
             {
                 "id": "Ms_THS_Con_preA",
                 "name": "Ms_THS_Con_preA",
-                "description": "恒例企画！　高高ナンバーワンの「男の娘」は誰だ！？ 予選3回中の1回目！",
+                "description": "通称ミスコン <b>男娘によるきゅんきゅんバトル</b> 予選3回中の1回目！",
                 "performers": null,
                 "programs": null,
                 "place": "stage",
@@ -44,7 +44,7 @@
             {
                 "id": "Ms_THS_Con_preB",
                 "name": "Ms_THS_Con_preB",
-                "description": "恒例企画！　高高ナンバーワンの「男の娘」は誰だ！？ 予選3回中の2回目！",
+                "description": "通称ミスコン <b>男娘によるきゅんきゅんバトル</b> 予選3回中の2回目！",
                 "performers": null,
                 "programs": null,
                 "place": "stage",
@@ -62,7 +62,7 @@
             {
                 "id": "Ms_THS_Con_preC",
                 "name": "Ms_THS_Con_preC",
-                "description": "恒例企画！　高高ナンバーワンの「男の娘」は誰だ！？ 予選3回中の3回目！",
+                "description": "通称ミスコン <b>男娘によるきゅんきゅんバトル</b> 予選3回中の3回目！",
                 "performers": null,
                 "programs": null,
                 "place": "stage",
@@ -78,9 +78,27 @@
                 "title": "ミス高高コンテスト 予選C"
             },
             {
+                "id": "Ms_THS_Con_FINAL",
+                "name": "Ms_THS_Con_FINAL",
+                "description": "<b>高高にだって男の娘はいるもんね♡ 一番可愛いのは誰だ!?</b>",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-04T14:30+09:00",
+                "endDate": "2017-06-04T15:00+09:00",
+                "tags": [
+                    "女装",
+                    "仮装",
+                    "変装",
+                    "コスプレ",
+                    "女子"
+                ],
+                "title": "ミス高高コンテスト 決勝"
+            },
+            {
                 "id": "Champion_of_THS",
                 "name": "Champion_of_THS",
-                "description": "<b>最強はオレだ！！！</b><br>翠巒祭で最もハードでエキサイティングな大目玉企画！<br>高高の王者となるため真の漢たちがエクストリームな戦いを繰り広げる！！ ",
+                "description": "<b>高高真のナンバー１を決める漢の中の漢のバトル！！</b>",
                 "performers": null,
                 "programs": null,
                 "place": "stage",
@@ -92,19 +110,19 @@
             {
                 "id": "Muscle_Kingdom",
                 "name": "Muscle_Kingdom",
-                "description": "<b>日頃から鍛えし筋肉で競い合う！</b><br>高高一マッチョなのは誰だ！？",
+                "description": "<b>高高ビューティフォーマッソーは誰だ！筋肉フェチは集まれ！</b>",
                 "performers": null,
                 "programs": null,
                 "place": "stage",
-                "startDate": "2017-06-04T12:10+09:00",
-                "endDate": "2017-06-04T12:50+09:00",
+                "startDate": "2017-06-04T11:00+09:00",
+                "endDate": "2017-06-04T11:40+09:00",
                 "tags": null,
                 "title": "筋肉王国 ～マッスルキングダム～"
             },
             {
                 "id": "Maji_Singers_Cup",
                 "name": "Maji_Singers_Cup",
-                "description": "<b>高高でいちばん歌が上手いのは誰だ！？</b><br>卓越した歌唱力を披露します！",
+                "description": "<b>優勝するのは誰だ！高高ののど自慢が集うガチの歌バトル</b><br>卓越した歌唱力を披露します！",
                 "performers": null,
                 "programs": null,
                 "place": "stage",
@@ -116,7 +134,7 @@
             {
                 "id": "Comedians_Acrobats_andOthers",
                 "name": "Comedians_Acrobats_andOthers",
-                "description": "<b>センスの塊である高高生が、抱腹絶倒・大爆笑な自慢のネタを披露！</b>",
+                "description": "<b>高高生が繰り広げる漫才コント一発芸！！腹筋崩壊間違いなし</b>",
                 "performers": null,
                 "programs": null,
                 "place": "stage",
@@ -128,7 +146,7 @@
             {
                 "id": "Quiz_SUIRAN",
                 "name": "Quiz_SUIRAN",
-                "description": "<b>高高のクイズ王を目指し、ポイント争奪戦！</b><br>もし負けたら……！？",
+                "description": "<b>高高の天才が挑む白熱クイズバトル！！</b>",
                 "performers": null,
                 "programs": null,
                 "place": "stage",
@@ -140,7 +158,7 @@
             {
                 "id": "Otokogumi_1",
                 "name": "Otokogumi_1",
-                "description": "<b>漢たちによる力強くダイナミックな演奏に刮目せよ！</b>",
+                "description": "<b>漢組による荒ぶるステージ！！</b>",
                 "performers": null,
                 "programs": null,
                 "place": "stage",
@@ -152,7 +170,7 @@
             {
                 "id": "Otokogumi_2",
                 "name": "Otokogumi_2",
-                "description": "<b>漢たちによる力強くダイナミックな演奏に刮目せよ！</b>",
+                "description": "<b>漢組による荒ぶるステージ！！</b>",
                 "performers": null,
                 "programs": null,
                 "place": "stage",
@@ -164,7 +182,7 @@
             {
                 "id": "Grand_Finale",
                 "name": "Grand_Finale",
-                "description": "<b>最後まで、何が起こるかわからない。</b><br>翠巒祭のラストを飾るイベントステージの最終演目！",
+                "description": "<b>翠巒祭最後の企画イベント班の集大成！何をやるかはお楽しみに！！</b>",
                 "performers": null,
                 "programs": null,
                 "place": "stage",
@@ -237,7 +255,7 @@
         ],
         "eventsplaces": {
             "stage": {
-                "description": "イベント班です。",
+                "description": "<b>イベント班</b><br>裏庭で高高生によるエンターテインメントを披露しています。<br><a class='btn btn-primary m-2' href='https://twitter.com/suiranevent' target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i> イベント班</a>",
                 "title": "イベントステージ",
                 "style": "warning",
                 "enable" : true
