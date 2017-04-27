@@ -178,6 +178,14 @@
                 "description" : "順次情報をお届けします。よろしくお願いします。",
                 "link" : "",
                 "badge" : "new"
+            },
+            {
+                "date" : "2017-05-01T12:00+09:00",
+                "name" : "site_grandopen",
+                "title" : "第65回サイト正式版公開",
+                "description" : "順次情報をお届けします。よろしくお願いします。",
+                "link" : "",
+                "badge" : "new"
             }
         ]
     }

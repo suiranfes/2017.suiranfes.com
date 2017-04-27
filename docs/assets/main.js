@@ -16748,11 +16748,11 @@ $(function(){
 });
 
 $(window).on('load',suiranfes_loaded);
-
 },{}],10:[function(require,module,exports){
 window.jQuery = $ = require('jquery');
 Tether = require('tether');
 UAparser = require('ua-parser-js');
+require('./serviceworker');
 require('./open');
 require('./bootstrap');
 require('./blockoldbrowsers');
@@ -16763,9 +16763,20 @@ require('./suiranfes-updates');
 require('./snses');
 require('./inputfocus');
 require('./jquery-yycountdown');
-},{"./blockoldbrowsers":4,"./bootstrap":5,"./bstab":6,"./inputfocus":7,"./jquery-yycountdown":8,"./loading":9,"./open":11,"./snses":12,"./suiranfes-updates":13,"./typekit":14,"jquery":1,"tether":2,"ua-parser-js":3}],11:[function(require,module,exports){
+},{"./blockoldbrowsers":4,"./bootstrap":5,"./bstab":6,"./inputfocus":7,"./jquery-yycountdown":8,"./loading":9,"./open":11,"./serviceworker":12,"./snses":13,"./suiranfes-updates":14,"./typekit":15,"jquery":1,"tether":2,"ua-parser-js":3}],11:[function(require,module,exports){
 $('link[as = "style"]').attr('rel','stylesheet');
 },{}],12:[function(require,module,exports){
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function(reg) {
+    // registration worked
+    console.log('Registration succeeded. Scope is ' + reg.scope);
+  }).catch(function(error) {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
+};
+
+},{}],13:[function(require,module,exports){
 function socialbutton(){
 
 var thelabel = "";
@@ -16850,7 +16861,7 @@ $(window).on('load',function(){
   FB.XFBML.parse();
 });
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 $(document).ready(function(){
     $('.-index-middle .list-group-item').eq(6).on("click", function(){
         $('.-index-middle .list-group-item').eq(6).hide();
@@ -16862,7 +16873,7 @@ $(document).ready(function(){
     });
 });
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 (function(d) {
     var config = {
         kitId: 'ods0yjz',
