@@ -9,8 +9,9 @@ var src = {
 
 var dest = {
     'root': 'docs/',
-    'everything': ['docs/**/*.html','docs/**/*.css','docs/**/*.js','docs/api/**/*.json']
+    'everything': ['docs/**/*.html','docs/assets/**/*.css','docs/assets/**/*.js','docs/api/**/*.json']
 }
+
 
 module.exports = function(grunt){
     grunt.initConfig({
@@ -142,6 +143,10 @@ grunt.task.registerTask( 'merge-json' , 'Merge all config files' , function(){
     grunt.file.write( 'docs/api/v1/index.json' , JSON.stringify( resultObj ) );
 });
 
+grunt.task.registerTask( 'rss' , 'Make RSS' , function(){
+    grunt.file.write( 'docs/rss2.xml' , drawrss() );
+});
+
 function listPages() {
     var siteArray = grunt.file.readJSON('config/site.json'),
         fesArray = grunt.file.readJSON('config/fes.json'),
@@ -160,8 +165,42 @@ function listPages() {
     return JSON.parse(files);
 }
 
+function drawrss() {
+    var rss = '<?xml version="1.0" encoding="utf-8"?><rss version="2.0"><channel>',
+        siteArray = grunt.file.readJSON('config/site.json'),
+        fesArray = grunt.file.readJSON('config/fes.json'),
+        now = new Date();
+        nowISO = now.toISOString()
+    
+    rss += '<title>'+siteArray.site.title+'</title>'
+        +'<description>'+siteArray.site.themeinjp+'</description>'
+        +'<link>'+siteArray.site.URL+'</link>'
+        +'<language>ja</language>'
+        +'<pubDate>'+nowISO+'</pubDate>'
+        +'<lastBuildDate>'+nowISO+'</lastBuildDate>'
+        +'<webMaster>info@suiranfes.com</webMaster>'
+        +'<copyright>Copyright (c) 2017 群馬県立高崎高等学校 第65回翠巒祭実行委員会</copyright>';
+
+    for( var i in siteArray.site.updates ){
+        rss += '<item>'
+            +'<title>【'+siteArray.site.updatebadges[siteArray.site.updates[i].badge].title+'】 '+siteArray.site.updates[i].title+'</title>'
+            +'<pubDate>'+siteArray.site.updates[i].date+'</pubDate>'
+            +'<description><![CDATA[ '+siteArray.site.updates[i].description+']]></description>';
+        if( siteArray.site.updates[i].link && siteArray.site.updates[i].link != "" ){
+            rss += '<link>'+siteArray.site.URL+siteArray.site.updates[i].link+'</link>'
+                +'<guid isPermaLink="true">'+siteArray.site.URL+siteArray.site.updates[i].link+'</guid>';
+        } else {
+            rss += '<link>'+siteArray.site.URL+'</link>'
+                +'<guid isPermaLink="true">'+siteArray.site.URL+'</guid>';
+        }
+        rss += '</item>'
+    }
+    rss+= '</channel></rss>'
+    return rss;
+}
+
   //タスクの登録
-    grunt.registerTask('default', ['clean', 'merge-json', 'browserify', 'uglify', 'stylus', 'cssmin', 'pug']);
+    grunt.registerTask('default', ['clean', 'merge-json', 'rss', 'browserify', 'uglify', 'stylus', 'cssmin', 'pug']);
     grunt.registerTask('server', ['default', 'connect', 'watch']);
 
 }

@@ -28,6 +28,7 @@
     "grunt-contrib-stylus": "^1.2.0",
     "grunt-contrib-uglify": "^2.1.0",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-fontmin": "^0.1.2",
     "jquery": "^3.1.1",
     "kramed": "^0.5.6",
     "marked": "^0.3.6",

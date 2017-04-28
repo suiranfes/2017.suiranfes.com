@@ -24,9 +24,22 @@
         },
         "events": [
             {
+                "id": "Yasai",
+                "name": "Yasai",
+                "description": "<b>高高生の真の姿をあなたに……</b>",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-04T13:20+09:00",
+                "endDate": "2017-06-04T13:40+09:00",
+                "tags": null,
+                "youtube_id": "lVcegUOcKkY",
+                "title": "ガチムチ幻影旅団"
+            },
+            {
                 "id": "Ms_THS_Con_preA",
                 "name": "Ms_THS_Con_preA",
-                "description": "通称ミスコン <b>男娘によるきゅんきゅんバトル</b> 予選3回中の1回目！",
+                "description": "通称ミスコン <b>男娘によるきゅんきゅんバトル</b>",
                 "performers": null,
                 "programs": null,
                 "place": "stage",
@@ -39,12 +52,13 @@
                     "コスプレ",
                     "女子"
                 ],
+                "youtube_id": null,
                 "title": "ミス高高コンテスト 予選A"
             },
             {
                 "id": "Ms_THS_Con_preB",
                 "name": "Ms_THS_Con_preB",
-                "description": "通称ミスコン <b>男娘によるきゅんきゅんバトル</b> 予選3回中の2回目！",
+                "description": "通称ミスコン <b>男娘によるきゅんきゅんバトル</b>",
                 "performers": null,
                 "programs": null,
                 "place": "stage",
@@ -57,12 +71,13 @@
                     "コスプレ",
                     "女子"
                 ],
+                "youtube_id": "tR0Wes1fP7Q",
                 "title": "ミス高高コンテスト 予選B"
             },
             {
                 "id": "Ms_THS_Con_preC",
                 "name": "Ms_THS_Con_preC",
-                "description": "通称ミスコン <b>男娘によるきゅんきゅんバトル</b> 予選3回中の3回目！",
+                "description": "通称ミスコン <b>男娘によるきゅんきゅんバトル</b>",
                 "performers": null,
                 "programs": null,
                 "place": "stage",
@@ -75,6 +90,7 @@
                     "コスプレ",
                     "女子"
                 ],
+                "youtube_id": "4DpHJBpTT9o",
                 "title": "ミス高高コンテスト 予選C"
             },
             {
@@ -93,6 +109,7 @@
                     "コスプレ",
                     "女子"
                 ],
+                "youtube_id": "_AHhRAjU_eA",
                 "title": "ミス高高コンテスト 決勝"
             },
             {
@@ -105,6 +122,7 @@
                 "startDate": "2017-06-04T12:10+09:00",
                 "endDate": "2017-06-04T12:50+09:00",
                 "tags": null,
+                "youtube_id": "nOwSaSAs-Xo",
                 "title": "高高王"
             },
             {
@@ -117,6 +135,7 @@
                 "startDate": "2017-06-04T11:00+09:00",
                 "endDate": "2017-06-04T11:40+09:00",
                 "tags": null,
+                "youtube_id": "lAUyZCUu8ok",
                 "title": "筋肉王国 ～マッスルキングダム～"
             },
             {
@@ -129,6 +148,7 @@
                 "startDate": "2017-06-04T10:15+09:00",
                 "endDate": "2017-06-04T10:45+09:00",
                 "tags": null,
+                "youtube_id": "XgS8N38SVqo",
                 "title": "マジ歌選手権"
             },
             {
@@ -141,6 +161,7 @@
                 "startDate": "2017-06-03T15:15+09:00",
                 "endDate": "2017-06-03T15:45+09:00",
                 "tags": null,
+                "youtube_id": "0RkaVERm2kg",
                 "title": "漫才･コント･一発芸"
             },
             {
@@ -153,6 +174,7 @@
                 "startDate": "2017-06-03T14:00+09:00",
                 "endDate": "2017-06-03T14:20+09:00",
                 "tags": null,
+                "youtube_id": null,
                 "title": "翠巒クイズ大会"
             },
             {
@@ -165,6 +187,7 @@
                 "startDate": "2017-06-03T12:35+09:00",
                 "endDate": "2017-06-03T13:10+09:00",
                 "tags": null,
+                "youtube_id": "lVcegUOcKkY",
                 "title": "和太鼓部「漢組」"
             },
             {
@@ -177,6 +200,7 @@
                 "startDate": "2017-06-04T09:15+09:00",
                 "endDate": "2017-06-04T10:00+09:00",
                 "tags": null,
+                "youtube_id": "-_5DfjcqymY",
                 "title": "和太鼓部「漢組」"
             },
             {
@@ -189,6 +213,7 @@
                 "startDate": "2017-06-04T15:40+09:00",
                 "endDate": "2017-06-04T16:00+09:00",
                 "tags": null,
+                "youtube_id": "WNB4fC49h5E",
                 "title": "グランドフィナーレ"
             },
             {
@@ -205,6 +230,7 @@
                     "ライブ",
                     "音楽"
                 ],
+                "youtube_id": "",
                 "title": "SUIRAN STATION"
             },
             {

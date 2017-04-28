@@ -6,7 +6,7 @@
         "domain" : "suiranfes.com",
         "FesURL" : "https://suiranfes.com/",
         "URL" : "https://2017-dev.suiranfes.com/",
-        "CDN" : "https://fs.suiranfes.com/",
+        "CDN" : "https://2017-dev.suiranfes.com/files/",
         "sitecardpath" : "assets/img/TwitterCard7.png",
         "iconpath" : "assets/img/X-SUIRAN-t-600-f-fs8.png",
         "sharetext" : {
@@ -20,6 +20,14 @@
                 "title" : "トップページ",
                 "description" : "来場者数1万5千人を誇る県内一の文化祭。第65回は2017年6月3日(土)4日(日)開催。テーマは“No SurFace”、日本語で言ったら「おもてなし」。ごめんなさい、駄洒落です。",
                 "keywords" : ["スイラン祭","文化祭","群馬","高校","高高","すいらんさい","スイランサイ","すいらん祭","すいらん","タカタカ"],
+                "enable" : true
+            },
+            {
+                "id" : "notices",
+                "name" : "notices",
+                "title" : "ご注意・ご案内",
+                "description" : "当日のご案内や守っていただきたい事をまとめました。",
+                "keywords" : ["スイラン祭","注意事項"],
                 "enable" : true
             },
             {
@@ -174,6 +182,14 @@
             {
                 "date" : "2017-04-01T12:00+09:00",
                 "name" : "site_open",
+                "title" : "第65回サイト正式版公開",
+                "description" : "順次情報をお届けします。よろしくお願いします。",
+                "link" : "",
+                "badge" : "new"
+            },
+            {
+                "date" : "2017-05-01T12:00+09:00",
+                "name" : "site_grandopen",
                 "title" : "第65回サイト正式版公開",
                 "description" : "順次情報をお届けします。よろしくお願いします。",
                 "link" : "",

@@ -191,6 +191,10 @@ mixin _event_tabcontent_ub(eventsplace, key, mmday)
                     ol.programs
                       each program in fes.events[i].programs
                         li= program
+                  if ( fes.events[i].youtube_id != null )
+                    h6.mt-3.p-0.mb-0 去年の動画
+                    .align-self-center.embed-responsive.embed-responsive-16by9.mt-2
+                      iframe.embed-responsive-item(src=`https://www.youtube.com/embed/${fes.events[i].youtube_id}`)
                   .dropdown-divider
                   p.mb-1 #{printDate(this_startDate, 'time')} ～ #{printDate(this_endDate, 'time')} @#{eventsplace.title}
                   +_urlshare_igroup(site.URL + "events?tab=" + key + "&collapse=event_collapse_" + key + "_" + fes.events[i].id, "【" + eventsplace.title + "】 " + fes.events[i].title, fes.events[i].description ,fes.events[i].description)

@@ -1,6 +1,7 @@
 window.jQuery = $ = require('jquery');
 Tether = require('tether');
 UAparser = require('ua-parser-js');
+require('./serviceworker');
 require('./open');
 require('./bootstrap');
 require('./blockoldbrowsers');

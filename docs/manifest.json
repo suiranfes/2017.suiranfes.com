@@ -1,0 +1,10 @@
+{
+  "name": "第65回翠巒祭",
+  "short_name": "第65回翠巒祭",
+  "icons": [
+    {"src": "/assets/img/andro_icon_144.png", "sizes": "144x144", "type": "image/png"},
+    {"src": "/assets/img/andro_icon_600.png", "sizes": "600x600", "type": "image/png"}
+    ],
+  "display": "standalone",
+  "start_url": "https://2017-dev.suiranfes.com"
+}

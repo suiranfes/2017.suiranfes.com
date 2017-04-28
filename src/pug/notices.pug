@@ -1,0 +1,19 @@
+- var page = { id :"notices" };
+
+doctype
+html(lang="ja")
+  head
+    include includes/_mixins.pug
+    include includes/_meta.pug
+    include includes/_includes.pug
+  body
+    include includes/_nav.pug
+    .wrap
+      .container
+        .row
+          .col-12.py-3
+            h1 #{page.title}
+            p!=page.description
+            include:kd ../text/notices.kd
+          
+    include includes/_footer.pug
