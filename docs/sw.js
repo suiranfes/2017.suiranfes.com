@@ -1,9 +1,10 @@
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(
-    caches.open('v4').then(function(cache) {
+    caches.open('v5').then(function(cache) {
       return cache.addAll([
         '/',
+        '/.htaccess',
         '/index.html',
         '/404.html',
         '/about.html',
@@ -84,7 +85,7 @@ this.addEventListener('fetch', function(event) {
   );
 });
 this.addEventListener('fetch', function(event) {
-  var cacheWhitelist = ['v4'];
+  var cacheWhitelist = ['v5'];
 
   event.waitUntil(
     caches.keys().then(function(keyList) {

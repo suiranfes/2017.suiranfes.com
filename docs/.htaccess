@@ -2,7 +2,7 @@
 AddEncoding gzip .svgz
 
 AddType application/font-woff2 woff2
-
+RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html
