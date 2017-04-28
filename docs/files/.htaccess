@@ -1,0 +1,3 @@
+Header set Strict-Transport-Security "max-age=315360000; includeSubDomains; preload"
+ExpiresDefault A25920000
+Header set Access-Control-Allow-Origin *

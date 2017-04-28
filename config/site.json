@@ -25,7 +25,7 @@
             {
                 "id" : "notices",
                 "name" : "notices",
-                "title" : "ご注意・ご案内",
+                "title" : "ご注意･ご案内",
                 "description" : "当日のご案内や守っていただきたい事をまとめました。",
                 "keywords" : ["スイラン祭","注意事項"],
                 "enable" : true
@@ -180,15 +180,7 @@
         },
         "updates" : [
             {
-                "date" : "2017-04-01T12:00+09:00",
-                "name" : "site_open",
-                "title" : "第65回サイト正式版公開",
-                "description" : "順次情報をお届けします。よろしくお願いします。",
-                "link" : "",
-                "badge" : "new"
-            },
-            {
-                "date" : "2017-05-01T12:00+09:00",
+                "date" : "2017-05-03T06:30+09:00",
                 "name" : "site_grandopen",
                 "title" : "第65回サイト正式版公開",
                 "description" : "順次情報をお届けします。よろしくお願いします。",

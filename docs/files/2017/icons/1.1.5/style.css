@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?im2vpp');
+  src:  url('fonts/icomoon.eot?im2vpp#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?im2vpp') format('truetype'),
+    url('fonts/icomoon.woff?im2vpp') format('woff'),
+    url('fonts/icomoon.svg?im2vpp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ths-takasakihs:before {
+  content: "\e900";
+}
+.icon-ths-thsr:before {
+  content: "\e901";
+}
+.icon-ths-chorus:before {
+  content: "\e902";
+}
+.icon-ths-tmo:before {
+  content: "\e903";
+}
+.icon-ths-two-thin:before {
+  content: "\e904";
+}
+.icon-ths-two:before {
+  content: "\e905";
+}
+.icon-ths-takasakihs-square:before {
+  content: "\e906";
+}
+.icon-ths-thsr-square:before {
+  content: "\e907";
+}
+.icon-ths-chorus-square:before {
+  content: "\e908";
+}
+.icon-ths-tmo-square:before {
+  content: "\e909";
+}
+.icon-ths-two-square:before {
+  content: "\e90a";
+}
+.icon-ths-otokogumi-square:before {
+  content: "\e90b";
+}
+.icon-ths-otokogumi:before {
+  content: "\e90c";
+}
+.icon-ths-bungei:before {
+  content: "\e90d";
+}
+.icon-ths-bungei-square:before {
+  content: "\e90e";
+}
+.icon-line:before {
+  content: "\e90f";
+}
+

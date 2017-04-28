@@ -1,4 +1,5 @@
 
+AddEncoding gzip .svgz
 
 AddType application/font-woff2 woff2
 
