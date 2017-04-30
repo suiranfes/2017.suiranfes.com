@@ -1,5 +1,7 @@
 # THE 65TH SUIRANFES
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/suiranfes/2017.suiranfes.com.svg)](https://greenkeeper.io/)
+
 ## お知らせ
 
 **FontForgeが必須になりました。**Windowsの場合pathを通してください。
