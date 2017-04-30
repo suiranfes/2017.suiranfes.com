@@ -28,7 +28,7 @@
                 "title" : "ご注意･ご案内",
                 "description" : "当日のご案内や守っていただきたい事をまとめました。",
                 "keywords" : ["スイラン祭","注意事項"],
-                "enable" : true
+                "enable" : false
             },
             {
                 "id" : "access",
@@ -36,7 +36,7 @@
                 "title" : "アクセス",
                 "description" : "当日運行される高崎駅からのシャトルバスや駐車場などについてです。",
                 "keywords" : ["スイラン祭","バス","シャトル","直通"],
-                "enable" : true
+                "enable" : false
             },
             {
                 "id" : "pantene",
@@ -77,7 +77,7 @@
                 "title" : "イベント",
                 "description" : "楽しいイベント！ イベントステージ・体育館行事・翠巒会館での音楽部発表情報です。",
                 "keywords" : ["スイラン祭"],
-                "enable" : true,
+                "enable" : false,
                 "children" : [
                     {
                         "title" : "イベントステージ",
@@ -128,7 +128,7 @@
                 "title" : "校内放送",
                 "description" : "ラジオ風校内放送についてです。\nお便り募集中です。以下のフォームからお便りを募集しています。",
                 "keywords" : ["スイラン祭"],
-                "enable" : true
+                "enable" : false
             },
             {
                 "id" : "about",
@@ -136,7 +136,7 @@
                 "title" : "概要",
                 "description" : "翠巒祭の沿革や今年のテーマについてです。",
                 "keywords" : ["スイラン祭","高崎高校","歴史"],
-                "enable" : true
+                "enable" : false
             },
             {
                 "id" : "404",
@@ -144,7 +144,7 @@
                 "title" : "エラー「404」",
                 "description" : "未公開のページか、間違ったアドレスである可能性があります",
                 "keywords" : [""],
-                "enable" : true
+                "enable" : false
             }
         ],
         "colorpalet" : {
@@ -180,8 +180,8 @@
         },
         "updates" : [
             {
-                "date" : "2017-05-03T06:30+09:00",
-                "name" : "site_grandopen",
+                "date" : "2017-05-01T00:00+09:00",
+                "name" : "site_preopen",
                 "title" : "第65回サイト正式版公開",
                 "description" : "順次情報をお届けします。よろしくお願いします。",
                 "link" : "",
