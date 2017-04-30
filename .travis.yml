@@ -22,7 +22,7 @@ before_install:
 - git config --global user.name "LuckyBeast"
 - npm install -g grunt-cli
 - grunt --version
-- sudo dpkg -i fontforge ttfautohint
+- sudo apt-get install fontforge ttfautohint
 script:
 - grunt
 after_success:
