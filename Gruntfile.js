@@ -1,3 +1,5 @@
+var package = require("./package.json");
+
 var src = {
    'pug': ['src/pug/**/*.pug', '!' + 'src/pug/**/_*.pug'],
    'everypug': 'src/pug/**/*.pug',
@@ -205,14 +207,13 @@ function drawrss() {
 function drawsw() {
     var myreturn = "var cachepages = [\n",
         sw = grunt.file.read('./src/js/sw.js'),
-        commit = "t140",
         urlstr = grunt.file.read('./src/text/urls.txt'),
         urls = urlstr.split("\n");
     for(var i in urls) {
         if(urls[i] != "") myreturn += '    "' + urls[i].replace(/\s|\n/g, "") + '",\n';
     }
     myreturn.substr( 0, myreturn.length - 2 );
-    myreturn += "\n];\nvar version = '" + commit.replace(/\s|\n/g, "") + "';\n" + sw;
+    myreturn += "\n];\nvar version = '" + package.version.replace(/\s|\n/g, "") + "';\n" + sw;
     return myreturn;
 }
   //タスクの登録

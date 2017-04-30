@@ -33,7 +33,7 @@
             {
                 "id" : "access",
                 "name" : "access",
-                "title" : "バス･アクセス",
+                "title" : "アクセス",
                 "description" : "当日運行される高崎駅からのシャトルバスや駐車場などについてです。",
                 "keywords" : ["スイラン祭","バス","シャトル","直通"],
                 "enable" : true

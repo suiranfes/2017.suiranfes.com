@@ -7,11 +7,15 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html
 
-<Files ~ "sw.js">
+<Files ~ ".(gif|jpe?g|png|ico|otf|ttf|eot|woff|woff2|svgz)$">
+Header set Cache-Control "max-age=2592000, public"
+</Files>
+
+<Files ~ ".(css|js|html|gz|xml)$">
 Header set Pragma no-cache
 Header set Cache-Control no-cache
 </Files>
-<Files ~ "rss2.xml">
-Header set Pragma no-cache
-Header set Cache-Control no-cache
-</Files>
+
+Header set Strict-Transport-Security "max-age=315360000; includeSubDomains; preload"
+ExpiresDefault A25920000
+Header set Access-Control-Allow-Origin *

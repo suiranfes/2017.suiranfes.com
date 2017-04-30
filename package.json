@@ -1,6 +1,6 @@
 {
   "name": "2017.suiranfes.com",
-  "version": "0.0.0",
+  "version": "0.0.8",
   "description": "2017.suiranfes.com",
   "main": "docs/index.html",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/suiranfes/2017.suiranfes.com.git"
   },
-  "author": "suiranfestival <info@suiranfes.com> (https://suiranfes.com/)",
+  "author": "suiranfes <info@suiranfes.com> (https://suiranfes.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/suiranfes/2017.suiranfes.com/issues"

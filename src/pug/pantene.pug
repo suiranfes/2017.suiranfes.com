@@ -112,48 +112,6 @@ html(lang="ja")
             else
               .-pantene-stair
         - }
-        // 4段目
-        .-pantene-floor
-            .-pantene-room.p-1
-              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/food?tab=stall") 模擬店
-              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=kaikan") 翠巒会館
-            .-pantene-toilet
-            .-pantene-stair
-            .-pantene-room.p-1
-              a.card.p-2(class="card-inverse card-info", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_engra`)
-                div
-                  +fa("chevron-right")
-                  | 玄関
-                h6.m-0 エントランス・グラフィック
-                small 創作班美術課
-            .-pantene-room.p-1
-              a.card.p-2(class="card-inverse card-info", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_endec`)
-                div
-                  +fa("chevron-right")
-                  | 玄関
-                h6.m-0 投票場
-                small 一般展示班
-            .-pantene-room
-            .-pantene-room
-            .-pantene-room.p-1
-              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=nakaniwa") 中庭
-            .-pantene-stair
-            .-pantene-room
-            .-pantene-stair.p-1
-              .card.p-2(class="card-inverse card-info")
-                div.m-auto 出口
-            .-pantene-room.p-1
-              a.card.p-2(class="card-inverse card-danger", href=`/food#bread`)
-                div 
-                  +fa("chevron-right")
-                  | 2F
-                h6.m-0 食堂
-                small 食堂･喫茶班
-            .-pantene-stair
-            .-pantene-room.p-1
-              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=gym") 体育館
-              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=stage") ステージ
-              a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/invmatch") 招待試合
-
+        +_pantene4th()
     include includes/_footer.pug
     +_pantene_modals()

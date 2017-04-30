@@ -42,9 +42,33 @@ var cachepages = [
     "/events?tab=kaikan&collapse=event_collapse_kaikan_TWO_1stDay",
     "/invmatch?tab=day1&collapse=invmatch_collapse_BasketBall_1stDay",
     "/invmatch?tab=day2&collapse=invmatch_collapse_BaseBall_2ndDay",
+    "/api/v1/index.json",
+    "/files/2017/bgimages/v2.0/background-g.png",
+    "/files/2017/bgimages/v2.0/background-n.png",
+    "/files/2017/bgimages/v2.0/background-s.png",
+    "/files/2017/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2",
+    "/files/2017/font-awesome/4.7.0/css/font-awesome.min.css",
+    "/files/2017/icons/1.1.5/style.css",
+    "/files/2017/icons/1.1.5/fonts/icomoon.woff",
+    "/files/2017/img/top/saya_modified5.svg",
+    "/files/2017/img/top/saya_modified5.svgz",
+    "/files/2017/img/top/poster2017_ex.jpg",
+    "/files/2017/fonts/irohakakuC-Bold.woff2",
+    "/files/2017/fonts/irohakakuC-Regular.woff2",
+    "/files/2017/fonts/irohakakuC-Light.woff2",
+    "/files/2017/fonts/mgenplus-p-black.woff2",
+    "/files/2017/fonts/mgenplus-p-heavy.woff2",
+    "/files/2017/fonts/mgenplus-p-bold.woff2",
+    "/files/2017/fonts/mgenplus-p-regular.woff2",
+    "/files/2017/fonts/mgenplus-p-light.woff2",
+    "/files/2017/fonts/mgenplus-c-black.woff2",
+    "/files/2017/fonts/mgenplus-c-heavy.woff2",
+    "/files/2017/fonts/mgenplus-c-bold.woff2",
+    "/files/2017/fonts/mgenplus-c-regular.woff2",
+    "/files/2017/fonts/mgenplus-c-light.woff2",
 
 ];
-var version = 't140';
+var version = '0.0.8';
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(
@@ -54,7 +78,17 @@ this.addEventListener('install', function(event) {
   );
 });
 this.addEventListener('fetch', function(event) {
-  this.registration.update();
+  var cacheWhitelist = [version];
+
+  event.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (cacheWhitelist.indexOf(key) === -1) {
+          return caches.delete(key)
+        }
+      }))
+    })
+  )
   event.respondWith(
     caches.match(event.request)
       .then(
@@ -80,19 +114,6 @@ this.addEventListener('fetch', function(event) {
                       });
               })
   );
-});
-this.addEventListener('fetch', function(event) {
-  var cacheWhitelist = [version];
-
-  event.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (cacheWhitelist.indexOf(key) === -1) {
-          return caches.delete(key)
-        }
-      }))
-    })
-  )
 });
 
 this.addEventListener('activate', function(event) {

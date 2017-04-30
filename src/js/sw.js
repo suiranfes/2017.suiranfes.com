@@ -7,7 +7,17 @@ this.addEventListener('install', function(event) {
   );
 });
 this.addEventListener('fetch', function(event) {
-  this.registration.update();
+  var cacheWhitelist = [version];
+
+  event.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (cacheWhitelist.indexOf(key) === -1) {
+          return caches.delete(key)
+        }
+      }))
+    })
+  )
   event.respondWith(
     caches.match(event.request)
       .then(
@@ -33,19 +43,6 @@ this.addEventListener('fetch', function(event) {
                       });
               })
   );
-});
-this.addEventListener('fetch', function(event) {
-  var cacheWhitelist = [version];
-
-  event.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (cacheWhitelist.indexOf(key) === -1) {
-          return caches.delete(key)
-        }
-      }))
-    })
-  )
 });
 
 this.addEventListener('activate', function(event) {

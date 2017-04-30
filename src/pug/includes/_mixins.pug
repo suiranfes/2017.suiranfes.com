@@ -106,8 +106,8 @@ mixin _pantene_modals()
     .modal-dialog(role="document")
       .modal-content
         .modal-header.flex-wrap-reverse
-          p.mr-2: b 玄関
-          h5.mr-2 投票
+          p.mr-2: b 文系玄関
+          h5.mr-2 校内展示人気投票
           button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
             span(aria-hidden="true") &times;
         .modal-body
@@ -117,6 +117,51 @@ mixin _pantene_modals()
             br
             | 翠巒祭の改善のために、どうかWEBアンケートにもご協力ください。
           a.btn.btn-primary.btn-lg.btn-block.disabled.m-1.-pantene-wtf(href="javascript:void(0);", role="button", aria-disabled="true") WEBアンケート準備中
+
+
+mixin _pantene4th()
+  .-pantene-floor
+      .-pantene-room.p-1
+        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/food?tab=stall") 模擬店
+        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=kaikan") 翠巒会館
+      .-pantene-toilet
+      .-pantene-stair
+      .-pantene-room.p-1
+        a.card.p-2(class="card-inverse card-info", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_engra`)
+          div
+            +fa("chevron-right")
+            | 文系玄関
+          h6.m-0 エントランス・グラフィック
+          small 創作班美術課
+      .-pantene-room.p-1
+        a.card.p-2(class="card-inverse card-info", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_endec`)
+          div
+            +fa("chevron-right")
+            | 文系玄関
+          h6.m-0 校内展示人気投票
+          small 一般展示班
+      .-pantene-room
+      .-pantene-room
+      .-pantene-room.p-1
+        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=nakaniwa") 中庭
+      .-pantene-stair
+      .-pantene-room
+      .-pantene-stair.p-1
+        .card.p-2(class="card-inverse card-info")
+          div.m-auto 出口
+      .-pantene-room.p-1
+        a.card.p-2(class="card-inverse card-danger", href=`/food#bread`)
+          div 
+            +fa("chevron-right")
+            | 2F
+          h6.m-0 食堂
+          small 食堂･喫茶班
+      .-pantene-stair
+      .-pantene-room.p-1
+        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=gym") 体育館
+        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=stage") ステージ
+        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/invmatch") 招待試合
+
 
 //-**********************************************
   *      food
