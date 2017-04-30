@@ -6,3 +6,12 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html
+
+<Files ~ "sw.js">
+Header set Pragma no-cache
+Header set Cache-Control no-cache
+</Files>
+<Files ~ "rss2.xml">
+Header set Pragma no-cache
+Header set Cache-Control no-cache
+</Files>

@@ -17,6 +17,16 @@ npm i grunt-cli -g
 grunt
 ```
 
+## 公開前にやること
+
+Service Workerの更新を自動化するのが面倒臭いので、手動でやってください。
+
+1. `grunt pug`を実行し、url群をコピーする
+2. `src/text/urls.txt`に以下の要領で書き込む
+  * `https://2017.suiranfes.com`または`https://2017-dev.suiranfes.com`を削除する
+3. いったんコミットする
+4. `grunt`または単体でも`grunt sw`
+
 ## About This Site
 
 ビルド前のコード自体はsrcにあります。

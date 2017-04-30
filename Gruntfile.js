@@ -146,6 +146,9 @@ grunt.task.registerTask( 'merge-json' , 'Merge all config files' , function(){
 grunt.task.registerTask( 'rss' , 'Make RSS' , function(){
     grunt.file.write( 'docs/rss2.xml' , drawrss() );
 });
+grunt.task.registerTask( 'sw' , 'Make sw.js' , function(){
+    grunt.file.write( 'docs/sw.js' , drawsw() );
+});
 
 function listPages() {
     var siteArray = grunt.file.readJSON('config/site.json'),
@@ -199,8 +202,21 @@ function drawrss() {
     return rss;
 }
 
+function drawsw() {
+    var myreturn = "var cachepages = [\n",
+        sw = grunt.file.read('./src/js/sw.js'),
+        commit = grunt.file.read('./.git/ORIG_HEAD'),
+        urlstr = grunt.file.read('./src/text/urls.txt'),
+        urls = urlstr.split("\n");
+    for(var i in urls) {
+        if(urls[i] != "") myreturn += '    "' + urls[i].replace(/\s|\n/g, "") + '",\n';
+    }
+    myreturn.substr( 0, myreturn.length - 2 );
+    myreturn += "\n];\nvar version = '" + commit.replace(/\s|\n/g, "") + "';\n" + sw;
+    return myreturn;
+}
   //タスクの登録
-    grunt.registerTask('default', ['clean', 'merge-json', 'rss', 'browserify', 'uglify', 'stylus', 'cssmin', 'pug']);
+    grunt.registerTask('default', ['clean', 'merge-json', 'rss', 'sw', 'browserify', 'uglify', 'stylus', 'cssmin', 'pug']);
     grunt.registerTask('server', ['default', 'connect', 'watch']);
 
 }

@@ -38,5 +38,17 @@ nav.navbar.navbar-toggleable-md.navbar-inverse.bg-suiranfes.bgimg-n
             a.nav-link.disabled(href="javascript:void(0)") #{site.pages[i].title}
       -   }
       - }
+      if (page.id == "index")
+        - for (var i in site.pages) {
+        -   if ( i != 0 && site.pages[i].name != "404") {
+        - if(!url_all){
+        -     url_all=""
+        - }
+        - url_all += "/" + site.pages[i].name + "\n"
+          if (site.pages[i].children)
+            each child, j in site.pages[i].children
+              - url_all += "/" + site.pages[i].name + child.add + "\n"
+        -   }
+        - }
       li.nav-item.ml-auto
         a.btn.btn-warning(href="https://suiranfes.com/") 翠巒祭ポータルへ

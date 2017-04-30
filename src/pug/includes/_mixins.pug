@@ -249,6 +249,10 @@ mixin _invmatch_tabcontent(mmday)
 mixin _urlshare_igroup(url, title, twtext, litext)
   - var tweettext = twtext.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')
   -     linetext  = litext.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')
+  - if(!url_all){
+  -     url_all=""  
+  - }
+  - url_all += url + "\n"
   form
     .input-group
       span.input-group-addon シェア
