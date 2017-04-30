@@ -16599,7 +16599,7 @@ $(window).on('load',function(){
 });
 },{}],7:[function(require,module,exports){
 $(window).on('load',function(){
-    $('iframe[pre-src]').attr("src",$(this).attr("pre-src"))
+    $('iframe[pre-src]').each(function(){$(this).attr("src",$(this).attr("pre-src"))})
 });
 },{}],8:[function(require,module,exports){
 $(document).ready(function(){
