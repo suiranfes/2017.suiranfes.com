@@ -1,5 +1,8 @@
 # THE 65TH SUIRANFES
 
+## お知らせ
+
+**FontForgeが必須になりました。**Windowsの場合pathを通してください。
 
 ## Build Info
 
@@ -8,6 +11,7 @@
 ## How to Build
 
 1. node.jsをインストールします
+2. fontforgeをインストールし、pathを通します
 2. https://github.com/suiranfes/2017.suiranfes.com の中身をダウンロードします
 3. 解凍するかgit cloneしたらそこで以下のコマンドを実行していきます
 
@@ -23,9 +27,11 @@ Service Workerの更新を自動化するのが面倒臭いので、手動でや
 
 1. `grunt pug`を実行し、url群をコピーする
 2. `src/text/urls.txt`に以下の要領で書き込む
+  * 下半分の`/files/**/*`,`/api/**/*`は消さないように
   * `https://2017.suiranfes.com`または`https://2017-dev.suiranfes.com`を削除する
+  * 空行とかなしで
 3. package.jsonのversionを上げる
-4. `grunt`
+4. `grunt`、または`grunt sw`単体でも
 
 ## About This Site
 

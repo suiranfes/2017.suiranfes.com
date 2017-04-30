@@ -6,7 +6,6 @@ require('./open');
 require('./bootstrap');
 require('./blockoldbrowsers');
 require('./loading');
-require('./typekit');
 require('./bstab');
 require('./suiranfes-updates');
 require('./snses');

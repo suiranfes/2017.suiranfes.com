@@ -16757,13 +16757,12 @@ require('./open');
 require('./bootstrap');
 require('./blockoldbrowsers');
 require('./loading');
-require('./typekit');
 require('./bstab');
 require('./suiranfes-updates');
 require('./snses');
 require('./inputfocus');
 require('./jquery-yycountdown');
-},{"./blockoldbrowsers":4,"./bootstrap":5,"./bstab":6,"./inputfocus":7,"./jquery-yycountdown":8,"./loading":9,"./open":11,"./serviceworker":12,"./snses":13,"./suiranfes-updates":14,"./typekit":15,"jquery":1,"tether":2,"ua-parser-js":3}],11:[function(require,module,exports){
+},{"./blockoldbrowsers":4,"./bootstrap":5,"./bstab":6,"./inputfocus":7,"./jquery-yycountdown":8,"./loading":9,"./open":11,"./serviceworker":12,"./snses":13,"./suiranfes-updates":14,"jquery":1,"tether":2,"ua-parser-js":3}],11:[function(require,module,exports){
 $('link[as = "style"]').attr('rel','stylesheet');
 },{}],12:[function(require,module,exports){
 if ('serviceWorker' in navigator) {
@@ -16874,13 +16873,4 @@ $(document).ready(function(){
     });
 });
 
-},{}],15:[function(require,module,exports){
-(function(d) {
-    var config = {
-        kitId: 'ods0yjz',
-        scriptTimeout: 3000,
-        async: true
-    },
-    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-})(document);
 },{}]},{},[10]);

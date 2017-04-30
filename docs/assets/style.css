@@ -13,6 +13,48 @@
 
 @font-face
 {
+    font-family: 'GenShinGothic-w';
+    font-weight: 800;
+
+    src: url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Heavy.woff2) format('woff2'), url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Heavy.woff) format('woff'), url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Heavy.ttf) format('truetype');
+}
+@font-face
+{
+    font-family: 'GenShinGothic-w';
+    font-weight: 700;
+
+    src: url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Bold.woff2) format('woff2'), url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Bold.woff) format('woff'), url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Bold.ttf) format('truetype');
+}
+@font-face
+{
+    font-family: 'GenShinGothic-w';
+    font-weight: 500;
+
+    src: url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Medium.woff2) format('woff2'), url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Medium.woff) format('woff'), url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Medium.ttf) format('truetype');
+}
+@font-face
+{
+    font-family: 'GenShinGothic-w';
+    font-weight: 400;
+
+    src: url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Regular.woff2) format('woff2'), url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Regular.woff) format('woff'), url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Regular.ttf) format('truetype');
+}
+@font-face
+{
+    font-family: 'GenShinGothic-w';
+    font-weight: 300;
+
+    src: url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Normal.woff2) format('woff2'), url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Normal.woff) format('woff'), url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Normal.ttf) format('truetype');
+}
+@font-face
+{
+    font-family: 'GenShinGothic-w';
+    font-weight: 200;
+
+    src: url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Light.woff2) format('woff2'), url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Light.woff) format('woff'), url(https://2017-dev.suiranfes.com/assets/fonts/GenShinGothic-Light.ttf) format('truetype');
+}
+@font-face
+{
     font-family: 'irohakakuC-w';
     font-weight: 200;
 
@@ -527,7 +569,7 @@ html
 
 body
 {
-    font-family: 'mgenplus-c-w', 'irohakakuC-w', 'Segoe UI Emoji', 'source-han-sans-japanese', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Arial', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    font-family: 'mgenplus-c-w', 'irohakakuC-w', 'Segoe UI Emoji', 'GenShinGothic-w', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Arial', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.6;
@@ -786,7 +828,7 @@ h6,
 .h5,
 .h6
 {
-    font-family: 'mgenplus-p-w', 'irohakakuC-w', 'Segoe UI Emoji', 'source-han-sans-japanese', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Arial', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    font-family: 'mgenplus-p-w', 'irohakakuC-w', 'Segoe UI Emoji', 'GenShinGothic-w', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Arial', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
     font-weight: 700;
     line-height: 1.1;
 
@@ -1009,7 +1051,7 @@ kbd,
 pre,
 samp
 {
-    font-family: Menlo, Monaco, Consolas, 'Courier New', 'source-han-sans-japanese', monospace;
+    font-family: Menlo, Monaco, Consolas, 'Courier New', 'GenShinGothic-w', monospace;
 }
 
 code
@@ -7549,7 +7591,7 @@ button.close
 }
 .tooltip
 {
-    font-family: 'mgenplus-c-w', 'irohakakuC-w', 'Segoe UI Emoji', 'source-han-sans-japanese', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Arial', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    font-family: 'mgenplus-c-w', 'irohakakuC-w', 'Segoe UI Emoji', 'GenShinGothic-w', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Arial', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
     font-size: .875rem;
     font-weight: 400;
     font-style: normal;
@@ -7680,7 +7722,7 @@ button.close
 
 .popover
 {
-    font-family: 'mgenplus-c-w', 'irohakakuC-w', 'Segoe UI Emoji', 'source-han-sans-japanese', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Arial', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    font-family: 'mgenplus-c-w', 'irohakakuC-w', 'Segoe UI Emoji', 'GenShinGothic-w', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Arial', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
     font-size: .875rem;
     font-weight: 400;
     font-style: normal;
@@ -12889,13 +12931,13 @@ select,
 textarea,
 .text-font-mpc
 {
-    font-family: 'mgenplus-c-w', 'irohakakuC-w', 'Segoe UI Emoji', 'source-han-sans-japanese', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Arial', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif !important;
+    font-family: 'mgenplus-c-w', 'irohakakuC-w', 'Segoe UI Emoji', 'GenShinGothic-w', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Arial', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif !important;
 }
 
 .text-font-mpp,
 .navbar-brand
 {
-    font-family: 'mgenplus-p-w', 'irohakakuC-w', 'Segoe UI Emoji', 'source-han-sans-japanese', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Arial', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif !important;
+    font-family: 'mgenplus-p-w', 'irohakakuC-w', 'Segoe UI Emoji', 'GenShinGothic-w', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Arial', '游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif !important;
 }
 
 .navbar-inverse .navbar-brand
