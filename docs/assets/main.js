@@ -16742,8 +16742,6 @@ $(document).ready(function(){
 function suiranfes_loaded(){
     if(!nosupport){
         $(".loading").fadeOut("fast");
-        $(".wrap").css("display","block");
-        $(".fontloader").css("display","none");
     }
 }
 

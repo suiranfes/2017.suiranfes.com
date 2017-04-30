@@ -1,20 +1,16 @@
 
 .loading.pt-5
-  p: span.zoomIn.t-0350em.text-suiranfes <i class="icon-ths-takasakihs"></i>
+  p: span.zoomIn.t-0350em.text-suiranfes
+    <i class="icon-ths-takasakihs fa-spin" aria-hidden="true"></i>
   noscript
     p javascriptを有効にして御覧ください。
-.fontloader
-  .a.text-font-mpp Aあ翠
-  .b.text-font-mpp Aあ翠
-  .c.text-font-mpp Aあ翠
-  .a.text-font-mpc Aあ翠
-  .b.text-font-mpc Aあ翠
-  .c.text-font-mpc Aあ翠
 
-nav.navbar.navbar-toggleable-md.navbar-inverse.bg-suiranfes.bgimg-n
+nav.navbar.navbar-toggleable-lg.navbar-inverse.bg-suiranfes.bgimg-n
   button.navbar-toggler.navbar-toggler-right(type="button", data-toggle="collapse", data-target="#navbar", aria-controls="navbar", aria-expanded="false", aria-label="Toggle navigation")
     span.navbar-toggler-icon
-  a.navbar-brand.fw-800(href="/") <i class="icon-ths-takasakihs"></i> #{site.title}
+  a.navbar-brand.fw-800(href="/")
+    +ft("ths-takasakihs")
+    | #{site.title}
   div.collapse.navbar-collapse(id="navbar")
     ul.navbar-nav
       - for (var i in site.pages) {
@@ -30,6 +26,11 @@ nav.navbar.navbar-toggleable-md.navbar-inverse.bg-suiranfes.bgimg-n
                     a.dropdown-item(href=`/${site.pages[i].name}${child.add}`) #{child.title}
                   else
                     a.dropdown-item.disabled(href=`javascript:void(0)`) #{child.title}
+          else if (site.pages[i].name == page.id)
+            li.nav-item
+              a.nav-link.active.fw-500(href=`javascript:void(0)`)
+                +fa('chevron-circle-right')
+                | #{site.pages[i].title}
           else
             li.nav-item
               a.nav-link(href=`/${site.pages[i].name}`) #{site.pages[i].title}
