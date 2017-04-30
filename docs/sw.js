@@ -44,7 +44,7 @@ var cachepages = [
     "/invmatch?tab=day2&collapse=invmatch_collapse_BaseBall_2ndDay",
 
 ];
-var version = '5066d2e89d6c9a44cc07389c181f161498b9b242';
+var version = '7b59591e995d4965ca412715262600e55a081be7';
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(
