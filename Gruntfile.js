@@ -205,7 +205,7 @@ function drawrss() {
 function drawsw() {
     var myreturn = "var cachepages = [\n",
         sw = grunt.file.read('./src/js/sw.js'),
-        commit = grunt.file.read('./.git/refs/heads/master'),
+        commit = "t140",
         urlstr = grunt.file.read('./src/text/urls.txt'),
         urls = urlstr.split("\n");
     for(var i in urls) {
