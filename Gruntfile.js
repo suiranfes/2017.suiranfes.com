@@ -408,7 +408,7 @@ function drawsw() {
     grunt.registerTask('webfont', ['fontmin']);
     grunt.registerTask('only_script', ['sw', 'browserify', 'uglify']);
     grunt.registerTask('only_style', ['sw', 'stylus', 'cssmin']);
-    grunt.registerTask('only_pug', ['rss', 'sw', 'pug', 'webfont']);
+    grunt.registerTask('only_pug', ['merge-json', 'sw', 'pug', 'webfont']);
     grunt.registerTask('server', ['default', 'connect', 'watch']);
 
 }
