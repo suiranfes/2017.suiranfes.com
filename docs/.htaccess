@@ -7,8 +7,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html
 
-Header set Pragma no-cache
-Header set Cache-Control no-cache
+Header set Cache-Control "max-age=3600, public"
 
 <Files ~ "files/*$">
 Header set Cache-Control "max-age=315360000, public"
