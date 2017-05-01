@@ -13006,12 +13006,12 @@ $(function(){
     $('.loading').html('<p><a href="intent://suiranfes.com#Intent;scheme=https;action=android.intent.action.VIEW;end" class="btn btn-danger btn-block">タップでブラウザアプリを開きます。</a></p>');
     throw new Error('古いアンドロイドの埋め込みブラウザを検出しました。以降のDOMツリー構築後に行う処理を中止します。');
     return false;
-  } else if (agent.browser.name == "IE") {
+  }/* else if (agent.browser.name == "IE") {
     nosupport = true
     $('.loading').html('<p class="bg-danger text-white">Internet ExprolerまたはレンダラにIEを使用するブラウザは対応していません。<br>Edgeまたはその他のブラウザをご利用ください。</p>');
     throw new Error('Microsoft Internet Explorerを検出しました。以降のDOMツリー構築後に行う処理を中止します。');
     return false;
-  }
+  }*/
 
 });
 
@@ -13022,12 +13022,12 @@ $(window).on('load',function(){
     nosupport = true
     throw new Error('古いアンドロイドの埋め込みブラウザを検出しました。以降のデータ読み込み終了後に行う処理を中止します。');
     return false;
-  } else if (agent.browser.name == "IE") {
+  }/* else if (agent.browser.name == "IE") {
     nosupport = true
     $('.loading').html('<p class="bg-danger">Internet ExprolerまたはレンダラにIEを使用するブラウザは対応していません。<br>Edgeまたはその他のブラウザをご利用ください。</p>');
     throw new Error('Microsoft Internet Explorerを検出しました。以降のデータ読み込み終了後に行う処理を中止します。');
     return false;
-  }
+  }*/
 
 });
 },{}],5:[function(require,module,exports){
@@ -16808,8 +16808,11 @@ $('.btn-social-action').on('click',function(){
     socialNw = "HatenaBookmark";
     socialAc = "Bookmark";
   } else if(thelabel == "twitter-follow"){
-    socialNw = "HatenaBookmark";
-    socialAc = "Bookmark";
+    socialNw = "Twitter";
+    socialAc = "Follow";
+  } else if(thelabel == "reg-push"){
+    socialNw = "Pushnate";
+    socialAc = "Registrate";
   } else {
     socialNw = "Unknown";
     socialAc = "Unknown";

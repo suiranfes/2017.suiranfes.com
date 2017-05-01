@@ -26,8 +26,11 @@ $('.btn-social-action').on('click',function(){
     socialNw = "HatenaBookmark";
     socialAc = "Bookmark";
   } else if(thelabel == "twitter-follow"){
-    socialNw = "HatenaBookmark";
-    socialAc = "Bookmark";
+    socialNw = "Twitter";
+    socialAc = "Follow";
+  } else if(thelabel == "reg-push"){
+    socialNw = "Pushnate";
+    socialAc = "Registrate";
   } else {
     socialNw = "Unknown";
     socialAc = "Unknown";

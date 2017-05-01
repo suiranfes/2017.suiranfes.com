@@ -6,5 +6,10 @@
     {"src": "/assets/img/andro_icon_600.png", "sizes": "600x600", "type": "image/png"}
     ],
   "display": "standalone",
-  "start_url": "https://2017-dev.suiranfes.com"
+  "start_url": "https://2017.suiranfes.com",
+  "gcm_sender_id": "972693808096",
+  "gcm_user_visible_only": true,
+  "permissions": [
+    "gcm", "storage"
+  ]
 }

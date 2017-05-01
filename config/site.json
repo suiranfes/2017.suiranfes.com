@@ -5,8 +5,8 @@
         "themeinjp" : "おもてなし",
         "domain" : "suiranfes.com",
         "FesURL" : "https://suiranfes.com/",
-        "URL" : "https://2017-dev.suiranfes.com/",
-        "CDN" : "https://2017-dev.suiranfes.com/files/",
+        "URL" : "https://2017.suiranfes.com/",
+        "CDN" : "https://2017.suiranfes.com/files/",
         "sitecardpath" : "assets/img/TwitterCard7.png",
         "iconpath" : "assets/img/X-SUIRAN-t-600-f-fs8.png",
         "sharetext" : {
@@ -28,7 +28,7 @@
                 "title" : "ご注意･ご案内",
                 "description" : "当日のご案内や守っていただきたい事をまとめました。",
                 "keywords" : ["スイラン祭","注意事項"],
-                "enable" : false
+                "enable" : true
             },
             {
                 "id" : "access",
@@ -36,7 +36,7 @@
                 "title" : "アクセス",
                 "description" : "当日運行される高崎駅からのシャトルバスや駐車場などについてです。",
                 "keywords" : ["スイラン祭","バス","シャトル","直通"],
-                "enable" : false
+                "enable" : true
             },
             {
                 "id" : "pantene",
@@ -77,7 +77,7 @@
                 "title" : "イベント",
                 "description" : "楽しいイベント！ イベントステージ・体育館行事・翠巒会館での音楽部発表情報です。",
                 "keywords" : ["スイラン祭"],
-                "enable" : false,
+                "enable" : true,
                 "children" : [
                     {
                         "title" : "イベントステージ",
@@ -128,7 +128,7 @@
                 "title" : "校内放送",
                 "description" : "ラジオ風校内放送についてです。\nお便り募集中です。以下のフォームからお便りを募集しています。",
                 "keywords" : ["スイラン祭"],
-                "enable" : false
+                "enable" : true
             },
             {
                 "id" : "about",
@@ -136,7 +136,7 @@
                 "title" : "概要",
                 "description" : "翠巒祭の沿革や今年のテーマについてです。",
                 "keywords" : ["スイラン祭","高崎高校","歴史"],
-                "enable" : false
+                "enable" : true
             },
             {
                 "id" : "404",
@@ -180,7 +180,7 @@
         },
         "updates" : [
             {
-                "date" : "2017-05-01T00:00+09:00",
+                "date" : "2017-05-01T18:00+09:00",
                 "name" : "site_preopen",
                 "title" : "第65回サイト正式版公開",
                 "description" : "順次情報をお届けします。よろしくお願いします。",

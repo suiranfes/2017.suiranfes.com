@@ -326,6 +326,7 @@ grunt.task.registerTask( 'merge-json' , 'Merge all config files' , function(){
             }
         }
     }
+    resultObj = arrayMerge(resultObj, {"package" : package});
     grunt.file.write( 'docs/api/v1/index.json' , JSON.stringify( resultObj ) );
 });
 
@@ -373,6 +374,9 @@ function drawrss() {
         +'<webMaster>info@suiranfes.com</webMaster>'
         +'<copyright>Copyright (c) 2017 群馬県立高崎高等学校 第65回翠巒祭実行委員会</copyright>';
 
+    siteArray.site.updates.sort(function(a,b) {
+        if(a.date < b.date) { return 1 } else { return -1 }
+    });
     for( var i in siteArray.site.updates ){
         rss += '<item>'
             +'<title>【'+siteArray.site.updatebadges[siteArray.site.updates[i].badge].title+'】 '+siteArray.site.updates[i].title+'</title>'
@@ -408,7 +412,7 @@ function drawsw() {
     grunt.registerTask('webfont', ['fontmin']);
     grunt.registerTask('only_script', ['sw', 'browserify', 'uglify']);
     grunt.registerTask('only_style', ['sw', 'stylus', 'cssmin']);
-    grunt.registerTask('only_pug', ['merge-json', 'sw', 'pug', 'webfont']);
+    grunt.registerTask('only_pug', ['merge-json', 'sw', 'pug']);
     grunt.registerTask('server', ['default', 'connect', 'watch']);
 
 }

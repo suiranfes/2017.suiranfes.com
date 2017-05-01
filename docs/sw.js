@@ -81,7 +81,7 @@ var cachepages = [
     "/files/2017/fonts/mgenplus-c-light.woff2",
 
 ];
-var version = '1.0.0';
+var version = '1.3.4';
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(
