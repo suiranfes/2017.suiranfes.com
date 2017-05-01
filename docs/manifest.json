@@ -7,9 +7,5 @@
     ],
   "display": "standalone",
   "start_url": "https://2017.suiranfes.com",
-  "gcm_sender_id": "972693808096",
-  "gcm_user_visible_only": true,
-  "permissions": [
-    "gcm", "storage"
-  ]
+  "gcm_sender_id": "482941778795"
 }

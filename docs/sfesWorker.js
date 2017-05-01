@@ -56,6 +56,7 @@ var cachepages = [
     "/assets/fonts/GenShinGothic-Normal.woff2",
     "/assets/fonts/GenShinGothic-Light.woff2",
     "/api/v1/index.json",
+    "/manifest.json",
     "/files/2017/bgimages/v2.0/background-g.png",
     "/files/2017/bgimages/v2.0/background-n.png",
     "/files/2017/bgimages/v2.0/background-s.png",
@@ -81,7 +82,7 @@ var cachepages = [
     "/files/2017/fonts/mgenplus-c-light.woff2",
 
 ];
-var version = '99999999';
+var version = '1.5.5';
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(

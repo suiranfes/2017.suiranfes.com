@@ -16754,7 +16754,6 @@ $(window).on('load',suiranfes_loaded);
 window.jQuery = $ = require('jquery');
 Tether = require('tether');
 UAparser = require('ua-parser-js');
-require('./serviceworker');
 require('./open');
 require('./bootstrap');
 require('./blockoldbrowsers');
@@ -16765,21 +16764,9 @@ require('./snses');
 require('./inputfocus');
 require('./iframe-loader');
 require('./jquery-yycountdown');
-},{"./blockoldbrowsers":4,"./bootstrap":5,"./bstab":6,"./iframe-loader":7,"./inputfocus":8,"./jquery-yycountdown":9,"./loading":10,"./open":12,"./serviceworker":13,"./snses":14,"./suiranfes-updates":15,"jquery":1,"tether":2,"ua-parser-js":3}],12:[function(require,module,exports){
+},{"./blockoldbrowsers":4,"./bootstrap":5,"./bstab":6,"./iframe-loader":7,"./inputfocus":8,"./jquery-yycountdown":9,"./loading":10,"./open":12,"./snses":13,"./suiranfes-updates":14,"jquery":1,"tether":2,"ua-parser-js":3}],12:[function(require,module,exports){
 $('link[as = "style"]').attr('rel','stylesheet');
 },{}],13:[function(require,module,exports){
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function(reg) {
-    // registration worked
-    console.log('Registration succeeded. Scope is ' + reg.scope);
-    reg.update();
-  }).catch(function(error) {
-    // registration failed
-    console.log('Registration failed with ' + error);
-  });
-};
-
-},{}],14:[function(require,module,exports){
 function socialbutton(){
 
 var thelabel = "";
@@ -16867,7 +16854,7 @@ $(window).on('load',function(){
   FB.XFBML.parse();
 });
 
-},{}],15:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 $(document).ready(function(){
     $('.-index-middle .list-group-item').eq(6).on("click", function(){
         $('.-index-middle .list-group-item').eq(6).hide();

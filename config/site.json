@@ -180,6 +180,14 @@
         },
         "updates" : [
             {
+                "date" : "2017-05-02T18:00+09:00",
+                "name" : "notification",
+                "title" : "サイトから通知が受信できるようになりました",
+                "description" : "許可すると翠巒祭の最新情報をキャッチできます",
+                "link" : "",
+                "badge" : "new"
+            },
+            {
                 "date" : "2017-05-01T18:00+09:00",
                 "name" : "site_preopen",
                 "title" : "第65回サイト正式版公開",

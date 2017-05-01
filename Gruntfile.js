@@ -334,7 +334,7 @@ grunt.task.registerTask( 'rss' , 'Make RSS' , function(){
     grunt.file.write( 'docs/rss2.xml' , drawrss() );
 });
 grunt.task.registerTask( 'sw' , 'Make sw.js' , function(){
-    grunt.file.write( 'docs/sw.js' , drawsw() );
+    grunt.file.write( 'docs/sfesWorker.js' , drawsw() );
 });
 
 function listPages(mode) {
