@@ -59,7 +59,7 @@ var cachepages = [
     "/manifest.json",
 
 ];
-var version = '1.5.13';
+var version = '1.5.14';
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(
