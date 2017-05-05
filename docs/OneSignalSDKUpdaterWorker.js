@@ -1,2 +1,3 @@
-importScripts('https://2017.suiranfes.com/sfesWorker.js');
+importScripts('/sfesWorker.js');
 importScripts('https://cdn.onesignal.com/sdks/OneSignalSDK.js');
+//v1.6.0-theta.4

@@ -17,7 +17,8 @@ Header set Cache-Control "max-age=7200, public"
 <Files ~ "files/*$">
 Header set Cache-Control "max-age=315360000, public"
 </Files>
-
 Header set Strict-Transport-Security "max-age=315360000; includeSubDomains; preload"
-ExpiresDefault A25920000
+RewriteCond %{HTTP_HOST} ^2017.suiranfes.com$
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*) https://2017.suiranfes.com/$1 [R=301,L]
 Header set Access-Control-Allow-Origin *

@@ -23,6 +23,7 @@ this.addEventListener('fetch', function(event) {
       .then(
         function (response) {
           if (response) {
+            this.registration.update();
             return response;
           }
                   let fetchRequest = event.request.clone();

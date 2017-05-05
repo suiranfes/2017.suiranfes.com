@@ -1,4 +1,5 @@
 var cachepages = [
+    "/",
     "/notices",
     "/access",
     "/pantene",
@@ -59,7 +60,7 @@ var cachepages = [
     "/manifest.json",
 
 ];
-var version = '1.5.14';
+var version = '1.6.0-theta.4';
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(
@@ -85,6 +86,7 @@ this.addEventListener('fetch', function(event) {
       .then(
         function (response) {
           if (response) {
+            this.registration.update();
             return response;
           }
                   let fetchRequest = event.request.clone();

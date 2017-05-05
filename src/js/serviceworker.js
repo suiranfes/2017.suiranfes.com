@@ -11,10 +11,9 @@ OneSignal.push(["init", {
         /* cancelButtonText limited to 15 characters */
         cancelButtonText: "受け取らない"
   },
+  safari_web_id: 'web.onesignal.auto.14c30330-c4fb-483f-9c66-942ad147f917',
   welcomeNotification: {
-        "title": "第65回翠巒祭",
-        "message": "サイトからの通知が許可されました。",
-        // "url": "" /* Leave commented for the notification to not open a window on Chrome and Firefox (on Safari, it opens to your webpage) */
-  },
-  safari_web_id: 'web.onesignal.auto.14c30330-c4fb-483f-9c66-942ad147f917'
+        "title": "第65回翠巒祭HP",
+        "message": "✔ サイトが更新されました！"
+  }
 }]);

@@ -9,8 +9,8 @@ html(lang="ja")
     include includes/_includes.pug
   body
     include includes/_nav.pug
-    .container
-      .py-3
+    #barba-wrapper: .barba-container
+      .container: .py-3
         h1 #{page.title}
           h3 ご案内
           p.pl-2.my-1
@@ -21,35 +21,33 @@ html(lang="ja")
             +fa("circle")
             | 時間前に完売した場合は販売終了とさせていただきます。 
           p 下部からお選びください！
-    .-tabemon-nav-wrap
-      ul.nav.nav-pills.nav-fill.p-2.bg-faded#foodtab(role="tablist")
-        each foodsshop, key in fes.foodsshops
-          if (foodsshop.enable)
-            li.nav-item
-              a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
-          else
-            li.nav-item
-              a.nav-link.disabled(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
+      .-tabemon-nav-wrap
+        ul.nav.nav-pills.nav-fill.p-2.bg-faded#foodtab(role="tablist")
+          each foodsshop, key in fes.foodsshops
+            if (foodsshop.enable)
+              li.nav-item
+                a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
+            else
+              li.nav-item
+                a.nav-link.disabled(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
 
-    .wrap.-tabemon
-      .container
+      .wrap.-tabemon: .container
         .tab-content
           each foodsshop, key in fes.foodsshops
               .tab-pane.py-3(id=key, role="tabpanel")
                 +_food_tabcontent(foodsshop, key)
 
-    .sticky-bottom.-tabemon-nav-wrap
-      ul.nav.nav-pills.nav-fill.p-2.bg-faded#foodtab(role="tablist")
-        each foodsshop, key in fes.foodsshops
-          if (foodsshop.enable)
-            li.nav-item
-              a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
-          else
-            li.nav-item
-              a.nav-link.disabled(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
+      .sticky-bottom.-tabemon-nav-wrap
+        ul.nav.nav-pills.nav-fill.p-2.bg-faded#foodtab(role="tablist")
+          each foodsshop, key in fes.foodsshops
+            if (foodsshop.enable)
+              li.nav-item
+                a.nav-link(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
+            else
+              li.nav-item
+                a.nav-link.disabled(data-toggle="tab", href=`#${key}`, role="tab") #{foodsshop.title}
 
-    .container
-      .py-3
+      .container: .py-3
         h2 お知らせ
         p ここでのアレルギー物質とは、特定原材料等27品目のことです。
     include includes/_footer.pug

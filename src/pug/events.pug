@@ -9,25 +9,36 @@ html(lang="ja")
     include includes/_includes.pug
   body
     include includes/_nav.pug
-    .container
-      .py-3
+    #barba-wrapper: .barba-container
+      .container: .py-3
         h1 #{page.title}
         p!=page.description
 
-    .-tabemon-nav-wrap
-      ul.nav.nav-pills.nav-fill.p-2.bg-faded.bg-dark#foodtab(role="tablist")
-        each eventsplace, key in fes.eventsplaces
-          if (eventsplace.enable)
-            li.nav-item
-              a.nav-link.text-white(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
-          else
-            li.nav-item
-              a.nav-link.text-secondary.disabled(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
-
-    .wrap
-      .container
-        .tab-content
+      .-tabemon-nav-wrap
+        ul.nav.nav-pills.nav-fill.p-2.bg-faded.bg-dark#foodtab(role="tablist")
           each eventsplace, key in fes.eventsplaces
+            if (eventsplace.enable)
+              li.nav-item
+                a.nav-link.text-white(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
+            else
+              li.nav-item
+                a.nav-link.text-secondary.disabled(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
+
+      .wrap
+        .container
+          .tab-content
+            each eventsplace, key in fes.eventsplaces
               .tab-pane.py-3(id=key, role="tabpanel")
                 +_event_tabcontent(eventsplace, key)
+
+      .sticky-bottom.-tabemon-nav-wrap
+        ul.nav.nav-pills.nav-fill.p-2.bg-faded.bg-dark#foodtab(role="tablist")
+          each eventsplace, key in fes.eventsplaces
+            if (eventsplace.enable)
+              li.nav-item
+                a.nav-link.text-white(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
+            else
+              li.nav-item
+                a.nav-link.text-secondary.disabled(data-toggle="tab", href=`#${key}`, role="tab") #{eventsplace.title}
+
     include includes/_footer.pug

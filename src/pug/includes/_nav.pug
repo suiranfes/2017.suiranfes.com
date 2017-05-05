@@ -18,7 +18,7 @@ nav.navbar.navbar-toggleable-lg.navbar-inverse.bg-suiranfes.bgimg-n
         if (site.pages[i].enable)
           if (site.pages[i].children)
             li.nav-item.dropdown
-              a.nav-link.dropdown-toggle(href="javascript:void(0)", id=`navbar_drop_${site.pages[i].name}`, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+              a.nav-link.dropdown-toggle(href="javascript:void(0)", id=`navbar_drop_${site.pages[i].name}`, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false", data-index=site.pages[i].name)
                 | #{site.pages[i].title}
               .dropdown-menu(area_labelledby=`navbar_drop_${site.pages[i].name}`)
                 each child, j in site.pages[i].children
@@ -26,17 +26,12 @@ nav.navbar.navbar-toggleable-lg.navbar-inverse.bg-suiranfes.bgimg-n
                     a.dropdown-item(href=`/${site.pages[i].name}${child.add}`) #{child.title}
                   else
                     a.dropdown-item.disabled(href=`javascript:void(0)`) #{child.title}
-          else if (site.pages[i].name == page.id)
-            li.nav-item
-              a.nav-link.active.fw-500(href=`javascript:void(0)`)
-                +fa('chevron-circle-right')
-                | #{site.pages[i].title}
           else
             li.nav-item
-              a.nav-link(href=`/${site.pages[i].name}`) #{site.pages[i].title}
+              a.nav-link(href=`/${site.pages[i].name}`, data-index=site.pages[i].name) #{site.pages[i].title}
         else
           li.nav-item
-            a.nav-link.disabled(href="javascript:void(0)") #{site.pages[i].title}
+            a.nav-link.disabled(href="javascript:void(0)", data-index=site.pages[i].name) #{site.pages[i].title}
       -   }
       - }
       if (page.id == "index")

@@ -13,8 +13,7 @@ function getUrlVars(){
     return vars;
 }
 
-var vars = getUrlVars();
-$(function(){
+function bstab(){
     $( '[role="tablist"] a[href="#' + vars.tab + '"]' ).tab('show');
     $('#' + vars.modal + '').modal('show');
     $('#' + vars.collapse + '').collapse('show')
@@ -22,7 +21,11 @@ $(function(){
         $('a[href="' + $(e.relatedTarget).attr("href") + '"]').removeClass('active')
         $('a[href="' + $(e.target).attr("href") + '"]').addClass('active')
     })
-});
+    return "bstab";
+}
+
+var vars = getUrlVars();
+$(function(){bstab()});
 
 $(window).on('load',function(){
     if(vars.collapse){$(window).scrollTop( document.getElementById( vars.collapse ).getBoundingClientRect().top + window.pageYOffset - Number($('nav').height()) - 80 );}

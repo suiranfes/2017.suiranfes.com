@@ -76,6 +76,13 @@
 }
 @font-face
 {
+    font-family: 'irohakakuC-w';
+    font-weight: 800;
+
+    src: url(https://2017.suiranfes.com/files/2017/fonts/irohakakuC-Heavy.woff2) format('woff2'), url(https://2017.suiranfes.com/files/2017/fonts/irohakakuC-Heavy.woff) format('woff'), url(https://2017.suiranfes.com/files/2017/fonts/irohakakuC-Heavy.ttf) format('truetype');
+}
+@font-face
+{
     font-family: 'mgenplus-p-w';
     font-weight: 200;
 

@@ -333,8 +333,10 @@ grunt.task.registerTask( 'merge-json' , 'Merge all config files' , function(){
 grunt.task.registerTask( 'rss' , 'Make RSS' , function(){
     grunt.file.write( 'docs/rss2.xml' , drawrss() );
 });
-grunt.task.registerTask( 'sw' , 'Make sw.js' , function(){
+grunt.task.registerTask( 'sw' , 'Update Service Worker' , function(){
     grunt.file.write( 'docs/sfesWorker.js' , drawsw() );
+    grunt.file.write( 'docs/OneSignalSDKUpdaterWorker.js' , drawOS_SDK() );
+    grunt.file.write( 'docs/OneSignalSDKWorker.js' , drawOS_SDK() );
 });
 
 function listPages(mode) {
@@ -405,6 +407,13 @@ function drawsw() {
     }
     myreturn.substr( 0, myreturn.length - 2 );
     myreturn += "\n];\nvar version = '" + package.version.replace(/\s|\n/g, "") + "';\n" + sw;
+    return myreturn;
+}
+
+function drawOS_SDK() {
+    var myreturn = "",
+        SDK = grunt.file.read('./src/js/OneSignalSW.js');
+    myreturn += SDK + "\n//v" + package.version.replace(/\s|\n/g, "");
     return myreturn;
 }
   //タスクの登録

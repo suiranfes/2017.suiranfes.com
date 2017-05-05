@@ -295,7 +295,7 @@
             "kaikan": {
                 "description": "翠巒音楽祭！",
                 "title": "翠巒会館",
-                "style": "secondary",
+                "style": "primary",
                 "enable" : false
             }
         },
@@ -462,7 +462,7 @@
                 "description": "校舎外での販売です。詳しい場所はパンフレットをご覧ください。完売する可能性があります。ご了承ください。ゴミはゴミステーションへよろしくお願いします。",
                 "is_plural": true,
                 "title": "模擬店",
-                "style": "primary",
+                "style": "warning",
                 "enable" : false
             },
             "bakery": {
