@@ -14827,7 +14827,7 @@ $(function(){
     return false;
   } else if (agent.browser.name == "IE") {
     nosupport = true
-    $('.loading').html('<p class="bg-danger text-white">Internet ExprolerまたはレンダラにIEを使用するブラウザは対応していません。<br>Edgeまたはその他のブラウザをご利用ください。</p>');
+    $('.loading').html('<p class="bg-danger text-white">Internet ExprolerまたはレンダリングエンジンにIE(<b>Trident</b>)を使用するブラウザは対応していません。<br>お手数ですが、Edge,Chromeなどでご閲覧ください。</p>');
     throw new Error('Microsoft Internet Explorerを検出しました。以降のDOMツリー構築後に行う処理を中止します。');
     return false;
   }
