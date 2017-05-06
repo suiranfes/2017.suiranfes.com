@@ -14788,10 +14788,17 @@ Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container
     document.body.scrollTop = 0;
     var vars = getUrlVars(window.location.search);
     bstab(vars);
-    ga('send', 'pageview', window.location.pathname.replace(/^\/?/, '/') + window.location.search);
     if(vars.collapse){$(window).scrollTop( document.getElementById( vars.collapse ).getBoundingClientRect().top + window.pageYOffset - Number($('nav').height()) - 80 );}
     $('iframe[pre-src]').each(function(){$(this).attr("src",$(this).attr("pre-src"))})
+    $('.-index-timer').yycountdown({
+        endDateTime   : '2017/06/03 12:00:00',  //カウントダウン終了日時
+        unit          : {d: '日', h: '時間', m: '分', s: '秒'},  //カウントダウン単位
+        complete      : function(_this){  //カウントダウン完了時のコールバック
+                      _this.find('.yycountdown-box').html("開催中!!");
+                    }
+    });
     require('./bootstrap.js');
+    ga('send', 'pageview', window.location.pathname.replace(/^\/?/, '/') + window.location.search);
 });
 
 // returnに作ったトランジションを設定します。
@@ -18551,15 +18558,6 @@ $(document).ready(function(){
 	
 })(jQuery);
 
-$(document).ready(function(){
-  $('.-index-timer').yycountdown({
-    endDateTime   : '2017/06/03 12:00:00',  //カウントダウン終了日時
-    unit          : {d: '日', h: '時間', m: '分', s: '秒'},  //カウントダウン単位
-    complete      : function(_this){  //カウントダウン完了時のコールバック
-                      _this.find('.yycountdown-box').html("開催中!!");
-                    }
-  });
-});
 },{}],12:[function(require,module,exports){
 function suiranfes_loaded(){
     if(!nosupport){

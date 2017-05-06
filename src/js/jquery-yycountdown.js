@@ -113,13 +113,3 @@
 	};
 	
 })(jQuery);
-
-$(document).ready(function(){
-  $('.-index-timer').yycountdown({
-    endDateTime   : '2017/06/03 12:00:00',  //カウントダウン終了日時
-    unit          : {d: '日', h: '時間', m: '分', s: '秒'},  //カウントダウン単位
-    complete      : function(_this){  //カウントダウン完了時のコールバック
-                      _this.find('.yycountdown-box').html("開催中!!");
-                    }
-  });
-});
