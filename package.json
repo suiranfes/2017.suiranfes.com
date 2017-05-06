@@ -42,6 +42,6 @@
     "tether": "^1.4.0",
     "ttf2woff2": "^2.0.3",
     "ua-parser-js": "^0.7.12",
-    "uglify-js": "^2.7.5"
+    "uglify-js": "^3.0.0"
   }
 }
