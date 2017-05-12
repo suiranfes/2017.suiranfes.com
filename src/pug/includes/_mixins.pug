@@ -215,15 +215,17 @@ mixin _food_tabcontent(foodsshop, key)
   ***********************************************
 
 mixin _event_tabcontent_ub(eventsplace, key, mmday)
-  h4.mt-2 #{mmday}日目
+  h4.mt-3 #{mmday}日目
   .-tabemon-common-wrapper
     div(role="tablist",aria-multiselectable="true",id=`accordion_${key}_${mmday}`)
+      - var thereis = false
       each event, i in fes.events
         - var this_startDate = new Date(fes.events[i].startDate)
         -     this_endDate = new Date(fes.events[i].endDate)
         -     day_startDate = new Date(fes['Day' + mmday].startDate)
         -     day_endDate = new Date(fes['Day' + mmday].endDate)
           if ( fes.events[i].place === key && this_startDate >= day_startDate && this_startDate <= day_endDate )
+            - thereis = true
             div( id= fes.events[i].id ).event
               .card(class=`card-outline-${eventsplace.style}`).-tabemon-card
                 a(data-toggle="collapse", data-parent=`#accordion_${key}_${mmday}`, href=`#event_collapse_${key}_${fes.events[i].id}`, aria-controls=`event_collapse_${key}_${fes.events[i].id}`)
@@ -243,7 +245,8 @@ mixin _event_tabcontent_ub(eventsplace, key, mmday)
                   .dropdown-divider
                   p.mb-1 #{printDate(this_startDate, 'time')} ～ #{printDate(this_endDate, 'time')} @#{eventsplace.title}
                   +_urlshare_igroup(site.URL + "events?tab=" + key + "&collapse=event_collapse_" + key + "_" + fes.events[i].id, "【" + eventsplace.title + "】 " + fes.events[i].title, fes.events[i].description ,fes.events[i].description)
-
+      if (thereis == false)
+        p **御座いません。**
 
 mixin _event_tabcontent(eventsplace, key)
   h3= eventsplace.title
@@ -282,7 +285,7 @@ mixin _invmatch_tabcontent_ub(mmday)
                   +_urlshare_igroup(site.URL + "invmatch?tab=day" + mmday + "&collapse=invmatch_collapse_" + fes.invmatches[i].id, "【招待試合】 vs " + fes.invmatches[i].vs.convenient, fes.invmatches[i].title + "です。ぜひ見に来てください。",fes.invmatches[i].title + "です。ぜひ見に来てください。" )
 
 mixin _invmatch_tabcontent(mmday)
-  h3 #{mmday}日目
+  h3.mt-3 #{mmday}日目
   +_invmatch_tabcontent_ub(mmday)
 
 

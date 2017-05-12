@@ -9,34 +9,20 @@
     flex: auto
 
 .-tabemon-common-wrapper
+  box-shadow: 0 0 3px #000
+  border-radius: .25rem
+
   > div > div
-    &:first-child
-      .card.-tabemon-card
-        border-top-right-radius: .25rem
-        border-top-left-radius: .25rem
-        border-bottom-right-radius: 0
-        border-bottom-left-radius: 0
+    .card.-tabemon-card
+    .card-header
+      border-radius: 0
 
     &:last-child
       .card.-tabemon-card
-        border-bottom-right-radius: .25rem
-        border-bottom-left-radius: .25rem
-        border-top-right-radius: 0
-        border-top-left-radius: 0
         .card-header
           border-bottom: 0 !important
 
     &:not(:first-child):not(:last-child)
       .card.-tabemon-card
         border-bottom: 0 !important
-        border-radius: 0
-    
-    &:first-child:last-child
-      .card.-tabemon-card
-        border-top-right-radius: .25rem
-        border-top-left-radius: .25rem
-        border-bottom-right-radius: .25rem
-        border-bottom-left-radius: .25rem
-    
-    .card-header
-      border-radius: 0
+  
