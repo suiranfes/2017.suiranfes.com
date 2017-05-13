@@ -18420,6 +18420,8 @@ function bstab(){
     return "bstab";
 }
 
+
+
 var vars = getUrlVars();
 $(function(){bstab()});
 
@@ -18575,6 +18577,7 @@ window.jQuery = $ = require('jquery');
 Tether = require('tether');
 UAparser = require('ua-parser-js');
 Barba = require('barba.js');
+
 require('./open');
 require('./bootstrap');
 require('./blockoldbrowsers');

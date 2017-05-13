@@ -107,7 +107,7 @@ mixin _pantene_modals()
       .modal-content
         .modal-header.flex-wrap-reverse
           p.mr-2: b 玄関
-          h5.mr-2 校内展示人気投票
+          h5.mr-2 校内展示シール式人気投票
           button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
             span(aria-hidden="true") &times;
         .modal-body
@@ -116,7 +116,7 @@ mixin _pantene_modals()
           p シールを貼る方式のかんたんな投票です。クラス展示・部活動展示からそれぞれ最もよかったと思う展示を選んでください。
             br
             | また、Web上でも人気投票とアンケートを行います。
-          a.btn.btn-primary.btn-lg.btn-block.disabled.m-1.-pantene-wtf(href="javascript:void(0);", role="button", aria-disabled="true") WEBアンケート準備中
+          a.btn.btn-primary.btn-lg.btn-block.disabled.m-1.-pantene-wtf(href="javascript:void(0);", role="button", aria-disabled="true") WEB上投票&amp;アンケート
 
 
 mixin _pantene4th()
@@ -124,8 +124,8 @@ mixin _pantene4th()
       .-pantene-room.p-1
         a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/food?tab=stall") 模擬店
         a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=kaikan") 翠巒会館
-      .-pantene-toilet
-      .-pantene-stair
+      .-pantene-toilet.p-1
+      .-pantene-stair.p-1
       .-pantene-room.p-1
         a.card.p-2(class="card-inverse card-info", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_engra`)
           div
@@ -137,15 +137,15 @@ mixin _pantene4th()
         a.card.p-2(class="card-inverse card-info", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_endec`)
           div
             +fa("chevron-right")
-            | 玄関
-          h6.m-0 校内展示人気投票
+            | 投票場
+          h6.m-0 校内展示シール式人気投票
           small 一般展示班
-      .-pantene-room
-      .-pantene-room
+      .-pantene-room.p-1
+      .-pantene-room.p-1
       .-pantene-room.p-1
         a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=nakaniwa") 中庭
-      .-pantene-stair
-      .-pantene-room
+      .-pantene-stair.p-1
+      .-pantene-room.p-1
       .-pantene-stair.p-1
         .card.p-2(class="card-inverse card-info")
           div.m-auto 出口
@@ -156,7 +156,7 @@ mixin _pantene4th()
             | 2F
           h6.m-0 食堂
           small 食堂･喫茶班
-      .-pantene-stair
+      .-pantene-stair.p-1
       .-pantene-room.p-1
         a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=gym") 体育館
         a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=stage") ステージ
@@ -246,7 +246,7 @@ mixin _event_tabcontent_ub(eventsplace, key, mmday)
                   p.mb-1 #{printDate(this_startDate, 'time')} ～ #{printDate(this_endDate, 'time')} @#{eventsplace.title}
                   +_urlshare_igroup(site.URL + "events?tab=" + key + "&collapse=event_collapse_" + key + "_" + fes.events[i].id, "【" + eventsplace.title + "】 " + fes.events[i].title, fes.events[i].description ,fes.events[i].description)
       if (thereis == false)
-        p **御座いません。**
+        p.bg-white: b 御座いません。
 
 mixin _event_tabcontent(eventsplace, key)
   h3= eventsplace.title
@@ -282,7 +282,7 @@ mixin _invmatch_tabcontent_ub(mmday)
                   p #{printDate(this_startDate, 'time')}～#{printDate(this_endDate, 'time')} @#{fes.invmatches[i].place.title} vs#{fes.invmatches[i].vs.formal}
                   p.mb-0!= fes.invmatches[i].description.replace(/\r?\n|\r/g,"<br>")
                   .dropdown-divider
-                  +_urlshare_igroup(site.URL + "invmatch?tab=day" + mmday + "&collapse=invmatch_collapse_" + fes.invmatches[i].id, "【招待試合】 vs " + fes.invmatches[i].vs.convenient, fes.invmatches[i].title + "です。ぜひ見に来てください。",fes.invmatches[i].title + "です。ぜひ見に来てください。" )
+                  +_urlshare_igroup(site.URL + "invmatch?collapse=invmatch_collapse_" + fes.invmatches[i].id, "【招待試合】 vs " + fes.invmatches[i].vs.convenient, fes.invmatches[i].title + "です。ぜひ見に来てください。",fes.invmatches[i].title + "です。ぜひ見に来てください。" )
 
 mixin _invmatch_tabcontent(mmday)
   h3.mt-3 #{mmday}日目
