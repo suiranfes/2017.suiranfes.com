@@ -1,0 +1,153 @@
+{
+    "fes": {
+        "foods": [
+            {
+                "description": "天空ジュース",
+                "kinds": [
+                    {
+                        "allergens": [
+                            "乳",
+                            "大豆"
+                        ],
+                        "description": "ソーダではない",
+                        "name": "Calpis",
+                        "price": 150,
+                        "title": "カルピス"
+                    },
+                    {
+                        "allergens": null,
+                        "description": "架空の商品です",
+                        "name": "water",
+                        "price": 150,
+                        "title": "観音山の天然水"
+                    },
+                    {
+                        "description": "群馬で作ってます",
+                        "name": "Pocari_Sweat",
+                        "price": 150,
+                        "title": "ポカリスエット"
+                    },
+                    {
+                        "description": "選ばれたのは綾鷹でした",
+                        "name": "Ayataka",
+                        "price": 120,
+                        "title": "綾鷹"
+                    }
+                ],
+                "name": "juice",
+                "shop": {
+                    "location": 1,
+                    "name": "stall"
+                },
+                "title": "ジュース"
+            },
+            {
+                "description": "新しい食感",
+                "kinds": [
+                    {
+                        "description": "",
+                        "name": "RAINBOW",
+                        "price": 300,
+                        "title": "レインボー"
+                    },
+                    {
+                        "description": "",
+                        "name": "VANILLA",
+                        "price": 300,
+                        "title": "バニラ"
+                    },
+                    {
+                        "description": "",
+                        "name": "STRAWBERRY",
+                        "price": 300,
+                        "title": "ストロベリー"
+                    }
+                ],
+                "name": "dippin_dots",
+                "shop": {
+                    "location": 6,
+                    "name": "stall"
+                },
+                "title": "dippin dots 粒粒アイス"
+            },
+            {
+                "description": "",
+                "kinds": [
+                    {
+                        "description": "",
+                        "name": "yakisoba",
+                        "price": 150,
+                        "title": "やきそば"
+                    }
+                ],
+                "name": "yakisoba",
+                "shop": {
+                    "location": 7,
+                    "name": "stall"
+                },
+                "title": "やきそば"
+            },
+            {
+                "description": "",
+                "kinds": [
+                    {
+                        "description": "",
+                        "name": "bamboo",
+                        "price": 750,
+                        "title": "竹"
+                    }
+                ],
+                "name": "torihei",
+                "shop": {
+                    "name": "bakery"
+                },
+                "title": "登利平 鶏めし"
+            },
+            {
+                "description": "",
+                "kinds": [
+                    {
+                        "description": "",
+                        "name": "typeA",
+                        "price": 180,
+                        "title": "Aセット"
+                    },
+                    {
+                        "description": "",
+                        "name": "typeB",
+                        "price": 330,
+                        "title": "Bセット"
+                    }
+                ],
+                "name": "cafe_setmenu",
+                "shop": {
+                    "name": "cafe"
+                },
+                "title": "お得なセットメニュー"
+            }
+        ],
+        "foodsshops": {
+            "stall": {
+                "description": "校舎外での販売です。詳しい場所はパンフレットをご覧ください。完売する可能性があります。ご了承ください。ゴミはゴミステーションへよろしくお願いします。",
+                "is_plural": true,
+                "title": "模擬店",
+                "style": "warning",
+                "enable" : false
+            },
+            "bakery": {
+                "description": "",
+                "is_plural": false,
+                "title": "食堂",
+                "style": "info",
+                "enable" : false
+            },
+            "cafe": {
+                "description": "",
+                "is_plural": false,
+                "title": "喫茶店",
+                "style": "danger",
+                "enable" : false
+            }
+        }
+    }
+}

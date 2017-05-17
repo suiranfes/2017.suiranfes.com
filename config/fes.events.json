@@ -1,0 +1,281 @@
+{
+    "fes": {
+        "events": [
+            {
+                "id": "Yasai",
+                "name": "Yasai",
+                "description": "<b>高高生の真の姿をあなたに……</b>",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-04T13:20+09:00",
+                "endDate": "2017-06-04T13:40+09:00",
+                "tags": null,
+                "youtube_id": "0bKciZciVvA",
+                "title": "ガチムチ幻影旅団"
+            },
+            {
+                "id": "Ms_THS_Con_preA",
+                "name": "Ms_THS_Con_preA",
+                "description": "通称ミスコン <b>男娘によるきゅんきゅんバトル</b>",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-03T13:25+09:00",
+                "endDate": "2017-06-03T13:45+09:00",
+                "tags": [
+                    "女装",
+                    "仮装",
+                    "変装",
+                    "コスプレ",
+                    "女子"
+                ],
+                "youtube_id": null,
+                "title": "ミス高高コンテスト 予選A"
+            },
+            {
+                "id": "Ms_THS_Con_preB",
+                "name": "Ms_THS_Con_preB",
+                "description": "通称ミスコン <b>男娘によるきゅんきゅんバトル</b>",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-03T14:40+09:00",
+                "endDate": "2017-06-03T15:00+09:00",
+                "tags": [
+                    "女装",
+                    "仮装",
+                    "変装",
+                    "コスプレ",
+                    "女子"
+                ],
+                "youtube_id": "tR0Wes1fP7Q",
+                "title": "ミス高高コンテスト 予選B"
+            },
+            {
+                "id": "Ms_THS_Con_preC",
+                "name": "Ms_THS_Con_preC",
+                "description": "通称ミスコン <b>男娘によるきゅんきゅんバトル</b>",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-03T16:00+09:00",
+                "endDate": "2017-06-03T16:20+09:00",
+                "tags": [
+                    "女装",
+                    "仮装",
+                    "変装",
+                    "コスプレ",
+                    "女子"
+                ],
+                "youtube_id": "4DpHJBpTT9o",
+                "title": "ミス高高コンテスト 予選C"
+            },
+            {
+                "id": "Ms_THS_Con_FINAL",
+                "name": "Ms_THS_Con_FINAL",
+                "description": "<b>高高にだって男の娘はいるもんね♡ 一番可愛いのは誰だ!?</b>",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-04T14:30+09:00",
+                "endDate": "2017-06-04T15:00+09:00",
+                "tags": [
+                    "女装",
+                    "仮装",
+                    "変装",
+                    "コスプレ",
+                    "女子"
+                ],
+                "youtube_id": "_AHhRAjU_eA",
+                "title": "ミス高高コンテスト 決勝"
+            },
+            {
+                "id": "Champion_of_THS",
+                "name": "Champion_of_THS",
+                "description": "<b>高高真のナンバー１を決める漢の中の漢のバトル！！</b>",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-04T12:10+09:00",
+                "endDate": "2017-06-04T12:50+09:00",
+                "tags": null,
+                "youtube_id": "nOwSaSAs-Xo",
+                "title": "高高王"
+            },
+            {
+                "id": "Muscle_Kingdom",
+                "name": "Muscle_Kingdom",
+                "description": "<b>高高ビューティフォーマッソーは誰だ！筋肉フェチは集まれ！</b>",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-04T11:00+09:00",
+                "endDate": "2017-06-04T11:40+09:00",
+                "tags": null,
+                "youtube_id": "lAUyZCUu8ok",
+                "title": "筋肉王国 ～マッスルキングダム～"
+            },
+            {
+                "id": "Maji_Singers_Cup",
+                "name": "Maji_Singers_Cup",
+                "description": "<b>優勝するのは誰だ！高高ののど自慢が集うガチの歌バトル</b><br>卓越した歌唱力を披露します！",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-04T10:15+09:00",
+                "endDate": "2017-06-04T10:45+09:00",
+                "tags": null,
+                "youtube_id": "XgS8N38SVqo",
+                "title": "マジ歌選手権"
+            },
+            {
+                "id": "Comedians_Acrobats_andOthers",
+                "name": "Comedians_Acrobats_andOthers",
+                "description": "<b>高高生が繰り広げる漫才コント一発芸！！腹筋崩壊間違いなし</b>",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-03T15:15+09:00",
+                "endDate": "2017-06-03T15:45+09:00",
+                "tags": null,
+                "youtube_id": "0RkaVERm2kg",
+                "title": "漫才･コント･一発芸"
+            },
+            {
+                "id": "Quiz_SUIRAN",
+                "name": "Quiz_SUIRAN",
+                "description": "<b>高高の天才が挑む白熱クイズバトル！！</b>",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-03T14:00+09:00",
+                "endDate": "2017-06-03T14:20+09:00",
+                "tags": null,
+                "youtube_id": null,
+                "title": "翠巒クイズ大会"
+            },
+            {
+                "id": "Otokogumi_1",
+                "name": "Otokogumi_1",
+                "description": "<b>漢組による荒ぶるステージ！！</b>",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-03T12:35+09:00",
+                "endDate": "2017-06-03T13:10+09:00",
+                "tags": null,
+                "youtube_id": "lVcegUOcKkY",
+                "title": "和太鼓部「漢組」"
+            },
+            {
+                "id": "Otokogumi_2",
+                "name": "Otokogumi_2",
+                "description": "<b>漢組による荒ぶるステージ！！</b>",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-04T09:15+09:00",
+                "endDate": "2017-06-04T10:00+09:00",
+                "tags": null,
+                "youtube_id": "-_5DfjcqymY",
+                "title": "和太鼓部「漢組」"
+            },
+            {
+                "id": "Grand_Finale",
+                "name": "Grand_Finale",
+                "description": "<b>翠巒祭最後の企画イベント班の集大成！何をやるかはお楽しみに！！</b>",
+                "performers": null,
+                "programs": null,
+                "place": "stage",
+                "startDate": "2017-06-04T15:40+09:00",
+                "endDate": "2017-06-04T16:00+09:00",
+                "tags": null,
+                "youtube_id": "WNB4fC49h5E",
+                "title": "グランドフィナーレ"
+            },
+            {
+                "id": "SUIRAN_STATION",
+                "name": "SUIRAN_STATION",
+                "description": "個性豊かな部活動のメンバーたちが歌や演奏、踊りなどの様々なパフォーマンスを披露！",
+                "performers": null,
+                "programs": null,
+                "place": "gym",
+                "startDate": "2017-06-04T12:30+09:00",
+                "endDate": "2017-06-04T15:30+09:00",
+                "tags": [
+                    "紅白",
+                    "ライブ",
+                    "音楽"
+                ],
+                "youtube_id": "",
+                "title": "SUIRAN STATION"
+            },
+            {
+                "id": "TWO_1stDay",
+                "name": "TWO_1stDay",
+                "description": "吹奏楽部による演奏披露！　心に響く演奏をお届けします。",
+                "performers": [
+                    "吹奏楽部"
+                ],
+                "programs": [
+                    "ここに曲目を入れます！",
+                    "サンプルサンプルサンプルサンプル",
+                    "見本見本見本見本あああああああ",
+                    "くぃｆヴぉｈｊヴぁひｓんｖかｊｌｌ",
+                    "フィナーレ！"
+                ],
+                "place": "kaikan",
+                "startDate": "2017-06-04T12:30+09:00",
+                "endDate": "2017-06-04T15:30+09:00",
+                "tags": [
+                    "翠巒音楽祭"
+                ],
+                "title": "吹奏楽部"
+            },
+            {
+                "id": "Owen",
+                "name": "Owen",
+                "description": "押忍。",
+                "performers": [
+                    "應援部"
+                ],
+                "programs": [
+                    "ここに曲目を入れます！",
+                    "サンプルサンプルサンプルサンプル",
+                    "見本見本見本見本あああああああ",
+                    "くぃｆヴぉｈｊヴぁひｓんｖかｊｌｌ",
+                    "フィナーレ！"
+                ],
+                "place": "nakaniwa",
+                "startDate": "2017-06-04T12:30+09:00",
+                "endDate": "2017-06-04T15:30+09:00",
+                "tags": [
+                    "應援部",
+                    "應援團"
+                ],
+                "title": "應援部"
+            }
+        ],
+        "eventsplaces": {
+            "stage": {
+                "description": "<b>イベント班</b><br>裏庭で高高生によるエンターテインメントを披露しています。<br><a class='btn btn-primary m-2' href='https://twitter.com/suiranevent' target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i> イベント班</a>",
+                "title": "イベントステージ",
+                "style": "warning",
+                "enable" : true
+            },
+            "gym": {
+                "description": "体育館行事班です！",
+                "title": "体育館",
+                "style": "info",
+                "enable" : false
+            },
+            "kaikan": {
+                "description": "翠巒音楽祭！",
+                "title": "翠巒会館",
+                "style": "primary",
+                "enable" : false
+            }
+        }
+    }
+}

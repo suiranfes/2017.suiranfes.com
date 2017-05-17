@@ -1,0 +1,57 @@
+{
+    "fes": {
+        "Day1": {
+            "endDate": "2017-06-03T17:00+09:00",
+            "startDate": "2017-06-03T12:00+09:00"
+        },
+        "Day2": {
+            "endDate": "2017-06-04T16:30+09:00",
+            "startDate": "2017-06-04T09:00+09:00"
+        },
+        "common": {
+            "address": {
+                "addressCountry": "日本",
+                "addressLocality": "高崎市",
+                "addressNumber": "2丁目4番地1号",
+                "addressRegion": "群馬県",
+                "addressStreet": "八千代町",
+                "name": "群馬県立高崎高等学校",
+                "postNumber": "370-0861",
+                "sameAs": "http://www.takasaki-hs.gsn.ed.jp/"
+            },
+            "theme": "No SurFace",
+            "themeinjap": "おもてなし"
+        },        "invmatches": [
+            {
+                "id": "BasketBall_1stDay",
+                "name": "BasketBall_1stDay",
+                "description": "バスケ部です。",
+                "place": {
+                    "title" : "第2体育館"
+                },
+                "startDate": "2017-06-03T12:30+09:00",
+                "endDate": "2017-06-03T15:30+09:00",
+                "vs": {
+                    "convenient": "前高",
+                    "formal": "群馬県立前橋高等学校"
+                    },
+                "title": "バスケ部"
+            },
+            {
+                "id": "BaseBall_2ndDay",
+                "name": "BaseBall_2ndDay",
+                "description": "野球部です。",
+                "place": {
+                    "title" : "野球場"
+                },
+                "startDate": "2017-06-04T12:30+09:00",
+                "endDate": "2017-06-04T15:30+09:00",
+                "vs": {
+                    "convenient": "前高",
+                    "formal": "群馬県立前橋高等学校"
+                    },
+                "title": "硬式野球部"
+            }
+        ]
+    }
+}

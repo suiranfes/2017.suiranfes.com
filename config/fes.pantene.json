@@ -1,0 +1,225 @@
+{
+    "fes": {
+        "pantene": [
+            {
+                "description": "こんにちは。鉄道研究部です。",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "Railway_Reserch_Club",
+                        "title": "鉄道研究部"
+                    }
+                ],
+                "id": "B01",
+                "keywords": [
+                    "巨大ジオラマ",
+                    "運転体験",
+                    "記念切符配布"
+                ],
+                "name": "RI_N_GO_KU",
+                "place": {
+                    "floor": 1,
+                    "room": 6
+                },
+                "title": "り　ん　ご　く",
+                "type": "club"
+            },
+            {
+                "description": "諏訪先輩が作ったピタゴラみてね",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "Math_Club",
+                        "title": "数学部"
+                    }
+                ],
+                "id": "B02",
+                "keywords": [
+                    "数学",
+                    "ピタゴラスイッチ"
+                ],
+                "name": "Switch",
+                "place": {
+                    "floor": 1,
+                    "room": 5
+                },
+                "title": "ピタゴラ",
+                "type": "club"
+            },
+            {
+                "description": "去年のしかわかんねぇ！",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "Montres_Club",
+                        "title": "山岳部"
+                    }
+                ],
+                "id": "B03",
+                "keywords": [
+                    "おやま"
+                ],
+                "name": "Totoro",
+                "place": {
+                    "floor": 1,
+                    "room": 1
+                },
+                "title": "トトロ",
+                "type": "club"
+            },
+            {
+                "description": "アソスと一緒に写真を撮ろう！",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "3-5",
+                        "title": "3年5組"
+                    },
+                    {
+                        "name": "3-6",
+                        "title": "3年6組"
+                    }
+                ],
+                "id": "A01",
+                "keywords": [
+                    "アリス",
+                    "写真撮影"
+                ],
+                "name": "Alice_in_Wonderland",
+                "place": {
+                    "floor": 2,
+                    "room": 5
+                },
+                "title": "アソス IN WONDERLAND",
+                "type": "homeroom"
+            },
+            {
+                "description": "圧倒的清涼感",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "3-8",
+                        "title": "3年8組"
+                    }
+                ],
+                "id": "A02",
+                "keywords": [
+                    "水",
+                    "清涼感"
+                ],
+                "name": "Venezia",
+                "place": {
+                    "floor": 2,
+                    "room": 4
+                },
+                "title": "水の都 ヴェネツィア",
+                "type": "homeroom"
+            },
+            {
+                "description": "的屋である！",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "1-4",
+                        "title": "1年4組"
+                    },
+                    {
+                        "name": "1-5",
+                        "title": "1年5組"
+                    },
+                    {
+                        "name": "1-7",
+                        "title": "1年7組"
+                    }
+                ],
+                "id": "A03",
+                "keywords": [
+                    "的屋",
+                    "おかし"
+                ],
+                "name": "Jungle",
+                "place": {
+                    "floor": 3,
+                    "room": 9
+                },
+                "title": "ジャングル行こうぜ",
+                "type": "homeroom"
+            },
+            {
+                "description": "お困りごとは、近くの黒いTシャツの実行委員へお気軽にお話しください。",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "suwa",
+                        "title": "実行委員"
+                    }
+                ],
+                "id": "Home",
+                "keywords": [],
+                "name": "Home",
+                "place": {
+                    "floor": 1,
+                    "room": 9
+                },
+                "title": "本部",
+                "type": "suwa"
+            },
+            {
+                "description": "<a href='/food?tab=cafe' class='btn btn-primary btn-block btn-lg'>メニューはこちら！</a>",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "cafe",
+                        "title": "食堂･喫茶班"
+                    }
+                ],
+                "id": "cafe1",
+                "keywords": [],
+                "name": "cafe1",
+                "place": {
+                    "floor": 2,
+                    "room": 2
+                },
+                "title": "喫茶１",
+                "type": "cafe"
+            },
+            {
+                "description": "<a href='/food?tab=cafe' class='btn btn-primary btn-block btn-lg'>メニューはこちら！</a>",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "cafe",
+                        "title": "食堂･喫茶班"
+                    }
+                ],
+                "id": "cafe2",
+                "keywords": [],
+                "name": "cafe2",
+                "place": {
+                    "floor": 2,
+                    "room": 1
+                },
+                "title": "喫茶２",
+                "type": "cafe"
+            }
+        ],
+        "pantenebadges": {
+            "cafe": {
+                "style": "danger",
+                "title": "喫茶"
+            },
+            "club": {
+                "style": "success",
+                "title": "部活動展示"
+            },
+            "homeroom": {
+                "style": "primary",
+                "title": "クラス展示"
+            },
+            "suwa": {
+                "style": "brown",
+                "title": "本部"
+            }
+        }
+    }
+}

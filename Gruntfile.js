@@ -340,16 +340,15 @@ grunt.task.registerTask( 'sw' , 'Update Service Worker' , function(){
 });
 
 function listPages(mode) {
-    var siteArray = grunt.file.readJSON('config/site.json'),
-        fesArray = grunt.file.readJSON('config/fes.json'),
+    var globalArray = grunt.file.readJSON('docs/api/v1/index.json'),
         files = '{',
         text = ''
         sitemaptxt = '{',
         logtext = 'Listing Up Files\n\n';
-    for (var i in siteArray.site.pages) {
-        files += '"docs/' + siteArray.site.pages[i].id + '.html" : "src/pug/' + siteArray.site.pages[i].id + '.pug"';
-        text += 'docs/' + siteArray.site.pages[i].id + '.html,'
-        logtext += '' + siteArray.site.pages[i].id + '\n';
+    for (var i in globalArray.site.pages) {
+        files += '"docs/' + globalArray.site.pages[i].id + '.html" : "src/pug/' + globalArray.site.pages[i].id + '.pug"';
+        text += 'docs/' + globalArray.site.pages[i].id + '.html,'
+        logtext += '' + globalArray.site.pages[i].id + '\n';
         files += ',\n';
     }
     files = files.substr( 0, files.length - 2 );
@@ -362,34 +361,33 @@ function listPages(mode) {
 
 function drawrss() {
     var rss = '<?xml version="1.0" encoding="utf-8"?><rss version="2.0"><channel>',
-        siteArray = grunt.file.readJSON('config/site.json'),
-        fesArray = grunt.file.readJSON('config/fes.json'),
+        globalArray = grunt.file.readJSON('docs/api/v1/index.json'),
         now = new Date();
         nowISO = now.toISOString()
     
-    rss += '<title>'+siteArray.site.title+'</title>'
-        +'<description>'+siteArray.site.themeinjp+'</description>'
-        +'<link>'+siteArray.site.URL+'</link>'
+    rss += '<title>'+globalArray.site.title+'</title>'
+        +'<description>'+globalArray.site.themeinjp+'</description>'
+        +'<link>'+globalArray.site.URL+'</link>'
         +'<language>ja</language>'
         +'<pubDate>'+nowISO+'</pubDate>'
         +'<lastBuildDate>'+nowISO+'</lastBuildDate>'
         +'<webMaster>info@suiranfes.com</webMaster>'
         +'<copyright>Copyright (c) 2017 群馬県立高崎高等学校 第65回翠巒祭実行委員会</copyright>';
 
-    siteArray.site.updates.sort(function(a,b) {
+    globalArray.site.updates.sort(function(a,b) {
         if(a.date < b.date) { return 1 } else { return -1 }
     });
-    for( var i in siteArray.site.updates ){
+    for( var i in globalArray.site.updates ){
         rss += '<item>'
-            +'<title>【'+siteArray.site.updatebadges[siteArray.site.updates[i].badge].title+'】 '+siteArray.site.updates[i].title+'</title>'
-            +'<pubDate>'+siteArray.site.updates[i].date+'</pubDate>'
-            +'<description><![CDATA[ '+siteArray.site.updates[i].description+']]></description>';
-        if( siteArray.site.updates[i].link && siteArray.site.updates[i].link != "" ){
-            rss += '<link>'+siteArray.site.URL+siteArray.site.updates[i].link+'</link>'
-                +'<guid isPermaLink="true">'+siteArray.site.URL+siteArray.site.updates[i].link+'</guid>';
+            +'<title>【'+globalArray.site.updatebadges[globalArray.site.updates[i].badge].title+'】 '+globalArray.site.updates[i].title+'</title>'
+            +'<pubDate>'+globalArray.site.updates[i].date+'</pubDate>'
+            +'<description><![CDATA[ '+globalArray.site.updates[i].description+']]></description>';
+        if( globalArray.site.updates[i].link && globalArray.site.updates[i].link != "" ){
+            rss += '<link>'+globalArray.site.URL+globalArray.site.updates[i].link+'</link>'
+                +'<guid isPermaLink="true">'+globalArray.site.URL+globalArray.site.updates[i].link+'</guid>';
         } else {
-            rss += '<link>'+siteArray.site.URL+'</link>'
-                +'<guid isPermaLink="true">'+siteArray.site.URL+'</guid>';
+            rss += '<link>'+globalArray.site.URL+'</link>'
+                +'<guid isPermaLink="true">'+globalArray.site.URL+'</guid>';
         }
         rss += '</item>'
     }

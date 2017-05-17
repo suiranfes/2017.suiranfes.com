@@ -42,7 +42,7 @@ html(lang="ja")
                           +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
                           small
                             +pantene_column_hosts()
-                        p!= fes.pantene[i].description.replace(/\r?\n/g,"<br>")
+                        div!= fes.pantene[i].description.replace(/\r?\n/g,"<br>")
                       .modal-footer
                         +_urlshare_igroup(site.URL + "pantene?modal=pantene_modal_" + fes.pantene[i].name, "【一般展示】 " + fes.pantene[i].title + " @" + j + "-" + k,"校舎内に遊びに来てね！\n\n第65回翠巒祭\n6月3日･4日\n","校舎内に遊びに来てね！\n\n第65回翠巒祭\n6月3日･4日\n")
               -         } else {
