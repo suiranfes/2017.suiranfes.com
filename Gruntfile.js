@@ -1,5 +1,6 @@
 
 var package = require('./package.json');
+var extend = require('extend');
 
 let chalk = require('chalk')
 let grunt = require('grunt')
@@ -188,6 +189,8 @@ var dest = {
 }
 
 module.exports = function(grunt){
+    var globalArray = grunt.file.readJSON('docs/api/v1/index.json');
+
     grunt.registerMultiTask('fontmin', 'Minimize fonts', taskFontmin)
 
     grunt.initConfig({
@@ -298,36 +301,22 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-function arrayMerge() {
-    if (arguments.length === 0) return false;
-    var i, len, key, result = new Object();
-    for (i = 0, len = arguments.length;i < len; i++) {
-        if (typeof arguments[i] !== 'object') continue;
-        for (key in arguments[i]) {
-            if (isFinite(key)) {
-                result.push(arguments[i][key]);
-            } else {
-                result[key] = arguments[i][key];
-            }
-        }
-    }
-    return result;
-};
-
 grunt.task.registerTask( 'merge-json' , 'Merge all config files' , function(){
-    var resultObj = { options: "" };
+    var resultObj = { options: "" },booksObj = new Array();
     grunt.file.recurse('./config/', process );
     function process(abspath, rootdir, subdir, filename){
         console.log(filename);
         if( filename.indexOf('.json') > -1 ){
-            bookObj = grunt.file.readJSON('./'+abspath);
-            for (var key in bookObj) {
-                resultObj = arrayMerge( resultObj , bookObj );
-            }
+            booksObj.push(grunt.file.readJSON('./'+abspath));
         }
     }
-    resultObj = arrayMerge(resultObj, {"package" : package});
+    for( var i = 0; i <= booksObj.length; i++ ){
+        resultObj = extend(true,resultObj, booksObj[i]);
+    }
+    resultObj = extend(true,resultObj, {"package" : package});
     grunt.file.write( 'docs/api/v1/index.json' , JSON.stringify( resultObj ) );
+    globalArray = resultObj;
+    return this;
 });
 
 grunt.task.registerTask( 'rss' , 'Make RSS' , function(){
@@ -340,8 +329,8 @@ grunt.task.registerTask( 'sw' , 'Update Service Worker' , function(){
 });
 
 function listPages(mode) {
-    var globalArray = grunt.file.readJSON('docs/api/v1/index.json'),
-        files = '{',
+    if(globalArray == {}) return false;
+    var files = '{',
         text = ''
         sitemaptxt = '{',
         logtext = 'Listing Up Files\n\n';
@@ -360,8 +349,8 @@ function listPages(mode) {
 }
 
 function drawrss() {
+    if(globalArray == {}) return false;
     var rss = '<?xml version="1.0" encoding="utf-8"?><rss version="2.0"><channel>',
-        globalArray = grunt.file.readJSON('docs/api/v1/index.json'),
         now = new Date();
         nowISO = now.toISOString()
     
@@ -423,4 +412,3 @@ function drawOS_SDK() {
     grunt.registerTask('server', ['default', 'connect', 'watch']);
 
 }
-
