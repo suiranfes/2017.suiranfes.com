@@ -8,110 +8,96 @@ html(lang="ja")
     include includes/_includes.pug
   body
     include includes/_nav.pug
-    #barba-wrapper: .barba-container: .wrap
-      .container
-        .row
-          .col-12
-            .py-3
-              h1 #{page.title}
-              p 校内展示の情報です。廊下側から見た図になっております。<span class="-pantene-u1701-text"></span>項目を選択すると、詳細情報が表示されます。
-      .-pantene-index-1st.p-2
-        h3 展示一覧
-      .-pantene-index-columns.p-2
-        - for (var j = 3; j > 0; j--) {
-          .-pantene-floor
-            -   for (var k = 9; k > 0; k--) {
-            -     var thereis = false;
-            .-pantene-room.p-1
-              -     for (var i in fes.pantene) {
-              -       if (fes.pantene[i].place.floor == j && fes.pantene[i].place.room == k) {
-              -         thereis = true;
-              -         if(fes.pantene[i].has_page) {
-                a.card.p-2(class=`card-inverse card-${fes.pantenebadges[fes.pantene[i].type].style}`, href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_${fes.pantene[i].name}`)
-                  +pantene_columm()
-                .modal.fade.-pantene-modal(id=`pantene_modal_${fes.pantene[i].name}`, tabindex="-1", role="dialog", aria-hidden="true")
-                  .modal-dialog(role="document")
-                    .modal-content
-                      .modal-header.flex-wrap-reverse
-                        p.mr-2: b #{j}-#{k}
-                        h5.mr-2 #{fes.pantene[i].title}
-                        button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
-                          span(aria-hidden="true") &times;
-                      .modal-body
-                        p
-                          +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
-                          small
-                            +pantene_column_hosts()
-                        div!= fes.pantene[i].description.replace(/\r?\n/g,"<br>")
-                      .modal-footer
-                        +_urlshare_igroup(site.URL + "pantene?modal=pantene_modal_" + fes.pantene[i].name, "【一般展示】 " + fes.pantene[i].title + " @" + j + "-" + k,"校舎内に遊びに来てね！\n\n第65回翠巒祭\n6月3日･4日\n","校舎内に遊びに来てね！\n\n第65回翠巒祭\n6月3日･4日\n")
-              -         } else {
-                .card.p-2(class=`card-inverse card-${fes.pantenebadges[fes.pantene[i].type].style}`)
-                  +pantene_columm()
-              -         }
-              -       }
-              -     }
-              -     if (thereis == false) {
-                .card.p-2(class="card-inverse card-danger")
-                  .d-flex.flex-row
-                    div #{j}-#{k}
-                    div.ml-auto ?
-                  | 準備中......
-              -     }
-            - if (k == 7 || k == 3) {
-              - if( j == 3 && k == 7 ) {
-                .-pantene-toilet.p-1
-                  .card(class="card-inverse -pantene-card-toilet")
-                    div.m-auto
-                      +fa("female")
-              - } else if( j == 3 && k == 3 ) {
-                .-pantene-toilet.p-1
-                  .card(class="card-inverse -pantene-card-toilet")
-                    div.m-auto
-                      +fa("female")
-              - } else if( j == 2 && k == 7 ) {
-                .-pantene-toilet.p-1
-                  .card(class="card-outline-secondary")
-                    div.m-auto
-                      +fa("male")
-              - } else if( j == 2 && k == 3 ) {
-                .-pantene-toilet.p-1
-                  .card(class="card-inverse -pantene-card-toilet")
-                    div.m-auto
-                      +fa("female")
-              - } else if( j == 1 && k == 7 ) {
-                .-pantene-toilet.p-1
-                  .card(class="card-inverse -pantene-card-toilet")
-                    div.m-auto
-                      +fa("female")
-              - } else if( j == 1 && k == 3 ) {
-                .-pantene-toilet.p-1
-                  .card(class="card-outline-secondary")
-                    div.m-auto
-                      +fa("male")
-              - }
-              - if ( j == 3 ) {
-                .-pantene-stair.-pantene-stair-s3.px-1.pt-1.pb-0
-                  .card.rounded-top(class="card-inverse card-warning")
-                    div.m-auto.-pantene-stair-hidden 階<br>段
-              - } else if ( j == 2 ) {
-                .-pantene-stair.-pantene-stair-s2.px-1.py-0
-                  .card.rounded-0(class="card-inverse card-warning")
-                    div.m-auto 階<br>段
-              - } else if ( j == 1 ) {
-                .-pantene-stair.-pantene-stair-s1.px-1.pt-0.pb-1
-                  .card.rounded-bottom(class="card-inverse card-warning")
-                    div.m-auto.-pantene-stair-hidden 階<br>段
-              - }
+    #barba-wrapper: .barba-container
+      .wrap
+        .container
+          .row
+            .col-12
+              .py-3
+                h1 #{page.title}
+                p 校内展示の情報です。廊下側から見た図になっております。<span class="-pantene-u1701-text"></span>項目を選択すると、詳細情報が表示されます。
+                p 黒背景が女子便所、白背景が男子便所となっています。
+        .-pantene-screen
+          .-pantene-index-1st.p-2: h3.p-2.m-0 展示一覧
+          .-pantene-index-columns.p-2
+            - for (var j = 3; j > 0; j--) {
+              .-pantene-floor
+                -   for (var k = 9; k > 0; k--) {
+                -     var thereis = false;
+                .-pantene-room.p-1
+                  -     for (var i in fes.pantene) {
+                  -       if (fes.pantene[i].place.floor == j && fes.pantene[i].place.room == k) {
+                  -         thereis = true;
+                  -         if(fes.pantene[i].has_page) {
+                    a.card.p-2(class=`card-inverse card-${fes.pantenebadges[fes.pantene[i].type].style}`, href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_${fes.pantene[i].name}`)
+                      +pantene_columm()
+                  -         } else {
+                    .card.p-2(class=`card-inverse card-${fes.pantenebadges[fes.pantene[i].type].style}`)
+                      +pantene_columm()
+                  -         }
+                  -       }
+                  -     }
+                  -     if (thereis == false) {
+                    .card.p-2(class="card-inverse card-danger")
+                      .d-flex.flex-row
+                        div #{j}-#{k}
+                        div.ml-auto ?
+                      | 準備中......
+                  -     }
+                - if (k == 7 || k == 3) {
+                  - if( j == 3 && k == 7 ) {
+                    .-pantene-toilet.p-1
+                      .card(class="card-inverse -pantene-card-toilet")
+                        div.m-auto
+                          +fa("female")
+                  - } else if( j == 3 && k == 3 ) {
+                    .-pantene-toilet.p-1
+                      .card(class="card-inverse -pantene-card-toilet")
+                        div.m-auto
+                          +fa("female")
+                  - } else if( j == 2 && k == 3 ) {
+                    .-pantene-toilet.p-1
+                      .card(class="card-outline-secondary")
+                        div.m-auto
+                          +fa("male")
+                  - } else if( j == 2 && k == 7 ) {
+                    .-pantene-toilet.p-1
+                      .card(class="card-inverse -pantene-card-toilet")
+                        div.m-auto
+                          +fa("female")
+                  - } else if( j == 1 && k == 3 ) {
+                    .-pantene-toilet.p-1
+                      .card(class="card-inverse -pantene-card-toilet")
+                        div.m-auto
+                          +fa("female")
+                  - } else if( j == 1 && k == 7 ) {
+                    .-pantene-toilet.p-1
+                      .card(class="card-outline-secondary")
+                        div.m-auto
+                          +fa("male")
+                  - }
+                  - if ( j == 3 ) {
+                    .-pantene-stair.-pantene-stair-s3.px-1.pt-1.pb-0
+                      .card.rounded-top(class="card-inverse card-warning")
+                        div.m-auto.-pantene-stair-hidden 階<br>段
+                  - } else if ( j == 2 ) {
+                    .-pantene-stair.-pantene-stair-s2.px-1.py-0
+                      .card.rounded-0(class="card-inverse card-warning")
+                        div.m-auto 階<br>段
+                  - } else if ( j == 1 ) {
+                    .-pantene-stair.-pantene-stair-s1.px-1.pt-0.pb-1
+                      .card.rounded-bottom(class="card-inverse card-warning")
+                        div.m-auto.-pantene-stair-hidden 階<br>段
+                  - }
+                - }
+                - }
+                if (j == 1)
+                  .-pantene-stair.p-1
+                    .card(class="card-inverse card-info")
+                      div.m-auto 入<br>口
+                else
+                  .-pantene-stair
             - }
-            - }
-            if (j == 1)
-              .-pantene-stair.p-1
-                .card(class="card-inverse card-info")
-                  div.m-auto 入<br>口
-            else
-              .-pantene-stair
-        - }
-        +_pantene4th()
+            +_pantene4th()
+      +_pantene_modals()
     include includes/_footer.pug
-    +_pantene_modals()

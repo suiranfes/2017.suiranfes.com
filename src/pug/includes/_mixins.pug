@@ -77,17 +77,54 @@ mixin pantene_columm()
     +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
   h6.m-0 #{fes.pantene[i].title}
   small.-pantene-hosts
-    +pantene_column_hosts()
+    +pantene_column_hosts(fes.pantene[i].hosts)
 
-mixin pantene_column_hosts()
-  - for (var o in fes.pantene[i].hosts) {
-    | #{fes.pantene[i].hosts[o].title}
-    - if (o < fes.pantene[i].hosts.length - 1){
+mixin pantene_column_hosts(hosts)
+  - for (var o in hosts) {
+    | #{hosts[o].title}
+    - if (o < hosts.length - 1){
       | ･
     - }
   - }
 
 mixin _pantene_modals()
+  - for (var j = 3; j > 0; j--) {
+  -   for (var k = 9; k > 0; k--) {
+  -     var thereis = false;
+  -     for (var i in fes.pantene) {
+  -       if (fes.pantene[i].place.floor == j && fes.pantene[i].place.room == k) {
+  -         if(fes.pantene[i].has_page) {
+    .modal.fade.-pantene-modal(id=`pantene_modal_${fes.pantene[i].name}`, tabindex="-1", role="dialog", aria-hidden="true")
+      .modal-dialog(role="document")
+        .modal-content
+          .modal-header.flex-wrap-reverse
+            p.mr-2: b #{j}-#{k}
+            h5.mr-2 #{fes.pantene[i].title}
+            button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
+              span(aria-hidden="true") &times;
+          .modal-body.flex-wrap-reverse
+            p
+              +bootstrap_badge_pill( fes.pantenebadges[fes.pantene[i].type].title, fes.pantenebadges[fes.pantene[i].type].style )
+              small
+                +pantene_column_hosts(fes.pantene[i].hosts)
+            if(fes.pantene[i].image != undefined)
+              if(fes.pantene[i].image[0] == "top")
+                img(src=`${site.CDN}2017/img/pantene/${fes.pantene[i].id}_${fes.pantene[i].image[1]}.svg` class="block ml-auto")
+              if(fes.pantene[i].image[0] == "both")
+                img(src=`${site.CDN}2017/img/pantene/${fes.pantene[i].id}_${fes.pantene[i].image[1]}_top.svg` class="block ml-auto")
+            div!= fes.pantene[i].description.replace(/\r?\n/g,"<br>")
+            if(fes.pantene[i].image != undefined)
+              if(fes.pantene[i].image[0] == "bottom")
+                img(src=`${site.CDN}2017/img/pantene/${fes.pantene[i].id}_${fes.pantene[i].image[1]}.svg` class="block ml-auto")
+              if(fes.pantene[i].image[0] == "both")
+                img(src=`${site.CDN}2017/img/pantene/${fes.pantene[i].id}_${fes.pantene[i].image[1]}_bottom.svg` class="block ml-auto")
+          .modal-footer
+            +_urlshare_igroup(site.URL + "pantene?modal=pantene_modal_" + fes.pantene[i].name, "【一般展示】 " + fes.pantene[i].title + " @" + j + "-" + k,"校舎内に遊びに来てね！\n\n第65回翠巒祭\n6月3日･4日\n","校舎内に遊びに来てね！\n\n第65回翠巒祭\n6月3日･4日\n")
+  -         }
+  -       }
+  -     }
+  -   }
+  - }
 
   .modal.fade.-pantene-modal(id=`pantene_modal_engra`, tabindex="-1", role="dialog", aria-hidden="true")
     .modal-dialog(role="document")
@@ -100,7 +137,7 @@ mixin _pantene_modals()
         .modal-body
           p
             small 創作班美術課
-          p NoSurFaceっぽくデザインしました。
+          p 階段の両側の超・巨大な絵で、校内へお迎えします。詳細はパンフレットにてご確認ください。
 
   .modal.fade.-pantene-modal(id=`pantene_modal_endec`, tabindex="-1", role="dialog", aria-hidden="true")
     .modal-dialog(role="document")
@@ -116,7 +153,7 @@ mixin _pantene_modals()
           p シールを貼る方式のかんたんな投票です。クラス展示・部活動展示からそれぞれ最もよかったと思う展示を選んでください。
             br
             | また、Web上でも人気投票とアンケートを行います。
-          a.btn.btn-primary.btn-lg.btn-block.disabled.m-1.-pantene-wtf(href="javascript:void(0);", role="button", aria-disabled="true") WEB上投票&amp;アンケート
+            a.btn.btn-link.m-1.-pantene-wtf(href="/", role="button", aria-disabled="true") 詳細はトップページ中段で
 
 
 mixin _pantene4th()
@@ -128,14 +165,14 @@ mixin _pantene4th()
       .-pantene-stair.p-1
       .-pantene-room.p-1
         a.card.p-2(class="card-inverse card-info", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_engra`)
-          div
+          small: div
             +fa("chevron-right")
             | 玄関
           h6.m-0 エントランス・グラフィック
           small 創作班美術課
       .-pantene-room.p-1
         a.card.p-2(class="card-inverse card-info", href=`javascript:void(0);`, data-toggle="modal", data-target=`#pantene_modal_endec`)
-          div
+          small: div
             +fa("chevron-right")
             | 投票場
           h6.m-0 校内展示シール式人気投票
@@ -150,12 +187,12 @@ mixin _pantene4th()
         .card.p-2(class="card-inverse card-info")
           div.m-auto 出口
       .-pantene-room.p-1
-        a.card.p-2(class="card-inverse card-danger", href=`/food#bread`)
-          div 
+        a.card.p-2(class="card-inverse card-danger", href=`javascript:void(0);`)
+          small: div 
             +fa("chevron-right")
             | 2F
           h6.m-0 食堂
-          small 食堂･喫茶班
+          small 食堂･喫茶店班
       .-pantene-stair.p-1
       .-pantene-room.p-1
         a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=gym") 体育館

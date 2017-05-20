@@ -13,7 +13,7 @@ function getUrlVars(url){
 }
 
 function bstab(vars){
-    $( '[role="tablist"] a[href="#' + vars.tab + '"]' ).tab('show');
+    $( '[role="tablist"] a[href="#' + vars.tab + '"]' ).tab('show')
     $('#' + vars.modal + '').modal('show');
     $('#' + vars.collapse + '').collapse('show')
     $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
@@ -24,7 +24,7 @@ function bstab(vars){
 }
 
 
-$(document).ready(function(){
+$(window).on('load',function(){
 
 var GreatBarba = Barba.BaseTransition.extend({
   start: function() {

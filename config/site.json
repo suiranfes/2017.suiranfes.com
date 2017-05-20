@@ -5,8 +5,8 @@
         "themeinjp" : "おもてなし",
         "domain" : "suiranfes.com",
         "FesURL" : "https://suiranfes.com/",
-        "URL" : "https://2017.suiranfes.com/",
-        "CDN" : "https://2017.suiranfes.com/files/",
+        "URL" : "https://2017-dev.suiranfes.com/",
+        "CDN" : "https://2017-dev.suiranfes.com/files/",
         "sitecardpath" : "assets/img/TwitterCard7.png",
         "iconpath" : "assets/img/X-SUIRAN-t-600-f-fs8.png",
         "sharetext" : {
@@ -44,7 +44,7 @@
                 "title" : "一般展示",
                 "description" : "校内の展示について。部活展示およびクラス展示などを、教室棟を模した図でリストアップしました。",
                 "keywords" : ["スイラン祭","部活展示","部展示","学級展示"],
-                "enable" : false
+                "enable" : true
             },
             {
                 "id" : "food",

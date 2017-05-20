@@ -10,5 +10,7 @@ link(href=`${site.CDN}/2017/img/top/saya_modified5.svgz`, rel="preload")
 
 script(src="/assets/main.min.js")
 script(src="https://apis.google.com/js/platform.js", async, defer) {lang: 'ja'}
-script(src="https://cdn.onesignal.com/sdks/OneSignalSDK.js", async, defer)
-<script>var OneSignal = window.OneSignal || [];OneSignal.push(["init", {  appId: "caa81f3a-0264-4b5f-916b-ff5484aa6a2b",  autoRegister: true,  notifyButton: {    enable: false/* Set to false to hide */  },  safari_web_id: 'web.onesignal.auto.14c30330-c4fb-483f-9c66-942ad147f917'}]);</script>
+script(src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML", async, defer)
+script(src="https://cdn.onesignal.com/sdks/OneSignalSDK.js")
+script
+  include:oneline ../../js/serviceworker.js

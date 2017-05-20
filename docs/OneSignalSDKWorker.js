@@ -1,3 +1,3 @@
 importScripts('/sfesWorker.js');
 importScripts('https://cdn.onesignal.com/sdks/OneSignalSDK.js');
-//v1.7.1
+//v2.0.0-beta.6

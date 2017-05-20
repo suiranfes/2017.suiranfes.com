@@ -13,7 +13,7 @@ OneSignal.push(["init", {
   },
   safari_web_id: 'web.onesignal.auto.14c30330-c4fb-483f-9c66-942ad147f917',
   
-    notifyButton: {
+  notifyButton: {
     enable: true, /* Required to use the notify button */
     size: 'medium', /* One of 'small', 'medium', or 'large' */
     theme: 'default', /* One of 'default' (red-white) or 'inverse" (white-red) */
@@ -41,13 +41,11 @@ OneSignal.push(["init", {
     }
   },
   welcomeNotification: {
-        "title": "第65回翠巒祭HP",
-        "message": "✔ サイトが更新されました！"
+        "title": "第65回翠巒祭サイト",
+        "message": "今後もよろしくお願いします！"
   }
 }]);
 
-$(window).on('load',function(){
 OneSignal.push(function() {
   OneSignal.showHttpPrompt();
-});
 });

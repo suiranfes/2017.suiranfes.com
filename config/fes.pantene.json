@@ -2,21 +2,22 @@
     "fes": {
         "pantene": [
             {
-                "description": "こんにちは。鉄道研究部です。",
+                "description": "<p class='text-center fw-800'>今年のテーマ</p><p class='text-center fw-800 t-0300em'>長&nbsp;&nbsp;野</p><p class='pb-1'>こんにちは。鉄道研究部です。</p><p class='pb-1'>今年のテーマは「隣国」長野県。7畳にわたる巨大ジオラマのなかには、「林檎」畑や長野市街、姨捨駅と棚田、松本市街、安曇野、平岩、など、長野の各地が凝縮しました。非常に見応えのあるものになっています。</p><p class='pb-1'>運転体験のブースでは、部員の「ラブライブ！」好きが高じ、「ラブライブ!サンシャイン!!」劇中に登場した各所が再現されています。お子様も、学生さんも、大人の方も、是非遊びに来てください。</p><p class='pb-1'>毎年恒例の部誌「旅路の朝日」は、今回の44号は部員総勢27名が書いた史上最大級(?)の厚さとなっています。そのわりに被りがなく、読みやすいと思います(部誌編集委員長談)。</p><p class='pb-1 fw-700'>玄関を入り、判天門をくぐって右側、北陸新幹線E7系が目印です。記念きっぷを配布しています。お気軽にお立ち寄りください！</p><div class='dropdown-divider'></div><h4>＜お品書き＞</h4><ul><li>7畳巨大ジオラマ「長野」</li><li>Nゲージ運転体験「根府川 ～ラブライブ!サンシャイン!!より～」</li><li>部誌「旅路の朝日」44号配布</li><li>ご来場記念きっぷ配布</li><li>長野をイメージした装飾</li></ul>",
                 "has_page": true,
                 "hosts": [
                     {
-                        "name": "Railway_Reserch_Club",
+                        "name": "tekken",
                         "title": "鉄道研究部"
                     }
                 ],
                 "id": "B01",
                 "keywords": [
+                    "長野",
                     "巨大ジオラマ",
                     "運転体験",
                     "記念切符配布"
                 ],
-                "name": "RI_N_GO_KU",
+                "name": "tekken",
                 "place": {
                     "floor": 1,
                     "room": 6
@@ -25,132 +26,514 @@
                 "type": "club"
             },
             {
-                "description": "諏訪先輩が作ったピタゴラみてね",
+                "description": "<h4>焼き絵体験コーナー</h4><p class='pb-1'>今年は新しい試みとして、木製スプーンにも焼き絵ができます。</p><h4>スーパーボールすくい</h4><p class='pb-1'>気に入った1個を狙うもよし、とにかくたくさんかっさらうもよしです。お客様自身の楽しみ方をしてください。</p><h4>ヨーヨーつり</h4><p class='pb-1'>上手く取れたからといって、あまりエキサイトしすぎて水をぶちまけないようお願いします。ふつうの教室ですから。</p><h4>通信神社</h4><p class='pb-1'>教室の一番奥に通信神社を作ります。この神社は、本気で信じれば恋愛成就・学業成就・交通安全・安産祈願、はては腰痛・リウマチにまで効能があります。<small>(※保証しません)</small>注意点として、この神様は身長をたいへん気にしているので、できればしゃがんでお参りしてあげてください。喜びます。</p>",
                 "has_page": true,
                 "hosts": [
                     {
-                        "name": "Math_Club",
-                        "title": "数学部"
+                        "name": "tsushin",
+                        "title": "通信制"
                     }
                 ],
-                "id": "B02",
+                "id": "TSU",
                 "keywords": [
-                    "数学",
-                    "ピタゴラスイッチ"
+                    "焼き絵",
+                    "ヨーヨー",
+                    "スーパーボール",
+                    "神社"
                 ],
-                "name": "Switch",
+                "name": "tsushin2",
                 "place": {
                     "floor": 1,
-                    "room": 5
+                    "room": 8
                 },
-                "title": "ピタゴラ",
+                "title": "夏を先取り! 楽しい縁日!!",
+                "type": "tsushin"
+            },
+            {
+                "description": "こちらでは<b>輪投げ</b>と<b>射的</b>ができます。得点に応じて景品として駄菓子がもらえます。高得点なら高級なお菓子(う○い棒の10倍以上?!)も用意しています。当然的は的が小さく難易度高。残ったお菓子はスタッフがおいしくいただきますので、ふるって外してくださいね。",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "tsushin",
+                        "title": "通信制"
+                    }
+                ],
+                "id": "TSU",
+                "keywords": [
+                    "焼き絵",
+                    "ヨーヨー",
+                    "スーパーボール",
+                    "神社"
+                ],
+                "name": "tsushin1",
+                "place": {
+                    "floor": 1,
+                    "room": 7
+                },
+                "title": "夏を先取り! 楽しい縁日!!",
+                "type": "tsushin"
+            },
+            {
+                "description": "<div class='d-flex flex-wrap'><div class='mx-auto py-3 serif vertical-rl'>バカは\n高いところが\n好き</div></div>",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "alpine",
+                        "title": "山岳部"
+                    }
+                ],
+                "id": "B07",
+                "keywords": [
+                    "山"
+                ],
+                "name": "alpine",
+                "place": {
+                    "floor": 2,
+                    "room": 7
+                },
+                "title": "バカは高いところが好き",
                 "type": "club"
             },
             {
-                "description": "去年のしかわかんねぇ！",
+                "description": "<h4>常設展示</h4><h5>スライム</h5><p class='pb-1'>様々な色のスライムを作れます。</p><h5>人工イクラ</h5><p class='pb-1'>様々な色のイクラが作れます。</p><h4>定期開催実験</h4><h5>テルミット反応</h5><p class='pb-1'>線路の溶接にも使われます。</p><h5>虹色試験管</h5><p class='pb-1'>指示薬が反応して虹色になります。</p><h5>液体窒素</h5><p class='pb-1'>約-196℃の液体が様々なものを凍らせます。</p><div class='text-center fw-700 t-0150em'>よろしくお願いします。</div>",
                 "has_page": true,
                 "hosts": [
                     {
-                        "name": "Montres_Club",
-                        "title": "山岳部"
+                        "name": "chemistry",
+                        "title": "化学部"
                     }
                 ],
                 "id": "B03",
                 "keywords": [
-                    "おやま"
+                    "化学"
                 ],
-                "name": "Totoro",
+                "name": "chemistry",
+                "place": {
+                    "floor": 1,
+                    "room": 3
+                },
+                "title": "化学部展示",
+                "type": "club"
+            },
+            {
+                "description": "<p class='pb-1'>文藝部では皆様の身近にある「文学」に目を向けていただくことを考えています。</p><p class='pb-1'>若い人だけでなく大人でも楽しむことのできる新しい文学であるライトノベル、文章の奥深さと美しさを味わう洗練された名著。私達は、この2つのジャンルの中からそれぞれ作品を選出し、<b>難易度別の30問のテスト</b>を用意しました。</p><p class='pb-1'>また、翠巒祭実行委員としてノベルゲームを制作しました。</p><p class='pb-1'>勿論、文藝部員が執筆した部誌「翠巒」は無料配布です。</p><p class='pb-1'>ライトノベルや名作の論破数に自信がある方は、是非文藝部へ。</p><p class='pb-1'>ちょっとした文藝部体験もありますので、普段読書をしない方も足を運んでいただけると幸いです。</p>",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "literary",
+                        "title": "文藝部"
+                    }
+                ],
+                "id": "B01",
+                "keywords": [
+                    "文芸",
+                    "文藝"
+                ],
+                "name": "literary",
                 "place": {
                     "floor": 1,
                     "room": 1
                 },
-                "title": "トトロ",
+                "title": "文学といっしょ",
                 "type": "club"
             },
             {
-                "description": "アソスと一緒に写真を撮ろう！",
+                "description": "畳あります。対局できます。",
                 "has_page": true,
                 "hosts": [
                     {
-                        "name": "3-5",
-                        "title": "3年5組"
-                    },
-                    {
-                        "name": "3-6",
-                        "title": "3年6組"
+                        "name": "IgoShogi",
+                        "title": "囲碁･将棋部"
                     }
                 ],
-                "id": "A01",
+                "id": "B02",
                 "keywords": [
-                    "アリス",
-                    "写真撮影"
+                    "囲碁",
+                    "将棋"
                 ],
-                "name": "Alice_in_Wonderland",
+                "name": "IgoShogi",
                 "place": {
-                    "floor": 2,
-                    "room": 5
+                    "floor": 1,
+                    "room": 2
                 },
-                "title": "アソス IN WONDERLAND",
-                "type": "homeroom"
+                "title": "囲碁・将棋",
+                "type": "club"
             },
             {
-                "description": "圧倒的清涼感",
+                "description": "<p class='pb-1'>イタリアといえば、サッカー？ ピサの斜塔？ 噴水？\nもちろん作りました。<b>自律型ロボットによるサッカー対決</b>は、まさにセリエＡと見間違うレベル……ではありませんが、「圧感」です。まず見に来てください。</p><p class='pb-1'>そして今年は、新たに<b>シューティングゲーム</b>を制作しました。\n大変お勧めです。毎年パソコンゲームが制作されてきましたが、新たに身体を動かすゲームに挑戦しました。</p>",
                 "has_page": true,
                 "hosts": [
                     {
-                        "name": "3-8",
-                        "title": "3年8組"
+                        "name": "physics",
+                        "title": "物理部"
                     }
                 ],
-                "id": "A02",
+                "id": "B04",
                 "keywords": [
-                    "水",
-                    "清涼感"
+                    "物理",
+                    "ロボット",
+                    "ゲーム"
                 ],
-                "name": "Venezia",
+                "name": "physics",
                 "place": {
-                    "floor": 2,
+                    "floor": 1,
                     "room": 4
                 },
-                "title": "水の都 ヴェネツィア",
-                "type": "homeroom"
+                "title": "PHYSICS FROM ITALY",
+                "type": "club"
             },
             {
-                "description": "的屋である！",
+                "description": "應援部の活動を映像に纏めました。\n厳格なイメージの應援部の意外な一面も展示で御覧ください。よろしくお願いします。",
                 "has_page": true,
                 "hosts": [
                     {
-                        "name": "1-4",
-                        "title": "1年4組"
+                        "name": "cheering",
+                        "title": "應援部"
+                    }
+                ],
+                "id": "B09",
+                "keywords": [
+                    "応援",
+                    "應援団"
+                ],
+                "name": "cheering",
+                "place": {
+                    "floor": 2,
+                    "room": 9
+                },
+                "title": "應援部の伝統",
+                "type": "club"
+            },
+            {
+                "description": "数学部の展示テーマは「\\(x^2+(y-\\sqrt[3]{x^2})^2=1\\)を届けよう!!」です。この方程式をグラフに表すとハートの形になり、今年の翠巒祭のテーマである「No SurFace･おもてなし」を通して、愛を伝えることを目標としています。ぜひ足を運んでください。<br>\\(\\begin{equation}展示内容 \\left \\{\\begin{array}{l}・ピタゴラスイッチ \\\\・数学クイズ \\\\・数学部誌\\end{array}\\right.\\end{equation}\\)\n\n<small>※表記の都合によりタイトルの数式は「LaTeX」という言語で表しています。LaTeXをツールに通すと、手書きで書いたのと同じように表示されるのです。(Webページを作っているひとより)</small> ",
+                "image" : ["bottom",1],
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "mathematics",
+                        "title": "数学部"
+                    }
+                ],
+                "id": "B05",
+                "keywords": [
+                    "数学"
+                ],
+                "name": "mathematics",
+                "place": {
+                    "floor": 1,
+                    "room": 5
+                },
+                "title": "x^2+(y-\\sqrt[3]{x^2})^2=1を届けよう!!",
+                "type": "club"
+            },
+            {
+                "description": "人間的本能を覚ます良作を多数揃えました。これ以上言葉はいりません。その目でご覧ください。",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "PhotoArt",
+                        "title": "写真部･美術部"
+                    }
+                ],
+                "id": "B10",
+                "keywords": [
+                    "写真",
+                    "美術"
+                ],
+                "name": "PhotoArt",
+                "place": {
+                    "floor": 3,
+                    "room": 7
+                },
+                "title": "解説無用",
+                "type": "club"
+            },
+            {
+                "description": "<p class='pb-1 fw-500'>磁石というのはかなり身近に潜んでいるのですね。恐らく小学校でS極とN極があることを学んだわけでありまして、方位磁針のN極が着たを指し、S極が南を指すわけですが、少し考えますと地球は大きな棒磁石に例えられるのですね。そこで、北極側がN極、南極側がS極の磁石を想像しますね。しかし方位磁針のN極が着たを指すのですから先程の想像は逆であったことに「アッ！」と頭を掻きむしります。</p><p class='pb-1 fw-500'>辰巳くんは東京-大阪間を飛行機に乗らずに1時間で移動しました。どうやって？答えはリニアモーターカーであります。辰巳くんは思いました「なぜこんなに速いのだろうか。」浮いたのです！それも10cm！あの何㌧という巨体が。</p><p class='pb-1 fw-500'>さて、放浪者は言いました「そうだ、北極へ行こう。」と。しかしこれが難題でありました。実は方位磁針のN極が北極点を指すわけではないっ！更に苦行は続きます。北極は南極とちがい、大陸ではないのでまさにあなたは水に浮く氷である！</p><p class='pb-1 fw-500'>では、着いたら教えてくださいな。</p>",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "1700",
+                        "title": "1年7組"
                     },
                     {
-                        "name": "1-5",
+                        "name": "1800",
+                        "title": "1年8組"
+                    }
+                ],
+                "id": "A05",
+                "keywords": [
+                    "磁石"
+                ],
+                "name": "magnet",
+                "place": {
+                    "floor": 3,
+                    "room": 1
+                },
+                "title": "素晴らしきかな、磁石",
+                "type": "homeroom"
+            },
+            {
+                "description": "我々のクラスのテーマは新しく斬新な和洋折衷だ。つまり、今までにない新しい「和」と「洋」の融合である。それに加えて輪投げというアトラクションも用意している。是非我々、1年5組･6組の熱き漢たちの魂の展示を見に来てくれ。",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "1500",
                         "title": "1年5組"
                     },
                     {
-                        "name": "1-7",
-                        "title": "1年7組"
+                        "name": "1600",
+                        "title": "1年6組"
                     }
                 ],
-                "id": "A03",
+                "id": "A12",
                 "keywords": [
-                    "的屋",
-                    "おかし"
+                    "輪投げ"
                 ],
-                "name": "Jungle",
+                "name": "wanage",
                 "place": {
                     "floor": 3,
                     "room": 9
                 },
-                "title": "ジャングル行こうぜ",
+                "title": "新しく斬新な和洋折衷 with 輪投げ",
                 "type": "homeroom"
             },
             {
-                "description": "お困りごとは、近くの黒いTシャツの実行委員へお気軽にお話しください。",
+                "description": "俺たち1年2組･4組が用意したのは……\nなんと!なんと!! &nbsp;&nbsp;人生スゴロク。ハイ。\n簡単に言うと「人生ゲーム要素が入ってるスゴロク」です！\nマスのバリエーションは豊富です！人生ゲームの定番からアンケートから厳選された高高オリジナルまでいっぱい！おもしろおかしく、自己を見つめて人生を考えてみてください！",
                 "has_page": true,
                 "hosts": [
                     {
-                        "name": "suwa",
+                        "name": "1200",
+                        "title": "1年2組"
+                    },
+                    {
+                        "name": "1400",
+                        "title": "1年4組"
+                    }
+                ],
+                "id": "A08",
+                "keywords": [
+                    "すごろく"
+                ],
+                "name": "sugoroku",
+                "place": {
+                    "floor": 3,
+                    "room": 4
+                },
+                "title": "人生スゴロク",
+                "type": "homeroom"
+            },
+            {
+                "description": "自作の紙ヒコーキでリングをくぐり抜けたら、豪華景品を差し上げます!!\n舞台のモデルはなんとあのSTAR W○RS!!\n宇宙、そしてフォースを、来てくれた人に体感してもらいたいです!!\n君だけの紙ヒコーキで宇宙に乗り込もう!!",
+                "image": ["bottom",1],
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "1100",
+                        "title": "1年1組"
+                    },
+                    {
+                        "name": "1300",
+                        "title": "1年3組"
+                    }
+                ],
+                "id": "A11",
+                "keywords": [
+                    "紙飛行機"
+                ],
+                "name": "paperplane",
+                "place": {
+                    "floor": 3,
+                    "room": 8
+                },
+                "title": "君の飛行機でリングを狙え!! STAR PLANES",
+                "type": "homeroom"
+            },
+            {
+                "description": "<ul class='list-style-type-circle'><li><b>「君の○は」「○コ太郎」の大型ドット絵</b></li><li><b>「ピ○太郎」のイントロゲーム</b><ul class='list-style-type-square'><li>誰もが一度は聞いたことのある名作ソング</li><li>ランキング形式でBEST3は掲示されます</li></ul></li><li><b>「君○名は」のカードゲーム</b><ul class='list-style-type-square'><li>「君の○は」をテーマにしたオリジナルゲーム</li></ul></li><li>バルーンときらきらのひもなどの装飾で華やかさアップ</li></ul>",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "2800",
+                        "title": "2年8組"
+                    }
+                ],
+                "id": "A07",
+                "keywords": [
+                    "映画",
+                    "流行"
+                ],
+                "name": "HumanScience",
+                "place": {
+                    "floor": 3,
+                    "room": 3
+                },
+                "title": "去年のTRENDへ「君.の.名.は」と「ピ.コ.太.郎」",
+                "type": "homeroom"
+            },
+            {
+                "description": "僕達のクラスでは<b>射的</b>と<b>巨大コリント</b>をやります。景品を準備しているので、ぜひ皆さん挑戦してみてください。\n高高生と写真が撮れます。\n2-5で待ってます。",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "2500",
+                        "title": "2年5組"
+                    },
+                    {
+                        "name": "2700",
+                        "title": "2年7組"
+                    }
+                ],
+                "id": "A09",
+                "keywords": [
+                    "西部",
+                    "アメリカ",
+                    "米"
+                ],
+                "name": "Western",
+                "place": {
+                    "floor": 3,
+                    "room": 5
+                },
+                "title": "ウェスタンミニゲーム",
+                "type": "homeroom"
+            },
+            {
+                "description": "その他にも普段皆さんの使っているSuicaの仕組みや、メトロノームの不思議な世界など、科学の実験が盛りだくさん！\n昼頃には中庭で大科学実験やります。ぜひ来てくださーい!!\n\n<span class='fw-800'>今しか見られないSSHがそこにある。</span>",
+                "image": ["top",1],
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "2100",
+                        "title": "2年1組"
+                    }
+                ],
+                "id": "A06",
+                "keywords": [
+                    "SSH"
+                ],
+                "name": "SSSH",
+                "place": {
+                    "floor": 3,
+                    "room": 2
+                },
+                "title": "Super Science Suiransai Highschool (SSSH)",
+                "type": "homeroom"
+            },
+            {
+                "description": "一人でも皆でも楽しめる\nあのゲームを完全再現!\nぜひ荒らしに来てください",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "3200",
+                        "title": "3年2組"
+                    },
+                    {
+                        "name": "3300",
+                        "title": "3年3組"
+                    },
+                    {
+                        "name": "3400",
+                        "title": "3年4組"
+                    }
+                ],
+                "id": "A01",
+                "keywords": [
+                    "嵐"
+                ],
+                "name": "arashi",
+                "place": {
+                    "floor": 2,
+                    "room": 3
+                },
+                "title": "VS荒",
+                "type": "homeroom"
+            },
+            {
+                "description": "日本では見られない「カジノ」の世界をお見せします。\n金欲にまみれた人をお待ちしています！",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "3100",
+                        "title": "3年1組"
+                    }
+                ],
+                "id": "A02",
+                "keywords": [
+                    "カジノ"
+                ],
+                "name": "casino",
+                "place": {
+                    "floor": 2,
+                    "room": 4
+                },
+                "title": "カジノゲーム",
+                "type": "homeroom"
+            },
+            {
+                "description": "<ul><li>まずはゲームで得点を重ねてください。</li><li>特典に応じて最後の写真撮影で様々なオプションがつきます。SNS映えさせるためには高得点を狙いましょう。</li><li>ヨーロッパの城･宮殿をモチーフに装飾したので、普段は味わえない独特な雰囲気をお楽しみください。</li></ul>",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "3500",
+                        "title": "3年5組"
+                    },
+                    {
+                        "name": "3600",
+                        "title": "3年6組"
+                    },
+                    {
+                        "name": "3700",
+                        "title": "3年7組"
+                    }
+                ],
+                "id": "A04",
+                "keywords": [
+                    "ゲーム"
+                ],
+                "name": "palace",
+                "place": {
+                    "floor": 2,
+                    "room": 6
+                },
+                "title": "Your Palace ～貴方の宮殿～",
+                "type": "homeroom"
+            },
+            {
+                "description": "<p class='p-1 text-primary text-center fw-800 t-0200em'>『ポケモンGO』</p><p class='pb-1'>昨年の夏、社会現象にまで発展したスマホのアプリだ。</p><p class='pb-1'>だが、ある問題により地方のアクティブ・ユーザーは数を減らしていった。</p><p class='pb-1'>その問題とは、</p><ul class='fw-700'><li><span class='text-danger'>ポッポの多さ</span></li><li><span class='text-info'>地域格差</span></li></ul><p class='pb-1 text-right'>である。</p><p class='pb-1'>そこで私達はその2つの問題点を改善したものを展示で行うことにした。</p><p class='p-1 text-success text-center fw-800 t-0200em'>『ボケモンGO』</p><p class='pb-1'><b>ポ</b>ではなく<b>ボ</b>だ。あまりのポッポの多さから<span class='text-primary t-0125em fw-500'>『ポケモンGO』</span>の<b>ポ</b>はポッポのポと言われていた。私達はポ→ボにすることでポッポの出現率を大幅に減らすことに成功したのだ。これで<span class='text-danger fw-500'>一つ目の問題</span>は解決した。</p><p class='pb-1'>そして<span class='text-info fw-500'>二つ目の問題</span>。田舎にボケモンが現れない現象だ。私達はこの問題を<span class='text-warning fw-700'>ルアーモジュール</span>によって解決した。<span class='text-warning fw-500'>ルアーモジュール</span>とはボケモンを近くに出現させる道具である。私達は段ボールで<span class='text-warning fw-500'>ルアーモジュール</span>を作り、部屋においておくことにした。これでボケモンたちは間違いなく寄ってくるだろう。これで<span class='text-info fw-500'>二つ目の問題</span>も解決した。</p><p class='pb-1'><span class='text-primary t-0125em fw-500'>『ポケモンGO』</span>の2つの問題点を改善した<span class='text-success t-0125em fw-500'>『ボケモンGO』</span>はまさに死角なしだ。</p><p class='pb-1'>巨大パチンコでポケモンをゲットしジムリーダーと戦うシンプルな展示のため、翠巒祭に来た際は是非とも立ち寄ってほしい。</p><p><small>p.s.時代遅れなんて言わないで。</small></p>",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "2300",
+                        "title": "2年3組"
+                    },
+                    {
+                        "name": "2400",
+                        "title": "2年4組"
+                    },
+                    {
+                        "name": "2600",
+                        "title": "2年6組"
+                    }
+                ],
+                "id": "A10",
+                "keywords": [
+                    "ポケモン"
+                ],
+                "name": "bokemon",
+                "place": {
+                    "floor": 3,
+                    "room": 6
+                },
+                "title": "ボケモンGO",
+                "type": "homeroom"
+            },
+            {
+                "description": "<p>靴の落とし物は、こちらでお預かりしております。</p><p>お困りごとは、近くの黒いTシャツの実行委員へお気軽にお話しください。</p>",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "base",
                         "title": "実行委員"
                     }
                 ],
@@ -162,15 +545,15 @@
                     "room": 9
                 },
                 "title": "本部",
-                "type": "suwa"
+                "type": "base"
             },
             {
-                "description": "<a href='/food?tab=cafe' class='btn btn-primary btn-block btn-lg'>メニューはこちら！</a>",
+                "description": "お飲み物、ケーキ等をお出しします。<a href='/food?tab=cafe' class='btn btn-primary btn-block btn-lg'>メニュー・価格へ</a>",
                 "has_page": true,
                 "hosts": [
                     {
                         "name": "cafe",
-                        "title": "食堂･喫茶班"
+                        "title": "食堂･喫茶店班"
                     }
                 ],
                 "id": "cafe1",
@@ -180,16 +563,16 @@
                     "floor": 2,
                     "room": 2
                 },
-                "title": "喫茶１",
-                "type": "cafe"
+                "title": "喫茶店",
+                "type": "shokkitsu"
             },
             {
-                "description": "<a href='/food?tab=cafe' class='btn btn-primary btn-block btn-lg'>メニューはこちら！</a>",
+                "description": "お飲み物、ケーキ等をお出しします。<a href='/food?tab=cafe' class='btn btn-primary btn-block btn-lg'>メニューはこちら！</a>",
                 "has_page": true,
                 "hosts": [
                     {
                         "name": "cafe",
-                        "title": "食堂･喫茶班"
+                        "title": "食堂･喫茶店班"
                     }
                 ],
                 "id": "cafe2",
@@ -199,14 +582,18 @@
                     "floor": 2,
                     "room": 1
                 },
-                "title": "喫茶２",
-                "type": "cafe"
+                "title": "喫茶店",
+                "type": "shokkitsu"
             }
         ],
         "pantenebadges": {
-            "cafe": {
+            "tsushin": {
+                "style": "brown",
+                "title": "通信制"
+            },
+            "shokkitsu": {
                 "style": "danger",
-                "title": "喫茶"
+                "title": "飲食"
             },
             "club": {
                 "style": "success",
@@ -216,8 +603,8 @@
                 "style": "primary",
                 "title": "クラス展示"
             },
-            "suwa": {
-                "style": "brown",
+            "base": {
+                "style": "suiranfes",
                 "title": "本部"
             }
         }

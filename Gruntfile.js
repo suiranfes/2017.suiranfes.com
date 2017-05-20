@@ -1,6 +1,5 @@
-
-var package = require('./package.json');
-var extend = require('extend');
+const package = require('./package.json')
+const extend = require('extend')
 
 let chalk = require('chalk')
 let grunt = require('grunt')
@@ -12,7 +11,6 @@ let html2text = require('html-to-text')
 let basename = require('path').basename
 let extname  = require('path').extname
 let join = require('path').join
-
 
 // grunt task function
 function taskFontmin() {
@@ -105,18 +103,14 @@ function readToTTF(path) {
     switch(ext){
         case '.otf':
             return otf2ttfObj(ab)
-        break
         case '.ttf':
         case '.ttc':
             return new ttfReader().read(ab)
-        break
         case '.woff':
         case '.woff2':
             return ttfReader(woff2ttf(ab))
-        break
         default:
             throw new Error('Unsupported extension: '+ext)
-        break
     }
 }
 
@@ -302,7 +296,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
 grunt.task.registerTask( 'merge-json' , 'Merge all config files' , function(){
-    var resultObj = { options: "" },booksObj = new Array();
+    let resultObj = { options: "" },booksObj = new Array();
     grunt.file.recurse('./config/', process );
     function process(abspath, rootdir, subdir, filename){
         console.log(filename);
@@ -330,7 +324,7 @@ grunt.task.registerTask( 'sw' , 'Update Service Worker' , function(){
 
 function listPages(mode) {
     if(globalArray == {}) return false;
-    var files = '{',
+    let files = '{',
         text = ''
         sitemaptxt = '{',
         logtext = 'Listing Up Files\n\n';
@@ -350,7 +344,7 @@ function listPages(mode) {
 
 function drawrss() {
     if(globalArray == {}) return false;
-    var rss = '<?xml version="1.0" encoding="utf-8"?><rss version="2.0"><channel>',
+    let rss = '<?xml version="1.0" encoding="utf-8"?><rss version="2.0"><channel>',
         now = new Date();
         nowISO = now.toISOString()
     
@@ -385,7 +379,7 @@ function drawrss() {
 }
 
 function drawsw() {
-    var myreturn = "var cachepages = [\n",
+    let myreturn = "var cachepages = [\n",
         sw = grunt.file.read('./src/js/sw.js'),
         urlstr = grunt.file.read('./src/text/urls.txt'),
         urls = urlstr.split("\n");
@@ -398,7 +392,7 @@ function drawsw() {
 }
 
 function drawOS_SDK() {
-    var myreturn = "",
+    let myreturn = "",
         SDK = grunt.file.read('./src/js/OneSignalSW.js');
     myreturn += SDK + "\n//v" + package.version.replace(/\s|\n/g, "");
     return myreturn;

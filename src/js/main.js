@@ -13,4 +13,4 @@ require('./snses');
 require('./inputfocus');
 require('./iframe-loader');
 require('./jquery-yycountdown');
-require('./barba_set.js');
+require('./barba_set');

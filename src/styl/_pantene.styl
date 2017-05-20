@@ -1,3 +1,10 @@
+.-pantene-card-hw
+  width: 100%
+  height: 7em
+
+.-pantene-screen
+  box-shadow: 0 0 3px #000
+
 .-pantene-index-1st
   background-color: #e1f5fe
   background-attachment: local
@@ -27,8 +34,7 @@
       word-break: break-all
 
       .card
-        width: 100%
-        height: 7em
+        @extend .-pantene-card-hw
 
       a.card
         color: rgba(255,255,255,1)
@@ -46,8 +52,7 @@
       word-break: break-all
 
       .card
-        width: 100%
-        height: 7em
+        @extend .-pantene-card-hw
         text-align: center
         color: rgba(255,255,255,.85)
 
@@ -78,8 +83,7 @@
 
       .card
         display: flex
-        width: 100%
-        height: 7em
+        @extend .-pantene-card-hw
         text-align: center
         color: rgba(255,255,255,.85)
     
@@ -92,6 +96,10 @@
     margin: 0
   p
     margin: 0
+  img
+    display: block
+    max-width: 100%
+    height: 10em
 
 .-pantene-wtf
   height: auto !important

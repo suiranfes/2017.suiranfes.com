@@ -14,20 +14,26 @@ function getUrlVars(){
 }
 
 function bstab(){
-    $( '[role="tablist"] a[href="#' + vars.tab + '"]' ).tab('show');
-    $('#' + vars.modal + '').modal('show');
+    $( '[role="tablist"] a[href="#' + vars.tab + '"]' ).tab('show')
+    $('#' + vars.modal + '').modal('show')
     $('#' + vars.collapse + '').collapse('show')
     $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
         $('a[href="' + $(e.relatedTarget).attr("href") + '"]').removeClass('active')
         $('a[href="' + $(e.target).attr("href") + '"]').addClass('active')
     })
-    return "bstab";
+    return "bstab"
 }
 
 
 
 var vars = getUrlVars();
-$(function(){bstab()});
+$(function(){bstab()
+
+$('.modal-content a').on('click',function(){
+    $('.modal').modal('hide')
+})
+
+});
 
 $(window).on('load',function(){
     if(vars.collapse){$(window).scrollTop( document.getElementById( vars.collapse ).getBoundingClientRect().top + window.pageYOffset - Number($('nav').height()) - 80 );}

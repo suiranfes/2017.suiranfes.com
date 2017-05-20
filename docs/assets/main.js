@@ -14710,7 +14710,7 @@ function getUrlVars(url){
 }
 
 function bstab(vars){
-    $( '[role="tablist"] a[href="#' + vars.tab + '"]' ).tab('show');
+    $( '[role="tablist"] a[href="#' + vars.tab + '"]' ).tab('show')
     $('#' + vars.modal + '').modal('show');
     $('#' + vars.collapse + '').collapse('show')
     $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
@@ -14721,7 +14721,7 @@ function bstab(vars){
 }
 
 
-$(document).ready(function(){
+$(window).on('load',function(){
 
 var GreatBarba = Barba.BaseTransition.extend({
   start: function() {
@@ -18410,14 +18410,14 @@ function getUrlVars(){
 }
 
 function bstab(){
-    $( '[role="tablist"] a[href="#' + vars.tab + '"]' ).tab('show');
-    $('#' + vars.modal + '').modal('show');
+    $( '[role="tablist"] a[href="#' + vars.tab + '"]' ).tab('show')
+    $('#' + vars.modal + '').modal('show')
     $('#' + vars.collapse + '').collapse('show')
     $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
         $('a[href="' + $(e.relatedTarget).attr("href") + '"]').removeClass('active')
         $('a[href="' + $(e.target).attr("href") + '"]').addClass('active')
     })
-    return "bstab";
+    return "bstab"
 }
 
 
@@ -18588,9 +18588,10 @@ require('./snses');
 require('./inputfocus');
 require('./iframe-loader');
 require('./jquery-yycountdown');
-require('./barba_set.js');
-},{"./barba_set.js":5,"./blockoldbrowsers":6,"./bootstrap":7,"./bstab":8,"./iframe-loader":9,"./inputfocus":10,"./jquery-yycountdown":11,"./loading":12,"./open":14,"./snses":15,"./suiranfes-updates":16,"barba.js":1,"jquery":2,"tether":3,"ua-parser-js":4}],14:[function(require,module,exports){
+require('./barba_set');
+},{"./barba_set":5,"./blockoldbrowsers":6,"./bootstrap":7,"./bstab":8,"./iframe-loader":9,"./inputfocus":10,"./jquery-yycountdown":11,"./loading":12,"./open":14,"./snses":15,"./suiranfes-updates":16,"barba.js":1,"jquery":2,"tether":3,"ua-parser-js":4}],14:[function(require,module,exports){
 $('link[as = "style"]').attr('rel','stylesheet');
+
 },{}],15:[function(require,module,exports){
 function socialbutton(){
 
