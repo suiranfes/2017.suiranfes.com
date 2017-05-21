@@ -74,7 +74,7 @@
                 "type": "tsushin"
             },
             {
-                "description": "<div class='d-flex flex-wrap'><div class='mx-auto py-3 serif vertical-rl'>バカは\n高いところが\n好き</div></div>",
+                "description": "<div class='serif vertical-rl t-0200em fw-900 w-100 -pantene-aipo'><div class='px-auto py-3 w-100 -pantene-aipi'>バカは\n高いところが\n好き</div></div>",
                 "has_page": true,
                 "hosts": [
                     {
@@ -548,7 +548,7 @@
                 "type": "base"
             },
             {
-                "description": "お飲み物、ケーキ等をお出しします。<a href='/food?tab=cafe' class='btn btn-primary btn-block btn-lg'>メニュー・価格へ</a>",
+                "description": "お飲み物、ケーキ等をお出しします。<a href='/food?tab=cafe' class='btn btn-primary btn-block btn-lg no-barba'>メニュー・価格へ</a>",
                 "has_page": true,
                 "hosts": [
                     {
@@ -567,7 +567,7 @@
                 "type": "shokkitsu"
             },
             {
-                "description": "お飲み物、ケーキ等をお出しします。<a href='/food?tab=cafe' class='btn btn-primary btn-block btn-lg'>メニューはこちら！</a>",
+                "description": "お飲み物、ケーキ等をお出しします。<a href='/food?tab=cafe' class='btn btn-primary btn-block btn-lg no-barba'>メニューはこちら！</a>",
                 "has_page": true,
                 "hosts": [
                     {

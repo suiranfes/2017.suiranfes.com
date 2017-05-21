@@ -18423,7 +18423,13 @@ function bstab(){
 
 
 var vars = getUrlVars();
-$(function(){bstab()});
+$(function(){bstab()
+
+$('.modal-content a').on('click',function(){
+    $('.modal').modal('hide')
+})
+
+});
 
 $(window).on('load',function(){
     if(vars.collapse){$(window).scrollTop( document.getElementById( vars.collapse ).getBoundingClientRect().top + window.pageYOffset - Number($('nav').height()) - 80 );}

@@ -12,6 +12,7 @@
 /assets/fonts/GenShinGothic-Regular.woff2
 /assets/fonts/GenShinGothic-Normal.woff2
 /assets/fonts/GenShinGothic-Light.woff2
+/assets/fonts/NotoSerifCJKjp-Black.woff2
 /api/v1/index.json
 /manifest.json
 /notices

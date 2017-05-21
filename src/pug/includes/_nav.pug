@@ -24,7 +24,7 @@ nav.navbar.navbar-toggleable-lg.navbar-inverse.bg-suiranfes.bgimg-n
                 each child, j in site.pages[i].children
                   if(site.pages[i].children[j].enable)
                     if(site.pages[i].name == "pantene")
-                      a.dropdown-item.nobarba(href=`/${site.pages[i].name}${child.add}`) #{child.title}
+                      a.dropdown-item.no-barba(href=`/${site.pages[i].name}${child.add}`) #{child.title}
                     else
                       a.dropdown-item(href=`/${site.pages[i].name}${child.add}`) #{child.title}
                   else
@@ -32,7 +32,7 @@ nav.navbar.navbar-toggleable-lg.navbar-inverse.bg-suiranfes.bgimg-n
           else
             li.nav-item
               if(site.pages[i].name == "pantene")
-                a.nav-link.nobarba(href=`/${site.pages[i].name}`, data-index=site.pages[i].name) #{site.pages[i].title}
+                a.nav-link.no-barba(href=`/${site.pages[i].name}`, data-index=site.pages[i].name) #{site.pages[i].title}
               else
                 a.nav-link(href=`/${site.pages[i].name}`, data-index=site.pages[i].name) #{site.pages[i].title}
         else
