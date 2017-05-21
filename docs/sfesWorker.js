@@ -77,7 +77,7 @@ var cachepages = [
     "/invmatch?collapse=invmatch_collapse_BaseBall_2ndDay",
 
 ];
-var version = '2.0.0-gamma';
+var version = '2.0.0-gamma.2';
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(
