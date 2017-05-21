@@ -529,6 +529,27 @@
                 "type": "homeroom"
             },
             {
+                "description": "3年8組のクラス展示は占い＆相談所をやります。\nタロット占いなどの様々な占いをします。\n誰でも楽しめる展示になってますので是非お気軽にお越しください。",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "3800",
+                        "title": "3年8組"
+                    }
+                ],
+                "id": "A03",
+                "keywords": [
+                    "易者"
+                ],
+                "name": "fortune_telling",
+                "place": {
+                    "floor": 2,
+                    "room": 5
+                },
+                "title": "占いの館",
+                "type": "homeroom"
+            },
+            {
                 "description": "<p>靴の落とし物は、こちらでお預かりしております。</p><p>お困りごとは、近くの黒いTシャツの実行委員へお気軽にお話しください。</p>",
                 "has_page": true,
                 "hosts": [

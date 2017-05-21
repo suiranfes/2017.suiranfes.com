@@ -100,7 +100,7 @@ mixin _pantene_modals()
           .modal-header.flex-wrap-reverse
             p.mr-2: b #{j}-#{k}
             h5.mr-2 #{fes.pantene[i].title}
-            button.close.ml-auto(type="button", data-dismiss="modal", aria-label="Close")
+            button.close.ml-auto.px-1(type="button", data-dismiss="modal", aria-label="Close")
               span(aria-hidden="true") &times;
           .modal-body.flex-wrap-reverse
             p
@@ -109,9 +109,9 @@ mixin _pantene_modals()
                 +pantene_column_hosts(fes.pantene[i].hosts)
             if(fes.pantene[i].image != undefined)
               if(fes.pantene[i].image[0] == "top")
-                img(src=`${site.CDN}2017/img/pantene/${fes.pantene[i].id}_${fes.pantene[i].image[1]}.svg` class="block ml-auto")
+                img(src=`${site.CDN}2017/img/pantene/${fes.pantene[i].id}_${fes.pantene[i].image[1]}.svg` class="block mr-auto")
               if(fes.pantene[i].image[0] == "both")
-                img(src=`${site.CDN}2017/img/pantene/${fes.pantene[i].id}_${fes.pantene[i].image[1]}_top.svg` class="block ml-auto")
+                img(src=`${site.CDN}2017/img/pantene/${fes.pantene[i].id}_${fes.pantene[i].image[1]}_top.svg` class="block mr-auto")
             div!= fes.pantene[i].description.replace(/\r?\n/g,"<br>")
             if(fes.pantene[i].image != undefined)
               if(fes.pantene[i].image[0] == "bottom")
@@ -120,6 +120,7 @@ mixin _pantene_modals()
                 img(src=`${site.CDN}2017/img/pantene/${fes.pantene[i].id}_${fes.pantene[i].image[1]}_bottom.svg` class="block ml-auto")
           .modal-footer
             +_urlshare_igroup(site.URL + "pantene?modal=pantene_modal_" + fes.pantene[i].name, "【一般展示】 " + fes.pantene[i].title + " @" + j + "-" + k,"校舎内に遊びに来てね！\n\n第65回翠巒祭\n6月3日･4日\n","校舎内に遊びに来てね！\n\n第65回翠巒祭\n6月3日･4日\n")
+            a.btn.btn-link.no-barba.text-right(href="/pantene") 戻る
   -         }
   -       }
   -     }

@@ -1,3 +1,4 @@
+$(function(){
 var OneSignal = window.OneSignal || [];
 OneSignal.push(["init", {
   appId: "caa81f3a-0264-4b5f-916b-ff5484aa6a2b",
@@ -49,3 +50,4 @@ OneSignal.push(["init", {
 OneSignal.push(function() {
   OneSignal.showHttpPrompt();
 });
+})

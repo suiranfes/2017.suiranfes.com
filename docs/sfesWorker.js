@@ -13,7 +13,6 @@ var cachepages = [
     "/assets/fonts/GenShinGothic-Regular.woff2",
     "/assets/fonts/GenShinGothic-Normal.woff2",
     "/assets/fonts/GenShinGothic-Light.woff2",
-    "/assets/fonts/NotoSerifCJKjp-Black.woff2",
     "/api/v1/index.json",
     "/manifest.json",
     "/notices",
@@ -77,7 +76,7 @@ var cachepages = [
     "/invmatch?collapse=invmatch_collapse_BaseBall_2ndDay",
 
 ];
-var version = '2.0.0-gamma.2';
+var version = '2.0.0-gamma.5';
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(
