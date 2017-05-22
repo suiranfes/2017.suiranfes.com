@@ -6,6 +6,6 @@
     {"src": "/assets/img/andro_icon_600.png", "sizes": "600x600", "type": "image/png"}
     ],
   "display": "standalone",
-  "start_url": "https://2017.suiranfes.com",
+  "start_url": "/",
   "gcm_sender_id": "482941778795"
 }

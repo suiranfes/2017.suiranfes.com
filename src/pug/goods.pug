@@ -13,4 +13,19 @@ html(lang="ja")
         .py-3
           h1 #{page.title}
           p!=page.description
+        .row
+          .col-12.col-md-6
+            .card
+              img.card-img-top.w-100(src=`${site.CDN}2017/img/goods/clear_folder.png`)
+              .card-block
+                h4.card-title クリアファイル
+                p.card-text 150円
+                p.card-text.text-danger.fw-700 500枚限定
+          .col-12.col-md-6
+            .card
+              img.card-img-top.w-100(src=`${site.CDN}2017/img/goods/uchiwa.png`)
+              .card-block
+                h4.card-title うちわ
+                p.card-text 100円
+                p.card-text.text-danger.fw-700 1000枚限定
     include includes/_footer.pug

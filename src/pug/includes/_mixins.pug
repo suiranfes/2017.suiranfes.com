@@ -138,7 +138,7 @@ mixin _pantene_modals()
         .modal-body
           p
             small 創作班美術課
-          p 階段の両側の超・巨大な絵で、校内へお迎えします。詳細はパンフレットにてご確認ください。
+          p 階段の両側の超・巨大な絵で、校内へお迎えします。ぜひ御覧ください。
 
   .modal.fade.-pantene-modal(id=`pantene_modal_endec`, tabindex="-1", role="dialog", aria-hidden="true")
     .modal-dialog(role="document")
@@ -161,7 +161,7 @@ mixin _pantene4th()
   .-pantene-floor
       .-pantene-room.p-1
         a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/food?tab=stall") 模擬店
-        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=kaikan") 翠巒会館
+        a.btn.btn-outline-secondary.btn-block.my-1.disabled.-pantene-wtf(href="/events?tab=kaikan") 翠巒会館
       .-pantene-toilet.p-1
       .-pantene-stair.p-1
       .-pantene-room.p-1
@@ -181,7 +181,7 @@ mixin _pantene4th()
       .-pantene-room.p-1
       .-pantene-room.p-1
       .-pantene-room.p-1
-        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=nakaniwa") 中庭
+        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf.disabled(href="javascript:void(0)") 中庭
       .-pantene-stair.p-1
       .-pantene-room.p-1
       .-pantene-stair.p-1
@@ -198,7 +198,7 @@ mixin _pantene4th()
       .-pantene-room.p-1
         a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=gym") 体育館
         a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf(href="/events?tab=stage") ステージ
-        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf.disabled(href="/invmatch") 招待試合
+        a.btn.btn-outline-secondary.btn-block.my-1.-pantene-wtf.disabled(href="javascript:void(0)") 招待試合
 
 
 //-**********************************************
@@ -217,7 +217,7 @@ mixin _food_tabcontent(foodsshop, key)
           .card(class=`card-outline-${foodsshop.style}`).-tabemon-card
             a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#food_collapse_${key}_${fes.foods[i].name}`, aria-controls=`food_collapse_${key}_${fes.foods[i].name}`)
               .card-header(class=`bg-${foodsshop.style}`, id=`accordion_${key}_${fes.foods[i].name}`,role="tab")
-                h4.text-white.p-0.m-0 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
+                h5.text-white.p-0.m-0 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
             .collapse(id=`food_collapse_${key}_${fes.foods[i].name}` role="tabpanel" aria-labelledby=`accordion_${key}_${fes.foods[i].name}`): .card-block.bg-white
               p.px-3 販売所:<b>#{foodsshop.title}</b>
                 if(foodsshop.is_plural)
@@ -233,16 +233,17 @@ mixin _food_tabcontent(foodsshop, key)
                     p.card-text #{fes.foods[i].kinds[j].price}円
                     if fes.foods[i].kinds[j].description
                       p.card-text #{fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")}
-                    .card-text
-                      +bootstrap_badge_normal("アレルギー物質","primary")
-                      if ( fes.foods[i].kinds[j].allergens === undefined )
-                        +bootstrap_badge_pill_lighter("調査中","warning")
-                      else if ( fes.foods[i].kinds[j].allergens === null )
-                        +bootstrap_badge_pill_lighter("なし","success")
-                      else
-                        - for(var k in fes.foods[i].kinds[j].allergens){
-                            +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
-                        - }
+                    if foodsshop.allergen_info
+                      .card-text
+                        +bootstrap_badge_normal("アレルギー物質","primary")
+                        if ( fes.foods[i].kinds[j].allergens === undefined )
+                          +bootstrap_badge_pill_lighter("調査中","warning")
+                        else if ( fes.foods[i].kinds[j].allergens === null )
+                          +bootstrap_badge_pill_lighter("なし","success")
+                        else
+                          - for(var k in fes.foods[i].kinds[j].allergens){
+                              +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
+                          - }
                 - }
       - } }
 
@@ -275,7 +276,7 @@ mixin _event_tabcontent_ub(eventsplace, key, mmday)
                   if ( fes.events[i].programs != null )
                     ol.programs
                       each program in fes.events[i].programs
-                        li= program
+                        li!= program
                   if ( fes.events[i].youtube_id != null )
                     h6.mt-3.p-0.mb-0 去年の動画
                     .align-self-center.embed-responsive.embed-responsive-16by9.mt-2

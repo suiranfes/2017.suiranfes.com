@@ -386,7 +386,7 @@ function drawsw() {
     for(var i in urls) {
         if(urls[i] != "") myreturn += '    "' + urls[i].replace(/\s|\n/g, "") + '",\n';
     }
-    myreturn.substr( 0, myreturn.length - 2 );
+    myreturn.substr( 0, myreturn.length - 5 );
     myreturn += "\n];\nvar version = '" + package.version.replace(/\s|\n/g, "") + "';\n" + sw;
     return myreturn;
 }

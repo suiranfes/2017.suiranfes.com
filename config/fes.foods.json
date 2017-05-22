@@ -2,136 +2,217 @@
     "fes": {
         "foods": [
             {
+                "name": "juice",
+                "title": "ジュース",
                 "description": "天空ジュース",
                 "kinds": [
                     {
-                        "allergens": [
-                            "乳",
-                            "大豆"
-                        ],
-                        "description": "ソーダではない",
-                        "name": "Calpis",
-                        "price": 150,
-                        "title": "カルピス"
+                        "description": "",
+                        "name": "Minimum",
+                        "price": 130,
+                        "title": "最低"
                     },
                     {
-                        "allergens": null,
-                        "description": "架空の商品です",
-                        "name": "water",
+                        "description": "",
+                        "name": "Maximum",
                         "price": 150,
-                        "title": "観音山の天然水"
-                    },
-                    {
-                        "description": "群馬で作ってます",
-                        "name": "Pocari_Sweat",
-                        "price": 150,
-                        "title": "ポカリスエット"
-                    },
-                    {
-                        "description": "選ばれたのは綾鷹でした",
-                        "name": "Ayataka",
-                        "price": 120,
-                        "title": "綾鷹"
+                        "title": "最高"
                     }
                 ],
-                "name": "juice",
                 "shop": {
-                    "location": 1,
                     "name": "stall"
-                },
-                "title": "ジュース"
+                }
             },
             {
-                "description": "新しい食感",
-                "kinds": [
-                    {
-                        "description": "",
-                        "name": "RAINBOW",
-                        "price": 300,
-                        "title": "レインボー"
-                    },
-                    {
-                        "description": "",
-                        "name": "VANILLA",
-                        "price": 300,
-                        "title": "バニラ"
-                    },
-                    {
-                        "description": "",
-                        "name": "STRAWBERRY",
-                        "price": 300,
-                        "title": "ストロベリー"
-                    }
-                ],
-                "name": "dippin_dots",
-                "shop": {
-                    "location": 6,
-                    "name": "stall"
-                },
-                "title": "dippin dots 粒粒アイス"
-            },
-            {
+                "name": "churro",
+                "title": "チュロス",
                 "description": "",
                 "kinds": [
                     {
-                        "description": "",
+                        "title": "チュロス",
+                        "name": "churro",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "yakimanju",
+                "title": "焼きまんじゅう",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "焼きまんじゅう",
+                        "name": "yakimanju",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "DolphinDots",
+                "title": "粒粒アイス",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "粒粒アイス",
+                        "name": "DolphinDots",
+                        "price": 300,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "Frankfurt",
+                "title": "フランクフルト",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "フランクフルト",
+                        "name": "Frankfurt",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "yakisoba",
+                "title": "焼きそば",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "焼きそば",
                         "name": "yakisoba",
                         "price": 150,
-                        "title": "やきそば"
+                        "description": ""
                     }
                 ],
-                "name": "yakisoba",
                 "shop": {
-                    "location": 7,
                     "name": "stall"
-                },
-                "title": "やきそば"
+                }
             },
             {
+                "name": "karaage",
+                "title": "唐揚げ",
                 "description": "",
                 "kinds": [
                     {
-                        "description": "",
-                        "name": "bamboo",
-                        "price": 750,
-                        "title": "竹"
+                        "title": "唐揚げ",
+                        "name": "karaage",
+                        "price": 150,
+                        "description": ""
                     }
                 ],
-                "name": "torihei",
                 "shop": {
-                    "name": "bakery"
-                },
-                "title": "登利平 鶏めし"
+                    "name": "stall"
+                }
             },
             {
+                "name": "popcorn",
+                "title": "ポップコーン",
+                "description": "縁日コーナー",
+                "kinds": [
+                    {
+                        "title": "ポップコーン",
+                        "name": "popcorn",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "wataame",
+                "title": "わたあめ",
+                "description": "縁日コーナー",
+                "kinds": [
+                    {
+                        "title": "わたあめ",
+                        "name": "wataame",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "senbei",
+                "title": "らくがきせんべい",
+                "description": "縁日コーナー",
+                "kinds": [
+                    {
+                        "title": "らくがきせんべい",
+                        "name": "senbei",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "crepe",
+                "title": "クレープ",
                 "description": "",
                 "kinds": [
                     {
-                        "description": "",
-                        "name": "typeA",
-                        "price": 180,
-                        "title": "Aセット"
+                        "title": "最低",
+                        "name": "minimum",
+                        "price": 250,
+                        "description": ""
                     },
                     {
-                        "description": "",
-                        "name": "typeB",
-                        "price": 330,
-                        "title": "Bセット"
+                        "title": "最高",
+                        "name": "maximum",
+                        "price": 300,
+                        "description": ""
                     }
                 ],
-                "name": "cafe_setmenu",
                 "shop": {
-                    "name": "cafe"
-                },
-                "title": "お得なセットメニュー"
+                    "name": "stall"
+                }
+            },
+            {
+                "name": "kakigori",
+                "title": "かき氷",
+                "description": "",
+                "kinds": [
+                    {
+                        "title": "かき氷",
+                        "name": "kakigori",
+                        "price": 100,
+                        "description": ""
+                    }
+                ],
+                "shop": {
+                    "name": "stall"
+                }
             }
         ],
         "foodsshops": {
             "stall": {
-                "description": "校舎外での販売です。詳しい場所はパンフレットをご覧ください。完売する可能性があります。ご了承ください。ゴミはゴミステーションへよろしくお願いします。",
-                "is_plural": true,
+                "description": "詳しい場所はパンフレットをご覧ください。完売する可能性があります。ご了承ください。ゴミはゴミステーションへよろしくお願いします。",
+                "is_plural": false,
                 "title": "模擬店",
                 "style": "warning",
+                "allergen_info": false,
                 "enable" : false
             },
             "bakery": {
@@ -139,6 +220,7 @@
                 "is_plural": false,
                 "title": "食堂",
                 "style": "info",
+                "allergen_info": false,
                 "enable" : false
             },
             "cafe": {
@@ -146,6 +228,7 @@
                 "is_plural": false,
                 "title": "喫茶店",
                 "style": "danger",
+                "allergen_info": false,
                 "enable" : false
             }
         }

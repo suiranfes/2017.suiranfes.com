@@ -95,7 +95,7 @@
                 "type": "club"
             },
             {
-                "description": "<h4>常設展示</h4><h5>スライム</h5><p class='pb-1'>様々な色のスライムを作れます。</p><h5>人工イクラ</h5><p class='pb-1'>様々な色のイクラが作れます。</p><h4>定期開催実験</h4><h5>テルミット反応</h5><p class='pb-1'>線路の溶接にも使われます。</p><h5>虹色試験管</h5><p class='pb-1'>指示薬が反応して虹色になります。</p><h5>液体窒素</h5><p class='pb-1'>約-196℃の液体が様々なものを凍らせます。</p><div class='text-center fw-700 t-0150em'>よろしくお願いします。</div>",
+                "description": "<h4>常設展示</h4><h5 class='pl-1'>スライム</h5><p class='pb-1 pl-2'>様々な色のスライムを作れます。</p><h5 class='pl-1'>人工イクラ</h5><p class='pb-1 pl-2'>様々な色のイクラが作れます。</p><h4>定期開催実験</h4><h5 class='pl-1'>テルミット反応</h5><p class='pb-1 pl-2'>線路の溶接にも使われます。</p><h5 class='pl-1'>虹色試験管</h5><p class='pb-1 pl-2'>指示薬が反応して虹色になります。</p><h5 class='pl-1'>液体窒素</h5><p class='pb-1 pl-2'>約-196℃の液体が様々なものを凍らせます。</p><div class='text-center fw-700 t-0150em'>よろしくお願いします。</div>",
                 "has_page": true,
                 "hosts": [
                     {
@@ -112,7 +112,7 @@
                     "floor": 1,
                     "room": 3
                 },
-                "title": "化学部展示",
+                "title": "化学を身近に",
                 "type": "club"
             },
             {
@@ -156,7 +156,7 @@
                     "floor": 1,
                     "room": 2
                 },
-                "title": "囲碁・将棋",
+                "title": "畳あります。",
                 "type": "club"
             },
             {
@@ -202,6 +202,27 @@
                     "room": 9
                 },
                 "title": "應援部の伝統",
+                "type": "club"
+            },
+            {
+                "description": "<p class='pb-1'>新聞部の展示では、来ていただいた方に写真撮影、インタビューをさせていただき、その方が載った新聞を印刷します!!</p><p class='pb-1'>あなたが載った、あなただけの新聞ができるというわけです。新聞に掲載されて有名人の気分を味わいましょう！</p><p class='pb-1'>また、過去の新聞も展示し、気軽に読めるようになっています。最近のものから昭和50年代ごろのものまで、新聞部の古くからの歴史を感じてほしいです。</p><p class='pb-1'>今回発行する「翠巒祭特別号」も置いてあるので是非お持ち帰りください！</p>",
+                "has_page": true,
+                "hosts": [
+                    {
+                        "name": "newspaper",
+                        "title": "新聞部"
+                    }
+                ],
+                "id": "B08",
+                "keywords": [
+                    "新聞部"
+                ],
+                "name": "newspaper",
+                "place": {
+                    "floor": 2,
+                    "room": 8
+                },
+                "title": "新聞に載って有名人気分",
                 "type": "club"
             },
             {
@@ -588,7 +609,7 @@
                 "type": "shokkitsu"
             },
             {
-                "description": "お飲み物、ケーキ等をお出しします。<a href='/food?tab=cafe' class='btn btn-primary btn-block btn-lg no-barba'>メニューはこちら！</a>",
+                "description": "お飲み物、ケーキ等をお出しします。<a href='/food?tab=cafe' class='btn btn-primary btn-block btn-lg no-barba'>メニュー・価格へ</a>",
                 "has_page": true,
                 "hosts": [
                     {

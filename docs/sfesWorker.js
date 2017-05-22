@@ -32,18 +32,20 @@ var cachepages = [
     "/invmatch?tab=day2",
     "/radio",
     "/about",
+    "/pantene?modal=pantene_modal_wanage",
     "/pantene?modal=pantene_modal_paperplane",
     "/pantene?modal=pantene_modal_PhotoArt",
+    "/pantene?modal=pantene_modal_bokemon",
     "/pantene?modal=pantene_modal_Western",
     "/pantene?modal=pantene_modal_sugoroku",
     "/pantene?modal=pantene_modal_HumanScience",
     "/pantene?modal=pantene_modal_SSSH",
-    "/pantene?modal=pantene_modal_wanage",
     "/pantene?modal=pantene_modal_magnet",
     "/pantene?modal=pantene_modal_cheering",
+    "/pantene?modal=pantene_modal_newspaper",
     "/pantene?modal=pantene_modal_alpine",
     "/pantene?modal=pantene_modal_palace",
-    "/pantene?modal=pantene_modal_bokemon",
+    "/pantene?modal=pantene_modal_fortune_telling",
     "/pantene?modal=pantene_modal_casino",
     "/pantene?modal=pantene_modal_arashi",
     "/pantene?modal=pantene_modal_cafe1",
@@ -76,7 +78,7 @@ var cachepages = [
     "/invmatch?collapse=invmatch_collapse_BaseBall_2ndDay",
 
 ];
-var version = '2.0.0-gamma.5';
+var version = '1.9.7';
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(
