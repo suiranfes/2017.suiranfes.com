@@ -78,7 +78,7 @@ var cachepages = [
     "/invmatch?collapse=invmatch_collapse_BaseBall_2ndDay",
 
 ];
-var version = '1.9.7';
+var version = '1.9.4';
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(

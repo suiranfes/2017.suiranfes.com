@@ -28,5 +28,5 @@ pugfilters.UglifyJS = function(str) {
     return result;
 };
 pugfilters.oneline = function(str) {
-    return str.replace(/\n/g,"");
+    return str.replace(/\r?\n/g,"");
 }
