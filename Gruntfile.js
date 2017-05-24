@@ -183,9 +183,9 @@ var dest = {
 }
 
 module.exports = function(grunt){
-    var globalArray = grunt.file.readJSON('docs/api/v1/index.json');
-
     grunt.registerMultiTask('fontmin', 'Minimize fonts', taskFontmin)
+
+    merge_json();
 
     grunt.initConfig({
         clean: {
@@ -295,7 +295,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-grunt.task.registerTask( 'merge-json' , 'Merge all config files' , function(){
+function merge_json(){
     let resultObj = { options: "" },booksObj = new Array();
     grunt.file.recurse('./config/', process );
     function process(abspath, rootdir, subdir, filename){
@@ -310,7 +310,11 @@ grunt.task.registerTask( 'merge-json' , 'Merge all config files' , function(){
     resultObj = extend(true,resultObj, {"package" : package});
     grunt.file.write( 'docs/api/v1/index.json' , JSON.stringify( resultObj ) );
     globalArray = resultObj;
-    return this;
+    return globalArray
+}
+
+grunt.task.registerTask( 'merge-json' , 'Merge all config files' , function(){
+    return merge_json();
 });
 
 grunt.task.registerTask( 'rss' , 'Make RSS' , function(){
@@ -323,7 +327,7 @@ grunt.task.registerTask( 'sw' , 'Update Service Worker' , function(){
 });
 
 function listPages(mode) {
-    if(globalArray == {}) return false;
+    if(globalArray == undefined) return false;
     let files = '{',
         text = ''
         sitemaptxt = '{',

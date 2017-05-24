@@ -62,12 +62,12 @@
                     {
                         "title" : "食堂",
                         "add" : "?tab=bakery",
-                        "enable" : false
+                        "enable" : true
                     },
                     {
                         "title" : "喫茶店",
                         "add" : "?tab=cafe",
-                        "enable" : false
+                        "enable" : true
                     }
                 ]
             },

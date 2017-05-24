@@ -204,7 +204,10 @@ mixin _pantene4th()
 //-**********************************************
   *      food
   *      たべもの
-  ***********************************************
+  **********************************************
+mixin _food_header_price(kinds)
+  .price
+    | #{_food_header_price(kinds)}
 
 mixin _food_tabcontent(foodsshop, key)
   h3= foodsshop.title
@@ -216,10 +219,12 @@ mixin _food_tabcontent(foodsshop, key)
         div( id= fes.foods[i].name ).food
           .card(class=`card-outline-${foodsshop.style}`).-tabemon-card
             a(data-toggle="collapse", data-parent=`#accordion_${key}`, href=`#food_collapse_${key}_${fes.foods[i].name}`, aria-controls=`food_collapse_${key}_${fes.foods[i].name}`)
-              .card-header(class=`bg-${foodsshop.style}`, id=`accordion_${key}_${fes.foods[i].name}`,role="tab")
-                h5.text-white.p-0.m-0 <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
+              .card-header.d-flex.flex-wrap(class=`bg-${foodsshop.style}`, id=`accordion_${key}_${fes.foods[i].name}`,role="tab")
+                h5.text-white.p-0.m-0.w-auto <i class="fa fa-angle-double-right" aria-hidden="true"></i> #{fes.foods[i].title}
+                .ml-auto.fw-500.t-0125em.text-white.w-auto
+                  +_food_header_price(fes.foods[i].kinds)
             .collapse(id=`food_collapse_${key}_${fes.foods[i].name}` role="tabpanel" aria-labelledby=`accordion_${key}_${fes.foods[i].name}`): .card-block.bg-white
-              p.px-3 販売所:<b>#{foodsshop.title}</b>
+              p 販売場所:<b>#{foodsshop.title}</b>
                 if(foodsshop.is_plural)
                   - if(typeis('Number', fes.foods[i].shop.location))
                     | #{circlenums[fes.foods[i].shop.location]}
@@ -229,15 +234,15 @@ mixin _food_tabcontent(foodsshop, key)
                         | #{circlenums[fes.foods[i].shop.location[n]]}
                 br
                 span.mb-0!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
-              .row.px-3
+              .d-flex.flex-wrap.pb-2
                 - for(var j in fes.foods[i].kinds) {
                   .-food-card-wrap.p-1: div.card.p-2(class=`card-outline-${foodsshop.style}`): .card-block
                     h6.card-title
                       +fa("caret-right")
                       | #{fes.foods[i].kinds[j].title}
-                    p.card-text #{fes.foods[i].kinds[j].price}円
+                    p.card-text.pb-1 #{fes.foods[i].kinds[j].price}円
                     if fes.foods[i].kinds[j].description
-                      p.card-text #{fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")}
+                      p.card-text.pb-1!= fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")
                     if foodsshop.allergen_info
                       .card-text
                         +bootstrap_badge_normal("アレルギー物質","primary")
@@ -250,6 +255,7 @@ mixin _food_tabcontent(foodsshop, key)
                               +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
                           - }
                 - }
+              +_urlshare_igroup(site.URL + "food?tab=" + key + "&collapse=food_collapse_" + key + "_" + fes.foods[i].name, "【" + foodsshop.title + "】 " + fes.foods[i].title + " " + _food_header_price(fes.foods[i].kinds), fes.foods[i].description, fes.foods[i].description)
       - } }
 
 
