@@ -234,7 +234,7 @@
                 "description": "体育館行事班です！",
                 "title": "体育館",
                 "style": "info",
-                "enable" : false
+                "enable" : true
             },
             "kaikan": {
                 "description": "翠巒音楽祭！",

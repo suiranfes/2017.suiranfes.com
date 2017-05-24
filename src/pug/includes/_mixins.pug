@@ -221,7 +221,12 @@ mixin _food_tabcontent(foodsshop, key)
             .collapse(id=`food_collapse_${key}_${fes.foods[i].name}` role="tabpanel" aria-labelledby=`accordion_${key}_${fes.foods[i].name}`): .card-block.bg-white
               p.px-3 販売所:<b>#{foodsshop.title}</b>
                 if(foodsshop.is_plural)
-                | #{circlenums[fes.foods[i].shop.location]}
+                  - if(typeis('Number', fes.foods[i].shop.location))
+                    | #{circlenums[fes.foods[i].shop.location]}
+                  - else if(typeis('Array', fes.foods[i].shop.location))
+                    - for(var n = 0; n < fes.foods[i].shop.location.length; n++ )
+                      - if(typeis('Number', fes.foods[i].shop.location[n]))
+                        | #{circlenums[fes.foods[i].shop.location[n]]}
                 br
                 span.mb-0!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
               .row.px-3

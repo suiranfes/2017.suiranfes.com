@@ -20,6 +20,7 @@
                     }
                 ],
                 "shop": {
+                    "location": [1,7],
                     "name": "stall"
                 }
             },
@@ -36,6 +37,7 @@
                     }
                 ],
                 "shop": {
+                    "location": 4,
                     "name": "stall"
                 }
             },
@@ -52,6 +54,7 @@
                     }
                 ],
                 "shop": {
+                    "location": 5,
                     "name": "stall"
                 }
             },
@@ -68,6 +71,7 @@
                     }
                 ],
                 "shop": {
+                    "location": 3,
                     "name": "stall"
                 }
             },
@@ -84,6 +88,7 @@
                     }
                 ],
                 "shop": {
+                    "location": 9,
                     "name": "stall"
                 }
             },
@@ -100,22 +105,24 @@
                     }
                 ],
                 "shop": {
+                    "location": 8,
                     "name": "stall"
                 }
             },
             {
                 "name": "karaage",
-                "title": "唐揚げ",
+                "title": "からあげ",
                 "description": "",
                 "kinds": [
                     {
-                        "title": "唐揚げ",
+                        "title": "からあげ",
                         "name": "karaage",
                         "price": 150,
                         "description": ""
                     }
                 ],
                 "shop": {
+                    "location": 10,
                     "name": "stall"
                 }
             },
@@ -132,6 +139,7 @@
                     }
                 ],
                 "shop": {
+                    "location": 11,
                     "name": "stall"
                 }
             },
@@ -148,6 +156,7 @@
                     }
                 ],
                 "shop": {
+                    "location": 11,
                     "name": "stall"
                 }
             },
@@ -164,6 +173,7 @@
                     }
                 ],
                 "shop": {
+                    "location": 11,
                     "name": "stall"
                 }
             },
@@ -186,6 +196,7 @@
                     }
                 ],
                 "shop": {
+                    "location": 2,
                     "name": "stall"
                 }
             },
@@ -202,18 +213,19 @@
                     }
                 ],
                 "shop": {
+                    "location": 6,
                     "name": "stall"
                 }
             }
         ],
         "foodsshops": {
             "stall": {
-                "description": "詳しい場所はパンフレットをご覧ください。完売する可能性があります。ご了承ください。ゴミはゴミステーションへよろしくお願いします。",
-                "is_plural": false,
+                "description": "詳しい場所はパンフレットをご覧ください。\n完売する可能性があります。ご了承ください。\n列規制は16時10分-15分です。\nゴミはゴミステーションへお願いします。",
+                "is_plural": true,
                 "title": "模擬店",
                 "style": "warning",
                 "allergen_info": false,
-                "enable" : false
+                "enable" : true
             },
             "bakery": {
                 "description": "",

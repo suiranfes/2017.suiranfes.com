@@ -5,8 +5,8 @@
         "themeinjp" : "おもてなし",
         "domain" : "suiranfes.com",
         "FesURL" : "https://suiranfes.com/",
-        "URL" : "https://2017.suiranfes.com/",
-        "CDN" : "https://2017.suiranfes.com/files/",
+        "URL" : "https://2017-dev.suiranfes.com/",
+        "CDN" : "https://2017-dev.suiranfes.com/files/",
         "sitecardpath" : "assets/img/TwitterCard7.png",
         "iconpath" : "assets/img/X-SUIRAN-t-600-f-fs8.png",
         "sharetext" : {
@@ -44,7 +44,7 @@
                 "title" : "一般展示",
                 "description" : "校内の展示について。部活展示およびクラス展示などを、教室棟を模した図でリストアップしました。",
                 "keywords" : ["スイラン祭","部活展示","部展示","学級展示"],
-                "enable" : false
+                "enable" : true
             },
             {
                 "id" : "food",
@@ -52,12 +52,12 @@
                 "title" : "食べ物",
                 "description" : "唐揚げ、アイス、ポップコーン、ジュース、etc...模擬店・食堂・喫茶店についてです。",
                 "keywords" : ["スイラン祭","模擬店","食べ物","飲み物"],
-                "enable" : false,
+                "enable" : true,
                 "children" : [
                     {
                         "title" : "模擬店",
                         "add" : "?tab=stall",
-                        "enable" : false
+                        "enable" : true
                     },
                     {
                         "title" : "食堂",
@@ -87,7 +87,7 @@
                     {
                         "title" : "体育館",
                         "add" : "?tab=gym",
-                        "enable" : false
+                        "enable" : true
                     },
                     {
                         "title" : "翠巒会館",
@@ -102,7 +102,7 @@
                 "title" : "グッズ",
                 "description" : "翠巒祭限定グッズです。",
                 "keywords" : ["スイラン祭"],
-                "enable" : false
+                "enable" : true
             },
             {
                 "id" : "invmatch",

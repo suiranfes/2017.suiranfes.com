@@ -1,3 +1,9 @@
+- function typeis(type, obj) {
+-     var clas = Object.prototype.toString.call(obj).slice(8, -1);
+-     if(obj !== undefined && obj !== null && clas === type) return true
+-     else return false;
+- }
+-
 - function arrayMerge() {
 -   if (arguments.length === 0) return false
 -   var i, len, key, result = new Object()
