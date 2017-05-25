@@ -92,7 +92,12 @@
                     {
                         "title" : "翠巒会館",
                         "add" : "?tab=kaikan",
-                        "enable" : false
+                        "enable" : true
+                    },
+                    {
+                        "title" : "中庭",
+                        "add" : "?tab=nakaniwa",
+                        "enable" : true
                     }
                 ]
             },
@@ -110,17 +115,7 @@
                 "title" : "招待試合",
                 "description" : "運動部の活躍もぜひご覧ください。",
                 "keywords" : ["スイラン祭"],
-                "enable" : false,
-                "children" : [
-                    {
-                        "title" : "1日目",
-                        "add" : "?tab=day1"
-                    },
-                    {
-                        "title" : "2日目",
-                        "add" : "?tab=day2"
-                    }
-                ]
+                "enable" : true
             },
             {
                 "id" : "radio",
@@ -128,6 +123,14 @@
                 "title" : "校内放送",
                 "description" : "ラジオ風校内放送についてです。\nお便り募集中です。以下のフォームからお便りを募集しています。",
                 "keywords" : ["スイラン祭"],
+                "enable" : true
+            },
+            {
+                "id" : "gallery",
+                "name" : "gallery",
+                "title" : "ギャラリー",
+                "description" : "翠巒祭のポスター・チラシや、壁画などについての紹介です。",
+                "keywords" : ["スイラン祭","高崎高校","デザイン"],
                 "enable" : true
             },
             {

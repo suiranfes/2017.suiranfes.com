@@ -296,7 +296,7 @@ mixin _event_tabcontent_ub(eventsplace, key, mmday)
                   p.mb-1 #{printDate(this_startDate, 'time')} ～ #{printDate(this_endDate, 'time')} @#{eventsplace.title}
                   +_urlshare_igroup(site.URL + "events?tab=" + key + "&collapse=event_collapse_" + key + "_" + fes.events[i].id, "【" + eventsplace.title + "】 " + fes.events[i].title, fes.events[i].description ,fes.events[i].description)
       if (thereis == false)
-        p.bg-white: b 御座いません。
+        p.bg-white.p-3: b ありません
 
 mixin _event_tabcontent(eventsplace, key)
   h3= eventsplace.title
@@ -324,19 +324,21 @@ mixin _invmatch_tabcontent_ub(mmday)
           if ( this_startDate >= day_startDate && this_startDate <= day_endDate )
             div( id=`invmatch_${fes.invmatches[i].id}` ).invmatch
               .card(class=`card-outline-secondary`).-tabemon-card
-                .card-header.bg-success(id=`accordion_${fes.invmatches[i].id}`,role="tab")
-                  h4.p-0.m-0
-                    a.text-white(data-toggle="collapse", data-parent=`accordion_${mmday}`, href=`#invmatch_collapse_${fes.invmatches[i].id}`, aria-controls=`event_collapse_${fes.invmatches[i].id}`)
-                      | <i class="fa fa-angle-double-right" aria-hidden="true"></i><small class="fw-700">#{printDate(this_startDate, 'time')}</small> #{fes.invmatches[i].title} <small class="fw-500">vs #{fes.invmatches[i].vs.convenient}</small>
-                .collapse(id=`invmatch_collapse_${fes.invmatches[i].id}` role="tabpanel" aria-labelledby=`accordion_${fes.invmatches[i].name}`): .card-block.bg-white
-                  p #{printDate(this_startDate, 'time')}～#{printDate(this_endDate, 'time')} @#{fes.invmatches[i].place.title} vs#{fes.invmatches[i].vs.formal}
+                a.text-white(data-toggle="collapse", data-parent=`accordion_${mmday}`, href=`#invmatch_collapse_${fes.invmatches[i].id}`, aria-controls=`invmatch_collapse_${fes.invmatches[i].id}`)
+                  .card-header.bg-success(id=`accordion_${fes.invmatches[i].id}`,role="tab")
+                    h4.p-0.m-0
+                      | <i class="fa fa-angle-double-right" aria-hidden="true"></i><small class="fw-700">#{printDate(this_startDate, 'time')}</small> #{fes.invmatches[i].title}
+                    <span class="fw-500">vs.#{fes.invmatches[i].vs.convenient}</span>
+                .collapse(id=`invmatch_collapse_${fes.invmatches[i].id}` role="tabpanel" aria-labelledby=`accordion_${fes.invmatches[i].id}`): .card-block.bg-white
+                  p #{printDate(this_startDate, 'time')}～#{printDate(this_endDate, 'time')} @#{fes.invmatches[i].place.title} vs.#{fes.invmatches[i].vs.formal}
                   p.mb-0!= fes.invmatches[i].description.replace(/\r?\n|\r/g,"<br>")
                   .dropdown-divider
                   +_urlshare_igroup(site.URL + "invmatch?collapse=invmatch_collapse_" + fes.invmatches[i].id, "【招待試合】 vs " + fes.invmatches[i].vs.convenient, fes.invmatches[i].title + "です。ぜひ見に来てください。",fes.invmatches[i].title + "です。ぜひ見に来てください。" )
 
 mixin _invmatch_tabcontent(mmday)
   h3.mt-3 #{mmday}日目
-  +_invmatch_tabcontent_ub(mmday)
+  .pb-2
+    +_invmatch_tabcontent_ub(mmday)
 
 
 //-**********************************************

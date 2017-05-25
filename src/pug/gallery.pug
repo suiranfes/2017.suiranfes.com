@@ -1,0 +1,28 @@
+- var page = { id :"gallery" };
+
+doctype
+html(lang="ja")
+  head
+    include includes/_mixins.pug
+    include includes/_meta.pug
+    include includes/_includes.pug
+  body
+    include includes/_nav.pug
+    #barba-wrapper: .barba-container: .wrap
+      .container
+        .row
+          .col-12.py-3
+            h1 #{page.title}
+            p!=page.description
+          .col-12.pb-2
+            .d-flex.flex-wrap
+              each picture, i in site.gallery
+                .py-2
+                  .card.card-inverse
+                    img.card-img.w-100(src=`${site.CDN}2017/img/gallery/${site.gallery[i].id}.jpg` alt="")
+                    .card-img-overlay.text-shadow-1-1-1-000
+                      h4.card-title #{site.gallery[i].title}
+                      div.card-text!= site.gallery[i].description
+                      if (site.gallery[i].downloadable)
+                        a.btn.btn-success.btn-block.w-auto(href=`${site.CDN}2017/img/gallery/${site.gallery[i].id}.png` download=`${site.gallery[i].title}` target="_blank") ダウンロード
+    include includes/_footer.pug

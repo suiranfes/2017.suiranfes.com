@@ -221,6 +221,135 @@
                 ],
                 "youtube_id": null,
                 "title": "SUIRAN STATION"
+            },
+            {
+                "id": "chorus",
+                "name": "chorus",
+                "description": "今年も祭を男たちの歌声が飾ります。\nぜひお越しください！",
+                "performers": null,
+                "programs": null,
+                "place": "kaikan",
+                "startDate": "2017-06-04T11:00+09:00",
+                "endDate": "2017-06-04T11:40+09:00",
+                "tags": null,
+                "youtube_id": null,
+                "title": "合唱部"
+            },
+            {
+                "id": "blass_1",
+                "name": "blass_1",
+                "description": "男たちの奏でるパワフルなサウンドをお楽しみあれ！",
+                "performers": null,
+                "programs": null,
+                "place": "kaikan",
+                "startDate": "2017-06-03T14:00+09:00",
+                "endDate": "2017-06-04T15:00+09:00",
+                "tags": null,
+                "youtube_id": null,
+                "title": "吹奏楽部"
+            },
+            {
+                "id": "blass_1",
+                "name": "blass_1",
+                "description": "男たちの奏でるパワフルなサウンドをお楽しみあれ！",
+                "performers": null,
+                "programs": null,
+                "place": "kaikan",
+                "startDate": "2017-06-03T14:00+09:00",
+                "endDate": "2017-06-04T15:00+09:00",
+                "tags": null,
+                "youtube_id": null,
+                "title": "吹奏楽部"
+            },
+            {
+                "id": "blass_2",
+                "name": "blass_2",
+                "description": "男たちの奏でるパワフルなサウンドをお楽しみあれ！",
+                "performers": null,
+                "programs": null,
+                "place": "kaikan",
+                "startDate": "2017-06-04T13:50+09:00",
+                "endDate": "2017-06-04T14:30+09:00",
+                "tags": null,
+                "youtube_id": null,
+                "title": "吹奏楽部"
+            },
+            {
+                "id": "blass_gym",
+                "name": "blass_gym",
+                "description": "男たちの奏でるパワフルなサウンドをお楽しみあれ！",
+                "performers": null,
+                "programs": null,
+                "place": "gym",
+                "startDate": "2017-06-04T11:30+09:00",
+                "endDate": "2017-06-04T12:30+09:00",
+                "tags": null,
+                "youtube_id": null,
+                "title": "吹奏楽部"
+            },
+            {
+                "id": "mandorin_1",
+                "name": "mandorin_1",
+                "description": "男たちの奏でるときに力強く、時に優しいマンドリンの音色をお楽しみください！！1年生の初ステージ。",
+                "performers": null,
+                "programs": null,
+                "place": "kaikan",
+                "startDate": "2017-06-03T12:30+09:00",
+                "endDate": "2017-06-03T13:30+09:00",
+                "tags": null,
+                "youtube_id": null,
+                "title": "マンドリン部"
+            },
+            {
+                "id": "mandorin_2",
+                "name": "mandorin_2",
+                "description": "男たちの奏でるときに力強く、時に優しいマンドリンの音色をお楽しみください！！1年生の初ステージ。\n2日目では、高女との合同合奏を予定しています！",
+                "performers": null,
+                "programs": null,
+                "place": "kaikan",
+                "startDate": "2017-06-04T11:30+09:00",
+                "endDate": "2017-06-04T12:30+09:00",
+                "tags": null,
+                "youtube_id": null,
+                "title": "マンドリン部☆"
+            },
+            {
+                "id": "cheering_1",
+                "name": "cheering_1",
+                "description": "我々應援部員は、高崎高校を盛り上げ勝利を導く為に、常日頃から修練を積んで参りました。今回はその結晶たる演舞を披露致します。おなじみのスポーツ應援とは異なる華やかさを御覧ください。押忍。",
+                "performers": null,
+                "programs": [
+                    "翠巒",
+                    "攻撃の拍手",
+                    "拍子",
+                    "数え歌",
+                    "天ゆく翼",
+                    "憂国の歌"
+                ],
+                "place": "nakaniwa",
+                "startDate": "2017-06-03T16:00+09:00",
+                "endDate": "2017-06-03T16:30+09:00",
+                "tags": null,
+                "youtube_id": null,
+                "title": "應援部:定例リーダー公開祭 第一部"
+            },
+            {
+                "id": "cheering_2",
+                "name": "cheering_2",
+                "description": "我々應援部員は、高崎高校を盛り上げ勝利を導く為に、常日頃から修練を積んで参りました。今回はその結晶たる演舞を披露致します。おなじみのスポーツ應援とは異なる華やかさを御覧ください。押忍。",
+                "performers": null,
+                "programs": [
+                    "撃滅",
+                    "敵軍",
+                    "富士の白雪",
+                    "校歌"
+                ],
+                "place": "gym",
+                "startDate": "2017-06-04T09:30+09:00",
+                "endDate": "2017-06-04T11:00+09:00",
+                "tags": null,
+                "youtube_id": null,
+                "title": "應援部:定例リーダー公開祭 第二部"
             }
         ],
         "eventsplaces": {
@@ -240,6 +369,12 @@
                 "description": "翠巒音楽祭！",
                 "title": "翠巒会館",
                 "style": "primary",
+                "enable" : false
+            },
+            "nakaniwa": {
+                "description": "例年は定例リーダー公開祭のみでしたが、今年は……？！",
+                "title": "中庭",
+                "style": "danger",
                 "enable" : false
             }
         }
