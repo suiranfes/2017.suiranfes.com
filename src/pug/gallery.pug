@@ -15,14 +15,14 @@ html(lang="ja")
             h1 #{page.title}
             p!=page.description
           .col-12.pb-2
-            .d-flex.flex-wrap
+            .col
               each picture, i in site.gallery
-                .py-2
-                  .card.card-inverse
+                .col-12.col-md-6.col-xl-4.py-2
+                  .card.w-100
                     img.card-img.w-100(src=`${site.CDN}2017/img/gallery/${site.gallery[i].id}.jpg` alt="")
-                    .card-img-overlay.text-shadow-1-1-1-000
+                    .card-block
                       h4.card-title #{site.gallery[i].title}
                       div.card-text!= site.gallery[i].description
                       if (site.gallery[i].downloadable)
-                        a.btn.btn-success.btn-block.w-auto(href=`${site.CDN}2017/img/gallery/${site.gallery[i].id}.png` download=`${site.gallery[i].title}` target="_blank") ダウンロード
+                        a.btn.btn-success.btn-block.w-auto.h-auto.mt-2(href=`${site.CDN}2017/img/gallery/${site.gallery[i].id}.png` download=`suiranfes_gallery_${site.gallery[i].name}` target="_blank") ダウンロード
     include includes/_footer.pug
