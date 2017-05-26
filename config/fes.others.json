@@ -25,7 +25,7 @@
             {
                 "id": "tennis",
                 "name": "tennis",
-                "title": "テニス部",
+                "title": "硬式テニス部",
                 "description": "",
                 "place": {
                     "title" : "テニスコート"
@@ -108,7 +108,7 @@
                 "startDate": "2017-06-03T13:00+09:00",
                 "endDate": "2017-06-03T15:30+09:00",
                 "vs": {
-                    "convenient": "沼田",
+                    "convenient": "沼高",
                     "formal": "群馬県立沼田高等学校"
                     }
             }

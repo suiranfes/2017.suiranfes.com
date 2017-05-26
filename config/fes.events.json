@@ -249,19 +249,6 @@
                 "title": "吹奏楽部"
             },
             {
-                "id": "blass_1",
-                "name": "blass_1",
-                "description": "男たちの奏でるパワフルなサウンドをお楽しみあれ！",
-                "performers": null,
-                "programs": null,
-                "place": "kaikan",
-                "startDate": "2017-06-03T14:00+09:00",
-                "endDate": "2017-06-04T15:00+09:00",
-                "tags": null,
-                "youtube_id": null,
-                "title": "吹奏楽部"
-            },
-            {
                 "id": "blass_2",
                 "name": "blass_2",
                 "description": "男たちの奏でるパワフルなサウンドをお楽しみあれ！",
@@ -369,13 +356,13 @@
                 "description": "翠巒音楽祭！",
                 "title": "翠巒会館",
                 "style": "primary",
-                "enable" : false
+                "enable" : true
             },
             "nakaniwa": {
                 "description": "例年は定例リーダー公開祭のみでしたが、今年は……？！",
                 "title": "中庭",
                 "style": "danger",
-                "enable" : false
+                "enable" : true
             }
         }
     }

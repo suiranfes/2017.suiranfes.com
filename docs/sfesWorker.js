@@ -114,7 +114,7 @@ var cachepages = [
     "/invmatch?collapse=invmatch_collapse_soccer",
 
 ];
-var version = '2.0.0-zeta.7';
+var version = '2.0.1';
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(
