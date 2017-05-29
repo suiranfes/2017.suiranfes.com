@@ -14,8 +14,7 @@ var cachepages = [
     "/assets/fonts/GenShinGothic-Normal.woff2",
     "/assets/fonts/GenShinGothic-Light.woff2",
     "/api/v1/index.json",
-    "/manifest.json",
-    "/notices",
+    "/manifest.json/notices",
     "/access",
     "/pantene",
     "/food",
@@ -30,6 +29,7 @@ var cachepages = [
     "/goods",
     "/invmatch",
     "/radio",
+    "/gallery",
     "/about",
     "/pantene?modal=pantene_modal_wanage",
     "/pantene?modal=pantene_modal_paperplane",
@@ -98,9 +98,18 @@ var cachepages = [
     "/events?tab=stage&collapse=event_collapse_stage_Grand_Finale",
     "/events?tab=gym&collapse=event_collapse_gym_cheering_2",
     "/events?tab=gym&collapse=event_collapse_gym_blass_gym",
-    "/events?tab=gym&collapse=event_collapse_gym_SUIRAN_STATION",
+    "/events?tab=gym&collapse=event_collapse_gym_SUIRAN_STATION_ABOUT",
+    "/events?tab=gym&collapse=event_collapse_gym_SUIRAN_STATION_OP",
+    "/events?tab=gym&collapse=event_collapse_gym_SUIRAN_STATION_Mandorin",
+    "/events?tab=gym&collapse=event_collapse_gym_SUIRAN_STATION_Baseball",
+    "/events?tab=gym&collapse=event_collapse_gym_SUIRAN_STATION_Soccer",
+    "/events?tab=gym&collapse=event_collapse_gym_SUIRAN_STATION_Wadaiko",
+    "/events?tab=gym&collapse=event_collapse_gym_SUIRAN_STATION_Seitokai",
+    "/events?tab=gym&collapse=event_collapse_gym_SUIRAN_STATION_Kendo",
+    "/events?tab=gym&collapse=event_collapse_gym_SUIRAN_STATION_Chigaku",
+    "/events?tab=gym&collapse=event_collapse_gym_SUIRAN_STATION_BrassBand",
+    "/events?tab=gym&collapse=event_collapse_gym_SUIRAN_STATION_End",
     "/events?tab=kaikan&collapse=event_collapse_kaikan_mandorin_1",
-    "/events?tab=kaikan&collapse=event_collapse_kaikan_blass_1",
     "/events?tab=kaikan&collapse=event_collapse_kaikan_blass_1",
     "/events?tab=kaikan&collapse=event_collapse_kaikan_chorus",
     "/events?tab=kaikan&collapse=event_collapse_kaikan_mandorin_2",
@@ -108,13 +117,13 @@ var cachepages = [
     "/events?tab=nakaniwa&collapse=event_collapse_nakaniwa_cheering_1",
     "/invmatch?collapse=invmatch_collapse_volleyball",
     "/invmatch?collapse=invmatch_collapse_basketball",
-    "/invmatch?collapse=invmatch_collapse_physics",
     "/invmatch?collapse=invmatch_collapse_baseball",
+    "/invmatch?collapse=invmatch_collapse_physics",
     "/invmatch?collapse=invmatch_collapse_tennis",
     "/invmatch?collapse=invmatch_collapse_soccer",
 
 ];
-var version = '2.0.5';
+var version = '2.2.0';
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(

@@ -176,12 +176,48 @@
                 "title" : "追加",
                 "style" : "info"
             },
+            "info" : {
+                "title" : "情報",
+                "style" : "info"
+            },
             "delete" : {
                 "title" : "削除",
                 "style" : "danger"
             }
         },
         "updates" : [
+            {
+                "date" : "2017-05-30T01:50+09:00",
+                "name" : "revice_mandorin",
+                "title" : "「マンドリン部☆」の時間を修正しました",
+                "description" : "誤った時間が掲載されていました。",
+                "link" : "events?tab=kaikan",
+                "badge" : "revice"
+            },
+            {
+                "date" : "2017-05-30T01:50+09:00",
+                "name" : "revice_invmatch",
+                "title" : "招待試合の時間を修正しました",
+                "description" : "物理部とサッカー部が変更になっています。ご確認ください。",
+                "link" : "invmatch",
+                "badge" : "revice"
+            },
+            {
+                "date" : "2017-05-30T01:50+09:00",
+                "name" : "change_gym",
+                "title" : "体育館のページを更新しました",
+                "description" : "各団体ごとに分割しました。",
+                "link" : "events?tab=gym",
+                "badge" : "change"
+            },
+            {
+                "date" : "2017-05-27T07:00+09:00",
+                "name" : "sinai_senden",
+                "title" : "今日は市内宣伝です！",
+                "description" : "12時30分頃に高高から高崎駅に向けて出発予定です。",
+                "link" : "",
+                "badge" : "info"
+            },
             {
                 "date" : "2017-05-26T23:30+09:00",
                 "name" : "grand_open",

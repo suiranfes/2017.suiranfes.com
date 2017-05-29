@@ -195,22 +195,11 @@
                 "title": "グランドフィナーレ"
             },
             {
-                "id": "SUIRAN_STATION",
-                "name": "SUIRAN_STATION",
-                "description": "<p>個性豊かな部活動の面々が、歌や演奏・踊りなど様々なパフォーマンスを披露します</p>",
+                "id": "SUIRAN_STATION_ABOUT",
+                "name": "SUIRAN_STATION_ABOUT",
+                "description": "新感覚 音楽･ダンスイベント",
                 "performers": null,
-                "programs": [
-                    "13:30 - 13:50 <b>&nbsp;Opening</b>",
-                    "13:52 - 14:02 <b>&nbsp;マンドリン部</b>",
-                    "14:04 - 14:14 <b>&nbsp;硬式野球部</b>",
-                    "14:16 - 14:26 <b>&nbsp;サッカー部</b>",
-                    "14:28 - 14:38 <b>&nbsp;和太鼓部</b>",
-                    "14:40 - 14:50 <b>&nbsp;生徒会</b>",
-                    "14:52 - 15:02 <b>&nbsp;剣道部</b>",
-                    "15:04 - 15:14 <b>&nbsp;地学部</b>",
-                    "15:16 - 15:26 <b>&nbsp;吹奏楽部</b>",
-                    "15:28 - 15:40 <b>&nbsp;Ending</b>"
-                    ],
+                "programs": null,
                 "place": "gym",
                 "startDate": "2017-06-04T13:30+09:00",
                 "endDate": "2017-06-04T15:40+09:00",
@@ -220,7 +209,177 @@
                     "音楽"
                 ],
                 "youtube_id": null,
-                "title": "SUIRAN STATION"
+                "title": "▼ SUIRAN STATION"
+            },
+            {
+                "id": "SUIRAN_STATION_OP",
+                "name": "SUIRAN_STATION_OP",
+                "description": "ヲタ芸\n出演者紹介",
+                "performers": null,
+                "programs": null,
+                "place": "gym",
+                "startDate": "2017-06-04T13:30+09:00",
+                "endDate": "2017-06-04T13:50+09:00",
+                "tags": [
+                    "紅白",
+                    "ライブ",
+                    "音楽"
+                ],
+                "youtube_id": null,
+                "title": "【Sステ】Opening Act"
+            },
+            {
+                "id": "SUIRAN_STATION_Mandorin",
+                "name": "SUIRAN_STATION_Mandorin",
+                "description": "カルマ\n会心の一撃",
+                "performers": null,
+                "programs": null,
+                "place": "gym",
+                "startDate": "2017-06-04T13:52+09:00",
+                "endDate": "2017-06-04T14:02+09:00",
+                "tags": [
+                    "紅白",
+                    "ライブ",
+                    "音楽"
+                ],
+                "youtube_id": null,
+                "title": "【Sステ】マンドリン"
+            },
+            {
+                "id": "SUIRAN_STATION_Baseball",
+                "name": "SUIRAN_STATION_Baseball",
+                "description": "Eeny, meeny, miny, moe!\n制服のマネキン",
+                "performers": null,
+                "programs": null,
+                "place": "gym",
+                "startDate": "2017-06-04T14:04+09:00",
+                "endDate": "2017-06-04T14:14+09:00",
+                "tags": [
+                    "紅白",
+                    "ライブ",
+                    "音楽"
+                ],
+                "youtube_id": null,
+                "title": "【Sステ】硬式野球部"
+            },
+            {
+                "id": "SUIRAN_STATION_Soccer",
+                "name": "SUIRAN_STATION_Soccer",
+                "description": "ガールズルール\nポーカーフェイス",
+                "performers": null,
+                "programs": null,
+                "place": "gym",
+                "startDate": "2017-06-04T14:16+09:00",
+                "endDate": "2017-06-04T14:26+09:00",
+                "tags": [
+                    "紅白",
+                    "ライブ",
+                    "音楽"
+                ],
+                "youtube_id": null,
+                "title": "【Sステ】サッカー部"
+            },
+            {
+                "id": "SUIRAN_STATION_Wadaiko",
+                "name": "SUIRAN_STATION_Wadaiko",
+                "description": "ウルトラタイガー\nB級インド映画",
+                "performers": null,
+                "programs": null,
+                "place": "gym",
+                "startDate": "2017-06-04T14:28+09:00",
+                "endDate": "2017-06-04T14:38+09:00",
+                "tags": [
+                    "紅白",
+                    "ライブ",
+                    "音楽"
+                ],
+                "youtube_id": null,
+                "title": "【Sステ】和太鼓部"
+            },
+            {
+                "id": "SUIRAN_STATION_Seitokai",
+                "name": "SUIRAN_STATION_Seitokai",
+                "description": "サイレントマジョリティ",
+                "performers": null,
+                "programs": null,
+                "place": "gym",
+                "startDate": "2017-06-04T14:40+09:00",
+                "endDate": "2017-06-04T14:50+09:00",
+                "tags": [
+                    "紅白",
+                    "ライブ",
+                    "音楽"
+                ],
+                "youtube_id": null,
+                "title": "【Sステ】生徒会"
+            },
+            {
+                "id": "SUIRAN_STATION_Kendo",
+                "name": "SUIRAN_STATION_Kendo",
+                "description": "原宿いやほい",
+                "performers": null,
+                "programs": null,
+                "place": "gym",
+                "startDate": "2017-06-04T14:52+09:00",
+                "endDate": "2017-06-04T15:02+09:00",
+                "tags": [
+                    "紅白",
+                    "ライブ",
+                    "音楽"
+                ],
+                "youtube_id": null,
+                "title": "【Sステ】剣道部"
+            },
+            {
+                "id": "SUIRAN_STATION_Chigaku",
+                "name": "SUIRAN_STATION_Chigaku",
+                "description": "天体観測",
+                "performers": null,
+                "programs": null,
+                "place": "gym",
+                "startDate": "2017-06-04T15:04+09:00",
+                "endDate": "2017-06-04T15:14+09:00",
+                "tags": [
+                    "紅白",
+                    "ライブ",
+                    "音楽"
+                ],
+                "youtube_id": null,
+                "title": "【Sステ】地学部"
+            },
+            {
+                "id": "SUIRAN_STATION_BrassBand",
+                "name": "SUIRAN_STATION_BrassBand",
+                "description": "前前前世\n房総スカイラインファントム\nOne Night Carnival\nミュージック・アワー\n\n翠巒祭にお越しの皆さん、こんにちは。吹奏楽部、ERECTED Boysです。私たちは昨年の翠巒祭から1年間、様々なものと闘ってきました。\n\n課題、校則、先生、テスト、部活…\n\n吹奏楽、ジャズ、ロック、クラシック…\n\nベイシア文化ホール、群馬音楽センター、club freez…\n\n仲間の何人かは脱落し、何度も挫けそうになりました。でも、私たちは、今日、ついに\"たちあがり\"ます。華麗なる音楽の世界をお楽しみください。\n\n行こうぜ、ピリオドの向こうへ！",
+                "performers": null,
+                "programs": null,
+                "place": "gym",
+                "startDate": "2017-06-04T15:16+09:00",
+                "endDate": "2017-06-04T15:26+09:00",
+                "tags": [
+                    "紅白",
+                    "ライブ",
+                    "音楽"
+                ],
+                "youtube_id": null,
+                "title": "【Sステ】吹奏楽部"
+            },
+            {
+                "id": "SUIRAN_STATION_End",
+                "name": "SUIRAN_STATION_End",
+                "description": "エンディング",
+                "performers": null,
+                "programs": null,
+                "place": "gym",
+                "startDate": "2017-06-04T15:28+09:00",
+                "endDate": "2017-06-04T15:40+09:00",
+                "tags": [
+                    "紅白",
+                    "ライブ",
+                    "音楽"
+                ],
+                "youtube_id": null,
+                "title": "【Sステ】Ending"
             },
             {
                 "id": "chorus",
@@ -272,7 +431,7 @@
                 "endDate": "2017-06-04T12:30+09:00",
                 "tags": null,
                 "youtube_id": null,
-                "title": "吹奏楽部"
+                "title": "【部活動発表】吹奏楽部"
             },
             {
                 "id": "mandorin_1",
@@ -294,8 +453,8 @@
                 "performers": null,
                 "programs": null,
                 "place": "kaikan",
-                "startDate": "2017-06-04T11:30+09:00",
-                "endDate": "2017-06-04T12:30+09:00",
+                "startDate": "2017-06-04T12:00+09:00",
+                "endDate": "2017-06-04T13:00+09:00",
                 "tags": null,
                 "youtube_id": null,
                 "title": "マンドリン部☆"
@@ -336,7 +495,7 @@
                 "endDate": "2017-06-04T11:00+09:00",
                 "tags": null,
                 "youtube_id": null,
-                "title": "應援部:定例リーダー公開祭 第二部"
+                "title": "【部活動発表】應援部:定例リーダー公開祭 第二部"
             }
         ],
         "eventsplaces": {

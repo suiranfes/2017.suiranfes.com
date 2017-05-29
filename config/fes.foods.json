@@ -526,13 +526,13 @@
                         "title": "Aセット",
                         "name": "A",
                         "price": 180,
-                        "description": "お好みの<b>アイス</b> + お好みのドリンク"
+                        "description": "お好みの<b class='text-danger fw-800'>アイス</b> + お好みのドリンク"
                     },
                     {
-                        "title": "お茶",
+                        "title": "Bセット",
                         "name": "B",
                         "price": 330,
-                        "description": "お好みの<b>ケーキ</b> + お好みのドリンク"
+                        "description": "お好みの<b class='text-danger fw-800'>ケーキ</b> + お好みのドリンク"
                     }
                 ],
                 "shop": {

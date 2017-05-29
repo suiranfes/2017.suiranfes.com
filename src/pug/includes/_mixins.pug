@@ -119,7 +119,7 @@ mixin _pantene_modals()
               if(fes.pantene[i].image[0] == "both")
                 img(src=`${site.CDN}2017/img/pantene/${fes.pantene[i].id}_${fes.pantene[i].image[1]}_bottom.svg` class="block ml-auto")
           .modal-footer
-            +_urlshare_igroup(site.URL + "pantene?modal=pantene_modal_" + fes.pantene[i].name, "【一般展示】 " + fes.pantene[i].title + " @" + j + "-" + k,"校舎内に遊びに来てね！\n\n第65回翠巒祭\n6月3日･4日\n","校舎内に遊びに来てね！\n\n第65回翠巒祭\n6月3日･4日\n")
+            +_urlshare_igroup(site.URL + "pantene?modal=pantene_modal_" + fes.pantene[i].name, "【一般展示】 " + fes.pantene[i].title + " @" + j + "-" + k,fes.pantene[i].description,fes.pantene[i].description)
             a.btn.btn-link.no-barba.text-right(href="/pantene") 戻る
   -         }
   -       }
@@ -235,6 +235,7 @@ mixin _food_tabcontent(foodsshop, key)
                 br
                 span.mb-0!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
               .d-flex.flex-wrap.pb-2
+                - if( fes.foods[i].kinds.length > 1 || fes.foods[i].title != fes.foods[i].kinds[0].title || foodsshop.allergen_info ) {
                 - for(var j in fes.foods[i].kinds) {
                   .-food-card-wrap.p-1: div.card.p-2(class=`card-outline-${foodsshop.style}`): .card-block
                     h6.card-title
@@ -254,7 +255,7 @@ mixin _food_tabcontent(foodsshop, key)
                           - for(var k in fes.foods[i].kinds[j].allergens){
                               +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
                           - }
-                - }
+                - } }
               +_urlshare_igroup(site.URL + "food?tab=" + key + "&collapse=food_collapse_" + key + "_" + fes.foods[i].name, "【" + foodsshop.title + "】 " + fes.foods[i].title + " " + _food_header_price(fes.foods[i].kinds), fes.foods[i].description, fes.foods[i].description)
       - } }
 
@@ -330,7 +331,11 @@ mixin _invmatch_tabcontent_ub(mmday)
                       | <i class="fa fa-angle-double-right" aria-hidden="true"></i><small class="fw-700">#{printDate(this_startDate, 'time')}</small> #{fes.invmatches[i].title}
                     <span class="fw-500 ml-auto">vs.#{fes.invmatches[i].vs.convenient}</span>
                 .collapse(id=`invmatch_collapse_${fes.invmatches[i].id}` role="tabpanel" aria-labelledby=`#accordion_${fes.invmatches[i].id}`): .card-block.bg-white
-                  p #{printDate(this_startDate, 'time')}～#{printDate(this_endDate, 'time')} @#{fes.invmatches[i].place.title} vs.#{fes.invmatches[i].vs.formal}
+                  p #{printDate(this_startDate, 'time')}～#{printDate(this_endDate, 'time')}
+                    br
+                    | <b>@</b>#{fes.invmatches[i].place.title}
+                    br
+                    | <b>vs.</b>#{fes.invmatches[i].vs.formal}
                   p.mb-0!= fes.invmatches[i].description.replace(/\r?\n|\r/g,"<br>")
                   .dropdown-divider
                   +_urlshare_igroup(site.URL + "invmatch?collapse=invmatch_collapse_" + fes.invmatches[i].id, "【招待試合】 vs " + fes.invmatches[i].vs.convenient, fes.invmatches[i].title + "です。ぜひ見に来てください。",fes.invmatches[i].title + "です。ぜひ見に来てください。" )
@@ -347,7 +352,8 @@ mixin _invmatch_tabcontent(mmday)
   ***********************************************
 
 mixin _urlshare_igroup(url, title, twtext, litext)
-  - var tweettext = twtext.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')
+  - var titletext = twtext.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')
+  -     tweettext = twtext.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')
   -     linetext  = litext.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')
   - if(!url_all){
   -     url_all=""  
@@ -361,9 +367,9 @@ mixin _urlshare_igroup(url, title, twtext, litext)
         button.btn.btn-secondary.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
           +fa('share-alt')
         .dropdown-menu.dropdown-menu-right
-          a.dropdown-item(href=`line://msg/text/?${encodeURIComponent(linetext + "\n\n" + url + "\n#翠巒祭")}`)
+          a.dropdown-item(href=`line://msg/text/?${encodeURIComponent(titletext + "\n\n" + linetext + "\n\n" + url + "\n#翠巒祭")}`)
             +ft('line')
             | &thinsp;LINE it!
-          a.dropdown-item(href=`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&hashtags=翠巒祭&text=${encodeURIComponent(title+"\n"+tweettext)}&related=suiranfes`, target="_blank")
+          a.dropdown-item(href=`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&hashtags=翠巒祭&text=${encodeURIComponent(titletext+"\n"+tweettext)}&related=suiranfes`, target="_blank")
             +fa('twitter')
             | &thinsp;Tweet
