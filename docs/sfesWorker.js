@@ -96,6 +96,7 @@ var cachepages = [
     "/events?tab=stage&collapse=event_collapse_stage_Yasai",
     "/events?tab=stage&collapse=event_collapse_stage_Ms_THS_Con_FINAL",
     "/events?tab=stage&collapse=event_collapse_stage_Grand_Finale",
+    "/events?tab=gym&collapse=event_collapse_gym_INVMATCH_IN_GYM",
     "/events?tab=gym&collapse=event_collapse_gym_cheering_2",
     "/events?tab=gym&collapse=event_collapse_gym_blass_gym",
     "/events?tab=gym&collapse=event_collapse_gym_SUIRAN_STATION_ABOUT",
@@ -123,7 +124,7 @@ var cachepages = [
     "/invmatch?collapse=invmatch_collapse_soccer",
 
 ];
-var version = '2.2.0';
+var version = '2.3.1';
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(

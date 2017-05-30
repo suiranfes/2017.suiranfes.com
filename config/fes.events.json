@@ -197,7 +197,7 @@
             {
                 "id": "SUIRAN_STATION_ABOUT",
                 "name": "SUIRAN_STATION_ABOUT",
-                "description": "新感覚 音楽･ダンスイベント",
+                "description": "<b>新感覚 音楽･ダンスイベント</b>",
                 "performers": null,
                 "programs": null,
                 "place": "gym",
@@ -214,7 +214,7 @@
             {
                 "id": "SUIRAN_STATION_OP",
                 "name": "SUIRAN_STATION_OP",
-                "description": "ヲタ芸\n出演者紹介",
+                "description": "<b>ヲタ芸\n出演者紹介</b>",
                 "performers": null,
                 "programs": null,
                 "place": "gym",
@@ -231,7 +231,7 @@
             {
                 "id": "SUIRAN_STATION_Mandorin",
                 "name": "SUIRAN_STATION_Mandorin",
-                "description": "カルマ\n会心の一撃",
+                "description": "<b>カルマ\n会心の一撃</b>",
                 "performers": null,
                 "programs": null,
                 "place": "gym",
@@ -248,7 +248,7 @@
             {
                 "id": "SUIRAN_STATION_Baseball",
                 "name": "SUIRAN_STATION_Baseball",
-                "description": "Eeny, meeny, miny, moe!\n制服のマネキン",
+                "description": "<b>Eeny, meeny, miny, moe!\n制服のマネキン</b>",
                 "performers": null,
                 "programs": null,
                 "place": "gym",
@@ -265,7 +265,7 @@
             {
                 "id": "SUIRAN_STATION_Soccer",
                 "name": "SUIRAN_STATION_Soccer",
-                "description": "ガールズルール\nポーカーフェイス",
+                "description": "<b>ガールズルール\nポーカーフェイス</b>\n\nサッカー部は全国・関東大会出場を目標に日々厳しい練習に励んでいます。サッカー部は何事にも全力で取り組むため、この翠巒ステーションでのダンスももちろん全力です。楽しんでいただけるよう頑張ります。",
                 "performers": null,
                 "programs": null,
                 "place": "gym",
@@ -282,7 +282,7 @@
             {
                 "id": "SUIRAN_STATION_Wadaiko",
                 "name": "SUIRAN_STATION_Wadaiko",
-                "description": "ウルトラタイガー\nB級インド映画",
+                "description": "<b>ウルトラタイガー\nB級インド映画</b>",
                 "performers": null,
                 "programs": null,
                 "place": "gym",
@@ -299,7 +299,7 @@
             {
                 "id": "SUIRAN_STATION_Seitokai",
                 "name": "SUIRAN_STATION_Seitokai",
-                "description": "サイレントマジョリティ",
+                "description": "<b>サイレントマジョリティ</b>\n\n直訳すれば、「静かな大衆」\n（↓この下からはテンション高く）\nOne of themになんかならない！！！\n個性全開っっっっ！！！\nイェェェェェい！！！\nよろしくお願いします。\n\nP.S 曲中手拍子ください！",
                 "performers": null,
                 "programs": null,
                 "place": "gym",
@@ -316,7 +316,7 @@
             {
                 "id": "SUIRAN_STATION_Kendo",
                 "name": "SUIRAN_STATION_Kendo",
-                "description": "原宿いやほい",
+                "description": "<b>原宿いやほい\nガールズルール\nキューピー</b>",
                 "performers": null,
                 "programs": null,
                 "place": "gym",
@@ -333,7 +333,7 @@
             {
                 "id": "SUIRAN_STATION_Chigaku",
                 "name": "SUIRAN_STATION_Chigaku",
-                "description": "天体観測",
+                "description": "<b>天体観測</b>\n\nみなさんこんにちは、地学部です。今地学部って聞いて、地層眺めて興奮してそう、とか思った女子高生いますよね？地学部＝地味、、そんなイメージを今日払拭します！",
                 "performers": null,
                 "programs": null,
                 "place": "gym",
@@ -350,7 +350,7 @@
             {
                 "id": "SUIRAN_STATION_BrassBand",
                 "name": "SUIRAN_STATION_BrassBand",
-                "description": "前前前世\n房総スカイラインファントム\nOne Night Carnival\nミュージック・アワー\n\n翠巒祭にお越しの皆さん、こんにちは。吹奏楽部、ERECTED Boysです。私たちは昨年の翠巒祭から1年間、様々なものと闘ってきました。\n\n課題、校則、先生、テスト、部活…\n\n吹奏楽、ジャズ、ロック、クラシック…\n\nベイシア文化ホール、群馬音楽センター、club freez…\n\n仲間の何人かは脱落し、何度も挫けそうになりました。でも、私たちは、今日、ついに\"たちあがり\"ます。華麗なる音楽の世界をお楽しみください。\n\n行こうぜ、ピリオドの向こうへ！",
+                "description": "<b>前前前世\n房総スカイラインファントム\nOne Night Carnival\nミュージック・アワー</b>\n\nこんにちは。吹奏楽部、ERECTED Boysです。ERECTED Boysはavexから2015年にメジャーデビューしたバンド… というのは嘘で、吉本興業所属のベテランコント集団です(嘘)。みなさんに音楽と笑いと愛をお届けします！",
                 "performers": null,
                 "programs": null,
                 "place": "gym",
@@ -380,6 +380,22 @@
                 ],
                 "youtube_id": null,
                 "title": "【Sステ】Ending"
+            },
+            {
+                "id": "INVMATCH_IN_GYM",
+                "name": "INVMATCH_IN_GYM",
+                "description": "<b>招待試合のページをご確認ください。</b><br><a href='/invmatch?collapse=invmatch_collapse_volleyball' class='btn btn-primary btn-block'>バレーボール</a><a href='/invmatch?collapse=invmatch_collapse_basketball' class='btn btn-primary btn-block'>バスケットボール</a>",
+                "performers": null,
+                "programs": null,
+                "place": "gym",
+                "startDate": "2017-06-03T13:00+09:00",
+                "endDate": "2017-06-03T16:00+09:00",
+                "tags": [
+                    "バレーボール",
+                    "バスケットボール"
+                ],
+                "youtube_id": null,
+                "title": "【招待試合】バレー/バスケ"
             },
             {
                 "id": "chorus",
