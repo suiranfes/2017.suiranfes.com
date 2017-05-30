@@ -207,7 +207,7 @@ mixin _pantene4th()
   **********************************************
 mixin _food_header_price(kinds)
   .price
-    | #{_food_header_price(kinds)}
+    | #{_food_header_price(kinds).text}
 
 mixin _food_tabcontent(foodsshop, key)
   h3= foodsshop.title
@@ -236,6 +236,7 @@ mixin _food_tabcontent(foodsshop, key)
                 span.mb-0!= fes.foods[i].description.replace(/\r?\n|\r/g,"<br>")
               .d-flex.flex-wrap.pb-2
                 - if( fes.foods[i].kinds.length > 1 || fes.foods[i].title != fes.foods[i].kinds[0].title || foodsshop.allergen_info ) {
+                - if( _food_header_price(fes.foods[i].kinds).type == "plural") {
                 - for(var j in fes.foods[i].kinds) {
                   .-food-card-wrap.p-1: div.card.p-2(class=`card-outline-${foodsshop.style}`): .card-block
                     h6.card-title
@@ -255,6 +256,27 @@ mixin _food_tabcontent(foodsshop, key)
                           - for(var k in fes.foods[i].kinds[j].allergens){
                               +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
                           - }
+                - }
+                - } else {
+                  ul
+                    - for(var j in fes.foods[i].kinds) {
+                      li #{fes.foods[i].kinds[j].title}
+                      if (fes.foods[i].kinds[j].description || foodsshop.allergen_info)
+                        ul
+                          if (fes.foods[i].kinds[j].description)
+                            li!= fes.foods[i].kinds[j].description.replace(/\r?\n|\r/g,"<br>")
+                          if (foodsshop.allergen_info)
+                            li
+                              +bootstrap_badge_normal("アレルギー物質","primary")
+                              if ( fes.foods[i].kinds[j].allergens === undefined )
+                                +bootstrap_badge_pill_lighter("調査中","warning")
+                              else if ( fes.foods[i].kinds[j].allergens === null )
+                                +bootstrap_badge_pill_lighter("なし","success")
+                              else
+                                - for(var k in fes.foods[i].kinds[j].allergens){
+                                    +bootstrap_badge_pill_lighter(fes.foods[i].kinds[j].allergens[k],"default")
+                                - }
+                    - }
                 - } }
               +_urlshare_igroup(site.URL + "food?tab=" + key + "&collapse=food_collapse_" + key + "_" + fes.foods[i].name, "【" + foodsshop.title + "】 " + fes.foods[i].title + " " + _food_header_price(fes.foods[i].kinds), fes.foods[i].description, fes.foods[i].description)
       - } }

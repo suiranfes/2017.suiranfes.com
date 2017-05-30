@@ -77,7 +77,7 @@
 
 - function _food_header_price(kinds){
 - if(kinds.length == 1){
--   return kinds[0].price + "円"
+-   return { text : kinds[0].price + "円", type : "one"}
 - }  else { 
 - var prices = [];
 - kinds.sort(function(a,b) {
@@ -90,7 +90,7 @@
 -       return self.indexOf(x) === c;
 -   });
 - if( pri.length == 1){
--   return "各" + prices[0] + "円"
+-   return { text: "各" + prices[0] + "円", type : "uniform" }
 - } else {
--   return prices[0] + "円～"
+-   return { text: prices[0] + "円～", type : "plural" }
 - }}}

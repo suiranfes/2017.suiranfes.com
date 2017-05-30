@@ -124,7 +124,7 @@ var cachepages = [
     "/invmatch?collapse=invmatch_collapse_soccer",
 
 ];
-var version = '2.3.1';
+var version = '2.4.1';
 this.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
   event.waitUntil(
