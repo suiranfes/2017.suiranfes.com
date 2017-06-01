@@ -13,7 +13,8 @@
 /assets/fonts/GenShinGothic-Normal.woff2
 /assets/fonts/GenShinGothic-Light.woff2
 /api/v1/index.json
-/manifest.json/notices
+/manifest.json
+/notices
 /access
 /pantene
 /food

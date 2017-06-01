@@ -19,7 +19,7 @@ html(lang="ja")
               each picture, i in site.gallery
                 .col-12.col-md-6.col-xl-4.py-2
                   .card.w-100
-                    img.card-img.w-100(src=`${site.CDN}2017/img/gallery/${site.gallery[i].id}.jpg` alt="")
+                    img.card-img.w-100(src=`${site.CDN}2017/img/gallery/${site.gallery[i].id}_s.jpg` alt="")
                     .card-block
                       h4.card-title #{site.gallery[i].title}
                       div.card-text!= site.gallery[i].description

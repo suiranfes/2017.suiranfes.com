@@ -1,5 +1,4 @@
 this.addEventListener('install', function(event) {
-  event.waitUntil(self.skipWaiting());
   event.waitUntil(
     caches.open(version).then(function(cache) {
       return cache.addAll(cachepages);

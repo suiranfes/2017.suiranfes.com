@@ -14,7 +14,8 @@ var cachepages = [
     "/assets/fonts/GenShinGothic-Normal.woff2",
     "/assets/fonts/GenShinGothic-Light.woff2",
     "/api/v1/index.json",
-    "/manifest.json/notices",
+    "/manifest.json",
+    "/notices",
     "/access",
     "/pantene",
     "/food",
@@ -124,9 +125,8 @@ var cachepages = [
     "/invmatch?collapse=invmatch_collapse_soccer",
 
 ];
-var version = '2.4.1';
+var version = '2.5.2';
 this.addEventListener('install', function(event) {
-  event.waitUntil(self.skipWaiting());
   event.waitUntil(
     caches.open(version).then(function(cache) {
       return cache.addAll(cachepages);
