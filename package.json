@@ -32,7 +32,7 @@
     "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-stylus": "^1.2.0",
     "grunt-contrib-uglify": "^3.0.0",
-    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-watch": "1.0.0",
     "html-to-text": "^3.2.0",
     "jquery": "^3.1.1",
     "kramed": "^0.5.6",
