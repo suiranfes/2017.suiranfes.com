@@ -43,7 +43,7 @@
     "stylus": "^0.54.5",
     "tether": "^1.4.0",
     "ttf2woff2": "^2.0.3",
-    "ua-parser-js": "^0.7.12",
+    "ua-parser-js": "^0.7.18",
     "uglify-js": "^3.0.0"
   }
 }
