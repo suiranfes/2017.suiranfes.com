@@ -29,7 +29,7 @@
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-cssmin": "^2.0.0",
-    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-pug": "^2.0.0",
     "grunt-contrib-stylus": "^1.2.0",
     "grunt-contrib-uglify": "^3.0.0",
     "grunt-contrib-watch": "^1.0.0",
