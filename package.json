@@ -38,7 +38,7 @@
     "kramed": "^0.5.6",
     "marked": "^0.3.6",
     "node-sfnt": "0.0.21",
-    "pako": "^1.0.5",
+    "pako": "^1.0.9",
     "pug-cli": "^1.0.0-alpha6",
     "stylus": "^0.54.5",
     "tether": "^1.4.0",
