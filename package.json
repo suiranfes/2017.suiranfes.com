@@ -27,7 +27,7 @@
     "grunt-browserify": "^5.0.0",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-connect": "^2.1.0",
     "grunt-contrib-cssmin": "^2.0.0",
     "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-stylus": "^1.2.0",
